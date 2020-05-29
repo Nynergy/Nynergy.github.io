@@ -1,0 +1,28 @@
+/* CLASSES */
+.masthead {
+	padding: 1em;
+	background: #220011 url("../img/masthead-home.jpg") no-repeat center center;
+	background-size: cover;
+
+	color: #ffffff;
+}
+
+.masthead-poetry {
+	background-image: url("../img/masthead-poetry.jpg");
+}
+
+.masthead-prose {
+	background-image: url("../img/masthead-prose.jpg");
+}
+
+.masthead-music {
+	background-image: url("../img/masthead-music.jpg");
+}
+
+.masthead-blog {
+	background-image: url("../img/masthead-blog.jpg");
+}
+
+.masthead-about {
+	background-image: url("../img/masthead-about.jpg");
+}
