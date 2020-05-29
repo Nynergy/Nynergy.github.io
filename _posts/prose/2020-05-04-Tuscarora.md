@@ -1,6 +1,7 @@
 ---
-layout: prose
+layout: prose-post
 title: Tuscarora
+written: May 04, 2020
 meta: A small vignette about my time camping with the Boy Scouts, circa 2012.
 category: prose
 ---
@@ -13,9 +14,9 @@ Further down the trail the path bends right along the edge of the lake, and open
 
 He’s concentrated on a particular spot furthest from the lake. I can hear the metallic squawk of his detector going off from time to time like a Geiger counter.
 
-	"What are you looking for?"
+    "What are you looking for?"
 
-	"Whatever I can find, I suppose."
+    "Whatever I can find, I suppose."
 
 He brings the plate of the detector across the grass in wide sweeping arcs, like a scythe. His body moves with a kind of fluidity, even though the long metal arm of the detector makes him look like a machine, a cyborg. He circles in on a central point by listening to the sharp tinny beeps, and then kneels down with a garden trowel. He begins to pick at the earth, digging up clumps of well-kept grass, until he finds what the detector was yelling about. He repeats this process numerous times.
 

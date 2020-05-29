@@ -1,6 +1,7 @@
 ---
-layout: prose
+layout: prose-post
 title: Spectacle (of Ritual)
+written: May 17, 2020
 meta: A short story about yearning, art, and understanding yourself.
 category: prose
 ---
