@@ -1,3 +1,4 @@
 markdown: redcarpet
 baseurl: /lexica-chromatica
 exclude: ['README.md']
+permalink: pretty
