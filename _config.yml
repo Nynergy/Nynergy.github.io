@@ -1,4 +1,4 @@
 markdown: redcarpet
-baseurl: /Nynergy.github.io
+baseurl: /nynergy.github.io
 exclude: ['README.md']
 permalink: pretty
