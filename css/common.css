@@ -29,3 +29,47 @@ footer {
 
 	text-align: center;
 }
+
+/* CLASSES */
+.row:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.column-left {
+	float: left;
+	width: 75%;
+}
+
+.column-right {
+	float: right;
+	margin-top: 15px;
+	width: 24%;
+	background-color: #331122;
+
+	text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 700px){
+	.column-left {
+		width:100%;
+	}
+
+	.column-right {
+		width: 100%;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+
+	.column-right .caption {
+		margin-left: 10px;
+	}
+
+	.column-right .image {
+		margin-right: 10px;
+		width: 20%;
+	}
+}
