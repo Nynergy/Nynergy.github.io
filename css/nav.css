@@ -1,6 +1,6 @@
 /* CLASSES */
 .current-page {
-	color: #ff1144;
+	color: #ff2233;
 }
 
 .nav {
@@ -12,7 +12,7 @@
 
 .nav > li {
 	display: inline-block;
-	margin: 1px 5px 1px 0px;
+	margin: 5px 3px 0px 0px;
 }
 
 .nav-top {

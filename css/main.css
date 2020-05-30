@@ -4,3 +4,6 @@
 {% include_relative common.css %}
 {% include_relative masthead.css %}
 {% include_relative nav.css %}
+{% include_relative content.css %}
+{% include_relative poetry.css %}
+{% include_relative prose.css %}

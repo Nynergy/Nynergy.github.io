@@ -2,7 +2,12 @@
 layout: poetry
 ---
 
-<h2>{{page.title}}</h2>
-<h4>{{page.written}}</h4>
+<div class="poem">
+	<h2>{{page.title}}</h2>
+	<hr>
+	<h4>{{page.written}}</h4>
 
-{{content}}
+	<div class="verse">
+		{{content}}
+	</div>
+</div>

@@ -1,0 +1,21 @@
+/* CLASSES */
+.prose {
+	margin-left: 50px;
+	width: 75%;
+}
+
+.textblock {
+	margin-left: 50px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 700px) {
+	.prose {
+		margin-left: 0;
+		width: 90%;
+	}
+
+	.textblock {
+		margin-left: 0;
+	}
+}

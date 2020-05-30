@@ -5,13 +5,14 @@ meta: Original abstract expressionistic poetry by Ben Buchanan.
 mastheadClass: masthead-poetry
 ---
 
-<h1>Poetry</h1>
+<h2>Poetry</h2>
+<hr>
 
 <ul>
 	{% for post in site.categories.poetry %}
 		<li>
-			<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-			<p>{{post.meta}}</p>
+			<p>{{post.written}} | <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></p>
+			<p class="indented">{{post.meta}}</p>
 		</li>
 	{% endfor %}
 </ul>
