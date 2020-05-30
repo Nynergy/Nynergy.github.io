@@ -3,7 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{% if page.title %}{{page.title}} | {% endif %}Lexica Chromatica{% if page.titleAfter %} | {{page.titleAfter}}{% endif %}</title>
-		<link href="/css/main.css" rel="stylesheet">
+		{% if page.url == '/' %}
+			<link href="/css/main.css" rel="stylesheet">
+		{% else %}
+			<link href="../css/main.css" rel="stylesheet">
+		{% endif %}
 		<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 		<meta name="description" content="{{page.meta}}">
