@@ -1,4 +1,4 @@
 markdown: redcarpet
-baseurl: /lexica-chromatica
+baseurl: /Nynergy.github.io
 exclude: ['README.md']
 permalink: pretty
