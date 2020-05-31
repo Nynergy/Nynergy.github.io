@@ -15,26 +15,3 @@
 .indented {
 	text-indent: 3rem;
 }
-
-/* IDs */
-#selfie {
-	margin-top: 15px;
-	margin-left: 50px;
-	width: 500px;
-}
-
-/* MEDIA QUERIES */
-@media screen and (max-width: 700px) {
-	#selfie {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		width: 400px;
-	}
-}
-
-@media screen and (max-width: 450px) {
-	#selfie {
-		width: 300px;
-	}
-}
