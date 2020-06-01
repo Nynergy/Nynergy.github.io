@@ -4,6 +4,7 @@ title: Tuscarora
 written: May 04, 2020
 meta: A small vignette about my time camping with the Boy Scouts, circa 2012.
 category: prose
+mastheadClass: masthead-prose
 ---
 
 Along the beaten trail between a window of trees. The waterfront watchtower looks down on a sea of flocking canoes. Across the still water sits the great firepit in the center of a stone amphitheater. Up ahead where the trail bends off to the right, the rocks fall away slowly into the reeds and ferns below a view of the mess hall. A bare flagpole, no smoke or steam from the chimneys and vents, the sun is going down over the dark green hillside, over the tops of the ancient mysterious trees. To the left a steep path of stone steps leads up the sheer ridge to the first aid hut. Behind me is a long walk from the trading post, that soft humming of the slushie machine, the neon glow of bent tubes and bulbs.

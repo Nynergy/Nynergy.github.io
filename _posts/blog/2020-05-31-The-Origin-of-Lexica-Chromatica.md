@@ -4,6 +4,7 @@ title: The Origin of Lexica Chromatica
 written: May 31, 2020
 meta: An introduction to Lexica Chromatica and it's creator, Ben Buchanan.
 category: blog
+mastheadClass: masthead-blog
 ---
 
 __Lexicon__ [__lek__-si-kon, -k*uh*n] <br>

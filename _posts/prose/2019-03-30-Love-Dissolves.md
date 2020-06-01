@@ -4,6 +4,7 @@ title: Love Dissolves
 written: March 30, 2019
 meta: A study on idealized love in imperfect circumstances.
 category: prose
+mastheadClass: masthead-prose
 ---
 
 In the northwest corner, Harrison is sipping on black coffee, not quite ready to wake up. The french doors are open and the passing morning shower is making itself at home. Jo is unwrapping the bedsheets from around her body, cursing the butterflies that make it look easy. The kitchen floor is a field of glass, and Harrison remembers that his socks are sticky. He continues sipping without an expression. Jo's feet fumble with the steps, but she emerges from the archway next to the fridge in one piece. As she peers inside for a drink, Harrison notices the half of her hair not bound up in a clip. An audible aluminum snap.

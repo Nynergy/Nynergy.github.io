@@ -4,6 +4,7 @@ title: Spectacle (of Ritual)
 written: May 17, 2020
 meta: A short story about yearning, art, and understanding yourself.
 category: prose
+mastheadClass: masthead-prose
 ---
 
 Alex steps back a few paces from the canvas. She puts her hand on her chin, thinking intently about the piece’s progress. Her skin is smudged with a stroke of phthalo blue, though she doesn’t notice, or doesn’t care. The slanted squares of color climb the pure white sheet underneath in layers of geometric patterns. Shapes and conventional forms emerge from the composition. Windows on buildings in dragon scale alignments. Hanging baskets of flowers like pendulums from awnings, just a quick series of yellow and green strokes. Still a white space evading any color or form in the lower right corner.
