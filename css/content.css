@@ -5,7 +5,7 @@
 }
 
 .main-container h2 {
-	color: #aa0055
+	color: var(--header-color);
 }
 
 .main-container > ul {

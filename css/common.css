@@ -1,10 +1,20 @@
+/* ELEMENTS */
+:root {
+	--main-background-color: #220011;
+	--accent-background-color: #331122;
+	--link-color: #eeaa99;
+	--link-accent-color: #ff2233;
+	--header-color: #aa0055;
+	--body-text-color: #ffffff;
+}
+
 /* GLOBAL */
 html {
 	margin: 0;
 	padding: 0;
 
-	background-color: #220011;
-	color: #ffffff;
+	background-color: var(--main-background-color);
+	color: var(--body-text-color);
 
 	font: normal 100%/1.4 Georgia,serif;
 }
@@ -16,7 +26,7 @@ body {
 }
 
 a {
-	color: #ffaa88;
+	color: var(--link-color);
 	text-decoration: none;
 }
 
@@ -25,7 +35,7 @@ footer {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: #331122;
+	background-color: var(--accent-background-color);
 
 	text-align: center;
 }
@@ -46,7 +56,7 @@ footer {
 	float: right;
 	margin-top: 15px;
 	width: 24%;
-	background-color: #331122;
+	background-color: var(--accent-background-color);
 
 	text-align: center;
 }
