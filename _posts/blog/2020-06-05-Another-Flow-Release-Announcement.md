@@ -4,7 +4,7 @@ title: Another Flow Release Announcement
 written: June 06, 2020
 meta: My second collection of original poetry is now available!
 category: blog
-mestheadClass: masthead-blog
+mastheadClass: masthead-blog
 ---
 
 After many months of curating, editing, formatting, and stylizing, my second collection of poetry, __Another Flow__, is now available for purchase on Amazon. Containing almost a full year of material from me, it's nearly triple the size of my previous collection, __Babylon Effect__. Experiments with concrete form, collage and blackout poetry, collaborative efforts from the talented Ashley Markowicz, and all of it compiled on the Unix command line with LaTeX. Weeks of perusing TeX Stack Exchange posts, designing the internal layout of the book, ordering and editing the pieces, every second of tedious double-checking has led to this final product, and I could not be happier with it.
