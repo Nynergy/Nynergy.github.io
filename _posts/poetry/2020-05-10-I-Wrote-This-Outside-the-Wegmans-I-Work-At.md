@@ -2,7 +2,7 @@
 layout: poetry-post
 title: I Wrote This Outside the Wegmans I Work At
 written: May 10, 2020
-meta: We’re all caught in the flaring tendrils of uncertainty / Under the blaring PA of holding calls and summons / The belts turning around the rollers, the vacuums whirring
+meta: We’re all caught in the flaring tendrils of uncertainty / Under the blaring PA of holding calls and summons
 category: poetry
 mastheadClass: masthead-poetry
 ---
