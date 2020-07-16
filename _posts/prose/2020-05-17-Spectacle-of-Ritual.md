@@ -53,7 +53,7 @@ A brief pause as Kali tried to remember the name in her excitement.
 
     “Number four?”
 
-Kali gave a Alex a coy smile and leaned forward slightly, like a schoolgirl telling a joke.
+Kali gave Alex a coy smile and leaned forward slightly, like a schoolgirl telling a joke.
 
     “The first three weren’t as big.”
 
