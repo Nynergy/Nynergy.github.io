@@ -2,10 +2,15 @@
 :root {
 	--main-background-color: #220011;
 	--accent-background-color: #331122;
+	--dark-background-color: #110000;
+	--hover-color: #2a0819;
 	--link-color: #eeaa99;
 	--link-accent-color: #ff2233;
 	--header-color: #aa0055;
 	--body-text-color: #ffffff;
+	--poetry-post-color: #cb0643;
+	--prose-post-color: #116e6f;
+	--blog-post-color: #782287;
 }
 
 /* GLOBAL */
