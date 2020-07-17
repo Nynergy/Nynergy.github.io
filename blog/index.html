@@ -8,11 +8,23 @@ mastheadClass: masthead-blog
 <h2>Blog</h2>
 <hr>
 
-<ul>
-	{% for post in site.categories.blog %}
-		<li>
-			<p>{{post.written}} | <a href="{{post.url}}">{{post.title}}</a></p>
-			<p class="indented">{{post.meta}}</p>
-		</li>
-	{% endfor %}
-</ul>
+<div class="container">
+	<table>
+		<thead>
+			<tr>
+				<th><h3>Title and Summary</h3></th>
+				<th><h3>Posted</h3></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for post in site.categories.blog %}
+			<tr class="{{post.category}}" onclick="location.href='{{post.url}}'">
+				<td><div class="meta-container"><a href="{{post.url}}"></a><h4>{{post.title}}</h4><small>{{post.meta}}</small></div></td>
+				<td><div class="posted-container">{{post.written}}</div></td>
+				<td><div class="goto-container"><a href="{{post.url}}"><button class="goto"><i class="fas fa-angle-double-right"></i></button></a></div></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
