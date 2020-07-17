@@ -40,7 +40,7 @@ footer {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: var(--accent-background-color);
+	background-color: var(--hover-color);
 
 	text-align: center;
 }
@@ -54,13 +54,13 @@ footer {
 
 .column-left {
 	float: left;
-	width: 75%;
+	width: 79%;
 }
 
 .column-right {
 	float: right;
 	margin-top: 15px;
-	width: 24%;
+	width: 20%;
 	background-color: var(--accent-background-color);
 
 	text-align: center;
