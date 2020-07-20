@@ -1,13 +1,429 @@
----
----
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-{% include_relative common.css %}
-{% include_relative masthead.css %}
-{% include_relative nav.css %}
-{% include_relative content.css %}
-{% include_relative table.css %}
-{% include_relative poetry.css %}
-{% include_relative prose.css %}
-{% include_relative music.css %}
-{% include_relative gallery.css %}
-{% include_relative about.css %}
+.m-1 {
+  margin: 1rem;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.px-1 {
+  padding: 0 1rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.mx-2 {
+  margin: 0 2rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.px-2 {
+  padding: 0 2rem;
+}
+
+.m-3 {
+  margin: 3rem;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.mx-3 {
+  margin: 0 3rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.px-3 {
+  padding: 0 3rem;
+}
+
+.m-4 {
+  margin: 4rem;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.mx-4 {
+  margin: 0 4rem;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+.px-4 {
+  padding: 0 4rem;
+}
+
+.m-5 {
+  margin: 5rem;
+}
+
+.my-5 {
+  margin: 5rem 0;
+}
+
+.mx-5 {
+  margin: 0 5rem;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.py-5 {
+  padding: 5rem 0;
+}
+
+.px-5 {
+  padding: 0 5rem;
+}
+
+body {
+  background-color: #220011;
+  color: #fff;
+  font: normal 100%/1.4 Georgia, serif;
+  min-height: 400px;
+  margin-bottom: 80px;
+  clear: both;
+}
+
+.main-container h2 {
+  margin: 0.5rem 0;
+}
+.main-container h3 {
+  margin: 0.5rem 0;
+}
+.main-container p {
+  margin: 1rem 0;
+}
+.main-container a {
+  color: #ff2233;
+  text-decoration: none;
+}
+
+.poetry-post h4 {
+  margin: 1rem 0;
+}
+.poetry-post hr {
+  margin: 1rem 0;
+}
+
+.prose-post h4 {
+  margin: 1rem 0;
+}
+.prose-post hr {
+  margin: 1rem 0;
+}
+
+.blog-post h4 {
+  margin: 1rem 0;
+}
+.blog-post hr {
+  margin: 1rem 0;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #18000c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.masthead {
+  padding: 1em;
+  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-home.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: #220011;
+  color: #fff;
+}
+
+.masthead-poetry {
+  padding: 1em;
+  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-poetry.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: #220011;
+  color: #fff;
+}
+
+.masthead-prose {
+  padding: 1em;
+  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-prose.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: #220011;
+  color: #fff;
+}
+
+.masthead-music {
+  padding: 1em;
+  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-music.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: #220011;
+  color: #fff;
+}
+
+.masthead-blog {
+  padding: 1em;
+  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-blog.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: #220011;
+  color: #fff;
+}
+
+.masthead-gallery {
+  padding: 1em;
+  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-gallery.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: #220011;
+  color: #fff;
+}
+
+.masthead-about {
+  padding: 1em;
+  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-about.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: #220011;
+  color: #fff;
+}
+
+nav .nav {
+  list-style-type: none;
+  display: flex;
+}
+nav .nav li {
+  margin: 0 0.4rem;
+}
+nav .nav li:first-of-type {
+  margin-left: 0;
+}
+nav .nav li a {
+  color: #ff8891;
+  text-decoration: none;
+}
+nav .nav .current-page {
+  color: #ff2233;
+}
+nav .nav-bottom {
+  margin: 0;
+  margin-top: 0.3rem;
+  padding: 0;
+}
+nav .nav-bottom li {
+  margin-right: 0 0.2rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+.row .column-right {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 250px;
+  align-items: center;
+}
+.row .column-right .image {
+  padding: 0 1rem;
+  background-color: #3c001e;
+  color: #fff;
+}
+.row .column-right .image:first-child {
+  padding-top: 1rem;
+}
+.row .column-right .image img {
+  width: 100%;
+}
+.row .column-right .caption {
+  padding: 0 1rem;
+  background-color: #3c001e;
+  color: #fff;
+  text-align: center;
+}
+
+.table-container {
+  background-color: #220011;
+  color: #fff;
+  margin: auto;
+  width: 90%;
+}
+
+table {
+  padding: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+table td {
+  cursor: pointer;
+  border: 2px solid #3c001e;
+  padding: 10px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table tbody tr {
+  background-color: #3c001e;
+  color: #fff;
+}
+table tbody tr:hover {
+  background-color: #310019;
+  color: #fff;
+}
+table tbody tr:hover td {
+  border: 2px solid #310019;
+}
+
+.meta-container {
+  text-align: left;
+}
+
+.category {
+  background-color: #3c001e;
+  color: #fff;
+  border-radius: 50px;
+  padding: 2px 10px;
+  text-transform: uppercase;
+}
+
+.category-poetry {
+  background-color: #cb0643;
+  color: #fff;
+}
+
+.category-prose {
+  background-color: #116e6f;
+  color: #fff;
+}
+
+.category-blog {
+  background-color: #782287;
+  color: #fff;
+}
+
+.goto {
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  padding: 5px 10px;
+  opacity: 0;
+}
+
+table tbody tr:hover .goto {
+  background-color: #3c001e;
+  color: #fff;
+  opacity: 1;
+}
+
+.music-container a {
+  color: #ff8891;
+}
+.music-container h4 {
+  margin: 0.5rem 0;
+}
+.music-container .album-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.music-container .album-container .album-description {
+  flex-grow: 1;
+}
+.music-container .album-container .album-art {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 2 0 300px;
+}
+.music-container .album-container .album-art .album-image {
+  padding: 2rem;
+  width: 100%;
+}
+.music-container .album-container .album-art #eastern-experiment,
+.music-container .album-container .album-art #red-miles {
+  padding: 1rem;
+  padding-top: 2rem;
+}
+
+.gallery-container a {
+  color: #ff8891;
+}
+.gallery-container .gallery-collection {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.gallery-container .gallery-collection .gallery-image {
+  margin: 5px;
+  height: 200px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+}
+.about-container .about-description {
+  background-color: #3c001e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+.about-container .about-image {
+  flex-basis: 30%;
+}
+.about-container .about-image #selfie {
+  margin: 20px;
+  width: 100%;
+}

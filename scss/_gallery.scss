@@ -1,0 +1,17 @@
+// GALLERY
+.gallery-container {
+	a {
+		color: lighten($accent-color, 20%);
+	}
+
+	.gallery-collection {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.gallery-image {
+			margin: 5px;
+			height: 200px;
+		}
+	}
+}

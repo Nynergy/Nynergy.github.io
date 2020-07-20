@@ -13,20 +13,22 @@
 	</head>
 	<body>
 
-		<header class="masthead {{page.mastheadClass}}">
+		<div class="masthead {{page.mastheadClass}}">
 			<h1>Lexica Chromatica</h1>
 			<p>Poetry, Music, and Other Strange Scrawlings</p>
 			{% include nav.html navclass='nav-top' %}
-		</header>
+		</div>
 
-		<div class="main-container">
+		<div class="main-container m-1">
 			{{content}}
 		</div>
 
-		<footer>
-			{% include nav.html navclass='nav-bottom' %}
+		<div class="footer">
+			<div class="nav-container">
+				{% include nav.html navclass='nav-bottom' %}
+			</div>
 			<small>Copyright &copy; 2020 Lexica Chromatica</small>
-		</footer>
+		</div>
 
 	</body>
 </html>

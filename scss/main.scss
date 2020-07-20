@@ -1,0 +1,62 @@
+@import 'config';
+@import 'utilities';
+
+body {
+	@include set-colors($primary-color);
+	font: $font-stack;
+	min-height: 400px;
+	margin-bottom: 80px;
+	clear: both;
+}
+
+.main-container {
+	h2 {
+		margin: 0.5rem 0;
+	}
+
+	h3 {
+		margin: 0.5rem 0;
+	}
+
+	p {
+		margin: 1rem 0;
+	}
+
+	a {
+		color: $accent-color;
+		text-decoration: none;
+	}
+}
+
+$post-types: (poetry, prose, blog);
+@each $type in $post-types {
+	.#{$type}-post {
+		h4 {
+			margin: 1rem 0;
+		}
+
+		hr {
+			margin: 1rem 0;
+		}
+	}
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	@include set-colors(darken($primary-color, 2%));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@import 'masthead';
+@import 'nav';
+@import 'columns';
+@import 'table';
+@import 'music';
+@import 'gallery';
+@import 'about';

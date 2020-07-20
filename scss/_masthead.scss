@@ -1,0 +1,36 @@
+// MASTHEAD UTILS
+@mixin set-masthead($gradient-color, $masthead-image) {
+	padding:1em;
+	background: linear-gradient(to bottom, transparent 50%, $gradient-color 100%), url("../img/#{$masthead-image}.jpg") no-repeat center center;
+	background-size: cover;
+	@include set-colors($gradient-color);
+}
+
+// MASTHEADS
+.masthead {
+	@include set-masthead($primary-color, masthead-home);
+}
+
+.masthead-poetry {
+	@include set-masthead($primary-color, masthead-poetry);
+}
+
+.masthead-prose {
+	@include set-masthead($primary-color, masthead-prose);
+}
+
+.masthead-music {
+	@include set-masthead($primary-color, masthead-music);
+}
+
+.masthead-blog {
+	@include set-masthead($primary-color, masthead-blog);
+}
+
+.masthead-gallery {
+	@include set-masthead($primary-color, masthead-gallery);
+}
+
+.masthead-about {
+	@include set-masthead($primary-color, masthead-about);
+}

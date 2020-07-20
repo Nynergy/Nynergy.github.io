@@ -1,5 +1,5 @@
 <nav>
-	<ul class="nav {{include.navclass}}">
+	<ul class="nav {{include.navclass}} my-1">
 		<li><a href="/" {% if page.url == '/' %}class="current-page"{% endif %}>Home</a></li>
 		<li><a href="/poetry/" {% if page.url contains 'poetry' %}class="current-page"{% endif %}>Poetry</a></li>
 		<li><a href="/prose/" {% if page.url contains 'prose' %}class="current-page"{% endif %}>Prose</a></li>

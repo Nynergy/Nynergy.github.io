@@ -1,0 +1,38 @@
+// MUSIC
+.music-container {
+	a {
+		color: lighten($accent-color, 20%);
+	}
+
+	h4 {
+		margin: 0.5rem 0;
+	}
+
+	.album-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.album-description {
+			flex-grow: 1;
+		}
+
+		.album-art {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex: 2 0 300px;
+
+			.album-image {
+				padding: 2rem;
+				width: 100%;
+			}
+
+			#eastern-experiment,
+			#red-miles {
+				padding: 1rem;
+				padding-top: 2rem;
+			}
+		}
+	}
+}
