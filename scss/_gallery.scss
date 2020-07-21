@@ -1,17 +1,24 @@
 // GALLERY
 .gallery-container {
-	a {
-		color: lighten($accent-color, 20%);
-	}
+	.gallery-content {
+		@include set-colors(lighten($primary-color, 5%));
+		padding-top: 0.1rem;
+		margin-top: 1rem;
 
-	.gallery-collection {
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
+		a {
+			color: lighten($accent-color, 20%);
+		}
 
-		.gallery-image {
-			margin: 5px;
-			height: 200px;
+		.gallery-collection {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-wrap: wrap;
+
+			.gallery-image {
+				margin: 5px;
+				height: 200px;
+			}
 		}
 	}
 }

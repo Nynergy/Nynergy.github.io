@@ -420,15 +420,22 @@ table tbody tr:hover .goto {
   grid-column: 3/4;
 }
 
-.gallery-container a {
+.gallery-container .gallery-content {
+  background-color: #3c001e;
+  color: #fff;
+  padding-top: 0.1rem;
+  margin-top: 1rem;
+}
+.gallery-container .gallery-content a {
   color: #ff8891;
 }
-.gallery-container .gallery-collection {
+.gallery-container .gallery-content .gallery-collection {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
-.gallery-container .gallery-collection .gallery-image {
+.gallery-container .gallery-content .gallery-collection .gallery-image {
   margin: 5px;
   height: 200px;
 }
