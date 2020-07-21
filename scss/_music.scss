@@ -1,38 +1,65 @@
 // MUSIC
 .music-container {
-	a {
-		color: lighten($accent-color, 20%);
-	}
+	.card-container {
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-gap: 1rem;
+		
+		.album-card {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			@include set-colors(lighten($primary-color, 3%));
+			padding-top: 0.5rem;
+			margin-top: 0.5rem;
 
-	h4 {
-		margin: 0.5rem 0;
-	}
+			.album-title {
+				text-align: center;
+			}
 
-	.album-container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+			.album-art {
+				display: flex;
+				justify-content: space-around;
+				margin-top: 0.5rem;
 
-		.album-description {
-			flex-grow: 1;
+				.album-image {
+					max-height: 275px;
+					width: 100%;
+				}
+			}
+
+			.album-description {
+				@include set-colors(lighten($primary-color, 5%));
+			}
+
+			.album-links {
+				text-align: center;
+				margin-top: 1rem;
+
+				.album-button {
+					cursor: pointer;
+					border: 0;
+					border-radius: 2px;
+					padding: 5px 15px;
+					@include set-colors($primary-color);
+
+					&:hover {
+						@include set-colors(lighten($primary-color, 10%));
+					}
+				}
+			}
 		}
 
-		.album-art {
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-			flex: 2 0 300px;
+		#adosr {
+			grid-column: 1 / 2;
+		}
 
-			.album-image {
-				padding: 2rem;
-				width: 100%;
-			}
+		#ee-rm {
+			grid-column: 2 / 3;
+		}
 
-			#eastern-experiment,
-			#red-miles {
-				padding: 1rem;
-				padding-top: 2rem;
-			}
+		#tiiimdna {
+			grid-column: 3 / 4;
 		}
 	}
 }

@@ -364,34 +364,60 @@ table tbody tr:hover .goto {
   opacity: 1;
 }
 
-.music-container a {
-  color: #ff8891;
+.music-container .card-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 1rem;
 }
-.music-container h4 {
-  margin: 0.5rem 0;
-}
-.music-container .album-container {
+.music-container .card-container .album-card {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #310019;
+  color: #fff;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
 }
-.music-container .album-container .album-description {
-  flex-grow: 1;
+.music-container .card-container .album-card .album-title {
+  text-align: center;
 }
-.music-container .album-container .album-art {
+.music-container .card-container .album-card .album-art {
   display: flex;
-  align-items: center;
   justify-content: space-around;
-  flex: 2 0 300px;
+  margin-top: 0.5rem;
 }
-.music-container .album-container .album-art .album-image {
-  padding: 2rem;
+.music-container .card-container .album-card .album-art .album-image {
+  max-height: 275px;
   width: 100%;
 }
-.music-container .album-container .album-art #eastern-experiment,
-.music-container .album-container .album-art #red-miles {
-  padding: 1rem;
-  padding-top: 2rem;
+.music-container .card-container .album-card .album-description {
+  background-color: #3c001e;
+  color: #fff;
+}
+.music-container .card-container .album-card .album-links {
+  text-align: center;
+  margin-top: 1rem;
+}
+.music-container .card-container .album-card .album-links .album-button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  padding: 5px 15px;
+  background-color: #220011;
+  color: #fff;
+}
+.music-container .card-container .album-card .album-links .album-button:hover {
+  background-color: #55002b;
+  color: #fff;
+}
+.music-container .card-container #adosr {
+  grid-column: 1/2;
+}
+.music-container .card-container #ee-rm {
+  grid-column: 2/3;
+}
+.music-container .card-container #tiiimdna {
+  grid-column: 3/4;
 }
 
 .gallery-container a {
