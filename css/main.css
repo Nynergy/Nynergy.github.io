@@ -451,7 +451,26 @@ table tbody tr:hover .goto {
   flex-direction: column;
   align-items: center;
   margin: 10px;
-  padding: 10px;
+  padding: 10px 20px;
+}
+.about-container .about-description p {
+  margin: 0.5rem 0;
+}
+.about-container .about-description .about-links {
+  display: flex;
+}
+.about-container .about-description .about-links .about-button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: #3c001e;
+  color: #fff;
+}
+.about-container .about-description .about-links .about-button:hover {
+  background-color: #55002b;
+  color: #fff;
 }
 .about-container .about-image {
   flex-basis: 30%;
