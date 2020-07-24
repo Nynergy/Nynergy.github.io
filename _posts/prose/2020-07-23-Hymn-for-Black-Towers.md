@@ -32,13 +32,13 @@ or spirit. Zenith light falling over the grass.
 Pulling a slip of brittle paper from the satchel, Clover reads the printed
 text, a familiar passage of youth:
 
-_And as the seas ebb and flow with the tide,
-So too the tepid waters within
-Will rise and overtake the vibrant soul.
+_And as the seas ebb and flow with the tide,_ <br>
+_So too the tepid waters within_ <br>
+_Will rise and overtake the vibrant soul._
 
-Quiet the raging stillness to stone,
-And remember the power of the words
-From which you draw your existence._
+_Quiet the raging stillness to stone,_ <br>
+_And remember the power of the words_ <br>
+_From which you draw your existence._
 
 An emerald shimmer skitters along their skin as the memory of power takes
 shape, mouthing the words so deeply instilled.
