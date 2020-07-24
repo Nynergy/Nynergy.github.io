@@ -67,7 +67,7 @@ Jotting the new information in a journal and tightening their thin cloak
 against the searching breeze, they head north.
 
 The pillars of the House stretch up into the dull sky. Smooth, nearly
-featureless totems. Gazing down at the solitary figure making a way aross the
+featureless totems. Gazing down at the solitary figure making a way across the
 field. Clover felt them watching, even at such a distance.
 
 Cold wind running through their silvery hair, disturbing the faint green
