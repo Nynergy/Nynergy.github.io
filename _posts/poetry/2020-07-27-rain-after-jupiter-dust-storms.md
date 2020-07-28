@@ -1,6 +1,6 @@
 ---
 layout: poetry-post
-title: r a i n :: a f t e r :: j u p i t e r :: d u s t :: s t o r m s
+title: r a i n ;; a f t e r ;; j u p i t e r ;; d u s t ;; s t o r m s
 written: July 27, 2020
 meta: Bloom, bloom, under the storm that / Flooded out the little birds / Fresh from eggs / Never seen
 category: poetry
