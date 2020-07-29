@@ -180,6 +180,10 @@ body {
   align-items: center;
   justify-content: center;
 }
+.footer .copyright-container {
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+}
 
 .masthead {
   padding: 1em;
@@ -258,9 +262,10 @@ nav .nav-bottom {
   margin: 0;
   margin-top: 0.3rem;
   padding: 0;
+  font-size: 0.8rem;
 }
 nav .nav-bottom li {
-  margin-right: 0 0.2rem;
+  margin-right: 0.2rem;
 }
 
 .row {

@@ -51,6 +51,11 @@ $post-types: (poetry, prose, blog);
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	.copyright-container {
+		margin-bottom: 0.4rem;
+		font-size: 0.8rem;
+	}
 }
 
 @import 'masthead';
