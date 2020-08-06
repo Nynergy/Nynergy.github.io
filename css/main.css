@@ -209,6 +209,14 @@ body {
   color: #fff;
 }
 
+.masthead-genuflectors {
+  padding: 1em;
+  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-genuflectors.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: #220011;
+  color: #fff;
+}
+
 .masthead-music {
   padding: 1em;
   background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-music.jpg") no-repeat center center;
@@ -355,6 +363,11 @@ table tbody tr:hover td {
   color: #fff;
 }
 
+.category-memory {
+  background-color: #cc6600;
+  color: #fff;
+}
+
 .goto {
   cursor: pointer;
   border: 0;
@@ -367,6 +380,18 @@ table tbody tr:hover .goto {
   background-color: #3c001e;
   color: #fff;
   opacity: 1;
+}
+
+.prose-collection {
+  background-color: #3c001e;
+  color: #fff;
+  padding: 0.5rem;
+}
+.prose-collection h3 {
+  margin: 0;
+}
+.prose-collection p {
+  margin: 0;
 }
 
 .music-container .card-container {

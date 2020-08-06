@@ -1,0 +1,47 @@
+---
+layout: prose-collection
+title: 2Xth Century Genuflectors
+meta: A series of altered futurist translations and obfuscated transmissions.
+mastheadClass: masthead-genuflectors
+---
+
+<h2>2Xth Century Genuflectors</h2>
+<hr>
+
+<p>In X amount in time as flowing by in spurious memories. These neurons firing
+rails of light. Corrupted state, reset. These are the documents. Your
+correspondence is appreciated. Borealis songs skipping school girls. Screwed
+in the metal ground. Here where there is somewhere other before remembering in
+scraps of flaming photographs. The gun barrels pointed fingers accused. Glass
+people glass churches prone under the bridge gazers. Jumping. Smaller
+crucifixes growing. Mark the spreadsheets hanging over after lifters raising
+limbs from earth. Suits sparkle dull boys parking outside the scene. We live
+here drinking tumbling what was that. Quick dry facade painted over.</p>
+
+<p>Come listen in. Speaking tongues and teeth. These people are not to be
+trusted. They are within and without us.</p>
+
+<hr>
+
+<div class="table-container">
+	<table>
+		<thead>
+			<tr>
+				<th><h3>Title and Summary</h3></th>
+				<th><h3>Memory</h3></th>
+				<th><h3>Posted</h3></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for post in site.genuflectors %}
+			<tr class="memory" onclick="location.href='{{post.url}}'">
+				<td><div class="meta-container"><a href="{{post.url}}"></a><h4>{{post.title}}</h4><small>{{post.meta}}</small></div></td>
+				<td><div class="category-container"><small class="category category-memory">{{post.memory}}</small></div></td>
+				<td><div class="posted-container">{{post.written}}</div></td>
+				<td><div class="goto-container"><a href="{{post.url}}" class="goto"><i class="fas fa-angle-double-right"></i></a></div></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>

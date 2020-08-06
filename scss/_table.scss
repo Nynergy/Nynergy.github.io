@@ -57,6 +57,10 @@ table {
 	@include set-colors($blog-color);
 }
 
+.category-memory {
+	@include set-colors($memory-color);
+}
+
 .goto {
 	cursor: pointer;
 	border: 0;

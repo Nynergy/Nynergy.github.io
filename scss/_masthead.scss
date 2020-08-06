@@ -19,6 +19,10 @@
 	@include set-masthead($primary-color, masthead-prose);
 }
 
+.masthead-genuflectors {
+	@include set-masthead($primary-color, masthead-genuflectors);
+}
+
 .masthead-music {
 	@include set-masthead($primary-color, masthead-music);
 }

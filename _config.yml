@@ -1,2 +1,7 @@
 exclude: ['README.md']
 permalink: pretty
+
+collections:
+  genuflectors:
+    output: true
+    permalink: /prose/:collection/:title

@@ -1,0 +1,15 @@
+// PROSE PAGE
+.prose-collection {
+	@include set-colors(lighten($primary-color, 5%));
+	padding: 0.5rem;
+
+	h3 {
+		margin: 0;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+// COLLECTION PAGE
