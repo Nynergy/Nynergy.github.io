@@ -12,7 +12,7 @@ nav {
 			}
 
 			a {
-				color: lighten($accent-color, 20%);
+				color: $accent-color-light-20;
 				text-decoration: none;
 			}
 		}

@@ -9,7 +9,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			@include set-colors(lighten($primary-color, 3%));
+			@include set-colors($primary-color-light-3);
 			padding-top: 0.5rem;
 			margin-top: 0.5rem;
 
@@ -29,7 +29,7 @@
 			}
 
 			.album-description {
-				@include set-colors(lighten($primary-color, 5%));
+				@include set-colors($primary-color-light-5);
 			}
 
 			.album-links {
@@ -44,7 +44,7 @@
 					@include set-colors($primary-color);
 
 					&:hover {
-						@include set-colors(lighten($primary-color, 10%));
+						@include set-colors($primary-color-light-10);
 					}
 				}
 			}

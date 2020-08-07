@@ -14,7 +14,7 @@
 
 		.image {
 			padding: 0 1rem;
-			@include set-colors(lighten($primary-color, 5%));
+			@include set-colors($primary-color-light-5);
 
 			&:first-child {
 				padding-top: 1rem;
@@ -27,7 +27,7 @@
 
 		.caption {
 			padding: 0 1rem;
-			@include set-colors(lighten($primary-color, 5%));
+			@include set-colors($primary-color-light-5);
 			text-align: center;
 		}
 	}
