@@ -1,7 +1,36 @@
 // PROSE PAGE
 .prose-collection {
+	display: flex;
+	align-items: center;
 	@include set-colors($primary-color-light-5);
 	padding: 0.5rem;
+	cursor: pointer;
+
+	.collection-counter {
+		margin: auto;
+		text-align: center;
+	}
+
+	.collection-button {
+		margin: auto;
+	}
+
+	.goto {
+		@include set-colors($primary-color);
+		cursor: pointer;
+		border: 0;
+		border-radius: 2px;
+		padding: 5px 10px;
+		opacity: 1;
+
+		&:hover {
+			@include set-colors($primary-color-light-10);
+		}
+	}
+
+	a {
+		color: #fff;
+	}
 
 	h3 {
 		margin: 0;

@@ -389,9 +389,35 @@ table tbody tr:hover .goto {
 }
 
 .prose-collection {
+  display: flex;
+  align-items: center;
   background-color: #3c001e;
   color: #fff;
   padding: 0.5rem;
+  cursor: pointer;
+}
+.prose-collection .collection-counter {
+  margin: auto;
+  text-align: center;
+}
+.prose-collection .collection-button {
+  margin: auto;
+}
+.prose-collection .goto {
+  background-color: #220011;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  padding: 5px 10px;
+  opacity: 1;
+}
+.prose-collection .goto:hover {
+  background-color: #55002b;
+  color: #fff;
+}
+.prose-collection a {
+  color: #fff;
 }
 .prose-collection h3 {
   margin: 0;

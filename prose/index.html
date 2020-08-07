@@ -8,10 +8,23 @@ mastheadClass: masthead-prose
 <h2>Prose Collections</h2>
 <hr>
 
-<div class="prose-collection m-1">
-	<a href="/prose/genuflectors"><h3>2Xth Century Genuflectors</h3></a>
-	<p>Come listen in. Speaking tongues and teeth. These people are not to be trusted. They are within and without us.</p>
-	<small>A series of altered futurist translations and obfuscated transmissions.</small>
+<div class="prose-collection m-1" onclick="location.href='/prose/genuflectors'">
+	<div class="collection-info">
+		<a href="/prose/genuflectors"><h3>2Xth Century Genuflectors</h3></a>
+		<p>Come listen in. Speaking tongues and teeth. These people are not to be trusted. They are within and without us.</p>
+		<small>A series of altered futurist translations and obfuscated transmissions.</small>
+	</div>
+	<div class="collection-counter">
+		<small>Number of Posts</small>
+		{% assign counter = 0 %}
+		{% for post in site.genuflectors %}
+			{% assign counter = counter | plus: 1 %}
+		{% endfor %}
+		<p>{{counter}}</p>
+	</div>
+	<div class="collection-button">
+		<a href="/prose/genuflectors" class="goto">View Collection</a>
+	</div>
 </div>
 
 <hr>
