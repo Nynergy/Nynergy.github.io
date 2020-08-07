@@ -12,4 +12,9 @@
 	}
 }
 
+.prose-content {
+	@include set-colors($primary-color-light-5);
+	padding: 0.01rem 1rem;
+}
+
 // COLLECTION PAGE

@@ -382,6 +382,12 @@ table tbody tr:hover .goto {
   opacity: 1;
 }
 
+.poetry-content {
+  background-color: #3c001e;
+  color: #fff;
+  padding: 0.01rem 1rem;
+}
+
 .prose-collection {
   background-color: #3c001e;
   color: #fff;
@@ -392,6 +398,12 @@ table tbody tr:hover .goto {
 }
 .prose-collection p {
   margin: 0;
+}
+
+.prose-content {
+  background-color: #3c001e;
+  color: #fff;
+  padding: 0.01rem 1rem;
 }
 
 .music-container .card-container {
@@ -450,14 +462,17 @@ table tbody tr:hover .goto {
   grid-column: 3/4;
 }
 
+.blog-content {
+  background-color: #3c001e;
+  color: #fff;
+  padding: 0.01rem 1rem;
+}
+
 .gallery-container .gallery-content {
   background-color: #3c001e;
   color: #fff;
   padding-top: 0.1rem;
   margin-top: 1rem;
-}
-.gallery-container .gallery-content a {
-  color: #ff8891;
 }
 .gallery-container .gallery-content .gallery-collection {
   display: flex;
