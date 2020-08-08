@@ -41,6 +41,20 @@ $post-types: (poetry, prose, blog);
 	}
 }
 
+.content {
+	@include set-colors($primary-color-light-5);
+
+	p {
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
 .footer {
 	position: fixed;
 	left: 0;
@@ -62,9 +76,7 @@ $post-types: (poetry, prose, blog);
 @import 'nav';
 @import 'columns';
 @import 'table';
-@import 'poetry';
 @import 'prose';
 @import 'music';
-@import 'blog';
 @import 'gallery';
 @import 'about';

@@ -168,6 +168,17 @@ body {
   margin: 1rem 0;
 }
 
+.content {
+  background-color: #3c001e;
+  color: #fff;
+}
+.content p:first-child {
+  margin-top: 0;
+}
+.content p:last-child {
+  margin-bottom: 0;
+}
+
 .footer {
   position: fixed;
   left: 0;
@@ -382,12 +393,6 @@ table tbody tr:hover .goto {
   opacity: 1;
 }
 
-.poetry-content {
-  background-color: #3c001e;
-  color: #fff;
-  padding: 0.01rem 1rem;
-}
-
 .prose-collection {
   display: flex;
   align-items: center;
@@ -424,12 +429,6 @@ table tbody tr:hover .goto {
 }
 .prose-collection p {
   margin: 0;
-}
-
-.prose-content {
-  background-color: #3c001e;
-  color: #fff;
-  padding: 0.01rem 1rem;
 }
 
 .music-container .card-container {
@@ -486,12 +485,6 @@ table tbody tr:hover .goto {
 }
 .music-container .card-container #tiiimdna {
   grid-column: 3/4;
-}
-
-.blog-content {
-  background-color: #3c001e;
-  color: #fff;
-  padding: 0.01rem 1rem;
 }
 
 .gallery-container .gallery-content {
