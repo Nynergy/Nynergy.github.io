@@ -4,6 +4,7 @@ title: Cantata for Black Robes (A Concept)
 written: July 27, 2020
 meta: Another short concept piece about the world of Clover.
 category: prose
+tags: clover exploration ritual
 mastheadClass: masthead-prose
 ---
 

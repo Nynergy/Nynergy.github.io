@@ -4,6 +4,7 @@ title: On Expectations and Burnout
 written: August 14, 2020
 meta: On my recent struggles with creative output.
 category: blog
+tags: creativity burnout
 mastheadClass: masthead-blog
 ---
 

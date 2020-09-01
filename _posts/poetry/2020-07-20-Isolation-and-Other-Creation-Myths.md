@@ -4,6 +4,7 @@ title: Isolation and Other Creation Myths
 written: July 20, 2020
 meta: Sun pulling tree needle sheets over / A tired head / For sleep
 category: poetry
+tags: isolation nature
 mastheadClass: masthead-poetry
 ---
 

@@ -4,6 +4,7 @@ title: Some Aesthetic Changes
 written: July 17, 2020
 meta: An update on some changes made to the site.
 category: blog
+tags: update webdev
 mastheadClass: masthead-blog
 ---
 

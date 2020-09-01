@@ -4,6 +4,7 @@ title: On Linux and the Art of Digital Gardening
 written: July 06, 2020
 meta: An explanation of my technological philosophy and update on my Linux system.
 category: blog
+tags: linux gentoo digital
 mastheadClass: masthead-blog
 ---
 

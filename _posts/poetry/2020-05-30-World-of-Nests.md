@@ -4,6 +4,7 @@ title: World of Nests
 written: May 30, 2020
 meta: Black streets fanning out / Ripples through the patches of trees / We keep / Between the brownstone blocks / On fire
 category: poetry
+tags: abstract birds protests
 mastheadClass: masthead-poetry
 ---
 

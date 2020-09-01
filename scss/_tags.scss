@@ -1,0 +1,24 @@
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+}
+
+.tag {
+	@include set-colors($primary-color-light-5);
+	margin: 0.2rem;
+	padding: 0.1rem 0.3rem;
+
+	a {
+		color: #fff;
+	}
+
+	&:hover {
+		cursor: pointer;
+
+		a {
+			color: $accent-color;
+		}
+	}
+}

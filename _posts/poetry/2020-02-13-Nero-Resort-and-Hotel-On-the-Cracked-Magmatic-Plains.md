@@ -4,6 +4,7 @@ title: Nero Resort and Hotel (On the Cracked Magmatic Plains)
 written: February 13, 2020
 meta: Deep jade walls in the earth looking out over tracks strangely zigging and zagging looking for purchase up the steep ravine walls.
 category: poetry
+tags: abstract vacation
 mastheadClass: masthead-poetry
 ---
 

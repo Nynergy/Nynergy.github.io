@@ -4,6 +4,7 @@ title: Tackling Burnout With Lambda Strategies
 written: August 19, 2020
 meta: Introducing a silly little Haskell program I wrote to combat creative burnout.
 category: blog
+tags: coding haskell burnout
 mastheadClass: masthead-blog
 ---
 

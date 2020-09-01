@@ -4,6 +4,7 @@ title: I Wrote This Outside the Wegmans I Work At
 written: May 10, 2020
 meta: We’re all caught in the flaring tendrils of uncertainty / Under the blaring PA of holding calls and summons
 category: poetry
+tags: abstract
 mastheadClass: masthead-poetry
 ---
 

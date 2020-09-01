@@ -4,6 +4,7 @@ title: A Dream For Our Fathers
 written: August 11, 2020
 meta: whirling pool of thoughts / idly spinning / beneath dullness / above / me
 category: poetry
+tags: abstract isolation dreams memory
 mastheadClass: masthead-poetry
 ---
 

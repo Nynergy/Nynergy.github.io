@@ -4,6 +4,7 @@ title: Migration
 written: March 03, 2020
 meta: The birds moving around poles of light streaming down / Searching rays scanning shores and radar bays bouncing signals
 category: poetry
+tags: birds time nature
 mastheadClass: masthead-poetry
 ---
 

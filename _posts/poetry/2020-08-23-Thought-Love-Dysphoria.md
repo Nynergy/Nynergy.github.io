@@ -4,6 +4,7 @@ title: Thought Love (Dysphoria)
 written: August 23, 2020
 meta: hollow core whispers skittering across the dust / to my fingertips fleeing some / quietness i cannot / extricate
 category: poetry
+tags: abstract isolation love
 mastheadClass: masthead-poetry
 ---
 

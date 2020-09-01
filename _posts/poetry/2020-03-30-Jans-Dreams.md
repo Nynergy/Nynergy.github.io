@@ -4,6 +4,7 @@ title: Jan's Dreams
 written: March 30, 2020
 meta: Down at the end of the hall / Acrylic petals fall / Ing off the stems like au / Tumn shades or specters
 category: poetry
+tags: abstract art dreams
 mastheadClass: masthead-poetry
 ---
 

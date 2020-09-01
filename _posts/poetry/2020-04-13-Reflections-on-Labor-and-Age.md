@@ -4,6 +4,7 @@ title: Reflections on Labor and Age
 written: April 13, 2020
 meta: Paper people folding feet across the miles / Tiled and rough with facsimile stone
 category: poetry
+tags: time memory
 mastheadClass: masthead-poetry
 ---
 

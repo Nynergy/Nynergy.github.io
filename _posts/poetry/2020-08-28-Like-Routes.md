@@ -4,6 +4,7 @@ title: Like Routes
 written: August 28, 2020
 meta: The lightning bugs left months ago / Your gossamer wake taking them out on / Straw rafts
 category: poetry
+tags: abstract nature change
 mastheadClass: masthead-poetry
 ---
 

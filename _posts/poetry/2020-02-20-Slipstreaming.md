@@ -4,6 +4,7 @@ title: Slipstreaming
 written: February 20, 2020
 meta: Your hand in the door / Holding something open in the light / Shining beams through lenses
 category: poetry
+tags: abstract slipstream memory
 mastheadClass: masthead-poetry
 ---
 

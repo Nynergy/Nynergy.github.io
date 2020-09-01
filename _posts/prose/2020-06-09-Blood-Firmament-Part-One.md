@@ -4,6 +4,7 @@ title: Blood Firmament (Part One)
 written: June 09, 2020
 meta: Part one of an ongoing short story about nature, exploration, and humanity.
 category: prose
+tags: blood-firmament landscapes nature exploration
 mastheadClass: masthead-prose
 ---
 

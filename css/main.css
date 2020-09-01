@@ -776,6 +776,29 @@ table tbody tr:hover .goto {
 }
 
 /* Literal.Number.Integer.Long */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tag {
+  background-color: #3c001e;
+  color: #fff;
+  margin: 0.2rem;
+  padding: 0.1rem 0.3rem;
+}
+.tag a {
+  color: #fff;
+}
+.tag:hover {
+  cursor: pointer;
+}
+.tag:hover a {
+  color: #ff2233;
+}
+
 .prose-collection {
   display: flex;
   align-items: center;

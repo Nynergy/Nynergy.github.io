@@ -4,6 +4,7 @@ title: Love Dissolves
 written: March 30, 2019
 meta: A study on idealized love in imperfect circumstances.
 category: prose
+tags: love imperfection
 mastheadClass: masthead-prose
 ---
 

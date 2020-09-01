@@ -4,6 +4,7 @@ title: Tuscarora
 written: May 04, 2020
 meta: A small vignette about my time camping with the Boy Scouts, circa 2012.
 category: prose
+tags: nature memory vignette
 mastheadClass: masthead-prose
 ---
 

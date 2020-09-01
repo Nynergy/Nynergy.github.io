@@ -5,6 +5,7 @@ written: August 10, 2020
 date: 2020-08-10
 meta: Product functions as expected, side effects may include but are not limited to-
 memory: II
+tags: genuflectors abstract memory dreams
 mastheadClass: masthead-genuflectors
 ---
 

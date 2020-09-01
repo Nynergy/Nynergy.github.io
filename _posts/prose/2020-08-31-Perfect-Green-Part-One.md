@@ -4,6 +4,7 @@ title: Perfect Green (Part One)
 written: August 31, 2020
 meta: Part one of an ongoing story about mystery, purpose, connection, and riichi mahjong.
 category: prose
+tags: perfect-green mahjong
 mastheadClass: masthead-prose
 ---
 

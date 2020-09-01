@@ -4,6 +4,7 @@ title: Another Flow Release Announcement
 written: June 06, 2020
 meta: My second collection of original poetry is now available!
 category: blog
+tags: book another-flow announcement
 mastheadClass: masthead-blog
 ---
 

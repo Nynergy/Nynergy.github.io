@@ -4,6 +4,7 @@ title: Landscapes That Haunt Me
 written: July 30, 2020
 meta: A deep dive into my thoughts on music, art, and landscapes.
 category: blog
+tags: music art landscapes
 mastheadClass: masthead-blog
 ---
 

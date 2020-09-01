@@ -5,6 +5,7 @@ written: August 20, 2020
 date: 2020-08-20
 meta: Customer feedback and data scraping (marketing divinations).
 memory: III
+tags: genuflectors abstract memory
 mastheadClass: masthead-genuflectors
 ---
 

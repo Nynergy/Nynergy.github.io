@@ -4,6 +4,7 @@ title: Captain Sunflower
 written: July 06, 2020
 meta: A short story about baggage, emotional instability, and other abstractions.
 category: prose
+tags: abstract drama love baggage
 mastheadClass: masthead-prose
 ---
 

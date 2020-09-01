@@ -4,6 +4,7 @@ title: A Kiss from Stiletto
 written: March 21, 2020
 meta: Lower lot in the middle of the woods. Quarantine ragers blasting lights and noise out into the night.
 category: poetry
+tags: abstract stiletto dreams
 mastheadClass: masthead-poetry
 ---
 

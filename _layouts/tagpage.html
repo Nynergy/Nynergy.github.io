@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<h1>Posts with tag: {{ page.tag }}</h1>
+<hr>
+<div class="table-container">
+	<table>
+		<thead>
+			<tr>
+				<th><h3>Title and Summary</h3></th>
+				<th><h3>Category</h3></th>
+				<th><h3>Posted</h3></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for post in site.tags[page.tag] %}
+			<tr class="{{post.category}}" onclick="location.href='{{post.url}}'">
+				<td><div class="meta-container"><a href="{{post.url}}"></a><h4>{{post.title}}</h4><small>{{post.meta}}</small></div></td>
+				<td><div class="category-container"><small class="category category-{{post.category}}">{{post.category}}</small></div></td>
+				<td><div class="posted-container">{{post.written}}</div></td>
+				<td><div class="goto-container"><a href="{{post.url}}" class="goto"><i class="fas fa-angle-double-right"></i></a></div></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+<br>
+<hr>
+<h2>Other Tags</h2>
+{% include tagcloud.html %}

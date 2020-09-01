@@ -4,6 +4,7 @@ title: Vermiculate Man
 written: April 08, 2020
 meta: Tessellations reorganizing mirror worlds / At the edges sewn with pine needles
 category: poetry
+tags: abstract memory
 mastheadClass: masthead-poetry
 ---
 

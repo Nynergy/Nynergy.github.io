@@ -1,0 +1,11 @@
+<div class="tags">
+	<h6>Tags ::&nbsp;</h6>
+	{% for tag in page.tags %}
+		{% capture tag_name %}{{ tag }}{% endcapture %}
+		<div class="tag">
+			<a href="/tag/{{ tag_name }}">
+				<code>{{tag_name}}</code>
+			</a>
+		</div>
+	{% endfor %}
+</div>

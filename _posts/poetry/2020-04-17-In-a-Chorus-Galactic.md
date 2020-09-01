@@ -4,6 +4,7 @@ title: In a Chorus Galactic
 written: April 17, 2020
 meta: Born dancing in ritual orbits / Around great pillars and beating heart anchors
 category: poetry
+tags: abstract nature life
 mastheadClass: masthead-poetry
 ---
 

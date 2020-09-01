@@ -4,6 +4,7 @@ title: Going a Bit Further
 written: July 21, 2020
 meta: An explanation of the site's styling overhaul done under the hood.
 category: blog
+tags: update webdev
 mastheadClass: masthead-blog
 ---
 

@@ -5,6 +5,7 @@ written: August 06, 2020
 date: 2020-08-06
 meta: Haze suites hooked up per standard and proper paperwork.
 memory: I
+tags: genuflectors abstract memory
 mastheadClass: masthead-genuflectors
 ---
 
