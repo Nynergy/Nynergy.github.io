@@ -776,11 +776,15 @@ table tbody tr:hover .goto {
 }
 
 /* Literal.Number.Integer.Long */
-.tags {
+.tags, .tags-cloud {
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+}
+.tags-cloud {
+  margin: auto;
 }
 
 .tag {

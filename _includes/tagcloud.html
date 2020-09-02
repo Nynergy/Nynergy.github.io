@@ -5,7 +5,7 @@
 {% endcapture %}
 
 {% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
-<div class="tags">
+<div class="tags-cloud">
 {% for temptag in sortedtemptags %}
 	{% assign tagitems = temptag | split:'#' %}
 	{% capture tag_name %}{{ tagitems[1] }}{% endcapture %}

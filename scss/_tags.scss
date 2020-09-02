@@ -1,8 +1,14 @@
 .tags {
+	width: 90%;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	align-items: center;
+
+	&-cloud {
+		@extend .tags;
+		margin: auto;
+	}
 }
 
 .tag {
