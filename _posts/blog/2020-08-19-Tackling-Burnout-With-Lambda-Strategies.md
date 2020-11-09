@@ -78,7 +78,7 @@ And that's it. That's the entire program. You may ask, "But wait, Ben, how do al
 ## The Product
 <hr>
 
-![alt text](/img/lambda-strategies.jpg?raw=true)
+![showcase](/img/lambda-strategies.jpg?raw=true)
 
 As it stands, the program exists in a GitHub repository [here](https://github.com/Nynergy/lambda-strategies). Feel free to clone it and play around, make requests, file issues, complain about dirty impure code, whatever you like. I'm a novice when it comes to functional programming, so I'm honestly surprised I even got something this simple working. And now I can use it when working on my various creative projects. Others can use it however they like, perhaps as a simple dialog box, though there are countless better ways of implementing that, even with the brick library itself.
 
