@@ -1,20 +1,83 @@
 // GALLERY
 .gallery-container {
-	.gallery-content {
-		@include set-colors($primary-color-light-5);
-		padding-top: 0.1rem;
-		margin-top: 1rem;
+    // MAIN PAGE CARDS
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
 
-		.gallery-collection {
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-			flex-wrap: wrap;
+        .gallery-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include set-colors($primary-color-light-3);
+            padding-top: 0.5rem;
+            margin-top: 0.5rem;
 
-			.gallery-image {
-				margin: 5px;
-				height: 200px;
-			}
-		}
-	}
+            .gallery-title {
+                text-align: center;
+            }
+
+            .gallery-lead-art {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 0.5rem;
+
+                .gallery-lead-image {
+                    max-height: 275px;
+                    width: 100%;
+                }
+            }
+
+            .gallery-description {
+                @include set-colors($primary-color-light-5);
+                padding: 1rem;
+            }
+
+            .gallery-links {
+                text-align: center;
+                margin-top: 1rem;
+
+                .gallery-button {
+                    cursor: pointer;
+                    border: 0;
+                    border-radius: 2px;
+                    padding: 5px 15px;
+                    @include set-colors($primary-color);
+                    transition: background-color 0.2s;
+                    transition-timing-function: linear;
+
+                    &:hover {
+                        @include set-colors($primary-color-light-10);
+                    }
+                }
+            }
+        }
+
+        #gl {
+            grid-column: 1 / 2;
+        }
+
+        #sn {
+            grid-column: 2 / 3;
+        }
+    }
+
+    // GALLERY COLLECTIONS
+    .gallery-content {
+        margin: 1rem;
+        padding: 1rem;
+        @include set-colors($primary-color-light-3);
+
+        .gallery-collection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .gallery-image {
+                max-height: 200px;
+                padding: 0.5rem;
+            }
+        }
+    }
 }

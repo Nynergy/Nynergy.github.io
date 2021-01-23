@@ -937,21 +937,75 @@ table tbody tr:hover .goto {
   grid-column: 3/4;
 }
 
-.gallery-container .gallery-content {
+.gallery-container .card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+.gallery-container .card-container .gallery-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #310019;
+  color: #fff;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+}
+.gallery-container .card-container .gallery-card .gallery-title {
+  text-align: center;
+}
+.gallery-container .card-container .gallery-card .gallery-lead-art {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+.gallery-container .card-container .gallery-card .gallery-lead-art .gallery-lead-image {
+  max-height: 275px;
+  width: 100%;
+}
+.gallery-container .card-container .gallery-card .gallery-description {
   background-color: #3c001e;
   color: #fff;
-  padding-top: 0.1rem;
+  padding: 1rem;
+}
+.gallery-container .card-container .gallery-card .gallery-links {
+  text-align: center;
   margin-top: 1rem;
+}
+.gallery-container .card-container .gallery-card .gallery-links .gallery-button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  padding: 5px 15px;
+  background-color: #220011;
+  color: #fff;
+  transition: background-color 0.2s;
+  transition-timing-function: linear;
+}
+.gallery-container .card-container .gallery-card .gallery-links .gallery-button:hover {
+  background-color: #55002b;
+  color: #fff;
+}
+.gallery-container .card-container #gl {
+  grid-column: 1/2;
+}
+.gallery-container .card-container #sn {
+  grid-column: 2/3;
+}
+.gallery-container .gallery-content {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #310019;
+  color: #fff;
 }
 .gallery-container .gallery-content .gallery-collection {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .gallery-container .gallery-content .gallery-collection .gallery-image {
-  margin: 5px;
-  height: 200px;
+  max-height: 200px;
+  padding: 0.5rem;
 }
 
 .about-container {
