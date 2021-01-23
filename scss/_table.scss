@@ -16,11 +16,15 @@ table {
 		padding: 10px;
 		text-align: center;
 		border-collapse: collapse;
+        transition: border 0.2s;
+        transition-timing-function: linear;
 	}
 
 	tbody {
 		tr {
 			@include set-colors($primary-color-light-5);
+            transition: background-color 0.2s;
+            transition-timing-function: linear;
 
 			&:hover {
 				@include set-colors($primary-color-light-3);
@@ -67,6 +71,8 @@ table {
 	border-radius: 2px;
 	padding: 5px 10px;
 	opacity: 0;
+    transition: opacity 0.2s, color 0.2s;
+    transition-timing-function: linear;
 }
 
 table tbody tr:hover .goto {

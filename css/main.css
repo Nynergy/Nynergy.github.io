@@ -364,10 +364,14 @@ table td {
   padding: 10px;
   text-align: center;
   border-collapse: collapse;
+  transition: border 0.2s;
+  transition-timing-function: linear;
 }
 table tbody tr {
   background-color: #3c001e;
   color: #fff;
+  transition: background-color 0.2s;
+  transition-timing-function: linear;
 }
 table tbody tr:hover {
   background-color: #310019;
@@ -415,6 +419,8 @@ table tbody tr:hover td {
   border-radius: 2px;
   padding: 5px 10px;
   opacity: 0;
+  transition: opacity 0.2s, color 0.2s;
+  transition-timing-function: linear;
 }
 
 table tbody tr:hover .goto {
