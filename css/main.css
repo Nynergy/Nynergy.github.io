@@ -143,7 +143,7 @@ body {
   margin: 1rem 0;
 }
 .main-container a {
-  color: #ff2233;
+  color: #ff2266;
   text-decoration: none;
 }
 
@@ -204,93 +204,117 @@ body {
 
 .masthead {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-home.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-home.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #220011;
+  background-color: #3c001e;
   color: #fff;
 }
 
 .masthead-poetry {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-poetry.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-poetry.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #220011;
+  background-color: #3c001e;
   color: #fff;
 }
 
 .masthead-prose {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-prose.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-prose.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #220011;
+  background-color: #3c001e;
   color: #fff;
 }
 
 .masthead-genuflectors {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-genuflectors.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-genuflectors.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #220011;
+  background-color: #3c001e;
   color: #fff;
 }
 
 .masthead-music {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-music.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-music.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #220011;
+  background-color: #3c001e;
   color: #fff;
 }
 
 .masthead-blog {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-blog.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-blog.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #220011;
+  background-color: #3c001e;
   color: #fff;
 }
 
 .masthead-gallery {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-gallery.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-gallery.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #220011;
+  background-color: #3c001e;
   color: #fff;
 }
 
 .masthead-about {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #220011 100%), url("../img/masthead-about.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-about.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #220011;
+  background-color: #3c001e;
   color: #fff;
 }
 
 nav .nav {
+  background-color: #3c001e;
   list-style-type: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 nav .nav li {
-  margin: 0 0.4rem;
+  padding: 0.3rem 1rem;
+  transition: background-color 0.2s;
+  transition-timing-function: linear;
 }
 nav .nav li:first-of-type {
-  margin-left: 0;
+  margin-left: 2rem;
 }
 nav .nav li a {
-  color: #ff8891;
+  color: #ff88ad;
   text-decoration: none;
 }
+nav .nav li:hover {
+  background-color: #310019;
+  color: #fff;
+}
 nav .nav .current-page {
-  color: #ff2233;
+  background-color: #220011;
+}
+nav .nav .current-page a {
+  color: #ffbbd0;
 }
 nav .nav-bottom {
+  background-color: #18000c;
   margin: 0;
   margin-top: 0.3rem;
   padding: 0;
   font-size: 0.8rem;
 }
 nav .nav-bottom li {
-  margin-right: 0.2rem;
+  margin: 0;
+  padding: 0.2rem 0.5rem;
+}
+nav .nav-bottom li:first-of-type {
+  margin-left: 0;
+}
+nav .nav-bottom li:hover {
+  background-color: #310019;
+  color: #fff;
+}
+nav .nav-bottom .current-page {
+  background-color: #3c001e;
 }
 
 .row {
@@ -800,7 +824,7 @@ table tbody tr:hover .goto {
   cursor: pointer;
 }
 .tag:hover a {
-  color: #ff2233;
+  color: #ff2266;
 }
 
 .prose-collection {

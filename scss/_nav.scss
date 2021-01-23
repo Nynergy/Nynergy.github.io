@@ -1,35 +1,62 @@
 // NAVIGATION
 nav {
 	.nav {
+        background-color: $primary-color-light-5;
 		list-style-type: none;
 		display: flex;
+        margin: 0;
+        padding: 0;
 
 		li {
-			margin: 0 0.4rem;
+			padding: 0.3rem 1rem;
+            transition: background-color 0.2s;
+            transition-timing-function: linear;
 
 			&:first-of-type {
-				margin-left: 0;
+				margin-left: 2rem;
 			}
 
 			a {
 				color: $accent-color-light-20;
 				text-decoration: none;
 			}
+
+            &:hover {
+                @include set-colors($primary-color-light-3);
+            }
 		}
 
 		.current-page {
-			color: $accent-color;
+            background-color: $primary-color;
+
+            a {
+                color: $accent-color-light-30;
+            }
 		}
 	}
 
 	.nav-bottom {
+        background-color: $primary-color-dark-2;
 		margin: 0;
 		margin-top: 0.3rem;
 		padding: 0;
 		font-size: 0.8rem;
 
 		li {
-			margin-right: 0.2rem;
+            margin: 0;
+            padding: 0.2rem 0.5rem;
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+
+            &:hover {
+                @include set-colors($primary-color-light-3);
+            }
 		}
+
+        .current-page {
+            background-color: $primary-color-light-5;
+        }
 	}
 }

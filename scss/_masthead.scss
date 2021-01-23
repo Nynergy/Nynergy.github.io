@@ -8,12 +8,12 @@
 
 // MASTHEADS
 .masthead {
-	@include set-masthead($primary-color, masthead-home);
+	@include set-masthead($primary-color-light-5, masthead-home);
 }
 
 $mastheads: (masthead-poetry, masthead-prose, masthead-genuflectors, masthead-music, masthead-blog, masthead-gallery, masthead-about);
 @each $masthead in $mastheads {
 	.#{$masthead} {
-		@include set-masthead($primary-color, #{$masthead});
+		@include set-masthead($primary-color-light-5, #{$masthead});
 	}
 }
