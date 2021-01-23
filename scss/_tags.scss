@@ -15,12 +15,17 @@
 	@include set-colors($primary-color-light-5);
 	margin: 0.2rem;
 	padding: 0.1rem 0.3rem;
+    transition: background-color 0.2s;
+    transition-timing-function: linear;
 
 	a {
-		color: #fff;
+		color: $accent-color-light-50;
+        transition: color 0.2s;
+        transition-timing-function: linear;
 	}
 
 	&:hover {
+        @include set-colors($primary-color-light-3);
 		cursor: pointer;
 
 		a {

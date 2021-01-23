@@ -822,11 +822,17 @@ table tbody tr:hover .goto {
   color: #fff;
   margin: 0.2rem;
   padding: 0.1rem 0.3rem;
+  transition: background-color 0.2s;
+  transition-timing-function: linear;
 }
 .tag a {
-  color: #fff;
+  color: white;
+  transition: color 0.2s;
+  transition-timing-function: linear;
 }
 .tag:hover {
+  background-color: #310019;
+  color: #fff;
   cursor: pointer;
 }
 .tag:hover a {
