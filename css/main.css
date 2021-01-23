@@ -862,6 +862,8 @@ table tbody tr:hover .goto {
   border-radius: 2px;
   padding: 5px 10px;
   opacity: 1;
+  transition: background-color 0.2s;
+  transition-timing-function: linear;
 }
 .prose-collection .goto:hover {
   background-color: #55002b;
@@ -918,6 +920,8 @@ table tbody tr:hover .goto {
   padding: 5px 15px;
   background-color: #220011;
   color: #fff;
+  transition: background-color 0.2s;
+  transition-timing-function: linear;
 }
 .music-container .card-container .album-card .album-links .album-button:hover {
   background-color: #55002b;
