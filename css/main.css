@@ -346,8 +346,8 @@ nav .nav-bottom .current-page {
   margin-top: 0.5rem;
 }
 .row .column-right .book-card .image .book-cover {
-  max-height: 275px;
-  width: 100%;
+  height: 275px;
+  width: auto;
 }
 .row .column-right .book-card .book-caption {
   background-color: #3c001e;
@@ -936,8 +936,8 @@ table tbody tr:hover .goto {
   margin-top: 0.5rem;
 }
 .music-container .card-container .album-card .album-art .album-image {
-  max-height: 275px;
-  width: 100%;
+  height: 275px;
+  width: auto;
 }
 .music-container .card-container .album-card .album-description {
   background-color: #3c001e;
@@ -994,8 +994,8 @@ table tbody tr:hover .goto {
   margin-top: 0.5rem;
 }
 .gallery-container .card-container .gallery-card .gallery-lead-art .gallery-lead-image {
-  max-height: 275px;
-  width: 100%;
+  height: 275px;
+  width: auto;
 }
 .gallery-container .card-container .gallery-card .gallery-description {
   background-color: #3c001e;
@@ -1062,6 +1062,7 @@ table tbody tr:hover .goto {
 }
 .about-container .about-row .about-image-container .about-image {
   height: 250px;
+  width: auto;
 }
 .about-container .about-row .about-block {
   display: flex;
