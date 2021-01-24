@@ -1109,6 +1109,8 @@ table tbody tr:hover .goto {
   padding: 5px 10px;
   background-color: #220011;
   color: #fff;
+  transition: background-color 0.2s;
+  transition-timing-function: linear;
 }
 .about-container .about-row .about-block .about-links .about-button:hover {
   background-color: #55002b;
@@ -1144,6 +1146,8 @@ table tbody tr:hover .goto {
   padding: 5px 10px;
   background-color: #220011;
   color: #fff;
+  transition: background-color 0.2s;
+  transition-timing-function: linear;
 }
 .about-container .about-row .about-block .cf-container .form-buttons .form-button:hover {
   background-color: #55002b;
