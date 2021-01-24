@@ -1,44 +1,74 @@
 // ABOUT
 .about-container {
 	display: flex;
+    flex-direction: column;
 	align-items: center;
+    padding: 1rem;
 
-	.about-description {
-		@include set-colors($primary-color-light-5);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 10px;
-		padding: 10px 20px;
+    .about-row {
+        display: flex;
+        align-items: center;
+        @include set-colors($primary-color-light-3);
+        width: 100%;
+        margin: 0.5rem 0;
 
-		p {
-			margin: 0.5rem 0;
-		}
+        .about-image-container {
+            display: flex;
+            padding: 1rem;
 
-		.about-links {
-			display: flex;
+            .about-image {
+                height: 250px;
+            }
+        }
 
-			.about-button {
-				cursor: pointer;
-				border: 0;
-				border-radius: 2px;
-				margin: 0 10px;
-				padding: 5px 10px;
-				@include set-colors($primary-color-light-5);
+        .about-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
 
-				&:hover {
-					@include set-colors($primary-color-light-10);
-				}
-			}
-		}
-	}
+            .about-title {
+                text-align: center;
+            }
 
-	.about-image {
-		flex-basis: 30%;
+            .about-description {
+                @include set-colors($primary-color-light-5);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 10px;
+                margin-top: 0;
+                padding: 10px 20px;
 
-		#selfie {
-			margin: 20px;
-			width: 100%;
-		}
-	}
+                p {
+                    margin: 0.5rem 0;
+                }
+            }
+
+            .left {
+                margin-right: 0;
+            }
+
+            .right {
+                margin-left: 0;
+            }
+
+            .about-links {
+                display: flex;
+
+                .about-button {
+                    cursor: pointer;
+                    border: 0;
+                    border-radius: 2px;
+                    margin: 0 10px;
+                    padding: 5px 10px;
+                    @include set-colors($primary-color);
+
+                    &:hover {
+                        @include set-colors($primary-color-light-10);
+                    }
+                }
+            }
+        }
+    }
 }
