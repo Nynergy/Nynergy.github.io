@@ -328,7 +328,7 @@ nav .nav-bottom .current-page {
 .row .column-right {
   display: flex;
   flex-direction: column;
-  flex-basis: 275px;
+  flex-basis: 300px;
   align-items: center;
 }
 .row .column-right .book-card {
@@ -1061,7 +1061,7 @@ table tbody tr:hover .goto {
   padding: 1rem;
 }
 .about-container .about-row .about-image-container .about-image {
-  height: 250px;
+  height: 275px;
   width: auto;
 }
 .about-container .about-row .about-block {
