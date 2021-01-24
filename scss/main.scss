@@ -3,7 +3,7 @@
 
 body {
 	@include set-colors($primary-color);
-	font: $font-stack;
+	font-family: $font-stack;
 	min-height: 400px;
 	margin-bottom: 80px;
 	clear: both;

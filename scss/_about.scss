@@ -50,7 +50,7 @@
                 margin-top: 0;
                 padding: 10px 20px;
 
-                p {
+                small {
                     margin: 0.5rem 0;
                 }
             }
@@ -65,6 +65,7 @@
 
             .about-links {
                 display: flex;
+                margin-bottom: 1rem;
 
                 .about-button {
                     cursor: pointer;
@@ -79,6 +80,10 @@
                     &:hover {
                         @include set-colors($primary-color-light-10);
                     }
+                }
+
+                #form-button {
+                    margin-top: 1rem;
                 }
             }
 
@@ -96,30 +101,12 @@
                     width: 100%;
                 }
 
-                #body {
-                    width: 100%;
+                textarea {
+                    resize: none;
                 }
 
-                .form-buttons {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-
-                    .form-button {
-                        cursor: pointer;
-                        border: 0;
-                        border-radius: 2px;
-                        margin: 0 10px;
-                        margin-top: 1rem;
-                        padding: 5px 10px;
-                        @include set-colors($primary-color);
-                        transition: background-color 0.2s;
-                        transition-timing-function: linear;
-
-                        &:hover {
-                            @include set-colors($primary-color-light-10);
-                        }
-                    }
+                #body {
+                    width: 100%;
                 }
             }
         }

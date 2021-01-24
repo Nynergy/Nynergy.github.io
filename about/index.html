@@ -19,7 +19,7 @@ mastheadClass: masthead-about
                 <h2>What is <em>Lexica Chromatica</em>?</h2>
             </div>
             <div class="about-description right">
-                <p><em>Lexica Chromatica</em> is the personal website of Ben
+                <small><em>Lexica Chromatica</em> is the personal website of Ben
                 Buchanan. That's me. Hello, I am writing this, I am Ben. I made
                 this website to serve as an archive of things I find
                 interesting, or for projects, or other assorted thoughts I'm
@@ -36,9 +36,9 @@ mastheadClass: masthead-about
                 Chromatica</em> and myself, head over to the "About" page. If
                 you're not currently on the "About" page, then please tell me how
                 you're reading this, I cannot fathom how it would be possible
-                outside of a webscraping application.</p>
+                outside of a webscraping application.</small>
 
-                <p>As you can tell from the long-winded and frankly unnecessary
+                <small>As you can tell from the long-winded and frankly unnecessary
                 explanation above, I like to keep things simple here. Pages are
                 appropriately named and easy to navigate to/from. There are
                 navbars at the top of the page as well as the bottom. I do not
@@ -48,7 +48,7 @@ mastheadClass: masthead-about
                 through. Hopefully you appreciate the site in the same way I
                 have come to. If you have any comments, tips, questions, etc,
                 then send me an email with the contact form at the bottom of
-                this page.</p>
+                this page.</small>
             </div>
         </div>
     </div>
@@ -59,7 +59,7 @@ mastheadClass: masthead-about
                 <h2>Who is Ben Buchanan?</h2>
             </div>
             <div class="about-description left">
-                <p>I'm a writer, author, poet, musician, artist, whatever the
+                <small>I'm a writer, author, poet, musician, artist, whatever the
                 hell people are calling things these days. I do stuff in my
                 spare time and I have a lot of fun with it. You can see some of
                 the fruits of my work on this very website, be it my poetry,
@@ -67,14 +67,14 @@ mastheadClass: masthead-about
                 that's not very creative. Mostly just me spouting endless inane
                 nonsense until I tire of writing anything more. Sometimes I
                 just want to see that "Recent Posts" table shift down a bit,
-                you know what I mean?</p>
+                you know what I mean?</small>
 
-                <p>You can see some older poems I've written (most of which are
+                <small>You can see some older poems I've written (most of which are
                 reaching the ripe old age of "cringe-inducing" at this point)
                 by going to my Instagram. My poetry Instagram, that is. I have
                 a separate account for my personal stuff, but you're more than
                 welcome to check that out as well if you feel so inclined.
-                Links for both are down below.</p>
+                Links for both are down below.</small>
             </div>
             <div class="about-links">
                 <a href="https://instagram.com/ben_writes_poems/" class="about-button">Poetry Account <i class="fab fa-instagram"></i></a>
@@ -95,7 +95,7 @@ mastheadClass: masthead-about
                 <h2>For real, though, who is this guy?</h2>
             </div>
             <div class="about-description right">
-                <p>So you weren't fooled by all that stuff about being a
+                <small>So you weren't fooled by all that stuff about being a
                 creative, huh? That's fair. In reality, I'm a front end cashier
                 taking turns working the register and running food orders for
                 our to-go department. When I'm not doing that, I'm usually
@@ -103,13 +103,13 @@ mastheadClass: masthead-about
                 student programmer, making little web applications and tools
                 for people. And if that wasn't enough for you, I also make my
                 own open source projects on Github. You can find a link to my
-                Github page below.</p>
+                Github page below.</small>
 
-                <p>I guess if you want an actual answer for what I do, I'm a
+                <small>I guess if you want an actual answer for what I do, I'm a
                 part-time wage slave looking to be a professional developer of
                 some sort. A prospective code monkey, if you will. And it's
                 that knowledge that's allowed me to make this website, so at
-                least I have something to show for it.</p>
+                least I have something to show for it.</small>
             </div>
             <div class="about-links">
                 <a href="https://github.com/Nynergy/" class="about-button">Github Account <i class="fab fa-github"></i></a>
@@ -134,9 +134,6 @@ mastheadClass: masthead-about
                         <br \>
                         <textarea name="body" rows="6" placeholder="Put your message here..." id="body"></textarea>
                     </div>
-                    <div class="form-buttons">
-                        <button class="form-button" type="button" onclick="sendMail();">Submit (Opens Mail Client) <i class="fa fa-envelope"></i></button>
-                    </div>
                 </form>
 
                 <!-- FORM SCRIPT -->
@@ -151,6 +148,9 @@ mastheadClass: masthead-about
                         + "&body=" + encodeURIComponent(body);
                 }
                 </script>
+            </div>
+            <div class="about-links">
+                <button class="about-button" id="form-button" type="button" onclick="sendMail();">Submit (Opens Mail Client) <i class="fa fa-envelope"></i></button>
             </div>
         </div>
         <div class="about-image-container">
