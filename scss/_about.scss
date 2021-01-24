@@ -26,9 +26,18 @@
             flex-direction: column;
             align-items: center;
             margin: auto;
+            width: 100%;
 
             .about-title {
                 text-align: center;
+
+                h4 {
+                    margin-bottom: 1rem;
+                }
+
+                #contact-header {
+                    margin-bottom: 0;
+                }
             }
 
             .about-description {
@@ -66,6 +75,45 @@
 
                     &:hover {
                         @include set-colors($primary-color-light-10);
+                    }
+                }
+            }
+
+            .cf-container {
+                @include set-colors($primary-color-light-5);
+                margin-left: 1rem;
+                padding: 1rem;
+                width: 100%;
+
+                label {
+                    color: $accent-color-light-30;
+                }
+
+                input {
+                    width: 100%;
+                }
+
+                #body {
+                    width: 100%;
+                }
+
+                .form-buttons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    .form-button {
+                        cursor: pointer;
+                        border: 0;
+                        border-radius: 2px;
+                        margin: 0 10px;
+                        margin-top: 1rem;
+                        padding: 5px 10px;
+                        @include set-colors($primary-color);
+
+                        &:hover {
+                            @include set-colors($primary-color-light-10);
+                        }
                     }
                 }
             }

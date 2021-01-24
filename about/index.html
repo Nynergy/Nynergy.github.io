@@ -117,4 +117,44 @@ mastheadClass: masthead-about
         </div>
     </div>
     <!-- CONTACT FORM -->
+    <div class="about-row">
+        <div class="about-block">
+            <div class="about-title">
+                <h2 id="contact-header">Contact Ben Buchanan</h2>
+                <h4>Go ahead, I don't bite.</h4>
+            </div>
+            <div class="cf-container">
+                <form action="mailto:bsbuchanan99@gmail.com" method="get" enctype="text/plain">
+                    <div>
+                        <label for="name">Your Name
+                            <input type="text" name="name" id="name" />
+                        </label>
+                    </div>
+                    <div>
+                        <br \>
+                        <textarea name="body" rows="6" placeholder="Put your message here..." id="body"></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button class="form-button" type="button" onclick="sendMail();">Submit (Opens Mail Client) <i class="fa fa-envelope"></i></button>
+                    </div>
+                </form>
+
+                <!-- FORM SCRIPT -->
+                <script>
+                function sendMail()
+                {
+                    var name = document.getElementById("name").value;
+                    var body = document.getElementById("body").value;
+                    var subject = "Message from " + name;
+                    document.location.href = "mailto:bsbuchanan99@gmail.com?subject="
+                        + encodeURIComponent(subject)
+                        + "&body=" + encodeURIComponent(body);
+                }
+                </script>
+            </div>
+        </div>
+        <div class="about-image-container">
+            <img class="about-image" src="/img/about-contact.jpg" alt="A casual photograph of Ben Buchanan, but sideways">
+        </div>
+    </div>
 </div>

@@ -1068,9 +1068,16 @@ table tbody tr:hover .goto {
   flex-direction: column;
   align-items: center;
   margin: auto;
+  width: 100%;
 }
 .about-container .about-row .about-block .about-title {
   text-align: center;
+}
+.about-container .about-row .about-block .about-title h4 {
+  margin-bottom: 1rem;
+}
+.about-container .about-row .about-block .about-title #contact-header {
+  margin-bottom: 0;
 }
 .about-container .about-row .about-block .about-description {
   background-color: #3c001e;
@@ -1104,6 +1111,41 @@ table tbody tr:hover .goto {
   color: #fff;
 }
 .about-container .about-row .about-block .about-links .about-button:hover {
+  background-color: #55002b;
+  color: #fff;
+}
+.about-container .about-row .about-block .cf-container {
+  background-color: #3c001e;
+  color: #fff;
+  margin-left: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+.about-container .about-row .about-block .cf-container label {
+  color: #ffbbd0;
+}
+.about-container .about-row .about-block .cf-container input {
+  width: 100%;
+}
+.about-container .about-row .about-block .cf-container #body {
+  width: 100%;
+}
+.about-container .about-row .about-block .cf-container .form-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-container .about-row .about-block .cf-container .form-buttons .form-button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  margin: 0 10px;
+  margin-top: 1rem;
+  padding: 5px 10px;
+  background-color: #220011;
+  color: #fff;
+}
+.about-container .about-row .about-block .cf-container .form-buttons .form-button:hover {
   background-color: #55002b;
   color: #fff;
 }
