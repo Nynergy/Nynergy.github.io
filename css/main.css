@@ -178,6 +178,9 @@ body {
 .content p:last-child {
   margin-bottom: 0;
 }
+.content li {
+  margin-left: 2rem;
+}
 .content div .highlight {
   padding: 0.3rem 0.5rem;
 }

@@ -54,6 +54,10 @@ $post-types: (poetry, prose, blog);
 		}
 	}
 
+    li {
+        margin-left: 2rem;
+    }
+
 	div {
 		.highlight {
 			padding: 0.3rem 0.5rem;
