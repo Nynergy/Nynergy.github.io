@@ -185,7 +185,10 @@ body {
   padding: 0.3rem 0.5rem;
 }
 .content img {
-  width: 100%;
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer {
