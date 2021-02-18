@@ -14,7 +14,6 @@ body {
 
 .main-container {
     margin: 1rem;
-    margin-bottom: 10rem;
 
 	h2 {
 		margin: 0.5rem 0;
@@ -84,6 +83,11 @@ $post-types: (poetry, prose, blog);
         margin-left: auto;
         margin-right: auto;
 	}
+}
+
+.buffer {
+    height: 3rem;
+    width: auto;
 }
 
 .footer {
