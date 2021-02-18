@@ -124,15 +124,21 @@
   padding: 0 5rem;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: #220011;
   color: #fff;
   font-family: normal 100%/1.4 Georgia, serif;
-  min-height: 400px;
-  margin-bottom: 80px;
-  clear: both;
+  height: 100%;
+  margin-bottom: 20px;
 }
 
+.main-container {
+  margin-bottom: 3rem;
+}
 .main-container h2 {
   margin: 0.5rem 0;
 }
@@ -147,6 +153,13 @@ body {
   text-decoration: none;
 }
 
+.poetry-post {
+  width: 50%;
+  margin: auto;
+}
+.poetry-post h2 {
+  text-align: center;
+}
 .poetry-post h4 {
   margin: 1rem 0;
 }
@@ -154,6 +167,13 @@ body {
   margin: 1rem 0;
 }
 
+.prose-post {
+  width: 50%;
+  margin: auto;
+}
+.prose-post h2 {
+  text-align: center;
+}
 .prose-post h4 {
   margin: 1rem 0;
 }
@@ -161,6 +181,13 @@ body {
   margin: 1rem 0;
 }
 
+.blog-post {
+  width: 50%;
+  margin: auto;
+}
+.blog-post h2 {
+  text-align: center;
+}
 .blog-post h4 {
   margin: 1rem 0;
 }
@@ -171,6 +198,7 @@ body {
 .content {
   background-color: #3c001e;
   color: #fff;
+  margin-bottom: 3rem;
 }
 .content p:first-child {
   margin-top: 0;
@@ -186,7 +214,7 @@ body {
 }
 .content img {
   display: block;
-  width: 50%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -204,7 +232,7 @@ body {
   justify-content: center;
 }
 .footer .copyright-container {
-  margin-bottom: 0.4rem;
+  margin: 0.4rem 0;
   font-size: 0.8rem;
 }
 
@@ -301,28 +329,6 @@ nav .nav .current-page {
 nav .nav .current-page a {
   color: #ffbbd0;
 }
-nav .nav-bottom {
-  background-color: #18000c;
-  margin: 0;
-  margin-top: 0.3rem;
-  margin-bottom: 0.1rem;
-  padding: 0;
-  font-size: 0.8rem;
-}
-nav .nav-bottom li {
-  margin: 0;
-  padding: 0.2rem 0.5rem;
-}
-nav .nav-bottom li:first-of-type {
-  margin-left: 0;
-}
-nav .nav-bottom li:hover {
-  background-color: #310019;
-  color: #fff;
-}
-nav .nav-bottom .current-page {
-  background-color: #3c001e;
-}
 
 .row {
   display: flex;
@@ -392,6 +398,10 @@ nav .nav-bottom .current-page {
   color: #fff;
   margin: auto;
   width: 90%;
+}
+
+.bottom-table {
+  margin-bottom: 3rem;
 }
 
 table {
@@ -856,6 +866,7 @@ table tbody tr:hover .goto {
 }
 .tags-cloud {
   margin: auto;
+  margin-bottom: 3rem;
 }
 
 .tag {

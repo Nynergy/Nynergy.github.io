@@ -1,15 +1,19 @@
 @import 'config';
 @import 'utilities';
 
+html {
+    height: 100%;
+}
+
 body {
 	@include set-colors($primary-color);
 	font-family: $font-stack;
-	min-height: 400px;
-	margin-bottom: 80px;
-	clear: both;
+    height: 100%;
+	margin-bottom: 20px;
 }
 
 .main-container {
+    margin-bottom: 3rem;
 	h2 {
 		margin: 0.5rem 0;
 	}
@@ -31,6 +35,13 @@ body {
 $post-types: (poetry, prose, blog);
 @each $type in $post-types {
 	.#{$type}-post {
+        width: 50%;
+        margin: auto;
+
+        h2 {
+            text-align: center;
+        }
+
 		h4 {
 			margin: 1rem 0;
 		}
@@ -43,6 +54,7 @@ $post-types: (poetry, prose, blog);
 
 .content {
 	@include set-colors($primary-color-light-5);
+    margin-bottom: 3rem;
 
 	p {
 		&:first-child {
@@ -66,7 +78,7 @@ $post-types: (poetry, prose, blog);
 
 	img {
         display: block;
-		width: 50%;
+		width: 85%;
         margin-left: auto;
         margin-right: auto;
 	}
@@ -84,7 +96,7 @@ $post-types: (poetry, prose, blog);
 	justify-content: center;
 
 	.copyright-container {
-		margin-bottom: 0.4rem;
+		margin: 0.4rem 0;
 		font-size: 0.8rem;
 	}
 }
