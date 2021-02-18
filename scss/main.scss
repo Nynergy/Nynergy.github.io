@@ -6,6 +6,8 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
 	@include set-colors($primary-color);
 	font-family: $font-stack;
     height: 100%;

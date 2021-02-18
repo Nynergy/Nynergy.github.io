@@ -129,6 +129,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: #220011;
   color: #fff;
   font-family: normal 100%/1.4 Georgia, serif;
@@ -1017,7 +1019,7 @@ table tbody tr:hover .goto {
   margin-top: 0.5rem;
 }
 .gallery-container .card-container .gallery-card .gallery-lead-art .gallery-lead-image {
-  height: 275px;
+  height: 225px;
   width: auto;
 }
 .gallery-container .card-container .gallery-card .gallery-description {
