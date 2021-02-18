@@ -133,12 +133,9 @@ body {
   color: #fff;
   font-family: normal 100%/1.4 Georgia, serif;
   height: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 
-.main-container {
-  margin: 1rem;
-}
 .main-container h2 {
   margin: 0.5rem 0;
 }
@@ -217,11 +214,6 @@ body {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-}
-
-.buffer {
-  height: 3rem;
-  width: auto;
 }
 
 .footer {
