@@ -9,10 +9,17 @@ body {
 	@include set-colors($primary-color);
 	font-family: $font-stack;
     height: 100%;
-	margin-bottom: 80px;
+	margin-bottom: 20px;
+}
+
+.space-maintainer {
+    display: flex;
+    flex-direction: column;
 }
 
 .main-container {
+    margin-bottom: 3rem;
+
 	h2 {
 		margin: 0.5rem 0;
 	}

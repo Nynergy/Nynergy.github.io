@@ -133,9 +133,17 @@ body {
   color: #fff;
   font-family: normal 100%/1.4 Georgia, serif;
   height: 100%;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
+.space-maintainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  margin-bottom: 3rem;
+}
 .main-container h2 {
   margin: 0.5rem 0;
 }
@@ -951,7 +959,7 @@ table tbody tr:hover .goto {
   margin-top: 0.5rem;
 }
 .music-container .card-container .album-card .album-art .album-image {
-  height: 275px;
+  height: 225px;
   width: auto;
 }
 .music-container .card-container .album-card .album-description {
