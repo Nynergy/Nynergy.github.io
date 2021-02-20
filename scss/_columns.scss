@@ -32,8 +32,11 @@
                 margin-top: 0.5rem;
 
                 .book-cover {
-                    height: 275px;
-                    width: auto;
+                    display: block;
+                    max-height: 275px;
+                    height: auto;
+                    width: 90%;
+                    margin: auto;
                 }
             }
 
@@ -66,4 +69,47 @@
             }
         }
 	}
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 800px) {
+    .row {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .column-left {
+            width: 100%;
+        }
+
+        .column-right {
+            width: 90%;
+
+            .book-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .book-card {
+                    flex-direction: row;
+                    align-items: center;
+
+                    .book-aside {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        width: 70%;
+                        margin-left: 10px;
+
+                        .book-links {
+                            flex-direction: column;
+
+                            .book-button {
+                                margin: 0.2rem 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
