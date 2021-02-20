@@ -11,7 +11,7 @@
 	.column-right {
 		display: flex;
 		flex-direction: column;
-		flex-basis: 350px;
+        width: 30%;
 		align-items: center;
 
         h3 {
@@ -35,7 +35,7 @@
                     display: block;
                     max-height: 275px;
                     height: auto;
-                    width: 90%;
+                    width: auto;
                     margin: auto;
                 }
             }
@@ -72,7 +72,17 @@
 }
 
 // MEDIA QUERIES
-@media screen and (max-width: 800px) {
+@media (max-width: 1000px) {
+    .book-links {
+        flex-direction: column;
+
+        .book-button {
+            margin: 0.2rem 0;
+        }
+    }
+}
+
+@media (max-width: 800px) {
     .row {
         flex-direction: column-reverse;
         align-items: center;
@@ -93,20 +103,16 @@
                     flex-direction: row;
                     align-items: center;
 
+                    .book-cover {
+                        width: 90%;
+                    }
+
                     .book-aside {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-around;
                         width: 70%;
                         margin-left: 10px;
-
-                        .book-links {
-                            flex-direction: column;
-
-                            .book-button {
-                                margin: 0.2rem 0;
-                            }
-                        }
                     }
                 }
             }

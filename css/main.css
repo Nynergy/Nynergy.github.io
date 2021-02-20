@@ -339,65 +339,80 @@ body {
   color: #fff;
 }
 
-nav .nav {
+.nav {
+  width: 100%;
   background-color: #3c001e;
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0 2rem;
-}
-nav .nav .nav-menu-button {
-  display: none;
-  padding: 0.3rem 2rem;
-  transition: background-color 0.2s;
-  transition-timing-function: linear;
-}
-nav .nav .nav-menu-button:hover {
-  background-color: #310019;
   color: #fff;
+  position: relative;
 }
-nav .nav a {
-  color: #ff88ad;
-  text-decoration: none;
-}
-nav .nav #landscape-nav-links {
-  display: flex;
-}
-nav .nav #dropdown-nav-links {
+.nav .nav-btn {
   display: none;
-  flex-direction: column;
 }
-nav .nav li {
+.nav #nav-check {
+  display: none;
+}
+.nav .nav-links {
+  display: inline;
+}
+.nav .nav-links a {
+  display: inline-block;
   padding: 0.3rem 1rem;
-  transition: background-color 0.2s;
-  transition-timing-function: linear;
+  text-decoration: none;
+  color: #ff88ad;
+  transition: background-color 0.2s linear;
 }
-nav .nav li:hover {
-  background-color: #310019;
-  color: #fff;
-}
-nav .nav .current-page {
+.nav .nav-links a:hover {
   background-color: #220011;
 }
-nav .nav .current-page a {
-  color: #ffbbd0;
+.nav .nav-links a.current-page {
+  background-color: #220011;
+  color: #ff5589;
 }
 
-@media screen and (max-width: 600px) {
-  nav .nav {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 0;
+@media (max-width: 600px) {
+  .nav .nav-button {
+    display: inline-block;
+    position: relative;
+    float: right;
+    height: 23px;
+    right: 0px;
+    top: 0px;
   }
-  nav .nav .nav-menu-button {
-    display: flex;
+  .nav .nav-button label {
+    display: inline-block;
+    padding: 0.5rem;
+    transition: background-color 0.2s linear;
   }
-  nav .nav #landscape-nav-links {
-    display: none;
+  .nav .nav-button label:hover {
+    background-color: #220011;
   }
-  nav .nav li {
-    padding-left: 2rem;
+  .nav .nav-button label span {
+    display: block;
+    width: 15px;
+    height: 5px;
+    border-top: 2px solid #ff88ad;
+  }
+  .nav .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #3c001e;
+    height: 0;
+    transition: all 0.2s ease-in;
+    overflow-y: hidden;
+    top: 23px;
+    left: 0px;
+  }
+  .nav .nav-links a {
+    display: block;
+    width: 100%;
+  }
+  .nav #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav #nav-check:checked ~ .nav-links {
+    height: calc(100vh);
+    overflow-y: auto;
   }
 }
 .row {
@@ -411,7 +426,7 @@ nav .nav .current-page a {
 .row .column-right {
   display: flex;
   flex-direction: column;
-  flex-basis: 350px;
+  width: 30%;
   align-items: center;
 }
 .row .column-right h3 {
@@ -435,7 +450,7 @@ nav .nav .current-page a {
   display: block;
   max-height: 275px;
   height: auto;
-  width: 90%;
+  width: auto;
   margin: auto;
 }
 .row .column-right .book-card .book-caption {
@@ -466,7 +481,15 @@ nav .nav .current-page a {
   color: #fff;
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 1000px) {
+  .book-links {
+    flex-direction: column;
+  }
+  .book-links .book-button {
+    margin: 0.2rem 0;
+  }
+}
+@media (max-width: 800px) {
   .row {
     flex-direction: column-reverse;
     align-items: center;
@@ -486,18 +509,15 @@ nav .nav .current-page a {
     flex-direction: row;
     align-items: center;
   }
+  .row .column-right .book-container .book-card .book-cover {
+    width: 90%;
+  }
   .row .column-right .book-container .book-card .book-aside {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 70%;
     margin-left: 10px;
-  }
-  .row .column-right .book-container .book-card .book-aside .book-links {
-    flex-direction: column;
-  }
-  .row .column-right .book-container .book-card .book-aside .book-links .book-button {
-    margin: 0.2rem 0;
   }
 }
 .table-container {

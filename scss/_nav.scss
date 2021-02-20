@@ -1,77 +1,92 @@
 // NAVIGATION
-nav {
-	.nav {
-        background-color: $primary-color-light-5;
-		list-style-type: none;
-		display: flex;
-        align-items: center;
-        margin: 0;
-        padding: 0 2rem;
+.nav {
+    width: 100%;
+    @include set-colors($primary-color-light-5);
+    position: relative;
 
-        .nav-menu-button {
-            display: none;
-            padding: 0.3rem 2rem;
-            transition: background-color 0.2s;
-            transition-timing-function: linear;
+    .nav-btn {
+        display: none;
+    }
 
-            &:hover {
-                @include set-colors($primary-color-light-3);
-            }
-        }
+    #nav-check {
+        display: none;
+    }
+
+    .nav-links {
+        display: inline;
 
         a {
-            color: $accent-color-light-20;
+            display: inline-block;
+            padding: 0.3rem 1rem;
             text-decoration: none;
-        }
-
-        #landscape-nav-links {
-            display: flex;
-        }
-
-        #dropdown-nav-links {
-            display: none;
-            flex-direction: column;
-        }
-
-		li {
-			padding: 0.3rem 1rem;
-            transition: background-color 0.2s;
-            transition-timing-function: linear;
+            color: $accent-color-light-20;
+            transition: background-color 0.2s linear;
 
             &:hover {
-                @include set-colors($primary-color-light-3);
+                background-color: $primary-color;
             }
-		}
 
-		.current-page {
-            background-color: $primary-color;
-
-            a {
-                color: $accent-color-light-30;
+            &.current-page {
+                background-color: $primary-color;
+                color: $accent-color-light-10;
             }
-		}
-	}
+        }
+    }
 }
 
 // MEDIA QUERIES
-@media screen and (max-width: 600px) {
-    nav {
-        .nav {
-            flex-direction: column;
-            align-items: stretch;
-            padding: 0;
+@media (max-width: 600px) {
+    .nav {
+        .nav-button {
+            display: inline-block;
+            position: relative;
+            float: right;
+            height: 23px;
+            right: 0px;
+            top: 0px;
 
-            .nav-menu-button {
-                display: flex;
-            }
+            label {
+                display: inline-block;
+                padding: 0.5rem;
+                transition: background-color 0.2s linear;
 
-            #landscape-nav-links {
-                display: none;
-            }
+                &:hover {
+                    background-color: $primary-color;
+                }
 
-            li {
-                padding-left: 2rem;
+                span {
+                    display: block;
+                    width: 15px;
+                    height: 5px;
+                    border-top: 2px solid $accent-color-light-20;
+                }
             }
+        }
+
+        .nav-links {
+            position: absolute;
+            display: block;
+            width: 100%;
+            background-color: $primary-color-light-5;
+            height: 0;
+            transition: all 0.2s ease-in;
+            overflow-y: hidden;
+            top: 23px;
+            left: 0px;
+
+            a {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        #nav-check:not(:checked) ~ .nav-links {
+            height: 0px;
+        }
+
+        #nav-check:checked ~ .nav-links {
+            height: calc(100vh);
+            overflow-y: auto;
         }
     }
 }
