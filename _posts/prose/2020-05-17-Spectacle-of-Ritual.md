@@ -18,7 +18,9 @@ Alex paints the time away. Until the sun is almost gone. Monday coming to a clos
 
 Final touches complete, Alex puts away her paints and records, rolls her sleeves back down, and goes to draw the curtains closed when she feels a buzz from her pocket. She pulls out her phone to find one new notification.
 
-    “are you busy?”
+<div class="block-quote monospace">
+“are you busy?”
+</div>
 
 The message was from a close friend, and sure enough, looking outside the window Alex could see Kali standing in front of the art gallery, gazing up at her second floor studio. Instead of answering, Alex simply gave Kali a thumbs up and a subtle grin, closing the curtain. Grabbing a jacket, a beanie, and a pair of shoes, she was downstairs and out the door without hesitation.
 

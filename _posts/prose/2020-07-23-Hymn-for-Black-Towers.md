@@ -8,11 +8,22 @@ tags: clover exploration
 mastheadClass: masthead-prose
 ---
 
-For quite a long time now, I've had this recurring theme for a character and a world. It was mostly inspired by the writing of Ursula K. Le Guin, most notably her novel _The Left Hand of Darkness_. I'm always coming back to this image of an androgynous character on some spirit journey, or a world controlled by transhumanist religious thought. These concepts can seem fairly obtuse or obscure from a narrative perspective, but I can't shake the desire to experiment with them.
+For quite a long time now, I've had this recurring theme for a character and a
+world. It was mostly inspired by the writing of Ursula K. Le Guin, most notably
+her novel _The Left Hand of Darkness_. I'm always coming back to this image of
+an androgynous character on some spirit journey, or a world controlled by
+transhumanist religious thought. These concepts can seem fairly obtuse or
+obscure from a narrative perspective, but I can't shake the desire to experiment
+with them.
 
-And so, I've brewed up this small taste of the world. A place far in the future where a sect of people are born and bred with mysterious powers, and without a given sex. A society reminiscent of an old world theocracy, ruled by the morals of transhumanist texts, steeped in the deep political intrigue of a corrupt clergical hierarchy.
+And so, I've brewed up this small taste of the world. A place far in the future
+where a sect of people are born and bred with mysterious powers, and without a
+given sex. A society reminiscent of an old world theocracy, ruled by the morals
+of transhumanist texts, steeped in the deep political intrigue of a corrupt
+clergical hierarchy.
 
-Just a sample of the writing before I dive too deep into it. Magic, religion, social commentary, etc. What more could you want, right?
+Just a sample of the writing before I dive too deep into it. Magic, religion,
+social commentary, etc. What more could you want, right?
 
 <hr>
 
@@ -33,18 +44,22 @@ or spirit. Zenith light falling over the grass.
 Pulling a slip of brittle paper from the satchel, Clover reads the printed
 text, a familiar passage of youth:
 
-_And as the seas ebb and flow with the tide,_ <br>
-_So too the tepid waters within_ <br>
-_Will rise and overtake the vibrant soul._
+<div class="block-quote italics">
+And as the seas ebb and flow with the tide, <br>
+So too the tepid waters within <br>
+Will rise and overtake the vibrant soul. <br><br>
 
-_Quiet the raging stillness to stone,_ <br>
-_And remember the power of the words_ <br>
-_From which you draw your existence._
+Quiet the raging stillness to stone, <br>
+And remember the power of the words <br>
+From which you draw your existence.
+</div>
 
 An emerald shimmer skitters along their skin as the memory of power takes
 shape, mouthing the words so deeply instilled.
 
-_To become ever onward, outward, and otherwise._
+<div class="block-quote italics">
+To become ever onward, outward, and otherwise.
+</div>
 
 The shimmer envelops the fragile paper and begins creasing, folding, morphing
 the form. Clover examines the surroundings, drawing in patterns and senses
@@ -76,6 +91,11 @@ shade, Clover moves onward.
 
 <hr>
 
-I may add more little conceptual excerpts like this in the future. I like the idea of playing around in this world a bit before committing to anything. Let me know what you think of the idea. Hopefully it doesn't distract too much from all the other narratives I'm still in the middle of developing.
+I may add more little conceptual excerpts like this in the future. I like the
+idea of playing around in this world a bit before committing to anything. Let me
+know what you think of the idea. Hopefully it doesn't distract too much from all
+the other narratives I'm still in the middle of developing.
 
-	Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

@@ -8,9 +8,14 @@ tags: music art landscapes
 mastheadClass: masthead-blog
 ---
 
-> _"Although cover notes for classical music albums tend to say that the trill of flutes suggests mountain streams and so on, I don't think anybody listens to music with the expectation that they're going to be presented with a sort of landscape painting."_
->
-> 	-- Brian Eno
+<div class="block-quote italics">
+"Although cover notes for classical music albums tend to say that the trill of
+flutes suggests mountain streams and so on, I don't think anybody listens to
+music with the expectation that they're going to be presented with a sort of
+landscape painting." <br> <br>
+
+-- Brian Eno
+</div>
 
 <hr>
 
@@ -44,7 +49,7 @@ Camp Tuscarora is a place I visited many times when I was younger. My father and
 
 Library Tower, sometimes also referred to as Library Tower North in some of my work, is a tall building situated in the middle of the Binghamton University campus. Technically the physical space I refer to as Library Tower is the entirety of the Bartle Library building, including its many wings and towers, but my mind simplifies it to a single tower in my memories. Often I talk about this place from two perspectives: inside, and outside. Outside the tower I discuss the raging winds coming down off the high walls, the booming electronic bell sounds echoing from its peak, or the colored lights that sit around the lip of the roof. In this context, it takes the place of a symbol for the university, for my time there, the many phases of my mind that have come and gone in these years. Inside the tower is a more specific memory. A very concentrated dose of emotion from a very stressful time in my life, fueled mainly by a certain tough course I was taking. I made frequent trips to the library to meet with members of a project group I was involved in, and the "landscape" of that many-floored place still haunts me. The empty elevators, silent glass walls and doors, rows of racks of shelves of books. This aspect of Library Tower is talked about mostly in my piece "My Day", which appears in my collection of poetry [_Babylon Effect_](/poetry/).
 
-#### Miscellaneous
+### Miscellaneous
 
 There are many other memories from times and places that dot my writings, like the melancholic passages surrounding Port Crane and Virginia Beach, the nostalgic lines about Arnold Park and Carpathian Hill, and the multitude of abstractions based on the steep woodlands behind my house.
 
@@ -70,4 +75,6 @@ Let me know what you think about all of this. The music, the landscapes, all the
 
 Thanks for reading.
 
-	Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

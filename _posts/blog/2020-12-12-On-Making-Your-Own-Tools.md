@@ -65,4 +65,6 @@ It's all for me. If anyone else finds it useful, then perhaps they see the same 
 
 If you find these projects interesting, or see eye-to-eye with my personal programming philosophies, feel free to let me know. I'd love to hear from you.
 
-    Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

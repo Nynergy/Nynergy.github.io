@@ -8,13 +8,21 @@ tags: clover exploration ritual
 mastheadClass: masthead-prose
 ---
 
-Another concept piece about the world that Clover inhabits. For this one, I decided to continue their journey into Hax Veibrus, and what they found there. The Hax is dark, somewhat dreary, and dense. Drenched in religious thought.
+Another concept piece about the world that Clover inhabits. For this one, I
+decided to continue their journey into Hax Veibrus, and what they found there.
+The Hax is dark, somewhat dreary, and dense. Drenched in religious thought.
 
-I wanted to create some kind of ceremony for Clover to witness, and decided on a kind of public service at the cathedral. The idea is to focus on the religious and political mindset of the Church, and to set up a kind of dichotomy between the Desired and Undesired, the sins of the flesh, and the purity of the vibrant soul. Just some basic ideacrafting for the basis of the religion.
+I wanted to create some kind of ceremony for Clover to witness, and decided on a
+kind of public service at the cathedral. The idea is to focus on the religious
+and political mindset of the Church, and to set up a kind of dichotomy between
+the Desired and Undesired, the sins of the flesh, and the purity of the vibrant
+soul. Just some basic ideacrafting for the basis of the religion.
 
 Let me know what you think. Thanks for reading.
 
-	Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>
 
 <hr>
 
@@ -100,35 +108,41 @@ The plate glass silence stood over them as the Haxei gazed out over the
 congregation, steadying themselves. After a sharp intake of breath, they began
 to recite the familiar melodic passages.
 
-_The flow of man from birth to death_ <br>
-_As time begets the labored breath_ <br>
-_The pool of life begins to grow_ <br>
-_And here the future opens,_
+<div class="block-quote italics">
+The flow of man from birth to death <br>
+As time begets the labored breath <br>
+The pool of life begins to grow <br>
+And here the future opens, <br><br>
 
-_We see it now_
+We see it now
+</div>
 
 The monks bring the man down onto the table. His face darkens in worry, though
 he does not resist. He understands its futility. The hooded figures begin to
 chant along with the Haxei as the next verse comes.
 
-_The world of wisdom flooding through_ <br>
-_With eyes of tempered crystal truth_ <br>
-_The fleshly fires we cannot mend,_ <br>
-_And tepid waters,_
+<div class="block-quote italics">
+The world of wisdom flooding through <br>
+With eyes of tempered crystal truth <br>
+The fleshly fires we cannot mend, <br>
+And tepid waters, <br><br>
 
-_Put to end_
+Put to end
+</div>
 
 The man is strapped against the gleaming metal. He makes no movements, eyes
 closed. His skin is slick with sweat in the cold blue light. A chorus of
 voices picking up, the hall of the cathedral reverberating. The congregation
 picks up with the next verse.
 
-_The withered vines and roots of man_ <br>
-_Do bind us to the rotted land_ <br>
-_In cleansing soil of blameless spirit_ <br>
-_Man will cower,_
+<div class="block-quote italics">
+The withered vines and roots of man <br>
+Do bind us to the rotted land <br>
+In cleansing soil of blameless spirit <br>
+Man will cower, <br><br>
 
-_He does fear it_
+He does fear it
+</div>
 
 One monk retrieves the curved blade from its stand. They present it to the
 other monk, who bows and takes it. The ceiling pulses with sound coming down
@@ -140,28 +154,38 @@ The monks remove his rags, and he lays bare upon the low slab.
 As the next verse picks up, Clover feels the words come. A familiar dream, a
 song they've heard many, many times. They sing along.
 
-_We prune the nature, blessed under_
+<div class="block-quote italics">
+We prune the nature, blessed under
+</div>
 
 The knife is lifted up into air, catching blue light for a moment.
 
-_The seeds of sin are torn asunder_
+<div class="block-quote italics">
+The seeds of sin are torn asunder
+</div>
 
 The knife comes down across the man's groin. There is no scream, as there
 usually is. Only gritted teeth and a muffled shout as he holds his tongue.
 
-_Blooming bright and solid whole_
+<div class="block-quote italics">
+Blooming bright and solid whole
+</div>
 
 The man's severed genitals are handed to the Haxei, who lifts them into the
 air over the pulpit. Their arm is wrapped in a sapphire shimmer as the flesh
 is consumed in blue fire.
 
-_Seize the future,_
+<div class="block-quote italics">
+Seize the future,
+</div>
 
 The Haxei descends the platform to the table, the man still squirming with
 closed eyes. They place a hand, still ashen and covered in a blue glow, over
 his wound. Another blue flame appears, and the wound is sealed.
 
-_The vibrant soul_
+<div class="block-quote italics">
+The vibrant soul
+</div>
 
 The hymn stops, and the hall is silent once more. Only the small wimpering of
 the man can be heard. The Haxei motions to the monks who begin to unstrap the

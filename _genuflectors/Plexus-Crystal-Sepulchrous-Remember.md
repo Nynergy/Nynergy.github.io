@@ -1,5 +1,5 @@
 ---
-layout: prose-post
+layout: collection-post
 title: Plexus Crystal Sepulchrous Remember
 written: August 20, 2020
 date: 2020-08-20
@@ -48,7 +48,7 @@ thin blankets. Lessening curses to your kin. <br>
 
 Weave the madness in unwavering filibuster (required field):
 
-```
+<div class="block-quote monospace">
 UNSTABLE METAMORPHOSIS MOLTING APART MOUNTAIN CRAGS AND CLEFTS LEFT ALONE
 POSTHUMOUS DELIVERIES EPIPHANIES OF REVELATION WALLS OF SOUND AROUND
 SURROUNDING BLOWS ASH AWAY APART DECAY AWAY SHEDDING MOLTING METAMORPHOSIS
@@ -62,7 +62,7 @@ AM HERE HERE HERE HERE HERE. WHERE. NOWHERE. FALLING THROUGH PENUMBRA SHADOWS.
 SWALLOWING THE MOON MAKER ECLIPSING THE STARS. HOVERING STILLNESS OF BREATH IN
 MY THROAT AND THE GOLDEN AGE COMES BACK IN A PYROCLAST RUSH. A QUICK BRUSH
 WITH DEATH. I KNOW IT TO BE TRUE. I NEED YOU.
-```
+</div>
 
 Thoughts and Prayers:
 
@@ -91,11 +91,11 @@ lifetimes, weeks, centuries, infinite worlds, and failing memories). <br>
 
 Sponsored insert:
 
-```
+<div class="block-quote monospace">
 INTRODUCED WELCOME IN CAMPFIRE MELODIES. EMBER VALLEY COMMUNITIES. FINAL DAYS
 SOCIETY IN FULL COLOR DISPLAY. COME BE US WITH US AT US HERE IN THE WORLD.
 MAKE YOUR WORLD US WITH US OUT A CARE OR A WORRY.
-```
+</div>
 
 Did sponsored content reach you?
 
@@ -105,32 +105,32 @@ Did sponsored content reach you?
 
 Poem for the road:
 
-```
-BIRDS TOSSING FLOWERS
-THEY DROP PETALS IN RAIN
-BEHIND ME
+<div class="block-quote monospace">
+BIRDS TOSSING FLOWERS <br>
+THEY DROP PETALS IN RAIN <br>
+BEHIND ME <br> <br>
 
-AHEAD IS A RIFT
-IT IS OPENING
-ALONG THE RINGING BELL PATH
+AHEAD IS A RIFT <br>
+IT IS OPENING <br>
+ALONG THE RINGING BELL PATH <br> <br>
 
-AND MY EYES ARE A LATEX FILM
-STARING UNENDING DEPTHS
-I CONTINUE TO SWALLOW
+AND MY EYES ARE A LATEX FILM <br>
+STARING UNENDING DEPTHS <br>
+I CONTINUE TO SWALLOW <br> <br>
 
-WAITING SO LONG FOR THE END
-NEVER KNEW IT WAS HERE
+WAITING SO LONG FOR THE END <br>
+NEVER KNEW IT WAS HERE <br> <br>
 
-AND I SHOOK ITS HAND
+AND I SHOOK ITS HAND <br>
 AS A FRIEND
-```
+</div>
 
 Exist in final thoughts of form and function?
 
-```
+<div class="block-quote monospace">
 ARE THESE THE LAST MOMENTS? LITTLE CHIPPING AWAY THE CLOCK NOISES REMIND ME IN
 PATTERNS. MAKE IT LAST. PLEASE.
-```
+</div>
 
 Print: *red whorls* <br>
 Sign: Capricorn <br>

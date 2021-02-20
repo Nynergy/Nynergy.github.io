@@ -1,5 +1,5 @@
 ---
-layout: prose-post
+layout: collection-post
 title: Echo Beyond Anechoic Humming
 written: September 15, 2020
 date: 2020-09-15

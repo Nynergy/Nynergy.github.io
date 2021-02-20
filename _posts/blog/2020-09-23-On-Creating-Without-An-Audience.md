@@ -36,4 +36,6 @@ Something about it reminds me of cleaning cobwebs off of some sleeping machine.
 
 Sorry about all the dust floating around.
 
-    Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

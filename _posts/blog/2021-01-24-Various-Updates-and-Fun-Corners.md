@@ -69,55 +69,57 @@ For a small taste, here's a piece that will appear in the collection, titled
 
 <hr>
 
-```
-Deep green night
-yawning wide
-with mist
-around the teeth
+### Yure(i)mono
 
-Eyes of the world
-glazed over
-for thousands of
-small moments
-already gone
+<div class="block-quote">
+Deep green night <br>
+yawning wide <br>
+with mist <br>
+around the teeth <br> <br>
 
-Outside the blue crystal
-headlights flare
-streaking by the road
+Eyes of the world <br>
+glazed over <br>
+for thousands of <br>
+small moments <br>
+already gone <br> <br>
 
-There is a spirit flashing
-a light into my window
+Outside the blue crystal <br>
+headlights flare <br>
+streaking by the road <br> <br>
 
-Faint beating pulsar
-reaching through the mesh
-without words
+There is a spirit flashing <br>
+a light into my window <br> <br>
 
-Her beam grasping straws
-from a stranger
-without reason
+Faint beating pulsar <br>
+reaching through the mesh <br>
+without words <br> <br>
 
-A cipher wound up in
-a dress of smoke and
-pale leaves
+Her beam grasping straws <br>
+from a stranger <br>
+without reason <br> <br>
 
-Dying grass under solid
-gunmetal clouds
+A cipher wound up in <br>
+a dress of smoke and <br>
+pale leaves <br> <br>
 
-Ancient future rain drying
-before it falls in a mad
-dash for more time
+Dying grass under solid <br>
+gunmetal clouds <br> <br>
 
-What is she saying?
-What is she saying?
+Ancient future rain drying <br>
+before it falls in a mad <br>
+dash for more time <br> <br>
 
-Waving back and forth
-back and forth
-in a swaying trance
-of lights
+What is she saying? <br>
+What is she saying? <br> <br>
 
-Trying not to be seen through
+Waving back and forth <br>
+back and forth <br>
+in a swaying trance <br>
+of lights <br> <br>
+
+Trying not to be seen through <br>
 so easily
-```
+</div>
 
 <hr>
 
@@ -140,7 +142,9 @@ That's about it. Not much else going on. I got a new chair for my desk. Not
 like anyone wants to read about that. Feel free to contact me with that form I
 mentioned in the Website Update section.
 
-    Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>
 
 \**the audience claps for a shorter period of time*\*
 

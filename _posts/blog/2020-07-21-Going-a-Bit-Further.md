@@ -18,4 +18,6 @@ I can't promise the site won't go through more overhauling in the future, but fo
 
 Thanks for reading.
 
-	Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

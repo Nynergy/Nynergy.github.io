@@ -20,7 +20,7 @@ body {
 }
 
 .main-container {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 
 	h2 {
 		margin: 0.5rem 0;
@@ -40,19 +40,16 @@ body {
 	}
 }
 
-$post-types: (poetry, prose, blog);
+$post-types: (poetry, prose, blog, collection);
 @each $type in $post-types {
 	.#{$type}-post {
-        width: 50%;
+        padding: 1rem;
         margin: auto;
+        width: 50%;
 
-        h2 {
+        h2, h3, h5 {
             text-align: center;
         }
-
-		h4 {
-			margin: 1rem 0;
-		}
 
 		hr {
 			margin: 1rem 0;
@@ -62,7 +59,42 @@ $post-types: (poetry, prose, blog);
 
 .content {
 	@include set-colors($primary-color-light-5);
-    margin-bottom: 3rem;
+    padding: 1rem;
+    margin: 1rem 0;
+
+    .block-quote {
+        width: 90%;
+        padding: 1rem;
+        margin: auto;
+        background: linear-gradient(to right, $primary-color-light-10 0%, transparent 100%);
+    }
+
+    .italics {
+        font-style: italic;
+    }
+
+    .monospace {
+        font-family: monospace;
+    }
+
+    .attrib {
+        padding: 0.3rem 0.5rem;
+        padding-left: 1rem;
+        margin: auto;
+        background: linear-gradient(to right, $primary-color-light-10 0%, transparent 100%);
+        font-family: monospace;
+    }
+
+    div.highlight {
+        padding: 0.5rem;
+        margin: auto;
+        background: linear-gradient(to right, $primary-color-light-10 0%, transparent 100%);
+        font-family: monospace;
+    }
+
+    pre.highlight {
+        background: transparent;
+    }
 
 	p {
 		&:first-child {
@@ -77,12 +109,6 @@ $post-types: (poetry, prose, blog);
     li {
         margin-left: 2rem;
     }
-
-	div {
-		.highlight {
-			padding: 0.3rem 0.5rem;
-		}
-	}
 
 	img {
         display: block;

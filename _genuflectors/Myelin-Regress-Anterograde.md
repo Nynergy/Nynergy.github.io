@@ -1,5 +1,5 @@
 ---
-layout: prose-post
+layout: collection-post
 title: Myelin Regress Anterograde
 written: August 06, 2020
 date: 2020-08-06

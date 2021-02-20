@@ -18,4 +18,6 @@ Here's a peek at one of the pieces, titled __Rift State__:
 
 Just a small little creative outburst before I go into hibernation again while the semester rages on. Let me know what you think of the work if you like. Thanks.
 
-    Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

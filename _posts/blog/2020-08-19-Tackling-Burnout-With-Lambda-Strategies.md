@@ -86,4 +86,6 @@ If you like the program, or my explanation, or have any thoughts regarding stuff
 
 Thanks for reading.
 
-	Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

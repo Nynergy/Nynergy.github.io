@@ -39,4 +39,6 @@ In time, a more complete image of myself will manifest from these projects, like
 
 Thanks for reading. Here's to more long-winded bullshit.
 
-	Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

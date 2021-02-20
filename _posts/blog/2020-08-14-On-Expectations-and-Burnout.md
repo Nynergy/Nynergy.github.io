@@ -32,4 +32,6 @@ TL;DR - Brain no work good, this is all I got. More coming eventually, probably.
 
 Thanks for listening to more long-winded bullshit, it's much appreciated.
 
-	Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

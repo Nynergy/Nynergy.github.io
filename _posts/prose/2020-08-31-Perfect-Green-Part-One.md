@@ -8,7 +8,7 @@ tags: perfect-green mahjong
 mastheadClass: masthead-prose
 ---
 
-## East 1 - 16m 47p 22366s 23z 56z :: 8s
+### East 1 - 16m 47p 22366s 23z 56z :: 8s
 
 <hr>
 
@@ -31,7 +31,9 @@ smugness fades as time goes on, no more exclamations from the table. A minute
 goes by, still nothing. Rose's expression settles on one of resignation, and a
 snap of bamboo from the laptop signals that her concerns are not misplaced.
 
+<div class="block-quote monospace">
 "Ron!"
+</div>
 
 West Seat goes out off East's tile, and the game is over. Points are tallied
 up, and the final scores levied. Rose comes away with an ambivalent 3rd place.
@@ -74,20 +76,20 @@ just a couple posts discussing some recent tournament results. As she's
 reading up on the opening rounds, a chat message comes up with a familiar
 handle.
 
-```
+<div class="block-quote monospace">
 hatsuro: hey, good game earlier!
-```
+</div>
 
 Rose can't hide the smile on her face. She responds.
 
-```
-roze_petalz: you're just happy cause you won :P
-roze_petalz: i'll kick your ass next time for sure ;)
+<div class="block-quote monospace">
+roze_petalz: you're just happy cause you won :P <br>
+roze_petalz: i'll kick your ass next time for sure ;) <br> <br>
 
-hatsuro: we'll see about that >:)
+hatsuro: we'll see about that >:) <br>
 hatsuro: i never asked before, how did you learn to play? whoever taught you
-         must have been one hell of a teacher.
-```
+must have been one hell of a teacher.
+</div>
 
 Rose thinks for a second, and she's taken back to her childhood. Staying over
 at her grandmother's house, she would host a game night with her old lady
@@ -96,24 +98,27 @@ tiles and complex rules. She was struck with wonder, and her grandmother took
 the chance to pass on her riichi mahjong prowess. Rose was never the same
 after training under her grandmother.
 
-```
+<div class="block-quote monospace">
 roze_petalz: and even now, not a day goes by where I don't ron some randoms
-             online for at least a couple hours.
+online for at least a couple hours. <br> <br>
 
 hatsuro: i believe you, i see you online what seems like all day. your grandma
-         must have been a seriously talented player.
-```
+must have been a seriously talented player.
+</div>
 
 The thought of her grandmother brings a sad angle to Rose's smile. The rain
 keeps falling as she recalls the last game they played together.
 
-_Rose, you've grown better than me at the game. I've really lost it, eh?_ <br>
-_No, gramma, you haven't lost it! Don't think like that._ <br>
-_...Rose, listen. I want to give you something._ <br>
-_What is it?_ <br>
-_You should have this game set. It's the one I've been using for ages, the one you learned to play the game with. I'm sure it means a lot to you._ <br>
-_No, gramma, this is yours. You haven't given up on playing, have you?_ <br>
-_No, no. I just think it would better serve someone like you, little Rosie..._
+<div class="block-quote italics">
+Rose, you've grown better than me at the game. I've really lost it, eh? <br>
+No, gramma, you haven't lost it! Don't think like that. <br>
+...Rose, listen. I want to give you something. <br>
+What is it? <br>
+You should have this game set. It's the one I've been using for ages, the one
+you learned to play the game with. I'm sure it means a lot to you. <br>
+No, gramma, this is yours. You haven't given up on playing, have you? <br>
+No, no. I just think it would better serve someone like you, little Rosie...
+</div>
 
 Three months later, she was gone. Like she knew the end was coming. That set
 is still sitting somewhere in her dorm room, unused since that day. Can't get
@@ -124,11 +129,11 @@ of the site.
 As the rain lets up a little, the clouds begin circling Rose's mind, consumed
 with thoughts of her grandmother. She begins typing to hatsuro.
 
-```
-roze_petalz: go ahead and lobby up, i'll be online in a few minutes.
+<div class="block-quote monospace">
+roze_petalz: go ahead and lobby up, i'll be online in a few minutes. <br> <br>
 
 hatsuro: still lookin for that W, huh? ;P you're on
-```
+</div>
 
 Rose makes her way back to the dorm as the rain lessens to just a light mist.
 Her hair gets damp and starts sticking to the back of her neck, and her

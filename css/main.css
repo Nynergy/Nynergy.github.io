@@ -144,7 +144,7 @@ body {
 }
 
 .main-container {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 .main-container h2 {
   margin: 0.5rem 0;
@@ -161,51 +161,86 @@ body {
 }
 
 .poetry-post {
-  width: 50%;
+  padding: 1rem;
   margin: auto;
+  width: 50%;
 }
-.poetry-post h2 {
+.poetry-post h2, .poetry-post h3, .poetry-post h5 {
   text-align: center;
-}
-.poetry-post h4 {
-  margin: 1rem 0;
 }
 .poetry-post hr {
   margin: 1rem 0;
 }
 
 .prose-post {
-  width: 50%;
+  padding: 1rem;
   margin: auto;
+  width: 50%;
 }
-.prose-post h2 {
+.prose-post h2, .prose-post h3, .prose-post h5 {
   text-align: center;
-}
-.prose-post h4 {
-  margin: 1rem 0;
 }
 .prose-post hr {
   margin: 1rem 0;
 }
 
 .blog-post {
-  width: 50%;
+  padding: 1rem;
   margin: auto;
+  width: 50%;
 }
-.blog-post h2 {
+.blog-post h2, .blog-post h3, .blog-post h5 {
   text-align: center;
 }
-.blog-post h4 {
+.blog-post hr {
   margin: 1rem 0;
 }
-.blog-post hr {
+
+.collection-post {
+  padding: 1rem;
+  margin: auto;
+  width: 50%;
+}
+.collection-post h2, .collection-post h3, .collection-post h5 {
+  text-align: center;
+}
+.collection-post hr {
   margin: 1rem 0;
 }
 
 .content {
   background-color: #3c001e;
   color: #fff;
-  margin-bottom: 3rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.content .block-quote {
+  width: 90%;
+  padding: 1rem;
+  margin: auto;
+  background: linear-gradient(to right, #55002b 0%, transparent 100%);
+}
+.content .italics {
+  font-style: italic;
+}
+.content .monospace {
+  font-family: monospace;
+}
+.content .attrib {
+  padding: 0.3rem 0.5rem;
+  padding-left: 1rem;
+  margin: auto;
+  background: linear-gradient(to right, #55002b 0%, transparent 100%);
+  font-family: monospace;
+}
+.content div.highlight {
+  padding: 0.5rem;
+  margin: auto;
+  background: linear-gradient(to right, #55002b 0%, transparent 100%);
+  font-family: monospace;
+}
+.content pre.highlight {
+  background: transparent;
 }
 .content p:first-child {
   margin-top: 0;
@@ -215,9 +250,6 @@ body {
 }
 .content li {
   margin-left: 2rem;
-}
-.content div .highlight {
-  padding: 0.3rem 0.5rem;
 }
 .content img {
   display: block;

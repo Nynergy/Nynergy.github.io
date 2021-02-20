@@ -14,4 +14,6 @@ I'd like to make some changes to the other pages on the site, like the music pag
 
 Thanks for reading.
 
-	Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

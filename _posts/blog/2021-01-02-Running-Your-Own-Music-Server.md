@@ -32,4 +32,6 @@ Finally, I have setup a music server to replace iTunes, and one that does exactl
 
 I'm quite happy with what I've accomplished. Now I can enjoy more music while I work on projects or read in my down time. If you like what you see, or have questions about anything discussed in this post, let me know. Shoot me an email or send a carrier pigeon or something. I don't bite. Thanks for reading.
 
-    Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

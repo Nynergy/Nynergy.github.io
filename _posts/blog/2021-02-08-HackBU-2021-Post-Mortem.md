@@ -97,4 +97,6 @@ events.
 Programming is a passion like any other, and like any other passion, doing it
 with those you care about is the ultimate privilege.
 
-    Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

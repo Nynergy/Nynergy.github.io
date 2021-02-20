@@ -16,14 +16,15 @@ Below is a small taste of the nearly 300-page volume, a single piece titled _You
 
 <hr>
 
-<h4>Your Lungs Are Jet Engines</h4>
+<h3>Your Lungs Are Jet Engines</h3>
 
+<div class="block-quote">
 In October your leaves go black <br>
 Hair dripping in the shower <br>
 Steaming shoulders <br>
 Heavy and wet <br>
 Bulldozing paths through crippled trees <br>
-Lining graveyards and boulevards
+Lining graveyards and boulevards <br> <br>
 
 You gaze through walls <br>
 What do you see there <br>
@@ -32,7 +33,7 @@ Meticulous lives seated in comfort <br>
 Stoic in austerity <br>
 Thriving off of a sentiment <br>
 Stuck in between your bones <br>
-A sediment of belief slowly wearing you away
+A sediment of belief slowly wearing you away <br> <br>
 
 Along that idea of winter paths <br>
 Inhaling the crystal snap of cold <br>
@@ -40,7 +41,7 @@ Your lungs are jet engines <br>
 Restraining the pealing sharpness <br>
 A yell or a scream or a sob into nothing <br>
 Your shoulders behind you <br>
-Nothing ahead
+Nothing ahead <br> <br>
 
 Air humming November commercials <br>
 Through your frozen TV screen <br>
@@ -50,28 +51,29 @@ Shaking like cats <br>
 Why are you shaking <br>
 It’s nothing so big <br>
 Or dramatic <br>
-As that
+As that <br> <br>
 
 Sitting in low light between worlds <br>
 You’re pressing your luck <br>
-Like flowers between dog-eared pages
+Like flowers between dog-eared pages <br> <br>
 
-Save some luck for me
+Save some luck for me <br> <br>
 
-~ ~ ==== ~ ~
+~ ~ ==== ~ ~ <br> <br>
 
 Cling to something <br>
-Hold it within you tightly
+Hold it within you tightly <br> <br>
 
 If you keep it warm <br>
 Like an egg <br>
-It will hatch
+It will hatch <br> <br>
 
 And if you open it <br>
 It will unfurl until it meets <br>
-The edge of the earth
+The edge of the earth <br> <br>
 
 Do not let it stop
+</div>
 
 <hr>
 
@@ -79,4 +81,6 @@ If you'd like to support me by purchasing a copy of __Another Flow__, you can vi
 
 Thank you for reading. Hopefully there will be more projects appearing in my catalogue in the future.
 
-	Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

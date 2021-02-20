@@ -8,7 +8,7 @@ tags: linux gentoo digital
 mastheadClass: masthead-blog
 ---
 
-_Digital Gardening_
+#### _Digital Gardening_
 
 It's a concept I've had in the back of my mind for quite some time. Certainly I'm not the only person to have come up with such an idea, for it does not seem like a wholly original one. I treat my computers like gardens; each one is like a little digital ecosystem, and it is my responsibility as its caretaker to tend to that ecosystem, and work toward its health. Like a Buddhist monk in a zen garden, I grow, prune, and organize my systems in such a way that benefits not only me as the end user, but also the system itself and how it interacts with internal files, packages, and data structures. By working on systems in this way, by giving them the care, attention, and respect they deserve, one will find that the world of computing opens up like a flower in the light. You begin to understand your system on a deeper level, how it functions, where it finds things, where it stores information, how it interacts with the end user. And through this understanding comes a kind of peace. A joy of maintaining a system, a landscape in its own right.
 
@@ -24,4 +24,6 @@ If you have any questions, comments, or otherwise regarding my thoughts on digit
 
 Thanks for reading.
 
-	Ben Buchanan
+<div class="attrib">
+Ben Buchanan
+</div>

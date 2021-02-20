@@ -1,5 +1,5 @@
 ---
-layout: prose-post
+layout: collection-post
 title: Obligation Polymorphic Somnambulism
 written: August 10, 2020
 date: 2020-08-10
