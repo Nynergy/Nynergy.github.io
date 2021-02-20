@@ -624,6 +624,21 @@ table tbody tr:hover .goto {
     display: none;
   }
 }
+@media (max-width: 500px) {
+  .table-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  table th:nth-child(3) {
+    display: none;
+  }
+  table td:nth-child(3), table td:nth-child(4) {
+    display: none;
+  }
+}
 .highlight pre {
   background-color: #55002b;
 }
@@ -1082,6 +1097,10 @@ table tbody tr:hover .goto {
   .collection-info p, .collection-info small {
     display: none;
   }
+
+  .collection-button {
+    display: none;
+  }
 }
 .music-container .card-container {
   display: grid;
@@ -1141,7 +1160,7 @@ table tbody tr:hover .goto {
   grid-column: 3/4;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .card-container {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr !important;
