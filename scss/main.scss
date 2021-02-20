@@ -135,6 +135,15 @@ $post-types: (poetry, prose, blog, collection);
 	}
 }
 
+// MEDIA QUERIES
+@media (max-width: 800px) {
+    @each $type in $post-types {
+        .#{$type}-post {
+            width: 100%;
+        }
+    }
+}
+
 @import 'masthead';
 @import 'nav';
 @import 'columns';

@@ -7,11 +7,14 @@
 	cursor: pointer;
 
 	.collection-counter {
+        min-width: 75px;
 		margin: auto;
+        padding: 0 1rem;
 		text-align: center;
 	}
 
 	.collection-button {
+        min-width: 125px;
 		margin: auto;
 	}
 
@@ -43,4 +46,11 @@
 	}
 }
 
-// COLLECTION PAGE
+// MEDIA QUERIES
+@media (max-width: 600px) {
+    .collection-info {
+        p, small {
+            display: none;
+        }
+    }
+}

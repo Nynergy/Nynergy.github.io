@@ -24,7 +24,7 @@
                 margin-top: 0.5rem;
 
                 .gallery-lead-image {
-                    height: 225px;
+                    height: calc(100vw/5);
                     width: auto;
                 }
             }
@@ -79,5 +79,17 @@
                 padding: 0.5rem;
             }
         }
+    }
+}
+
+// MEDIA QUERIES
+@media (max-width: 800px) {
+    .card-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .gallery-lead-image {
+        height: calc(100vw/3) !important;
     }
 }

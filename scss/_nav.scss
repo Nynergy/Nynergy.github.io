@@ -14,10 +14,12 @@
 
     .nav-links {
         display: inline;
+        padding-left: 1rem;
 
         a {
             display: inline-block;
             padding: 0.3rem 1rem;
+            margin: 0 -2px;
             text-decoration: none;
             color: $accent-color-light-20;
             transition: background-color 0.2s linear;
@@ -64,6 +66,7 @@
             position: absolute;
             display: block;
             width: 100%;
+            padding-left: 0;
             background-color: $primary-color-light-5;
             height: 0;
             transition: all 0.2s ease-in;

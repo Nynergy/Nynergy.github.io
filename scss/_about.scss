@@ -17,8 +17,9 @@
             padding: 1rem;
 
             .about-image {
-                height: 275px;
-                width: auto;
+                height: auto;
+                width: 30vw;
+                max-width: 275px;
             }
         }
 
@@ -69,6 +70,7 @@
 
                 .about-button {
                     cursor: pointer;
+                    text-align: center;
                     border: 0;
                     border-radius: 2px;
                     margin: 0 10px;
@@ -91,7 +93,7 @@
                 @include set-colors($primary-color-light-5);
                 margin-left: 1rem;
                 padding: 1rem;
-                width: 100%;
+                width: 90%;
 
                 label {
                     color: $accent-color-light-30;
@@ -110,5 +112,37 @@
                 }
             }
         }
+    }
+}
+
+// MEDIA QUERIES
+@media (max-width: 800px) {
+    .about-row {
+        flex-direction: column;
+    }
+
+    .right, .left {
+        margin: 0 10px 10px 10px!important;
+    }
+
+    .cf-container {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .about-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .about-button {
+            width: 90%;
+            margin: 0.2rem 0 !important;
+        }
+    }
+
+    #form-button {
+        margin-top: 1rem !important;
     }
 }

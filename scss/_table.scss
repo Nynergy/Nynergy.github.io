@@ -83,3 +83,14 @@ table tbody tr:hover .goto {
 	@include set-colors($primary-color-light-5);
 	opacity: 1;
 }
+
+// MEDIA QUERIES
+@media (max-width: 600px) {
+    table {
+        .meta-container {
+            small {
+                display: none;
+            }
+        }
+    }
+}
