@@ -1377,6 +1377,12 @@ table tbody tr:hover .goto {
   .about-row {
     flex-direction: column;
   }
+  .about-row .about-image-container {
+    padding: 0.2rem !important;
+  }
+  .about-row .about-image-container .about-image {
+    display: none;
+  }
 
   .right, .left {
     margin: 0 10px 10px 10px !important;

@@ -119,6 +119,14 @@
 @media (max-width: 800px) {
     .about-row {
         flex-direction: column;
+
+        .about-image-container {
+            padding: 0.2rem !important;
+
+            .about-image {
+                display: none;
+            }
+        }
     }
 
     .right, .left {
