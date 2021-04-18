@@ -1,0 +1,112 @@
+// NAV
+.ps-nav {
+    width: 100%;
+    @include set-colors($ps-background-light-5);
+    position: relative;
+
+    .ps-nav-button {
+        display: none;
+    }
+
+    #ps-nav-check {
+        display: none;
+    }
+
+    .ps-nav-links {
+        display: inline;
+        padding-left: 1rem;
+
+        a {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            margin: 0 -2px;
+            text-decoration: none;
+            color: $ps-current-act-light-30;
+            transition: background-color 0.2s linear;
+
+            &:hover {
+                background-color: $ps-background;
+            }
+
+            &.current-page {
+                background-color: $ps-background;
+                color: $ps-current-act;
+            }
+        }
+    }
+}
+
+@each $act in $acts {
+    .#{$act}-nav {
+        .ps-nav-links {
+            a {
+                color: getLightActColor($act);
+
+                &.current-page {
+                    color: getActColor($act);
+                }
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES
+@media (max-width: 600px) {
+    .ps-nav {
+        .ps-nav-button {
+            display: inline-block;
+            position: relative;
+            float: right;
+            height: 100%;
+            right: 0px;
+            top: 0px;
+
+            label {
+                display: inline-block;
+                padding: 0.3rem 0.5rem;
+                transition: background-color 0.2s linear;
+
+                &:hover {
+                    background-color: $ps-background;
+                }
+
+                i {
+                    color: $ps-current-act;
+
+                    @each $act in $acts {
+                        &.#{$act}-nav-button {
+                            color: getActColor($act);
+                        }
+                    }
+                }
+            }
+        }
+
+        .ps-nav-links {
+            position: absolute;
+            display: block;
+            width: 100%;
+            padding-left: 0;
+            background-color: $ps-background-light-5;
+            height: 0;
+            transition: all 0.2s ease-in;
+            overflow-y: hidden;
+            top: 100%;
+            left: 0px;
+
+            a {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        #ps-nav-check:not(:checked) ~ .ps-nav-links {
+            height: 0px;
+        }
+
+        #ps-nav-check:checked ~ .ps-nav-links {
+            height: calc(100vh);
+            overflow-y: auto;
+        }
+    }
+}

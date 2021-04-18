@@ -1,0 +1,48 @@
+---
+layout: petrichor-base
+title: Act I - Wandering Sage
+meta: Act I of Petrichor Sacrament
+act: I
+---
+
+<div class="content-header">
+    <h2>{{page.title}}</h2>
+</div>
+
+<hr class="short-rule"><br>
+
+<div class="row">
+    <div class="column-left">
+        <div class="content-block centered-text">
+            <img class="full-width my-1" src="/img/PS/act-{{page.act}}-insert.jpg">
+            From a lone city on a windswept plain, a young pilgrim begins their journey in black robes.
+        </div>
+    </div>
+
+    <div class="column-right">
+        <div class="ps-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th><h3>Title</h3></th>
+                        <th><h3>Part</h3></th>
+                        <th><h3>Posted</h3></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for post in site.petrichor %}
+                    {% if post.act == 'I' %}
+                    <tr class="ps-post" onclick="location.href='{{post.url}}'">
+                        <td><div class="meta-container"><a href="{{post.url}}"></a><h4>{{post.title}}</h4></div></td>
+                        <td><div class="ps-category-container"><small class="ps-category category-ps-part">{{post.part}}</small></div></td>
+                        <td><div class="ps-posted-container">{{post.written}}</div></td>
+                        <td><div class="ps-goto-container"><a href="{{post.url}}" class="ps-goto"><i class="fas fa-angle-double-right"></i></a></div></td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

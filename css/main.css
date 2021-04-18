@@ -135,7 +135,6 @@ body {
   color: #fff;
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", serif;
   height: 100%;
-  margin-bottom: 20px;
 }
 
 .space-maintainer {
@@ -1053,22 +1052,31 @@ table tbody tr:hover .goto {
 .prose-collection {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #3c001e;
   color: #fff;
+  margin: 0 3rem;
   padding: 0.5rem;
   cursor: pointer;
 }
-.prose-collection .collection-counter {
+.prose-collection .collection-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+}
+.prose-collection .collection-block .collection-counter {
   min-width: 75px;
+  width: 50%;
   margin: auto;
-  padding: 0 1rem;
   text-align: center;
 }
-.prose-collection .collection-button {
+.prose-collection .collection-block .collection-button {
   min-width: 125px;
+  width: 50%;
   margin: auto;
 }
-.prose-collection .goto {
+.prose-collection .collection-block .goto {
   background-color: #220011;
   color: #fff;
   cursor: pointer;
@@ -1079,7 +1087,7 @@ table tbody tr:hover .goto {
   transition: background-color 0.2s;
   transition-timing-function: linear;
 }
-.prose-collection .goto:hover {
+.prose-collection .collection-block .goto:hover {
   background-color: #55002b;
   color: #fff;
 }
