@@ -322,6 +322,9 @@ body {
 .ps-main-container .centered-text {
   text-align: center;
 }
+.ps-main-container .mirrored-text {
+  text-align: right;
+}
 .ps-main-container .short-rule {
   width: 80%;
   margin: auto;
