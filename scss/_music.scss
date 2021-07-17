@@ -1,5 +1,76 @@
 // MUSIC
 .music-container {
+    .featured-album-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        @include set-colors($primary-color-light-3);
+        padding-top: 0.5rem;
+        margin: 0.5rem 0;
+
+        .featured-album-art {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 0.5rem;
+
+            .featured-album-image {
+                height: auto;
+                width: calc(100vw/4);
+            }
+        }
+
+        .featured-album-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: 1rem;
+            width: 70%;
+
+            .featured-album-title {
+                text-align: center;
+            }
+
+            .featured-album-embed {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 0.5rem 0;
+                width: 90%;
+
+                .album-button {
+					cursor: pointer;
+                    text-align: center;
+					border: 0;
+					border-radius: 2px;
+					padding: 8px 20px;
+					@include set-colors($primary-color);
+                    transition: background-color 0.2s;
+                    transition-timing-function: linear;
+
+					&:hover {
+						@include set-colors($primary-color-light-10);
+					}
+                }
+            }
+
+            .featured-album-description {
+                @include set-colors($primary-color-light-5);
+
+                .show-large {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .hide-tiny {
+        display: inline-block;
+    }
+    .show-tiny {
+        display: none;
+    }
+
 	.card-container {
 		display: grid;
 		grid-template-columns: 1fr 2fr 1fr;
@@ -67,7 +138,37 @@
 }
 
 // MEDIA QUERIES
+@media (max-width: 1300px) {
+    .featured-album-image {
+        width: calc(100vw/5) !important;
+    }
+
+    .featured-album-content {
+        width: 75% !important;
+
+        .featured-album-embed {
+            width: 75% !important;
+        }
+    }
+
+    .show-large {
+        display: none !important;
+    }
+}
+
 @media (max-width: 1000px) {
+    .featured-album-image {
+        width: calc(100vw/3) !important;
+    }
+
+    .featured-album-content {
+        width: 60% !important;
+
+        .featured-album-embed {
+            width: 90% !important;
+        }
+    }
+
     .card-container {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr !important;
@@ -90,6 +191,24 @@
 
     .album-image {
         width: calc(100vw/3) !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .featured-album-card {
+        flex-direction: column !important;
+    }
+
+    .featured-album-content {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .hide-tiny {
+        display: none !important;
+    }
+    .show-tiny {
+        display: inline-block !important;
     }
 }
 
