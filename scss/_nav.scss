@@ -21,7 +21,7 @@
             padding: 0.3rem 1rem;
             margin: 0 -2px;
             text-decoration: none;
-            color: $accent-color-light-20;
+            color: $accent-color-light-10;
             transition: background-color 0.2s linear;
 
             &:hover {
@@ -30,7 +30,7 @@
 
             &.current-page {
                 background-color: $primary-color;
-                color: $accent-color-light-10;
+                color: $accent-color;
             }
         }
     }
@@ -57,7 +57,7 @@
                 }
 
                 i {
-                    color: $accent-color-light-20;
+                    color: $accent-color-light-10;
                 }
             }
         }

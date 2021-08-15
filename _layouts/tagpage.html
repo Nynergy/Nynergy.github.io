@@ -2,8 +2,11 @@
 layout: default
 ---
 
-<h1>Posts with tag: {{ page.tag }}</h1>
-<hr>
+<hr class="accent-rule">
+<div class="header-span">
+    <h2>Posts with tag: {{ page.tag }}</h2>
+</div>
+<hr class="accent-rule">
 <div class="table-container">
 	<table>
 		<thead>
@@ -27,6 +30,9 @@ layout: default
 	</table>
 </div>
 <br>
-<hr>
-<h2>Other Tags</h2>
+<hr class="accent-rule">
+<div class="header-span">
+    <h2>Other Tags</h2>
+</div>
+<hr class="accent-rule">
 {% include tagcloud.html %}

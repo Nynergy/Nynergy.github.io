@@ -131,7 +131,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #220011;
+  background-color: #04080c;
   color: #fff;
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", serif;
   height: 100%;
@@ -157,6 +157,16 @@ body {
 .main-container a {
   color: #ff2266;
   text-decoration: none;
+}
+
+.accent-rule {
+  border-color: #ff2266;
+}
+
+.header-span {
+  text-align: center;
+  background: linear-gradient(to right, transparent 0%, #112232 50%, transparent 100%);
+  padding: 0.1rem;
 }
 
 .poetry-post {
@@ -208,7 +218,7 @@ body {
 }
 
 .content {
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
   padding: 1rem;
   margin: 1rem 0;
@@ -217,7 +227,7 @@ body {
   width: 90%;
   padding: 1rem;
   margin: auto;
-  background: linear-gradient(to right, #55002b 0%, transparent 100%);
+  background: linear-gradient(to right, #112232 0%, transparent 100%);
 }
 .content .italics {
   font-style: italic;
@@ -229,13 +239,13 @@ body {
   padding: 0.3rem 0.5rem;
   padding-left: 1rem;
   margin: auto;
-  background: linear-gradient(to right, #55002b 0%, transparent 100%);
+  background: linear-gradient(to right, #112232 0%, transparent 100%);
   font-family: monospace;
 }
 .content div.highlight {
   padding: 0.5rem;
   margin: auto;
-  background: linear-gradient(to right, #55002b 0%, transparent 100%);
+  background: linear-gradient(to right, #112232 0%, transparent 100%);
   font-family: monospace;
 }
 .content pre.highlight {
@@ -262,7 +272,7 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #18000c;
+  background-color: #010304;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -293,71 +303,71 @@ body {
 }
 .masthead {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-home.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #0a151f 100%), url("../img/masthead-home.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
 }
 
 .masthead-poetry {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-poetry.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #0a151f 100%), url("../img/masthead-poetry.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
 }
 
 .masthead-prose {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-prose.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #0a151f 100%), url("../img/masthead-prose.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
 }
 
 .masthead-genuflectors {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-genuflectors.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #0a151f 100%), url("../img/masthead-genuflectors.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
 }
 
 .masthead-music {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-music.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #0a151f 100%), url("../img/masthead-music.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
 }
 
 .masthead-blog {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-blog.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #0a151f 100%), url("../img/masthead-blog.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
 }
 
 .masthead-gallery {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-gallery.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #0a151f 100%), url("../img/masthead-gallery.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
 }
 
 .masthead-about {
   padding: 1em;
-  background: linear-gradient(to bottom, transparent 50%, #3c001e 100%), url("../img/masthead-about.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, transparent 50%, #0a151f 100%), url("../img/masthead-about.jpg") no-repeat center center;
   background-size: cover;
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
 }
 
 .nav {
   width: 100%;
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
   position: relative;
 }
@@ -376,15 +386,15 @@ body {
   padding: 0.3rem 1rem;
   margin: 0 -2px;
   text-decoration: none;
-  color: #ff88ad;
+  color: #ff5589;
   transition: background-color 0.2s linear;
 }
 .nav .nav-links a:hover {
-  background-color: #220011;
+  background-color: #04080c;
 }
 .nav .nav-links a.current-page {
-  background-color: #220011;
-  color: #ff5589;
+  background-color: #04080c;
+  color: #ff2266;
 }
 
 @media (max-width: 600px) {
@@ -402,17 +412,17 @@ body {
     transition: background-color 0.2s linear;
   }
   .nav .nav-button label:hover {
-    background-color: #220011;
+    background-color: #04080c;
   }
   .nav .nav-button label i {
-    color: #ff88ad;
+    color: #ff5589;
   }
   .nav .nav-links {
     position: absolute;
     display: block;
     width: 100%;
     padding-left: 0;
-    background-color: #3c001e;
+    background-color: #0a151f;
     height: 0;
     transition: all 0.2s ease-in;
     overflow-y: hidden;
@@ -452,7 +462,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #310019;
+  background-color: #081017;
   color: #fff;
   padding-top: 0.5rem;
   margin-top: 0.5rem;
@@ -470,7 +480,7 @@ body {
   margin: auto;
 }
 .row .column-right .book-card .book-caption {
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
   margin-top: 0.75rem;
   padding: 1rem;
@@ -489,13 +499,13 @@ body {
   border-radius: 2px;
   margin: 0.2rem 0;
   padding: 5px 15px;
-  background-color: #220011;
+  background-color: #04080c;
   color: #fff;
   transition: background-color 0.2s;
   transition-timing-function: linear;
 }
 .row .column-right .book-card .book-links .book-button:hover {
-  background-color: #55002b;
+  background-color: #112232;
   color: #fff;
 }
 
@@ -532,7 +542,7 @@ body {
   }
 }
 .table-container {
-  background-color: #220011;
+  background-color: #04080c;
   color: #fff;
   margin: auto;
   width: 90%;
@@ -549,7 +559,7 @@ table {
 }
 table td {
   cursor: pointer;
-  border: 2px solid #3c001e;
+  border: 2px solid #0a151f;
   padding: 10px;
   text-align: center;
   border-collapse: collapse;
@@ -557,17 +567,17 @@ table td {
   transition-timing-function: linear;
 }
 table tbody tr {
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
   transition: background-color 0.2s;
   transition-timing-function: linear;
 }
 table tbody tr:hover {
-  background-color: #310019;
+  background-color: #081017;
   color: #fff;
 }
 table tbody tr:hover td {
-  border: 2px solid #310019;
+  border: 2px solid #081017;
 }
 
 .meta-container {
@@ -575,7 +585,7 @@ table tbody tr:hover td {
 }
 
 .category {
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
   border-radius: 50px;
   padding: 2px 10px;
@@ -583,23 +593,27 @@ table tbody tr:hover td {
 }
 
 .category-poetry {
-  background-color: #cb0643;
+  background-color: #ff2266;
   color: #fff;
+  color: #0a151f;
 }
 
 .category-prose {
-  background-color: #116e6f;
+  background-color: #00ffcc;
   color: #fff;
+  color: #0a151f;
 }
 
 .category-blog {
-  background-color: #782287;
-  color: #fff;
+  background-color: #5577ff;
+  color: #333;
+  color: #0a151f;
 }
 
 .category-memory {
-  background-color: #cc6600;
+  background-color: #ff9911;
   color: #fff;
+  color: #0a151f;
 }
 
 .goto {
@@ -613,7 +627,7 @@ table tbody tr:hover td {
 }
 
 table tbody tr:hover .goto {
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
   opacity: 1;
 }
@@ -639,11 +653,11 @@ table tbody tr:hover .goto {
   }
 }
 .highlight pre {
-  background-color: #55002b;
+  background-color: #112232;
 }
 
 .highlight .hll {
-  background-color: #55002b;
+  background-color: #112232;
 }
 
 .highlight .c {
@@ -1024,11 +1038,12 @@ table tbody tr:hover .goto {
 }
 .tags-cloud {
   margin: auto;
+  margin-top: 1rem;
   margin-bottom: 3rem;
 }
 
 .tag {
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
   margin: 0.2rem;
   padding: 0.1rem 0.3rem;
@@ -1041,7 +1056,7 @@ table tbody tr:hover .goto {
   transition-timing-function: linear;
 }
 .tag:hover {
-  background-color: #310019;
+  background-color: #081017;
   color: #fff;
   cursor: pointer;
 }
@@ -1053,7 +1068,7 @@ table tbody tr:hover .goto {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
   margin: 0 3rem;
   padding: 0.5rem;
@@ -1077,7 +1092,7 @@ table tbody tr:hover .goto {
   margin: auto;
 }
 .prose-collection .collection-block .goto {
-  background-color: #220011;
+  background-color: #04080c;
   color: #fff;
   cursor: pointer;
   border: 0;
@@ -1088,7 +1103,7 @@ table tbody tr:hover .goto {
   transition-timing-function: linear;
 }
 .prose-collection .collection-block .goto:hover {
-  background-color: #55002b;
+  background-color: #112232;
   color: #fff;
 }
 .prose-collection a {
@@ -1114,7 +1129,7 @@ table tbody tr:hover .goto {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #310019;
+  background-color: #081017;
   color: #fff;
   padding-top: 0.5rem;
   margin: 0.5rem 0;
@@ -1152,17 +1167,17 @@ table tbody tr:hover .goto {
   border: 0;
   border-radius: 2px;
   padding: 8px 20px;
-  background-color: #220011;
+  background-color: #04080c;
   color: #fff;
   transition: background-color 0.2s;
   transition-timing-function: linear;
 }
 .music-container .featured-album-card .featured-album-content .featured-album-embed .album-button:hover {
-  background-color: #55002b;
+  background-color: #112232;
   color: #fff;
 }
 .music-container .featured-album-card .featured-album-content .featured-album-description {
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
 }
 .music-container .featured-album-card .featured-album-content .featured-album-description .show-large {
@@ -1183,7 +1198,7 @@ table tbody tr:hover .goto {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #310019;
+  background-color: #081017;
   color: #fff;
   padding-top: 0.5rem;
   margin-top: 0.5rem;
@@ -1201,7 +1216,7 @@ table tbody tr:hover .goto {
   width: calc(100vw/5);
 }
 .music-container .card-container .album-card .album-description {
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
 }
 .music-container .card-container .album-card .album-links {
@@ -1213,13 +1228,13 @@ table tbody tr:hover .goto {
   border: 0;
   border-radius: 2px;
   padding: 5px 15px;
-  background-color: #220011;
+  background-color: #04080c;
   color: #fff;
   transition: background-color 0.2s;
   transition-timing-function: linear;
 }
 .music-container .card-container .album-card .album-links .album-button:hover {
-  background-color: #55002b;
+  background-color: #112232;
   color: #fff;
 }
 .music-container .card-container #adosr {
@@ -1317,7 +1332,7 @@ table tbody tr:hover .goto {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #310019;
+  background-color: #081017;
   color: #fff;
   padding-top: 0.5rem;
   margin-top: 0.5rem;
@@ -1335,7 +1350,7 @@ table tbody tr:hover .goto {
   width: auto;
 }
 .gallery-container .card-container .gallery-card .gallery-description {
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
   padding: 1rem;
 }
@@ -1348,13 +1363,13 @@ table tbody tr:hover .goto {
   border: 0;
   border-radius: 2px;
   padding: 5px 15px;
-  background-color: #220011;
+  background-color: #04080c;
   color: #fff;
   transition: background-color 0.2s;
   transition-timing-function: linear;
 }
 .gallery-container .card-container .gallery-card .gallery-links .gallery-button:hover {
-  background-color: #55002b;
+  background-color: #112232;
   color: #fff;
 }
 .gallery-container .card-container #gl {
@@ -1366,7 +1381,7 @@ table tbody tr:hover .goto {
 .gallery-container .gallery-content {
   margin: 1rem;
   padding: 1rem;
-  background-color: #310019;
+  background-color: #081017;
   color: #fff;
 }
 .gallery-container .gallery-content .gallery-collection {
@@ -1398,7 +1413,7 @@ table tbody tr:hover .goto {
 .about-container .about-row {
   display: flex;
   align-items: center;
-  background-color: #310019;
+  background-color: #081017;
   color: #fff;
   width: 100%;
   margin: 0.5rem 0;
@@ -1429,7 +1444,7 @@ table tbody tr:hover .goto {
   margin-bottom: 0;
 }
 .about-container .about-row .about-block .about-description {
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -1458,20 +1473,20 @@ table tbody tr:hover .goto {
   border-radius: 2px;
   margin: 0 10px;
   padding: 5px 10px;
-  background-color: #220011;
+  background-color: #04080c;
   color: #fff;
   transition: background-color 0.2s;
   transition-timing-function: linear;
 }
 .about-container .about-row .about-block .about-links .about-button:hover {
-  background-color: #55002b;
+  background-color: #112232;
   color: #fff;
 }
 .about-container .about-row .about-block .about-links #form-button {
   margin-top: 1rem;
 }
 .about-container .about-row .about-block .cf-container {
-  background-color: #3c001e;
+  background-color: #0a151f;
   color: #fff;
   margin-left: 1rem;
   padding: 1rem;

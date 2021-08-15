@@ -5,6 +5,7 @@ meta: The personal website of Ben Buchanan.
 priority: 1.0
 ---
 
+<div class="content">
 <p>
 Welcome to <strong>Lexica Chromatica</strong>, an online archive/blog for "Poetry, Music, and Other Strange Scrawlings".
 </p>
@@ -20,9 +21,16 @@ and throw it through my window. If you do so, please also attach a check that co
 Thank you.
 </p>
 
-<hr>
-<h2>Recent Posts</h2>
-<hr>
+<div class="attrib">
+Ben Buchanan
+</div>
+</div>
+
+<hr class="accent-rule">
+<div class="header-span">
+    <h2>Latest Posts</h2>
+</div>
+<hr class="accent-rule">
 
 <div class="table-container">
 	<table>
@@ -47,6 +55,9 @@ Thank you.
 	</table>
 </div>
 <br>
-<hr>
-<h2>Tag Archive</h2>
+<hr class="accent-rule">
+<div class="header-span">
+    <h2>Tag Archive</h2>
+</div>
+<hr class="accent-rule">
 {% include tagcloud.html %}

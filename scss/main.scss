@@ -39,6 +39,16 @@ body {
 	}
 }
 
+.accent-rule {
+    border-color: $accent-color;
+}
+
+.header-span {
+    text-align: center;
+    background: linear-gradient(to right, transparent 0%, $primary-color-light-10 50%, transparent 100%);
+    padding: 0.1rem;
+}
+
 $post-types: (poetry, prose, blog, collection);
 @each $type in $post-types {
 	.#{$type}-post {

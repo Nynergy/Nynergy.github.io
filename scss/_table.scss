@@ -55,18 +55,22 @@ table {
 
 .category-poetry {
 	@include set-colors($poetry-color);
+    color: $primary-color-light-5;
 }
 
 .category-prose {
 	@include set-colors($prose-color);
+    color: $primary-color-light-5;
 }
 
 .category-blog {
 	@include set-colors($blog-color);
+    color: $primary-color-light-5;
 }
 
 .category-memory {
 	@include set-colors($memory-color);
+    color: $primary-color-light-5;
 }
 
 .goto {
