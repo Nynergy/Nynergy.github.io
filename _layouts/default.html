@@ -13,6 +13,18 @@
 	</head>
 
 	<body>
-        {{content}}
+        <header class="masthead--{{page.layout}}">
+            <h1>Lexica Chromatica</h1>
+            <p>Cheeky Subtitle</p>
+        </header>
+
+        <main>
+            {{content}}
+        </main>
+
+        <footer>
+            <small>Copyright &copy; {{ 'now' | date: "%Y" }} Lexica Chromatica</small>
+        </footer>
+
 	</body>
 </html>

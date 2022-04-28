@@ -11,3 +11,22 @@ body {
     @include set-colors($light-color);
 	font-family: $font-stack;
 }
+
+main {
+    margin: 1em;
+    padding: 1em;
+}
+
+footer {
+    @include set-colors(darken($light-color, 10%));
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 0.4rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@import '_masthead';

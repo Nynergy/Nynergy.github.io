@@ -1,0 +1,9 @@
+$mastheads: (home);
+@each $masthead in $mastheads {
+    .masthead--#{$masthead} {
+        padding: 2em;
+        background: linear-gradient(to bottom, transparent 50%, $light-color 100%), url("../assets/mastheads/#{$masthead}.jpg") no-repeat center center;
+        background-size: cover;
+        @include set-colors($light-color);
+    }
+}
