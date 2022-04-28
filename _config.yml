@@ -1,10 +1,2 @@
 exclude: ['README.md']
 permalink: pretty
-
-collections:
-  genuflectors:
-    output: true
-    permalink: /prose/:collection/:title
-  petrichor:
-    output: true
-    permalink: /:collection/:categories
