@@ -8,6 +8,6 @@ $mastheads: (home);
 @each $masthead in $mastheads {
     .masthead--#{$masthead} {
         @extend .masthead;
-        background: linear-gradient(to bottom, transparent 50%, $light-color 100%), url("../assets/mastheads/#{$masthead}.jpg") no-repeat center center;
+        @include gradient-image("../assets/mastheads/#{$masthead}.jpg", $light-color, bottom);
     }
 }

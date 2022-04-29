@@ -7,10 +7,21 @@
 	}
 }
 
+@function in_list($value, $list) {
+    @return (false != index($list, $value));
+}
+
 // MIXINS
 @mixin set-colors($color) {
 	background-color: $color;
 	color: get-text-color($color);
+}
+
+@mixin gradient-image($image, $color, $dir) {
+    background: linear-gradient(to $dir, transparent 50%, $color 100%), url($image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 // MARGIN & PADDING
