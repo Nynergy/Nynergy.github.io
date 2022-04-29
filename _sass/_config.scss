@@ -1,6 +1,8 @@
 // COLORS
-$light-color: #daddd8;
-$dark-color:  #171816;
+$light-color:  #daddd8;
+$light-accent: darken($light-color, 10%);
+$dark-color:   #171816;
+$dark-accent:  lighten($dark-color, 10%);
 
 $light-blue: #cbd9d0;
 $dark-blue:  #a2cdbd;
