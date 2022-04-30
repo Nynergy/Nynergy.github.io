@@ -1,7 +1,17 @@
+@mixin button-colors($normal, $hover) {
+    a {
+        @include set-colors($normal);
+
+        &:hover {
+            @include set-colors($hover);
+        }
+    }
+}
+
 .home-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 3fr 2fr 2fr;
+    grid-template-columns: 3fr 4fr 4fr 3fr;
+    grid-template-rows: 4fr 3fr 3fr;
     grid-gap: 1rem 1rem;
     height: 100%;
 
@@ -35,10 +45,6 @@
             grid-column: 2 / 4;
         }
 
-        &:hover {
-            @include set-colors($dark-color);
-        }
-
         .home-container__info {
             display: flex;
             flex-direction: column;
@@ -49,6 +55,66 @@
 
             &.full-width {
                 width: 100%;
+            }
+
+            .home-container__header-tease {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .tease {
+                    color: $light-accent;
+                    transition: 500ms;
+                }
+            }
+
+            .home-container__buttons {
+                display: grid;
+                grid-gap: 1rem;
+                justify-content: space-around;
+                align-items: center;
+
+                a {
+                    font-weight: bold;
+                    text-decoration: none;
+                    text-align: center;
+                    padding: 0.5em;
+                    transition: 500ms;
+
+                    &:nth-of-type(1) {
+                        grid-row: 1;
+                        grid-column: 1;
+                    }
+                    &:nth-of-type(2) {
+                        grid-row: 1;
+                        grid-column: 2;
+                    }
+                }
+            }
+            .home-container__music-buttons {
+                @extend .home-container__buttons;
+                grid-template-columns: 1fr 1fr;
+                @include button-colors($light-magenta, $dark-magenta);
+            }
+            .home-container__writing-buttons {
+                @extend .home-container__buttons;
+                grid-template-columns: 1fr;
+                @include button-colors($light-red, $dark-red);
+            }
+            .home-container__blog-buttons {
+                @extend .home-container__buttons;
+                grid-template-columns: 1fr;
+                @include button-colors($light-blue, $dark-blue);
+            }
+            .home-container__gallery-buttons {
+                @extend .home-container__buttons;
+                grid-template-columns: 1fr;
+                @include button-colors($light-yellow, $dark-yellow);
+            }
+            .home-container__about-buttons {
+                @extend .home-container__buttons;
+                grid-template-columns: 1fr;
+                @include button-colors($light-green, $dark-green);
             }
         }
 
@@ -88,11 +154,22 @@
                 }
             }
         }
-    }
-    // Upon card hover, transition the gradients
-    @each $card in $cards {
-        .home-container__card:hover .home__#{$card}-image::before {
-            opacity: 1;
+
+        // Card hover
+        &:hover {
+            @include set-colors($dark-color);
+            cursor: pointer;
+
+            // Upon card hover, transition the gradients
+            @each $card in $cards {
+                .home__#{$card}-image::before {
+                    opacity: 1;
+                }
+            }
+
+            .tease {
+                color: $light-color !important;
+            }
         }
     }
     .home-container__card--column {
