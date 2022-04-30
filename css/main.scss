@@ -66,6 +66,24 @@ footer {
     justify-content: center;
 }
 
+.rule--light-color {
+    border-color: $light-color;
+}
+.rule--light-magenta {
+    border-color: $light-magenta;
+}
+.rule--light-red {
+    border-color: $light-red;
+}
+.rule--light-yellow {
+    border-color: $light-yellow;
+}
+.rule--light-green {
+    border-color: $light-green;
+}
+.rule--light-blue {
+    border-color: $light-blue;
+}
 .rule--dark-color {
     border-color: $dark-color;
 }

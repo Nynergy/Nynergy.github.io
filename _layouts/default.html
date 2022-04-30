@@ -13,7 +13,9 @@
 	</head>
 
 	<body>
-        <header class="masthead--{{page.layout}}">
+        {% capture page_baseurl %}{{ page.url | replace: "/", "" }}{% endcapture %}
+        {% if page_baseurl == "" %}{% assign page_baseurl = "home" %}{% endif %}
+        <header class="masthead--{{ page_baseurl }}">
             <h1>Lexica Chromatica</h1>
             <p>Cheeky Subtitle</p>
         </header>

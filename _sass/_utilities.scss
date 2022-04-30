@@ -17,6 +17,13 @@
 	color: get-text-color($color);
 }
 
+@mixin background-image($image) {
+    background: url($image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 @mixin gradient-image($image, $color, $dir) {
     background: linear-gradient(to $dir, transparent 50%, $color 100%), url($image);
     background-size: cover;
