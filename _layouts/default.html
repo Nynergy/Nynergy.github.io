@@ -15,6 +15,7 @@
 	<body>
         {% capture page_baseurl %}{{ page.url | replace: "/", "" }}{% endcapture %}
         {% if page_baseurl == "" %}{% assign page_baseurl = "home" %}{% endif %}
+        {% if page.status_code == 404 %}{% assign page_baseurl = "404" %}{% endif %}
         <header class="masthead--{{ page_baseurl }}">
             <h1>Lexica Chromatica</h1>
             <p>Cheeky Subtitle</p>

@@ -4,7 +4,7 @@
     @include set-colors($light-color);
 }
 
-$mastheads: (home);
+$mastheads: 404, home, music, writing, blog, gallery, about;
 @each $masthead in $mastheads {
     .masthead--#{$masthead} {
         @extend .masthead;

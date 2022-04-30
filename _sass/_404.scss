@@ -1,0 +1,51 @@
+.fnf-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+
+    .fnf-container__card {
+        @include set-colors($light-accent);
+        display: flex;
+        justify-content: center;
+        height: 100%;
+
+        .fnf-container__info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 20%;
+            width: 75%;
+            margin-top: 3%;
+
+            .fnf-header {
+                font-size: 50px;
+            }
+
+            .fnf__subtext-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                height: 50%;
+                font-size: 20px;
+
+                a {
+                    color: $dark-red;
+                    text-decoration: none;
+                    transition: 500ms;
+
+                    &:hover {
+                        color: $dark-yellow;
+                    }
+                }
+            }
+        }
+    }
+
+    .fnf-container__image {
+        @include gradient-image("../assets/404/expanse.jpg",
+                                $light-color,
+                                top);
+    }
+}
