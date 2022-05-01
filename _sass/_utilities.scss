@@ -1,4 +1,8 @@
 // FUNCTIONS
+@function get-color($name) {
+    @return map-get($color-map, $name);
+}
+
 @function get-text-color($color) {
 	@if (lightness($color) > 60) {
 		@return $dark-color;
@@ -31,50 +35,52 @@
     background-repeat: no-repeat;
 }
 
-// MARGIN & PADDING
-$spaceamounts: (1, 2, 3, 4, 5);
-@each $space in $spaceamounts {
-	.m-#{$space} {
-		margin: #{$space}rem;
-	}
-	.my-#{$space} {
-		margin: #{$space}rem 0;
-	}
-	.mx-#{$space} {
-		margin: 0 #{$space}rem;
-	}
-    .mt-#{$space} {
-        margin-top: #{$space}rem;
-    }
-    .mb-#{$space} {
-        margin-bottom: #{$space}rem;
-    }
-    .ml-#{$space} {
-        margin-left: #{$space}rem;
-    }
-    .mr-#{$space} {
-        margin-right: #{$space}rem;
-    }
+@mixin colored-buttons($normal, $hover) {
+    .colored-button {
+        @include set-colors($normal);
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.5em;
+        transition: $normal-transition;
 
-	.p-#{$space} {
-		padding: #{$space}rem;
-	}
-	.py-#{$space} {
-		padding: #{$space}rem 0;
-	}
-	.px-#{$space} {
-		padding: 0 #{$space}rem;
-	}
-    .pt-#{$space} {
-        padding-top: #{$space}rem;
+        &:hover {
+            @include set-colors($hover);
+        }
     }
-    .pb-#{$space} {
-        padding-bottom: #{$space}rem;
+}
+
+// UTILITY CLASSES
+$space-types: (margin: m, padding: p);
+$spaceamounts: (1, 2, 3, 4, 5);
+@each $type, $letter in $space-types {
+    @each $space in $spaceamounts {
+        .#{$letter}-#{$space} {
+            #{$type}: #{$space}rem;
+        }
+        .#{$letter}y-#{$space} {
+            #{$type}: #{$space}rem 0;
+        }
+        .#{$letter}x-#{$space} {
+            #{$type}: 0 #{$space}rem;
+        }
+        .#{$letter}t-#{$space} {
+            #{$type}-top: #{$space}rem;
+        }
+        .#{$letter}b-#{$space} {
+            #{$type}-bottom: #{$space}rem;
+        }
+        .#{$letter}l-#{$space} {
+            #{$type}-left: #{$space}rem;
+        }
+        .#{$letter}r-#{$space} {
+            #{$type}-right: #{$space}rem;
+        }
     }
-    .pl-#{$space} {
-        padding-left: #{$space}rem;
-    }
-    .pr-#{$space} {
-        padding-right: #{$space}rem;
+}
+
+@each $name, $color in $color-map {
+    .rule--#{$name} {
+        border-color: $color;
     }
 }

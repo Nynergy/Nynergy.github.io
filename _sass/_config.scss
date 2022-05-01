@@ -19,5 +19,23 @@ $dark-red:  #7a1a1a;
 $light-magenta: #81667a;
 $dark-magenta:  #4a253b;
 
+$color-map: (light-color: $light-color,
+             light-accent: $light-accent,
+             dark-color: $dark-color,
+             dark-accent: $dark-accent,
+             light-blue: $light-blue,
+             dark-blue: $dark-blue,
+             light-green: $light-green,
+             dark-green: $dark-green,
+             light-yellow: $light-yellow,
+             dark-yellow: $dark-yellow,
+             light-red: $light-red,
+             dark-red: $dark-red,
+             light-magenta: $light-magenta,
+             dark-magenta: $dark-magenta);
+
 // FONTS
 $font-stack: Palatino, "Palatino Linotype", "Palatino LT STD", serif;
+
+// TRANSITIONS
+$normal-transition: 500ms;

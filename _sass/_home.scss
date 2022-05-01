@@ -1,34 +1,16 @@
-@mixin button-colors($normal, $hover) {
-    a {
-        @include set-colors($normal);
-
-        &:hover {
-            @include set-colors($hover);
-        }
-    }
-}
-
 .home-container {
-    display: grid;
-    grid-template-columns: 3fr 4fr 4fr 3fr;
-    grid-template-rows: 4fr 3fr 3fr;
-    grid-gap: 1rem 1rem;
-    height: 100%;
+    @include grid-container($columns: 3fr 4fr 4fr 3fr, $rows: 4fr 3fr 3fr);
 
     $cards: music, writing, blog, gallery, about;
     .home-container__card {
-        @include set-colors($light-accent);
-        display: flex;
-        justify-content: space-between;
-        height: 100%;
-        transition: 500ms;
+        @include card;
 
         &:nth-of-type(1) {
             grid-column: 1;
             grid-row: 1 / 4;
 
             hr {
-                transition: 500ms;
+                transition: $normal-transition;
             }
             &:hover hr {
                 border-color: $light-color;
@@ -46,10 +28,7 @@
         }
 
         .home-container__info {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
+            @include flexbox($direction: column, $justify: space-between);
             width: 50%;
             padding: 1em;
 
@@ -58,29 +37,19 @@
             }
 
             .home-container__header-tease {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                @include flexbox($justify: space-between, $align: center);
 
                 .tease {
                     color: $light-accent;
-                    transition: 500ms;
+                    transition: $normal-transition;
                 }
             }
 
             .home-container__buttons {
                 display: grid;
                 grid-gap: 1rem;
-                justify-content: space-around;
-                align-items: center;
 
-                a {
-                    font-weight: bold;
-                    text-decoration: none;
-                    text-align: center;
-                    padding: 0.5em;
-                    transition: 500ms;
-
+                .colored-button {
                     &:nth-of-type(1) {
                         grid-row: 1;
                         grid-column: 1;
@@ -94,27 +63,27 @@
             .home-container__music-buttons {
                 @extend .home-container__buttons;
                 grid-template-columns: 1fr 1fr;
-                @include button-colors($light-magenta, $dark-magenta);
+                @include colored-buttons($light-magenta, $dark-magenta);
             }
             .home-container__writing-buttons {
                 @extend .home-container__buttons;
                 grid-template-columns: 1fr;
-                @include button-colors($light-red, $dark-red);
+                @include colored-buttons($light-red, $dark-red);
             }
             .home-container__blog-buttons {
                 @extend .home-container__buttons;
                 grid-template-columns: 1fr;
-                @include button-colors($light-blue, $dark-blue);
+                @include colored-buttons($light-blue, $dark-blue);
             }
             .home-container__gallery-buttons {
                 @extend .home-container__buttons;
                 grid-template-columns: 1fr;
-                @include button-colors($light-yellow, $dark-yellow);
+                @include colored-buttons($light-yellow, $dark-yellow);
             }
             .home-container__about-buttons {
                 @extend .home-container__buttons;
                 grid-template-columns: 1fr;
-                @include button-colors($light-green, $dark-green);
+                @include colored-buttons($light-green, $dark-green);
             }
         }
 
@@ -149,7 +118,7 @@
                                                 $dir);
                         z-index: 1;
                         opacity: 0;
-                        transition: opacity 500ms;
+                        transition: opacity $normal-transition;
                     }
                 }
             }
@@ -157,7 +126,6 @@
 
         // Card hover
         &:hover {
-            @include set-colors($dark-color);
             cursor: pointer;
 
             // Upon card hover, transition the gradients

@@ -1,10 +1,22 @@
 <nav>
     <div class="nav__links">
-        <a {% if page.url == '/' %}class="current-page"{% endif %} href="/">Home</a>
-        <a {% if page.url contains 'music/' %}class="current-page"{% endif %} href="/music/">Music</a>
-        <a {% if page.url contains 'writing/' %}class="current-page"{% endif %} href="/writing/">Writing</a>
-        <a {% if page.url contains 'blog/' %}class="current-page"{% endif %} href="/blog/">Blog</a>
-        <a {% if page.url contains 'gallery/' %}class="current-page"{% endif %} href="/gallery/">Gallery</a>
-        <a {% if page.url contains 'about/' %}class="current-page"{% endif %} href="/about/">About</a>
+        <a class="colored-button{% if page.url == '/' %} current-page{% endif %}" href="/">
+            Home
+        </a>
+        <a class="colored-button{% if page.url contains 'music/' %} current-page{% endif %}" href="/music">
+            Music
+        </a>
+        <a class="colored-button{% if page.url contains 'writing/' %} current-page{% endif %}" href="/writing">
+            Writing
+        </a>
+        <a class="colored-button{% if page.url contains 'blog/' %} current-page{% endif %}" href="/blog">
+            Blog
+        </a>
+        <a class="colored-button{% if page.url contains 'gallery/' %} current-page{% endif %}" href="/gallery">
+            Gallery
+        </a>
+        <a class="colored-button{% if page.url contains 'about/' %} current-page{% endif %}" href="/about">
+            About
+        </a>
     </div>
 </nav>

@@ -3,6 +3,7 @@
 
 @import 'config';
 @import 'utilities';
+@import 'containers';
 
 * {
 	box-sizing: border-box;
@@ -28,27 +29,14 @@ nav {
     margin: 1em 1em 0 1em;
 
     .nav__links {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexbox($justify: center, $align: center);
 
-        a {
-            @include set-colors($light-accent);
+        @include colored-buttons($light-accent, $dark-accent);
+        .colored-button {
             flex: 1;
-            padding: 0.5em;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 500ms;
-
-            &.current-page {
-                @include set-colors($dark-accent);
-            }
-
-            &:hover {
-                @include set-colors($dark-accent);
-                transition: 500ms;
-            }
+        }
+        .current-page {
+            @include set-colors($dark-accent);
         }
     }
 }
@@ -64,43 +52,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.rule--light-color {
-    border-color: $light-color;
-}
-.rule--light-magenta {
-    border-color: $light-magenta;
-}
-.rule--light-red {
-    border-color: $light-red;
-}
-.rule--light-yellow {
-    border-color: $light-yellow;
-}
-.rule--light-green {
-    border-color: $light-green;
-}
-.rule--light-blue {
-    border-color: $light-blue;
-}
-.rule--dark-color {
-    border-color: $dark-color;
-}
-.rule--dark-magenta {
-    border-color: $dark-magenta;
-}
-.rule--dark-red {
-    border-color: $dark-red;
-}
-.rule--dark-yellow {
-    border-color: $dark-yellow;
-}
-.rule--dark-green {
-    border-color: $dark-green;
-}
-.rule--dark-blue {
-    border-color: $dark-blue;
 }
 
 @import '404';

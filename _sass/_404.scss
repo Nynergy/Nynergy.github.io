@@ -1,20 +1,12 @@
 .fnf-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    height: 100%;
+    @include grid-container;
 
     .fnf-container__card {
         @include set-colors($light-accent);
-        display: flex;
-        justify-content: center;
-        height: 100%;
+        @include flexbox($justify: center);
 
         .fnf-container__info {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 20%;
+            @include flexbox($height: 20%, $justify: space-around, $align: center);
             width: 75%;
             margin-top: 3%;
 
@@ -23,17 +15,16 @@
             }
 
             .fnf__subtext-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                height: 50%;
+                @include flexbox($height: 50%,
+                                 $direction: column,
+                                 $justify: space-around,
+                                 $align: center);
                 font-size: 20px;
 
                 a {
                     color: $light-red;
                     text-decoration: none;
-                    transition: 500ms;
+                    transition: $normal-transition;
 
                     &:hover {
                         color: $light-yellow;
