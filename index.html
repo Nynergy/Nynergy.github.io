@@ -6,7 +6,7 @@ priority: 1.0
 ---
 
 <div class="home-container">
-    <div class="home-container__card">
+    <div class="home-container__card column">
         <div class="home-container__info full-width">
             <div>
                 <h2>Latest</h2>
@@ -20,156 +20,44 @@ priority: 1.0
         </div>
     </div>
 
-    <div class="home-container__card" onclick="location.href = '/music'">
-        <div class="home-container__info">
+    {% for card in site.data.home_cards %}
+    <div class="home-container__card{% if card.type == 'writing' %} column{% endif %}"
+         onclick="location.href = '/{{ card.type }}'">
+        {% case card.type %}
+            {% when 'gallery', 'about' %}
+            <div class="home-container__image--{{ card.image-dir }} home__{{ card.type }}-image"></div>
+        {% endcase %}
+        <div class="home-container__info{% if card.type == 'writing' %} full-width{% endif %}">
             <div>
                 <div class="home-container__header-tease">
-                    <h2>Music</h2>
+                    <h2>{{ card.type | capitalize }}</h2>
                     <h3 class="tease">
                         See More&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
                     </h3>
                 </div>
-                <hr class="rule--light-magenta">
+                <hr class="rule--light-{{ card.color }}">
             </div>
 
             <div>
-                <p>I've made music under a few different names, scattered
-                across a number of Bandcamp pages. Most of my work consists of
-                ambient, electronic, noise, drone, and generative music.</p>
-                <br>
-                <p>I've also got a YouTube channel where I post VCV Rack
-                patches, album streams, audio visualizers, and whatever else
-                strikes my fancy.</p>
+                {% for text in card.blurbs %}
+                <p>{{ text }}</p>
+                {% if forloop.last == false %}<br>{% endif %}
+                {% endfor %}
             </div>
 
-            <div class="home-container__music-buttons">
+            <div class="home-container__{{ card.type }}-buttons">
+                {% for button in card.buttons %}
                 <a class="colored-button"
-                   href="https://benbuchanan.bandcamp.com">
-                    Bandcamp&nbsp;&nbsp;<i class="fab fa-bandcamp"></i>
+                   href="{{ button.link }}">
+                    {{ button.name }}&nbsp;&nbsp;<i class="{{ button.icon }}"></i>
                 </a>
-                <a class="colored-button"
-                   href="https://youtube.com/channel/UCnWTmsuxOUfJYNEDGMFWmaw">
-                    YouTube&nbsp;&nbsp;<i class="fab fa-youtube"></i>
-                </a>
+                {% endfor %}
             </div>
         </div>
-        <div class="home-container__image--left home__music-image"></div>
+        {% case card.type %}
+            {% when 'music', 'writing', 'blog' %}
+            <div class="home-container__image--{{ card.image-dir }} home__{{ card.type }}-image"></div>
+        {% endcase %}
     </div>
-
-    <div class="home-container__card--column" onclick="location.href = '/writing'">
-        <div class="home-container__info full-width">
-            <div>
-                <div class="home-container__header-tease">
-                    <h2>Writing</h2>
-                    <h3 class="tease">
-                        See More&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
-                    </h3>
-                </div>
-                <hr class="rule--light-red">
-            </div>
-
-            <div>
-                <p>I've written poetry and prose for many years, far longer
-                than I've been making music. My poetry typically focuses on
-                abstract emotions, pulling a lot of imagery from nature and the
-                environment, even dreams.</p>
-                <br>
-                <p>Some of these pieces I felt were good enough to publish, and
-                so I've edited, designed, typeset, and self-published a number
-                of volumes through Amazon. Free PDF downloads of the
-                collections are also available on the site.</p>
-            </div>
-
-            <div class="home-container__writing-buttons">
-                <a class="colored-button"
-                   href="/writing/published">
-                    Published Works&nbsp;&nbsp;<i class="fas fa-pen-fancy"></i>
-                </a>
-            </div>
-        </div>
-        <div class="home-container__image--top home__writing-image"></div>
-    </div>
-
-    <div class="home-container__card" onclick="location.href = '/blog'">
-        <div class="home-container__info">
-            <div>
-                <div class="home-container__header-tease">
-                    <h2>Blog</h2>
-                    <h3 class="tease">
-                        See More&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
-                    </h3>
-                </div>
-                <hr class="rule--light-blue">
-            </div>
-
-            <div>
-                <p>My blog is where I post aimless diatribes and discuss my
-                personal projects, many of which are hosted on GitHub.</p>
-            </div>
-
-            <div class="home-container__blog-buttons">
-                <a class="colored-button"
-                   href="https://github.com/Nynergy">
-                    Github&nbsp;&nbsp;<i class="fab fa-github"></i>
-                </a>
-            </div>
-        </div>
-        <div class="home-container__image--left home__blog-image"></div>
-    </div>
-
-    <div class="home-container__card" onclick="location.href = '/gallery'">
-        <div class="home-container__image--right home__gallery-image"></div>
-        <div class="home-container__info">
-            <div>
-                <div class="home-container__header-tease">
-                    <h2>Gallery</h2>
-                    <h3 class="tease">
-                        See More&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
-                    </h3>
-                </div>
-                <hr class="rule--light-yellow">
-            </div>
-
-            <div>
-                <p>This is where I show off my digital artwork, physical
-                sketches, and other ill-executed artistic endeavors.</p>
-            </div>
-
-            <div class="home-container__gallery-buttons">
-                <a class="colored-button"
-                   href="/gallery">
-                    All Collections&nbsp;&nbsp;<i class="fas fa-image"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="home-container__card" onclick="location.href = '/about'">
-        <div class="home-container__image--right home__about-image"></div>
-        <div class="home-container__info">
-            <div>
-                <div class="home-container__header-tease">
-                    <h2>About</h2>
-                    <h3 class="tease">
-                        See More&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
-                    </h3>
-                </div>
-                <hr class="rule--light-green">
-            </div>
-
-            <div>
-                <p>I'm a full-time applications programmer and recreational
-                open-source developer. I make modular synth music, write poems
-                and short stories, create digital art, and otherwise exist in
-                the Binghamton area of Upstate New York.</p>
-            </div>
-
-            <div class="home-container__about-buttons">
-                <a class="colored-button"
-                   href="/about/contact">
-                    Contact Me&nbsp;&nbsp;<i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>

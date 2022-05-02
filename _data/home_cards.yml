@@ -1,0 +1,79 @@
+# Music Card
+- type: music
+  color: magenta
+  blurbs:
+    - >
+      I've made music under a few different names, scattered across a number
+      of Bandcamp pages. Most of my work consists of ambient, electronic,
+      noise, drone, and generative music.
+    - >
+      I've also got a YouTube channel where I post VCV Rack patches, album
+      streams, audio visualizers, and whatever else strikes my fancy.
+  buttons:
+    - name: Bandcamp
+      link: https://benbuchanan.bandcamp.com
+      icon: fab fa-bandcamp
+    - name: YouTube
+      link: https://youtube.com/channel/UCnWTmsuxOUfJYNEDGMFWmaw
+      icon: fab fa-youtube
+  image-dir: left
+
+# Writing Card
+- type: writing
+  color: red
+  blurbs:
+    - >
+      I've written poetry and prose for many years, far longer than I've been
+      making music. My poetry typically focuses on abstract emotions, pulling a
+      lot of imagery from nature and the environment, even dreams.
+    - >
+      Some of these pieces I felt were good enough to publish, and so I've
+      edited, designed, typeset, and self-published a number of volumes through
+      Amazon. Free PDF downloads of the collections are also available on the
+      site.
+  buttons:
+    - name: Published Works
+      link: /writing/published
+      icon: fas fa-pen-fancy
+  image-dir: top
+
+# Blog Card
+- type: blog
+  color: blue
+  blurbs:
+    - >
+      My blog is where I post aimless diatribes and discuss my personal
+      projects, many of which are hosted on GitHub.
+  buttons:
+    - name: Github
+      link: https://github.com/Nynergy
+      icon: fab fa-github
+  image-dir: left
+
+# Gallery Card
+- type: gallery
+  color: yellow
+  blurbs:
+    - >
+      This is where I show off my digital artwork, physical sketches, and other
+      ill-executed artistic endeavors.
+  buttons:
+    - name: All Collections
+      link: /gallery
+      icon: fas fa-image
+  image-dir: right
+
+# About Card
+- type: about
+  color: green
+  blurbs:
+    - >
+      I'm a full-time applications programmer and recreational open-source
+      developer. I make modular synth music, write poems and short stories,
+      create digital art, and otherwise exist in the Binghamton area of Upstate
+      New York.
+  buttons:
+    - name: Contact Me
+      link: /about/contact
+      icon: fas fa-envelope
+  image-dir: right

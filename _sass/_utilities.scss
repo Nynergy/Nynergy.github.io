@@ -84,3 +84,10 @@ $spaceamounts: (1, 2, 3, 4, 5);
         border-color: $color;
     }
 }
+
+.row {
+    flex-direction: row !important;
+}
+.column {
+    flex-direction: column !important;
+}
