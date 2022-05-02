@@ -30,12 +30,8 @@
                 flex: 1;
                 @include flexbox($direction: column, $justify: space-between);
             }
-        }
-        .music-container__album-showcase--column {
-            @extend .music-container__album-showcase;
-            flex-direction: column;
 
-            iframe {
+            .side-album {
                 width: 100%;
                 height: auto;
                 margin-bottom: 1rem;

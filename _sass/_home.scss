@@ -140,8 +140,4 @@
             }
         }
     }
-    .home-container__card--column {
-        @extend .home-container__card;
-        flex-direction: column;
-    }
 }
