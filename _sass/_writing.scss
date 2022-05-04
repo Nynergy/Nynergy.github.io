@@ -1,0 +1,41 @@
+.writing-container {
+    flex: 1;
+    @include grid-container($columns: 1fr 1fr);
+
+    .writing-container__section {
+        flex: 1;
+        @include set-colors($light-accent);
+        @include flexbox($direction: column);
+
+        .writing-container__header {
+            padding: 1em 1em 0 1em;
+        }
+
+        .writing-container__post {
+            @include card($align: center);
+            padding: 0.5em 1em;
+            cursor: pointer;
+
+            .post__meta {
+                flex: 10;
+                @include flexbox($direction: column, $justify: center);
+            }
+
+            .post__date {
+                flex: 5;
+                @include flexbox($justify: center, $align: center);
+            }
+
+            .post__link {
+                flex: 2;
+                @include flexbox($justify: center, $align: center);
+                min-width: 200px;
+
+                @include colored-buttons($light-red, $dark-red);
+                .colored-button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

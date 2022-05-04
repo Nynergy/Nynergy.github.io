@@ -1,8 +1,10 @@
 // COLORS
-$light-color:  #daddd8;
-$light-accent: darken($light-color, 10%);
-$dark-color:   #171816;
-$dark-accent:  lighten($dark-color, 10%);
+$light-color:     #daddd8;
+$light-accent:    darken($light-color, 10%);
+$light-secondary: darken($light-color, 20%);
+$dark-color:     #171816;
+$dark-accent:    lighten($dark-color, 10%);
+$dark-secondary: lighten($dark-color, 20%);
 
 $light-blue: #729d8d;
 $dark-blue:  #325d4d;
@@ -19,20 +21,27 @@ $dark-red:  #7a1a1a;
 $light-magenta: #81667a;
 $dark-magenta:  #4a253b;
 
-$color-map: (light-color: $light-color,
-             light-accent: $light-accent,
-             dark-color: $dark-color,
-             dark-accent: $dark-accent,
-             light-blue: $light-blue,
-             dark-blue: $dark-blue,
-             light-green: $light-green,
-             dark-green: $dark-green,
-             light-yellow: $light-yellow,
-             dark-yellow: $dark-yellow,
-             light-red: $light-red,
-             dark-red: $dark-red,
-             light-magenta: $light-magenta,
-             dark-magenta: $dark-magenta);
+$light-color-map: (
+    'color': $light-color,
+    'accent': $light-accent,
+    'secondary': $light-secondary,
+    'blue': $light-blue,
+    'green': $light-green,
+    'yellow': $light-yellow,
+    'red': $light-red,
+    'magenta': $light-magenta
+);
+
+$dark-color-map: (
+    'color': $dark-color,
+    'accent': $dark-accent,
+    'secondary': $dark-secondary,
+    'blue': $dark-blue,
+    'green': $dark-green,
+    'yellow': $dark-yellow,
+    'red': $dark-red,
+    'magenta': $dark-magenta
+);
 
 // FONTS
 $font-stack: Palatino, "Palatino Linotype", "Palatino LT STD", serif;

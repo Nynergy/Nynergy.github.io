@@ -1,4 +1,5 @@
 .music-container {
+    flex: 1;
     @include grid-container($columns: 1fr 3fr 1fr);
 
     .music-container__card {

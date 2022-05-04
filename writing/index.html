@@ -1,5 +1,40 @@
 ---
 layout: default
+title: Writing
+meta: Original poetry and prose by Ben Buchanan.
+sections:
+  - poetry
+  - prose
 ---
 
-<h1>Hello, world!</h1>
+<div class="writing-container">
+    {% for section in page.sections %}
+    <div class="writing-container__section">
+        <div class="writing-container__header">
+            <h1>Latest {{ section | capitalize }} Posts</h1>
+            <hr class="rule--light-red"><br>
+        </div>
+        {% for post in site.categories[section] | limit: 10 %}
+        <div class="writing-container__post" onclick="location.href = '{{ post.url }}'">
+            <div class="post__meta">
+                <h3>{{ post.title }}</h3>
+                {% if post.meta %}
+                    <p>{{ post.meta }}</p>
+                {% else %}
+                    {% assign excerpt_pieces = post.excerpt | strip_html | newline_to_br | normalize_whitespace | split: '<br />' %}
+                    <p>{{ excerpt_pieces | join: ' / ' }}</p>
+                {% endif %}
+            </div>
+            <div class="post__date">
+                <p>{{ post.date | date: "%B %d, %Y" }}</p>
+            </div>
+            <div class="post__link">
+                <a class="colored-button" href="{{ post.url }}">
+                    Read More&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>

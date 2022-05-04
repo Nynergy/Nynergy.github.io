@@ -1,2 +1,10 @@
 exclude: ['README.md']
 permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      excerpt_separator: <!--excerpt-->

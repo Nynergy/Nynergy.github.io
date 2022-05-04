@@ -1,0 +1,81 @@
+.post-container {
+    flex: 1;
+    @include flexbox($direction: column);
+    width: 50%;
+    margin: auto;
+
+    .post-container__info {
+        @include set-colors($light-accent);
+        @include flexbox($direction: column, $justify: center, $align: center);
+        padding: 1em 1em 0 1em;
+
+        hr {
+            width: 100%;
+        }
+    }
+
+    .post-container__content {
+        flex: 1;
+        @include set-colors($light-accent);
+        @include flexbox($direction: column);
+        padding: 1em;
+
+        // Eliminate redundant line breaks
+        & > br:nth-child(2n + 2) {
+            display: none;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .block-quote {
+            width: 95%;
+            padding: 0 1em 1em 1em;
+            margin: auto;
+            background: linear-gradient(to right, $light-secondary, transparent);
+        }
+
+        .monospace {
+            font-family: monospace;
+        }
+
+        .italics {
+            font-style: italic;
+        }
+
+        .attrib {
+            width: 100%;
+            padding: 0 1em 1em 1em;
+            margin: auto;
+            background: linear-gradient(to right, $light-secondary, transparent);
+            font-family: monospace;
+        }
+    }
+
+    .post-container__links {
+        @include grid-container($columns: 1fr 1fr);
+
+        &:first-child {
+            padding-bottom: 1em;
+        }
+        &:last-child {
+            padding-top: 1em;
+        }
+
+        $colors: 'magenta', 'red', 'yellow', 'green', 'blue';
+        @each $color in $colors {
+            .colored-button--#{$color} {
+                width: 90%;
+                margin: auto;
+            }
+        }
+
+        .previous {
+            grid-column: 1;
+        }
+        .next {
+            grid-column: 2;
+        }
+    }
+}

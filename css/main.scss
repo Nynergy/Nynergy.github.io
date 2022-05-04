@@ -14,9 +14,9 @@
 body {
     @include set-colors($light-color);
 	font-family: $font-stack;
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -42,19 +42,22 @@ nav {
 }
 
 main {
-    height: 100%;
+    flex: 1 auto;
+    @include flexbox($direction: column);
     margin: 1em;
 }
 
 footer {
     @include set-colors($dark-color);
-    height: 30px;
+    min-height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+@import 'masthead';
 @import '404';
 @import 'home';
 @import 'music';
-@import 'masthead';
+@import 'writing';
+@import 'post';

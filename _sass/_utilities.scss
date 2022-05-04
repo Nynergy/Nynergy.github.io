@@ -1,6 +1,10 @@
 // FUNCTIONS
-@function get-color($name) {
-    @return map-get($color-map, $name);
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
 }
 
 @function get-text-color($color) {
@@ -79,7 +83,12 @@ $spaceamounts: (1, 2, 3, 4, 5);
     }
 }
 
-@each $name, $color in $color-map {
+@each $name, $color in $light-color-map {
+    .rule--#{$name} {
+        border-color: $color;
+    }
+}
+@each $name, $color in $dark-color-map {
     .rule--#{$name} {
         border-color: $color;
     }
@@ -90,4 +99,23 @@ $spaceamounts: (1, 2, 3, 4, 5);
 }
 .column {
     flex-direction: column !important;
+}
+
+$colors: 'magenta', 'red', 'yellow', 'green', 'blue';
+@each $color in $colors {
+    $normal: map-get($light-color-map, $color);
+    $hover: map-get($dark-color-map, $color);
+
+    .colored-button--#{$color} {
+        @include set-colors($normal);
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.5em;
+        transition: $normal-transition;
+
+        &:hover {
+            @include set-colors($hover);
+        }
+    }
 }
