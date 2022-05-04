@@ -1,0 +1,36 @@
+---
+layout: default
+title: Published Works
+meta: Published works by Ben Buchanan.
+---
+
+<div class="published-container">
+    {% for book in site.data.published_books %}
+    <div class="published-container__card">
+        <div class="published-container__info">
+            <h2>{{ book.title }} ({{ book.year }})</h2>
+            <hr class="rule--light-red">
+        </div>
+
+        <div class="published-container__showcase">
+            <img src="../../assets/writing/{{ book.image }}.jpg"></img>
+
+            <div class="book__blurbs">
+                {% for text in book.blurbs %}
+                <p>{{ text }}</p>
+                {% if forloop.last == false %}<br>{% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="published-container__buttons">
+            <a class="colored-button--red" href="{{ book.amazon }}">
+                Buy on Amazon&nbsp;&nbsp;<i class="fab fa-amazon"></i>
+            </a>
+            <a class="colored-button--red" href="{{ book.download }}">
+                Download PDF&nbsp;&nbsp;<i class="fas fa-download"></i>
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
