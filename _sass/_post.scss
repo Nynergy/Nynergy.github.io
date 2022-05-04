@@ -54,7 +54,7 @@
     }
 
     .post-container__links {
-        @include grid-container($columns: 1fr 1fr);
+        @include grid-container($columns: 1fr 1fr, $gap: 0);
 
         &:first-child {
             padding-bottom: 1em;

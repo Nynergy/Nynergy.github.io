@@ -43,6 +43,8 @@ $dark-color-map: (
     'magenta': $dark-magenta
 );
 
+$color-map: ('light': $light-color-map, 'dark': $dark-color-map);
+
 // FONTS
 $font-stack: Palatino, "Palatino Linotype", "Palatino LT STD", serif;
 

@@ -7,6 +7,10 @@
     @return $map;
 }
 
+@function get-color($type, $color) {
+    @return map-deep-get($color-map, $type, $color);
+}
+
 @function get-text-color($color) {
 	@if (lightness($color) > 60) {
 		@return $dark-color;
@@ -83,17 +87,6 @@ $spaceamounts: (1, 2, 3, 4, 5);
     }
 }
 
-@each $name, $color in $light-color-map {
-    .rule--#{$name} {
-        border-color: $color;
-    }
-}
-@each $name, $color in $dark-color-map {
-    .rule--#{$name} {
-        border-color: $color;
-    }
-}
-
 .row {
     flex-direction: row !important;
 }
@@ -101,13 +94,14 @@ $spaceamounts: (1, 2, 3, 4, 5);
     flex-direction: column !important;
 }
 
-$colors: 'magenta', 'red', 'yellow', 'green', 'blue';
+// COLORED CLASSES
+$colors: 'color', 'accent', 'secondary', 'magenta', 'red', 'yellow', 'green', 'blue';
 @each $color in $colors {
-    $normal: map-get($light-color-map, $color);
-    $hover: map-get($dark-color-map, $color);
+    $light: get-color('light', $color);
+    $dark: get-color('dark', $color);
 
     .colored-button--#{$color} {
-        @include set-colors($normal);
+        @include set-colors($light);
         font-weight: bold;
         text-decoration: none;
         text-align: center;
@@ -115,7 +109,14 @@ $colors: 'magenta', 'red', 'yellow', 'green', 'blue';
         transition: $normal-transition;
 
         &:hover {
-            @include set-colors($hover);
+            @include set-colors($dark);
         }
+    }
+
+    .rule--light-#{$color} {
+        border-color: $light;
+    }
+    .rule--dark-#{$color} {
+        border-color: $dark;
     }
 }

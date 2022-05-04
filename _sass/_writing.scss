@@ -1,14 +1,121 @@
 .writing-container {
     flex: 1;
-    @include grid-container($columns: 1fr 1fr);
+    @include grid-container($columns: 1fr 1fr 1fr, $rows: 1fr 1fr);
+
+    .writing-container__showcase {
+        @include card($direction: column);
+        grid-row: 1 / 3;
+
+        .showcase__info {
+            @include flexbox($direction: column, $justify: space-between);
+            padding: 1em;
+
+            .showcase__header-tease {
+                @include flexbox($justify: space-between, $align: center);
+
+                .tease {
+                    color: $light-accent;
+                    transition: $normal-transition;
+                }
+            }
+
+            .showcase__buttons {
+                display: grid;
+                @include colored-buttons($light-red, $dark-red);
+            }
+        }
+
+        // Create default appearance
+        .showcase__image {
+            height: 80%;
+            position: relative;
+            @include gradient-image("../assets/writing/showcase.jpg",
+                                    $light-accent,
+                                    top);
+            z-index: 2;
+        }
+        // Stow an invisible transition appearance beneath the default
+        .showcase__image::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include gradient-image("../assets/writing/showcase.jpg",
+                                    $dark-color,
+                                    top);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity $normal-transition;
+        }
+
+        // Card hover
+        &:hover {
+            cursor: pointer;
+
+            // Upon card hover, transition the gradients
+            .showcase__image::before {
+                opacity: 1;
+            }
+
+            .tease {
+                color: $light-color !important;
+            }
+        }
+    }
 
     .writing-container__section {
         flex: 1;
         @include set-colors($light-accent);
         @include flexbox($direction: column);
+        grid-column: 2 / 4;
 
-        .writing-container__header {
-            padding: 1em 1em 0 1em;
+        .writing-container__info {
+            flex: 0;
+            cursor: pointer;
+            transition: $normal-transition;
+
+            &:hover {
+                @include set-colors($dark-color);
+
+                .tease {
+                    color: $light-color !important;
+                }
+            }
+
+            .writing-container__header {
+                padding: 1em 1em 0 1em;
+
+                .writing-container__header-tease {
+                    @include flexbox($justify: space-between, $align: center);
+
+                    .tease {
+                        color: $light-accent;
+                        transition: $normal-transition;
+                    }
+                }
+            }
+
+            .writing-container__labels {
+                @include flexbox;
+                padding: 0.5em 1em;
+
+                h4 {
+                    text-align: center;
+
+                    &:nth-child(1) {
+                        flex: 10;
+                    }
+                    &:nth-child(2) {
+                        flex: 5;
+                    }
+                    &:nth-child(3) {
+                        flex: 2;
+                        min-width: 200px;
+                    }
+                }
+            }
         }
 
         .writing-container__post {

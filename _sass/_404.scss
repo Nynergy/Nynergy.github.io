@@ -1,4 +1,5 @@
 .fnf-container {
+    flex: 1;
     @include grid-container;
 
     .fnf-container__card {
