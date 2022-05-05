@@ -37,11 +37,15 @@ layout: default
     <div class="post-container__links">
         {% if previous_post %}
             <a class="previous {{ 'colored-button--' | append: post_color }}"
-               href="{{ previous_post.url }}">Previous Post</a>
+               href="{{ previous_post.url }}">
+                <i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;Previous Post
+            </a>
         {% endif %}
         {% if next_post %}
             <a class="next {{ 'colored-button--' | append: post_color }}"
-               href="{{ next_post.url }}">Next Post</a>
+               href="{{ next_post.url }}">
+                Next Post&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
+            </a>
         {% endif %}
     </div>
     <div class="post-container__info">
@@ -55,11 +59,15 @@ layout: default
     <div class="post-container__links">
         {% if previous_post %}
             <a class="previous {{ 'colored-button--' | append: post_color }}"
-               href="{{ previous_post.url }}">Previous Post</a>
+               href="{{ previous_post.url }}">
+                <i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;Previous Post
+            </a>
         {% endif %}
         {% if next_post %}
             <a class="next {{ 'colored-button--' | append: post_color }}"
-               href="{{ next_post.url }}">Next Post</a>
+               href="{{ next_post.url }}">
+                Next Post&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
+            </a>
         {% endif %}
     </div>
 </div>

@@ -25,8 +25,59 @@
             display: none;
         }
 
-        h3 {
+        h2, h3 {
             text-align: center;
+        }
+
+        ol {
+            br {
+                display: none;
+            }
+
+            li {
+                margin-left: 2em;
+            }
+        }
+
+        div.highlight {
+            padding: 0.5rem;
+            margin: auto;
+            background: linear-gradient(to right, $light-secondary, transparent);
+            font-family: monospace;
+
+            br {
+                display: none;
+            }
+        }
+
+        pre.highlight {
+            background: transparent;
+        }
+
+        img {
+            display: block;
+            width: 85%;
+            margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+            transition: $normal-transition;
+
+            &:link {
+                color: $dark-yellow;
+
+                &:hover {
+                    color: $light-yellow;
+                }
+            }
+            &:visited {
+                color: $dark-blue;
+
+                &:hover {
+                    color: $light-blue;
+                }
+            }
         }
 
         .block-quote {
@@ -76,6 +127,70 @@
         }
         .next {
             grid-column: 2;
+        }
+    }
+}
+
+.post-list-container {
+    flex: 1;
+    @include set-colors($light-accent);
+    @include flexbox($direction: column);
+
+    .post-list__info {
+        flex: 0;
+        
+        .post-list__header {
+            padding: 1em 1em 0 1em;
+        }
+
+        .post-list__labels {
+            @include flexbox;
+            padding: 0.5em 1em;
+
+            h4 {
+                text-align: center;
+
+                &:nth-child(1) {
+                    flex: 10;
+                }
+                &:nth-child(2) {
+                    flex: 5;
+                }
+                &:nth-child(3) {
+                    flex: 2;
+                    min-width: 200px;
+                }
+            }
+        }
+    }
+
+    .post-list__post {
+        flex: 1;
+        @include card($align: center);
+        padding: 0.5em 1em;
+        cursor: pointer;
+
+        .post__meta {
+            flex: 10;
+            @include flexbox($direction: column, $justify: center);
+        }
+
+        .post__date {
+            flex: 5;
+            @include flexbox($justify: center, $align: center);
+        }
+
+        .post__link {
+            flex: 2;
+            @include flexbox($justify: center, $align: center);
+            min-width: 200px;
+
+            $colors: red, magenta, blue, green, yellow;
+            @each $color in $colors {
+                .colored-button--#{$color} {
+                    width: 100%;
+                }
+            }
         }
     }
 }
