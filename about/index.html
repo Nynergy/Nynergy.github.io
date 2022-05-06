@@ -1,5 +1,43 @@
 ---
 layout: default
+title: About
+meta: Information about Ben Buchanan.
 ---
 
-<h1>Hello, world!</h1>
+<div class="about-container">
+    {% for card in site.data.about_cards %}
+    {% assign remainder = forloop.index | modulo: 2 %}
+
+    <div class="about-container__card">
+        {% if remainder == 1 %}
+        <div class="about-container__image--{{ card.type }}--right"></div>
+        {% endif %}
+
+        <div class="about-container__info">
+            <div class="about-container__header">
+                <h2>{{ card.type | capitalize }}</h2>
+                <hr class="rule--light-green">
+            </div>
+
+            <div class="about-container__blurbs">
+                {% for text in card.blurbs %}
+                <p>{{ text }}</p>
+                {% if forloop.last == false %}<br>{% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="about-container__buttons">
+                {% for link in card.links %}
+                <a class="colored-button--green" href="{{ link.url }}">
+                    {{ link.name }}&nbsp;&nbsp;<i class="{{ link.icon }}"></i>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        {% if remainder == 0 %}
+        <div class="about-container__image--{{ card.type }}--left"></div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
