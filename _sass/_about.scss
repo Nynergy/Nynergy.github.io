@@ -71,3 +71,47 @@ $cards: 'programmer', 'musician', 'writer', 'contact';
         }
     }
 }
+
+.contact-container {
+    flex: 1;
+    @include card($direction: column);
+    padding: 1em;
+
+    &:hover {
+        input {
+            @include set-colors($dark-secondary);
+        }
+
+        textarea {
+            @include set-colors($dark-secondary);
+        }
+    }
+
+    .contact-container__header {
+        padding-bottom: 1em;
+    }
+
+    .contact-container__form {
+        flex: 1;
+        @include flexbox($direction: column, $justify: center);
+
+        input {
+            width: 100%;
+            transition: $normal-transition;
+        }
+
+        textarea {
+            resize: none;
+            width: 100%;
+            transition: $normal-transition;
+        }
+    }
+
+    .contact-container__buttons {
+        display: grid;
+
+        .colored-button--green {
+            cursor: pointer;
+        }
+    }
+}
