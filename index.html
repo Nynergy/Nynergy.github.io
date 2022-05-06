@@ -6,16 +6,33 @@ priority: 1.0
 ---
 
 <div class="home-container">
-    <div class="home-container__card column">
+    <div class="home-container__post-list column">
         <div class="home-container__info full-width">
-            <div>
+            <div class="home-container__header">
                 <h2>Latest</h2>
                 <hr class="rule--dark-color">
             </div>
 
-            <div>
-                <p>This is a section where the latest posts will be
-                listed, similar to the original site.</p>
+            <hr>
+
+            <div class="home-container__posts">
+                {% for post in site.posts limit: 10 %}
+                {% assign post_type = post.url | replace: '/', ' ' | truncatewords: 1, '' %}
+                {% case post_type %}
+                {% when 'writing' %}
+                    {% assign post_color = 'red' %}
+                {% when 'blog' %}
+                    {% assign post_color = 'blue' %}
+                {% endcase %}
+                <div class="home-container__post--{{ post_color }}" onclick="location.href = '{{ post.url }}'">
+                    <div class="post__meta">
+                        <h3>{{ post.title }}</h3>
+                    </div>
+                    <div class="post__date">
+                        <p>{{ post.date | date: "%B %d, %Y" }}</p>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -28,7 +45,7 @@ priority: 1.0
             <div class="home-container__image--{{ card.image-dir }} home__{{ card.type }}-image"></div>
         {% endcase %}
         <div class="home-container__info{% if card.type == 'writing' %} full-width{% endif %}">
-            <div>
+            <div class="home-container__header">
                 <div class="home-container__header-tease">
                     <h2>{{ card.type | capitalize }}</h2>
                     <h3 class="tease">
@@ -38,7 +55,7 @@ priority: 1.0
                 <hr class="rule--light-{{ card.color }}">
             </div>
 
-            <div>
+            <div class="home-container__blurbs">
                 {% for text in card.blurbs %}
                 <p>{{ text }}</p>
                 {% if forloop.last == false %}<br>{% endif %}
