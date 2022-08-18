@@ -23,7 +23,6 @@ meta: Original artwork adn digital images by Ben Buchanan.
             <div class="gallery-container__blurbs">
                 {% for text in collection.blurbs %}
                 <p>{{ text }}</p>
-                {% if forloop.last == false %}<br>{% endif %}
                 {% endfor %}
             </div>
         </div>

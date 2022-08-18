@@ -25,8 +25,8 @@ $cards: 'programmer', 'musician', 'writer', 'contact';
             padding: 1em;
 
             .about-container__blurbs {
-                flex: 1;
-                @include flexbox($direction: column, $justify: center);
+                @include flexbox($direction: column, $justify: space-around);
+                height: 50%;
             }
 
             .about-container__buttons {

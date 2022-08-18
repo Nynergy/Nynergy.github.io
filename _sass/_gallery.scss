@@ -47,7 +47,7 @@ $collections: 'strange-negatives', 'genius-loci', 'illogical-sketches';
             }
 
             .gallery-container__blurbs {
-                @include flexbox($direction: column, $justify: center);
+                @include flexbox($direction: column, $justify: space-around);
             }
         }
 

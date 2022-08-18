@@ -22,7 +22,6 @@ meta: Information about Ben Buchanan.
             <div class="about-container__blurbs">
                 {% for text in card.blurbs %}
                 <p>{{ text }}</p>
-                {% if forloop.last == false %}<br>{% endif %}
                 {% endfor %}
             </div>
 
