@@ -9,6 +9,10 @@
         @include flexbox($direction: column, $justify: center, $align: center);
         padding: 1em 1em 0 1em;
 
+        h2 {
+            margin-bottom: 1rem;
+        }
+
         hr {
             width: 100%;
         }
@@ -21,7 +25,7 @@
         padding: 1em;
 
         // Eliminate redundant line breaks
-        & > br:nth-child(2n + 2) {
+        & > br:nth-child(n) {
             display: none;
         }
 

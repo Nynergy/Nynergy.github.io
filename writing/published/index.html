@@ -18,7 +18,6 @@ meta: Published works by Ben Buchanan.
             <div class="book__blurbs">
                 {% for text in book.blurbs %}
                 <p>{{ text }}</p>
-                {% if forloop.last == false %}<br>{% endif %}
                 {% endfor %}
             </div>
         </div>

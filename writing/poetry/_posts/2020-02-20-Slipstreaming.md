@@ -10,11 +10,13 @@ Shining beams through lenses
 Becoming the petals creeping peeking out
       Through the ice and stubborn
 Mannerisms
+<br>
 
 That raining sunlight coming down
 Remember me in angled colors
 Do you remember me there?
 Do you remember my shape?
+<br>
 
 Lanterns hanging swinging dripping warm
     Ideas down the slopes we made
@@ -27,11 +29,13 @@ We can’t go back to that
 A slurry in the sky dissolved
                As
                                   Clouds
+<br>
 
 Terrace steps along the coast
 The amber wisps above the waves saying
 Hello there good morning
 Nice weather we’re having
+<br>
 
 Soft shells
 Beating blood organs
@@ -40,12 +44,14 @@ You know this phase
 Nature’s flock of time in feathers falling
 On your face
 In molting
+<br>
 
 Buzzing Sun and Humming Moon
     Holding hands back in September
 Making rose fruition moves like dances
   On park benches in high heels
 All barbs and leafy shadows
+<br>
 
 Holding hands back in
         Whenever
@@ -55,12 +61,16 @@ Remembers shafts of foamy night
    It felt alright
  It was alright
 It was
+<br>
 
 For a time
+<br>
 
 And all things are moving
 Along
+<br>
 
 As they
+<br>
 
                       Do

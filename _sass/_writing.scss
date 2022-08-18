@@ -182,7 +182,7 @@
 
             .book__blurbs {
                 flex: 1;
-                @include flexbox($direction: column, $justify: center);
+                @include flexbox($direction: column, $justify: space-around);
                 width: 100%;
                 padding: 1em 1em 0 1em;
             }

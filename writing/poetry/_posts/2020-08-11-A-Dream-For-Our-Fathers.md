@@ -4,6 +4,7 @@ meta: whirling pool of thoughts / idly spinning / beneath dullness / above / me
 ---
 
 whirling&nbsp;pool&nbsp;of&nbsp;thoughts
+<br>
 
 idly&nbsp;spinning
 <br>
@@ -12,13 +13,15 @@ idly&nbsp;spinning
 beneath&nbsp;dullness
 above
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;me
-<!--excerpt-->
+<!--excerpt--><br>
 
 totem&nbsp;people&nbsp;turning
+<br>
 
 off&nbsp;and&nbsp;under
 away&nbsp;bridges
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;away
+<br>
 <br>
 
 jelly&nbsp;cotton&nbsp;roll
@@ -29,11 +32,14 @@ skies&nbsp;of
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clean
 &nbsp;&nbsp;&nbsp;&nbsp;off
 our
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;faces
 <br>
+<br>
 
 hardwood&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;places
+<br>
 
 so&nbsp;still&nbsp;and
 quiet
@@ -43,6 +49,7 @@ quiet
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you&nbsp;forget
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;about
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;people
 <br>
@@ -53,6 +60,7 @@ looking&nbsp;out
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;no&nbsp;rain
 &nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;the
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;leaves
+<br>
 
 why&nbsp;is&nbsp;there
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;sound&nbsp;coming
@@ -66,8 +74,10 @@ clouds
 keeping&nbsp;company
 close&nbsp;to&nbsp;me
 <br>
+<br>
 
 basking&nbsp;prone&nbsp;in&nbsp;the&nbsp;sun
+<br>
 <br>
 
 forgetting&nbsp;about
@@ -79,13 +89,16 @@ forgetting&nbsp;about
 and&nbsp;this&nbsp;man
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;his&nbsp;hummingbird's
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dance
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;forget&nbsp;begone
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;someone's&nbsp;something
 &nbsp;they&nbsp;lost
+<br>
 
 in&nbsp;the&nbsp;haze&nbsp;of
 &nbsp;&nbsp;&nbsp;&nbsp;cicada&nbsp;stupor
@@ -103,6 +116,7 @@ before&nbsp;in&nbsp;summer&nbsp;fire
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waves&nbsp;&nbsp;&nbsp;of
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gelatin&nbsp;joy
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;carefree
+<br>
 <br>
 
 back&nbsp;when&nbsp;tides&nbsp;smiled&nbsp;wide
@@ -124,6 +138,7 @@ remember&nbsp;the&nbsp;&nbsp;&nbsp;lack&nbsp;&nbsp;of&nbsp;&nbsp;a&nbsp;&nbsp;&n
 
 held&nbsp;in&nbsp;a
 motionless&nbsp;state
+<br>
 <br>
 
 a&nbsp;state&nbsp;of&nbsp;&nbsp;&nbsp;our&nbsp;&nbsp;&nbsp;&nbsp;selves&nbsp;&nbsp;&nbsp;like
@@ -148,6 +163,7 @@ we&nbsp;wrote&nbsp;to
 &nbsp;&nbsp;&nbsp;out&nbsp;of
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fortune&nbsp;cookies
 <br>
+<br>
 
 sealed&nbsp;blessings
 &nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;charms
@@ -158,6 +174,7 @@ sealed&nbsp;blessings
 
 drawing&nbsp;faces&nbsp;on&nbsp;napkins
 &nbsp;&nbsp;&nbsp;&nbsp;as&nbsp;ghosts&nbsp;we&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;abandon
+<br>
 
 we&nbsp;forget
 <br>
@@ -168,29 +185,38 @@ cling&nbsp;to&nbsp;a&nbsp;setting
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sun
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;&nbsp;&nbsp;me
 <br>
+<br>
 
 we'll&nbsp;swing
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;the&nbsp;deck
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;&nbsp;&nbsp;&nbsp;our&nbsp;&nbsp;&nbsp;shoes&nbsp;&nbsp;&nbsp;&nbsp;off
 <br>
+<br>
 
 l&nbsp;&nbsp;&nbsp;e&nbsp;a&nbsp;n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t&nbsp;o
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ea&nbsp;&nbsp;&nbsp;c&nbsp;h&nbsp;ot&nbsp;&nbsp;&nbsp;&nbsp;he&nbsp;r
+<br>
 
 &nbsp;&nbsp;and
 <br>
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;smile
+<br>
 <br>
 
 &nbsp;&nbsp;p&nbsp;p&nbsp;p&nbsp;pu&nbsp;uu&nbsp;utt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;le&nbsp;&nbsp;e&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v&nbsp;e&nbsp;&nbsp;e&nbsp;&nbsp;s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;youu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ha&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;i&nbsp;i&nbsp;ii&nbsp;r&nbsp;&nbsp;&nbsp;&nbsp;r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;aa&nbsp;n&nbsp;&nbsp;d&nbsp;d
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w&nbsp;ai&nbsp;t
+<br>
 
 f&nbsp;&nbsp;oo&nbsp;o&nbsp;&nbsp;r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;uo&nbsp;uu&nbsp;ou&nbsp;ououru&nbsp;ururu&nbsp;&nbsp;r&nbsp;r&nbsp;&nbsp;r&nbsp;r&nbsp;&nbsp;r
+<br>
 
 &nbsp;f&nbsp;a&nbsp;a&nbsp;&nbsp;thth&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;r&nbsp;&nbsp;&nbsp;&nbsp;'s&nbsp;&nbsp;&nbsp;s&nbsp;s&nbsp;'s&nbsp;&nbsp;s&nbsp;s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d&nbsp;&nbsp;&nbsp;re&nbsp;&nbsp;e&nbsp;&nbsp;e&nbsp;aaamsmsmms&nbsp;sssss
+<br>
 
 &nbsp;to&nbsp;&nbsp;&nbsp;c&nbsp;&nbsp;oo&nbsp;&nbsp;m&nbsp;e
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t&nbsp;t&nbsp;&nbsp;&nbsp;tt&nbsp;r&nbsp;&nbsp;r&nbsp;r&nbsp;r&nbsp;u&nbsp;uuu&nbsp;e&nbsp;e&nbsp;eee&nbsp;e
