@@ -20,7 +20,8 @@
         {% if page.status_code == 404 %}{% assign page_baseurl = "404" %}{% endif %}
         <header class="masthead--{{ page_baseurl }}">
             <h1>Lexica Chromatica</h1>
-            <p>Cheeky Subtitle</p>
+ 			<p id="masthead-quote"></p>
+            <script src="/js/mastheadQuote.js"></script>
         </header>
 
         {% include nav.html %}
