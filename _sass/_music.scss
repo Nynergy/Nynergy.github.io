@@ -1,10 +1,9 @@
 .music-container {
     flex: 1;
-    @include grid-container($columns: 1fr 3fr 1fr);
+    @include grid-container($columns: 10fr 3fr);
 
     .music-container__card {
         @include card($direction: column);
-        max-width: 60vw;
         padding: 1em;
 
         @include colored-buttons($light-magenta, $dark-magenta);
@@ -24,18 +23,24 @@
         }
 
         .music-container__album-showcase {
-            flex: 2;
+            flex: 1;
             @include flexbox($align: center);
 
             & > div {
-                flex: 1;
                 @include flexbox($direction: column, $justify: space-between);
             }
 
-            .side-album {
-                width: 100%;
+            .main-album {
                 height: auto;
-                margin-bottom: 1rem;
+            }
+
+            .side-embed {
+                height: auto;
+
+                .side-album {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
             }
 
             div {
@@ -44,11 +49,16 @@
         }
 
         .music-container__discog {
-            flex: 1;
-            @include flexbox($align: center);
+            flex: 0;
+            @include grid-container($columns: 1fr 1fr);
+            align-items: center;
 
-            .mini-album {
-                height: 50%;
+            .music-container__album-showcase {
+                height: 75%;
+
+                .mini-album {
+                    height: 75%;
+                }
             }
         }
     }

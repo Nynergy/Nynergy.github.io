@@ -41,7 +41,7 @@ $cards: music, writing, blog, gallery, about;
 
             .home-container__blurbs {
                 flex: 1;
-                @include flexbox($direction: column, $justify: center);
+                @include flexbox($direction: column, $justify: space-around);
                 padding: 0 1em;
             }
 

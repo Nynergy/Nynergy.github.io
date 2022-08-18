@@ -16,7 +16,9 @@ meta: Original music by Ben Buchanan.
 
             {% for album in card.albums %}
             <div class="music-container__album-showcase column">
-                {{ album.embed }}
+                <div class="side-embed">
+                    {{ album.embed }}
+                </div>
                 <div>
                     <div>
                         <h3>{{ album.title }} ({{ album.year }})</h3>

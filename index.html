@@ -58,7 +58,6 @@ priority: 1.0
             <div class="home-container__blurbs">
                 {% for text in card.blurbs %}
                 <p>{{ text }}</p>
-                {% if forloop.last == false %}<br>{% endif %}
                 {% endfor %}
             </div>
 
