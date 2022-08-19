@@ -48,3 +48,17 @@
         flex-direction: column !important;
     }
 }
+
+// Phone Dimensions
+@media (max-width: 500px) {
+    .fnf-container__info {
+        h1 {
+            font-size: 25px !important;
+            margin-bottom: 2rem;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 1rem;
+        }
+    }
+}

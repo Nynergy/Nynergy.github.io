@@ -15,7 +15,7 @@ meta: Original music by Ben Buchanan.
             </div>
 
             {% for album in card.albums %}
-            <div class="music-container__album-showcase column">
+            <div id="MoLF" class="music-container__album-showcase column">
                 <div class="side-embed">
                     {{ album.embed }}
                 </div>
@@ -75,7 +75,7 @@ meta: Original music by Ben Buchanan.
                 {% if forloop.first == false %}
                 <div class="music-container__album-showcase">
                     {{ album.embed }}
-                    <div class="ml-1">
+                    <div class="discog-info ml-1">
                         <div>
                             <strong>{{ album.title }} ({{ album.year }})</strong>
                             <hr class="rule--light-magenta">

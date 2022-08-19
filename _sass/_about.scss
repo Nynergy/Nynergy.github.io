@@ -128,3 +128,19 @@ $cards: 'programmer', 'musician', 'writer', 'contact';
         }
     }
 }
+
+// Phone Dimensions
+@media (max-width: 500px) {
+    @each $dir in $directions {
+        @each $card in $cards {
+            // Create default appearance
+            .about-container__image--#{$card}--#{$dir} {
+                display: none;
+            }
+        }
+    }
+
+    .about-container__info {
+        width: 100% !important;
+    }
+}

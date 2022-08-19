@@ -226,3 +226,57 @@
         }
     }
 }
+
+// Phone Dimensions
+@media (max-width: 500px) {
+    .writing-container {
+        grid-template-rows: 1fr;
+    }
+
+    .showcase__buttons {
+        margin-top: 1em;
+    }
+
+    .rule--light-red {
+        margin-bottom: 1em;
+    }
+
+    .writing-container__labels {
+        display: none !important;
+    }
+
+    .post__link {
+        display: none !important;
+    }
+
+    .post__date {
+        display: none !important;
+    }
+
+    .published-container__info hr {
+        margin: 0;
+    }
+
+    #volume {
+        flex-direction: column !important;
+
+        img {
+            margin: 0;
+        }
+
+        p {
+            margin: 0.5rem 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .published-container__buttons {
+        grid-template-columns: 1fr !important;
+    }
+}

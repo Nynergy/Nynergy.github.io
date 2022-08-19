@@ -207,3 +207,10 @@
         width: 100%;
     }
 }
+
+// Phone Dimensions
+@media (max-width: 500px) {
+    .post-list__labels {
+        display: none !important;
+    }
+}
