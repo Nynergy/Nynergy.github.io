@@ -115,3 +115,16 @@ $cards: 'programmer', 'musician', 'writer', 'contact';
         }
     }
 }
+
+// Tablet Dimensions
+@media (max-width: 1000px) {
+    .about-container {
+        grid-template-columns: 1fr;
+
+        .about-container__blurbs {
+            p {
+                margin: 1rem 0;
+            }
+        }
+    }
+}

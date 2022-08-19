@@ -7,7 +7,7 @@ meta: Original music by Ben Buchanan.
 <div class="music-container">
     {% for card in site.data.music_cards %}
     {% case card.artist %}
-        {% when 'Maps of Low Fidelity', 'Neuromelter' %}
+        {% when 'Maps of Low Fidelity' %}
         <div class="music-container__card">
             <div class="music-container__info pb-1">
                 <h2>{{ card.artist }}</h2>
@@ -45,8 +45,10 @@ meta: Original music by Ben Buchanan.
 
             {% assign main-album = card.albums[0] %}
             <div class="music-container__album-showcase">
-                {{ main-album.embed }}
-                <div class="ml-1">
+                <div class="main-embed">
+                    {{ main-album.embed }}
+                </div>
+                <div class="main-info ml-1">
                     <div>
                         <h3>{{ main-album.title }} ({{ main-album.year }})</h3>
                         <hr class="rule--light-magenta">

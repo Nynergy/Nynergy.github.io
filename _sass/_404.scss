@@ -41,3 +41,10 @@
                                 top);
     }
 }
+
+// Tablet Dimensions
+@media (max-width: 1000px) {
+    .fnf-container__info {
+        flex-direction: column !important;
+    }
+}

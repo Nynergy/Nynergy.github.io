@@ -105,3 +105,16 @@ $collections: 'strange-negatives', 'genius-loci', 'illogical-sketches';
         }
     }
 }
+
+// Tablet Dimensions
+@media (max-width: 1000px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+
+        .gallery-container__card > div {
+            &:nth-of-type(3) {
+                display: none;
+            }
+        }
+    }
+}

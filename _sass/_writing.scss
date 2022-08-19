@@ -195,3 +195,34 @@
         }
     }
 }
+
+// Tablet Dimensions
+@media (max-width: 1000px) {
+    .writing-container {
+        grid-template-columns: 1fr;
+
+        .writing-container__showcase {
+            grid-row: 1 / 2;
+
+            .showcase__image {
+                display: none;
+            }
+        }
+
+        .writing-container__section {
+            grid-column: 1 / 2;
+        }
+    }
+
+    .published-container {
+        grid-template-columns: 1fr;
+
+        .published-container__showcase {
+            flex-direction: row !important;
+
+            img {
+                margin-left: 1rem;
+            }
+        }
+    }
+}
