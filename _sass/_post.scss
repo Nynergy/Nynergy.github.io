@@ -1,0 +1,216 @@
+.post-container {
+    flex: 1;
+    @include flexbox($direction: column);
+    width: 50%;
+    margin: auto;
+
+    .post-container__info {
+        @include set-colors($light-accent);
+        @include flexbox($direction: column, $justify: center, $align: center);
+        padding: 1em 1em 0 1em;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        hr {
+            width: 100%;
+        }
+    }
+
+    .post-container__content {
+        flex: 1;
+        @include set-colors($light-accent);
+        @include flexbox($direction: column);
+        padding: 1em;
+
+        // Eliminate redundant line breaks
+        & > br:nth-child(n) {
+            display: none;
+        }
+
+        h2, h3 {
+            text-align: center;
+        }
+
+        ol {
+            margin-bottom: 1rem;
+
+            br {
+                display: none;
+            }
+
+            li {
+                margin-left: 2em;
+            }
+        }
+
+        div.highlight {
+            padding: 0.5rem;
+            margin: auto;
+            background: linear-gradient(to right, $light-secondary, transparent);
+            font-family: monospace;
+
+            br {
+                display: none;
+            }
+        }
+
+        pre.highlight {
+            background: transparent;
+        }
+
+        img {
+            display: block;
+            width: 85%;
+            margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+            transition: $normal-transition;
+
+            &:link {
+                color: $dark-yellow;
+
+                &:hover {
+                    color: $light-yellow;
+                }
+            }
+            &:visited {
+                color: $dark-blue;
+
+                &:hover {
+                    color: $light-blue;
+                }
+            }
+        }
+
+        .block-quote {
+            width: 95%;
+            padding: 0 1em 1em 1em;
+            margin: auto;
+            background: linear-gradient(to right, $light-secondary, transparent);
+        }
+
+        .monospace {
+            font-family: monospace;
+        }
+
+        .italics {
+            font-style: italic;
+        }
+
+        .attrib {
+            width: 100%;
+            padding: 0 1em 1em 1em;
+            margin: auto;
+            background: linear-gradient(to right, $light-secondary, transparent);
+            font-family: monospace;
+        }
+    }
+
+    .post-container__links {
+        @include grid-container($columns: 1fr 1fr, $gap: 0);
+
+        &:first-child {
+            padding-bottom: 1em;
+        }
+        &:last-child {
+            padding-top: 1em;
+        }
+
+        $colors: 'magenta', 'red', 'yellow', 'green', 'blue';
+        @each $color in $colors {
+            .colored-button--#{$color} {
+                width: 90%;
+                margin: auto;
+            }
+        }
+
+        .previous {
+            grid-column: 1;
+        }
+        .next {
+            grid-column: 2;
+        }
+    }
+}
+
+.post-list-container {
+    flex: 1;
+    @include set-colors($light-accent);
+    @include flexbox($direction: column);
+
+    .post-list__info {
+        flex: 0;
+        
+        .post-list__header {
+            padding: 1em 1em 0 1em;
+        }
+
+        .post-list__labels {
+            @include flexbox;
+            padding: 0.5em 1em;
+
+            h4 {
+                text-align: center;
+
+                &:nth-child(1) {
+                    flex: 10;
+                }
+                &:nth-child(2) {
+                    flex: 5;
+                }
+                &:nth-child(3) {
+                    flex: 2;
+                    min-width: 200px;
+                }
+            }
+        }
+    }
+
+    .post-list__post {
+        flex: 1;
+        @include card($align: center);
+        padding: 0.5em 1em;
+        cursor: pointer;
+
+        .post__meta {
+            flex: 10;
+            @include flexbox($direction: column, $justify: center);
+        }
+
+        .post__date {
+            flex: 5;
+            @include flexbox($justify: center, $align: center);
+        }
+
+        .post__link {
+            flex: 2;
+            @include flexbox($justify: center, $align: center);
+            min-width: 200px;
+
+            $colors: red, magenta, blue, green, yellow;
+            @each $color in $colors {
+                .colored-button--#{$color} {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Tablet Dimensions
+@media (max-width: 1000px) {
+    .post-container {
+        width: 100%;
+    }
+}
+
+// Phone Dimensions
+@media (max-width: 500px) {
+    .post-list__labels {
+        display: none !important;
+    }
+}

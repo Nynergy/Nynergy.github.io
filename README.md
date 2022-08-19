@@ -2,6 +2,7 @@
 
 -------------------------------------------------------------------------------
 
-A personal website hosting original poetry, blog posts, and other miscellaneous scrawlings.
+A personal website for Ben Buchanan, hosting original writing, music, art, and
+other miscellaneous projects.
 
 Visit __Lexica Chromatica__ at <https://lexicachromatica.xyz/>

@@ -1,33 +1,7 @@
 ---
-layout: blog
+layout: default
 title: Blog
-meta: A blog of miscelaneous topics by Ben Buchanan.
-mastheadClass: masthead-blog
+meta: Aimless diatribes by Ben Buchanan.
 ---
 
-<hr class="accent-rule">
-<div class="header-span">
-    <h2>Blog</h2>
-</div>
-<hr class="accent-rule">
-
-<div class="table-container bottom-table">
-	<table>
-		<thead>
-			<tr>
-				<th><h3>Title and Summary</h3></th>
-				<th><h3>Posted</h3></th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for post in site.categories.blog %}
-			<tr class="{{post.category}}" onclick="location.href='{{post.url}}'">
-				<td><div class="meta-container"><a href="{{post.url}}"></a><h4>{{post.title}}</h4><small>{{post.meta}}</small></div></td>
-				<td><div class="posted-container">{{post.written}}</div></td>
-				<td><div class="goto-container"><a href="{{post.url}}" class="goto"><i class="fas fa-angle-double-right"></i></a></div></td>
-			</tr>
-			{% endfor %}
-		</tbody>
-	</table>
-</div>
+{% include post-list.html category='blog' color='blue' %}

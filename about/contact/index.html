@@ -1,0 +1,48 @@
+---
+layout: default
+title: Contact
+meta: Send an email to Ben Buchanan.
+---
+
+<div class="contact-container">
+    <div class="contact-container__header">
+        <h2>Contact Me</h2>
+        <hr class="rule--light-green">
+    </div>
+
+    <div class="contact-container__form">
+        <form action="mailto:bsbuchanan99@gmail.com"
+              method="get" enctype="text/plain">
+            <div>
+                <label for="name">Your Name
+                    <input type="text" name="name" id="name" />
+                </label>
+            </div>
+            <br>
+            <div>
+                <label for="body">Your Message
+                    <textarea name="body" rows=20 id="body"></textarea>
+                </label>
+            </div>
+        </form>
+
+        <!-- FORM SCRIPT -->
+        <script>
+        function sendMail()
+        {
+            var name = document.getElementById("name").value;
+            var body = document.getElementById("body").value;
+            var subject = "Message from " + name;
+            document.location.href = "mailto:bsbuchanan99@gmail.com?subject="
+                + encodeURIComponent(subject)
+                + "&body=" + encodeURIComponent(body);
+        }
+        </script>
+    </div>
+
+    <div class="contact-container__buttons">
+        <a class="colored-button--green" onclick="sendMail();">
+            Submit (Opens Mail Client)
+        </a>
+    </div>
+</div>

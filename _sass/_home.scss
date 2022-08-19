@@ -1,0 +1,278 @@
+$cards: music, writing, blog, gallery, about;
+
+.home-container {
+    flex: 1;
+    @include grid-container($columns: 3fr 4fr 4fr 3fr, $rows: 4fr 3fr 3fr);
+
+    .home-container__card {
+        @include card;
+
+        &:nth-of-type(2) {
+            grid-column: 2 / 4;
+        }
+        &:nth-of-type(3) {
+            grid-column: 4;
+            grid-row: 1 / 4;
+        }
+        &:nth-of-type(6) {
+            grid-column: 2 / 4;
+        }
+
+        .home-container__info {
+            @include flexbox($direction: column, $justify: space-between);
+            width: 50%;
+
+            &.full-width {
+                width: 100%;
+            }
+
+            .home-container__header {
+                padding: 1em;
+
+                .home-container__header-tease {
+                    @include flexbox($justify: space-between, $align: center);
+
+                    .tease {
+                        color: $light-accent;
+                        transition: $normal-transition;
+                    }
+                }
+            }
+
+            .home-container__blurbs {
+                flex: 1;
+                @include flexbox($direction: column, $justify: space-around);
+                padding: 0 1em;
+            }
+
+            .home-container__buttons {
+                display: grid;
+                grid-gap: 1rem;
+                padding: 1em;
+
+                .colored-button {
+                    &:nth-of-type(2) {
+                        grid-column: 2;
+                    }
+                }
+            }
+            .home-container__music-buttons {
+                @extend .home-container__buttons;
+                @include colored-buttons($light-magenta, $dark-magenta);
+            }
+            .home-container__writing-buttons {
+                @extend .home-container__buttons;
+                @include colored-buttons($light-red, $dark-red);
+            }
+            .home-container__blog-buttons {
+                @extend .home-container__buttons;
+                @include colored-buttons($light-blue, $dark-blue);
+            }
+            .home-container__gallery-buttons {
+                @extend .home-container__buttons;
+                @include colored-buttons($light-yellow, $dark-yellow);
+            }
+            .home-container__about-buttons {
+                @extend .home-container__buttons;
+                @include colored-buttons($light-green, $dark-green);
+            }
+        }
+
+        $gradient-dirs: top, bottom, left, right;
+        @each $dir in $gradient-dirs {
+            .home-container__image--#{$dir} {
+                @if index([left, right], $dir) {
+                    width: 50%;
+                } @else {
+                    height: 100%;
+                }
+
+                @each $card in $cards {
+                    // Create default appearance
+                    &.home__#{$card}-image {
+                        position: relative;
+                        @include gradient-image("../assets/home/#{$card}.jpg",
+                                                $light-accent,
+                                                $dir);
+                        z-index: 2;
+                    }
+                    // Stow an invisible transition appearance beneath the default
+                    &.home__#{$card}-image::before {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        @include gradient-image("../assets/home/#{$card}.jpg",
+                                                $dark-color,
+                                                $dir);
+                        z-index: 1;
+                        opacity: 0;
+                        transition: opacity $normal-transition;
+                    }
+                }
+            }
+        }
+
+        // Card hover
+        &:hover {
+            cursor: pointer;
+
+            // Upon card hover, transition the gradients
+            @each $card in $cards {
+                .home__#{$card}-image::before {
+                    opacity: 1;
+                }
+            }
+
+            .tease {
+                color: $light-color !important;
+            }
+        }
+    }
+
+    .home-container__post-list {
+        @include set-colors($light-accent);
+        @include flexbox($direction: column);
+
+        &:nth-of-type(1) {
+            grid-column: 1;
+            grid-row: 1 / 4;
+        }
+
+        .home-container__info {
+            @include flexbox($direction: column, $justify: space-between);
+            width: 50%;
+
+            &.full-width {
+                width: 100%;
+            }
+
+            .home-container__header {
+                padding: 1em;
+
+                .home-container__header-tease {
+                    @include flexbox($justify: space-between, $align: center);
+
+                    .tease {
+                        color: $light-accent;
+                        transition: $normal-transition;
+                    }
+                }
+            }
+        }
+
+        .home-container__posts {
+            flex: 1;
+            @include flexbox($direction: column);
+
+            $post-colors: red, blue;
+            @each $color in $post-colors {
+                .home-container__post--#{$color} {
+                    flex: 1;
+                    @include flexbox($direction: column, $justify: center);
+                    padding: 0.5em 1em;
+                    cursor: pointer;
+                    transition: $normal-transition;
+
+                    &:hover {
+                        color: get-color('light', '#{$color}');
+                        background-color: $dark-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Tablet Dimensions
+@media (max-width: 1000px) {
+    .home-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        .home-container__card {
+            flex-direction: column;
+
+            &:nth-of-type(1) {
+                grid-column: 1 / 2;
+                grid-row: 1 / 4;
+            }
+            &:nth-of-type(2) {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+
+                p {
+                    &:last-of-type {
+                        display: none;
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+
+                .home__writing-image {
+                    display: none;
+                }
+
+                p {
+                    &:last-of-type {
+                        display: none;
+                    }
+                }
+            }
+            &:nth-of-type(4) {
+                grid-column: 2 / 3;
+                grid-row: 3 / 4;
+            }
+            &:nth-of-type(5) {
+                grid-column: 2 / 3;
+                grid-row: 4 / 5;
+            }
+            &:nth-of-type(6) {
+                grid-column: 1 / 2;
+                grid-row: 4 / 5;
+            }
+
+            .home-container__info {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Phone Dimensions
+@media (max-width: 500px) {
+    .home-container {
+        grid-template-columns: 1fr;
+
+        .home-container__card {
+            &:nth-of-type(1) {
+                grid-column: 1 / 2;
+                grid-row: 1 / 4;
+            }
+            &:nth-of-type(2) {
+                grid-column: 1 / 2;
+                grid-row: 4 / 5;
+            }
+            &:nth-of-type(3) {
+                grid-column: 1 / 2;
+                grid-row: 5 / 6;
+            }
+            &:nth-of-type(4) {
+                grid-column: 1 / 2;
+                grid-row: 6 / 7;
+            }
+            &:nth-of-type(5) {
+                grid-column: 1 / 2;
+                grid-row: 7 / 8;
+            }
+            &:nth-of-type(6) {
+                grid-column: 1 / 2;
+                grid-row: 8 / 9;
+            }
+        }
+    }
+}

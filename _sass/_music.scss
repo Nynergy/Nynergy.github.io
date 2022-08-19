@@ -1,0 +1,162 @@
+.music-container {
+    flex: 1;
+    @include grid-container($columns: 10fr 3fr);
+
+    .music-container__card {
+        @include card($direction: column);
+        padding: 1em;
+
+        @include colored-buttons($light-magenta, $dark-magenta);
+
+        iframe {
+            border: 0;
+            height: 100%;
+            max-width: 700px;
+            max-height: 700px;
+            min-width: 200px;
+            min-height: 200px;
+            aspect-ratio: 1/1;
+        }
+
+        .music-container__info {
+            min-height: 20px;
+        }
+
+        .music-container__album-showcase {
+            flex: 1;
+            @include flexbox($align: center);
+
+            & > div {
+                @include flexbox($direction: column, $justify: space-between);
+            }
+
+            .main-embed {
+                width: auto;
+
+                .main-album {
+                    height: auto;
+                }
+            }
+
+            .side-embed {
+                height: auto;
+
+                .side-album {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            div {
+                width: 100%;
+            }
+        }
+
+        .music-container__discog {
+            flex: 0;
+            @include grid-container($columns: 1fr 1fr);
+            align-items: center;
+
+            .music-container__album-showcase {
+                height: 75%;
+
+                .mini-album {
+                    height: 75%;
+                }
+            }
+        }
+    }
+}
+
+// Tablet Dimensions
+@media (max-width: 1000px) {
+    .music-container {
+        @include flexbox($direction: column);
+
+        .music-container__discog {
+            grid-template-columns: 1fr !important;
+        }
+
+        .music-container__album-showcase {
+            & > div {
+                &:nth-of-type(2) {
+                    margin-left: 1rem;
+
+                    p {
+                        margin: 2rem 0;
+                    }
+                }
+            }
+
+            &.column {
+                flex-direction: row !important;
+
+                .side-embed {
+                    width: 50%;
+
+                    .side-album {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            p {
+                &:nth-of-type(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// Phone Dimensions
+@media (max-width: 500px) {
+    .music-container__album-showcase {
+        flex-direction: column !important;
+
+        & > div {
+            &:nth-of-type(2) {
+                margin-left: 0 !important;
+
+                p {
+                    margin: 1rem 0 !important;
+                }
+            }
+        }
+
+        .main-album {
+            margin-bottom: 1rem;
+        }
+    }
+
+    #MoLF {
+        flex-direction: column !important;
+
+        .side-embed {
+            width: 100%;
+
+            .side-album {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .music-container__discog {
+        .discog-info {
+            margin-left: 0;
+
+            p {
+                margin: 1rem 0;
+            }
+        }
+
+        .music-container__album-showcase {
+            height: 100% !important;
+
+            .mini-album {
+                height: 100% !important;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

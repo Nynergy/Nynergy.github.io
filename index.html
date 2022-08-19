@@ -1,63 +1,79 @@
 ---
 layout: default
-titleAfter: Poetry, Music, and Other Strange Scrawlings
+title: Home
 meta: The personal website of Ben Buchanan.
 priority: 1.0
 ---
 
-<div class="content">
-<p>
-Welcome to <strong>Lexica Chromatica</strong>, an online archive/blog for "Poetry, Music, and Other Strange Scrawlings".
-</p>
-<p>
-This site will serve as a landing page for all my creative projects, including poetry, prose, music, blog posts, digital artwork,
-and perhaps much more in the future. Updates may be sporadic, I tend to upload new posts when projects finish, or when it
-particularly strikes my fancy. If you have any comments, questions, enlightened ideas, ill-formed music opinions, philosophical
-advice, literary/life-choice recommendations, bones to pick, or winning lottery numbers, please don't hesitate to send them to my
-email at bsbuchanan99@gmail.com - alternatively, you can write them on a piece of paper, tape that paper to a brick or large rock,
-and throw it through my window. If you do so, please also attach a check that covers the cost of window repair.
-</p>
-<p>
-Thank you.
-</p>
+<div class="home-container">
+    <div class="home-container__post-list column">
+        <div class="home-container__info full-width">
+            <div class="home-container__header">
+                <h2>Latest</h2>
+                <hr class="rule--dark-color">
+            </div>
 
-<div class="attrib">
-Ben Buchanan
-</div>
-</div>
+            <hr>
 
-<hr class="accent-rule">
-<div class="header-span">
-    <h2>Latest Posts</h2>
-</div>
-<hr class="accent-rule">
+            <div class="home-container__posts">
+                {% for post in site.posts limit: 10 %}
+                {% assign post_type = post.url | replace: '/', ' ' | truncatewords: 1, '' %}
+                {% case post_type %}
+                {% when 'writing' %}
+                    {% assign post_color = 'red' %}
+                {% when 'blog' %}
+                    {% assign post_color = 'blue' %}
+                {% endcase %}
+                <div class="home-container__post--{{ post_color }}" onclick="location.href = '{{ post.url }}'">
+                    <div class="post__meta">
+                        <h3>{{ post.title }}</h3>
+                    </div>
+                    <div class="post__date">
+                        <p>{{ post.date | date: "%B %d, %Y" }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 
-<div class="table-container">
-	<table>
-		<thead>
-			<tr>
-				<th><h3>Title and Summary</h3></th>
-				<th><h3>Category</h3></th>
-				<th><h3>Posted</h3></th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for post in site.posts limit:10 %}
-			<tr class="{{post.category}}" onclick="location.href='{{post.url}}'">
-				<td><div class="meta-container"><a href="{{post.url}}"></a><h4>{{post.title}}</h4><small>{{post.meta}}</small></div></td>
-				<td><div class="category-container"><small class="category category-{{post.category}}">{{post.category}}</small></div></td>
-				<td><div class="posted-container">{{post.written}}</div></td>
-				<td><div class="goto-container"><a href="{{post.url}}" class="goto"><i class="fas fa-angle-double-right"></i></a></div></td>
-			</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+    {% for card in site.data.home_cards %}
+    <div class="home-container__card{% if card.type == 'writing' %} column{% endif %}"
+         onclick="location.href = '/{{ card.type }}'">
+        {% case card.type %}
+            {% when 'gallery', 'about' %}
+            <div class="home-container__image--{{ card.image-dir }} home__{{ card.type }}-image"></div>
+        {% endcase %}
+        <div class="home-container__info{% if card.type == 'writing' %} full-width{% endif %}">
+            <div class="home-container__header">
+                <div class="home-container__header-tease">
+                    <h2>{{ card.type | capitalize }}</h2>
+                    <h3 class="tease">
+                        See More&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
+                    </h3>
+                </div>
+                <hr class="rule--light-{{ card.color }}">
+            </div>
+
+            <div class="home-container__blurbs">
+                {% for text in card.blurbs %}
+                <p>{{ text }}</p>
+                {% endfor %}
+            </div>
+
+            <div class="home-container__{{ card.type }}-buttons">
+                {% for button in card.buttons %}
+                <a class="colored-button"
+                   href="{{ button.link }}">
+                    {{ button.name }}&nbsp;&nbsp;<i class="{{ button.icon }}"></i>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% case card.type %}
+            {% when 'music', 'writing', 'blog' %}
+            <div class="home-container__image--{{ card.image-dir }} home__{{ card.type }}-image"></div>
+        {% endcase %}
+    </div>
+    {% endfor %}
 </div>
-<br>
-<hr class="accent-rule">
-<div class="header-span">
-    <h2>Tag Archive</h2>
-</div>
-<hr class="accent-rule">
-{% include tagcloud.html %}

@@ -1,0 +1,122 @@
+// FUNCTIONS
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}
+
+@function get-color($type, $color) {
+    @return map-deep-get($color-map, $type, $color);
+}
+
+@function get-text-color($color) {
+	@if (lightness($color) > 60) {
+		@return $dark-color;
+	} @else {
+		@return $light-color;
+	}
+}
+
+@function in_list($value, $list) {
+    @return (false != index($list, $value));
+}
+
+// MIXINS
+@mixin set-colors($color) {
+	background-color: $color;
+	color: get-text-color($color);
+}
+
+@mixin background-image($image) {
+    background: url($image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin gradient-image($image, $color, $dir) {
+    background: linear-gradient(to $dir, transparent 50%, $color 100%), url($image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin colored-buttons($normal, $hover) {
+    .colored-button {
+        @include set-colors($normal);
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.5em;
+        transition: $normal-transition;
+
+        &:hover {
+            @include set-colors($hover);
+        }
+    }
+}
+
+// UTILITY CLASSES
+$space-types: (margin: m, padding: p);
+$spaceamounts: (1, 2, 3, 4, 5);
+@each $type, $letter in $space-types {
+    @each $space in $spaceamounts {
+        .#{$letter}-#{$space} {
+            #{$type}: #{$space}rem;
+        }
+        .#{$letter}y-#{$space} {
+            #{$type}: #{$space}rem 0;
+        }
+        .#{$letter}x-#{$space} {
+            #{$type}: 0 #{$space}rem;
+        }
+        .#{$letter}t-#{$space} {
+            #{$type}-top: #{$space}rem;
+        }
+        .#{$letter}b-#{$space} {
+            #{$type}-bottom: #{$space}rem;
+        }
+        .#{$letter}l-#{$space} {
+            #{$type}-left: #{$space}rem;
+        }
+        .#{$letter}r-#{$space} {
+            #{$type}-right: #{$space}rem;
+        }
+    }
+}
+
+.row {
+    flex-direction: row !important;
+}
+.column {
+    flex-direction: column !important;
+}
+
+// COLORED CLASSES
+$colors: 'color', 'accent', 'secondary', 'magenta', 'red', 'yellow', 'green', 'blue';
+@each $color in $colors {
+    $light: get-color('light', $color);
+    $dark: get-color('dark', $color);
+
+    .colored-button--#{$color} {
+        @include set-colors($light);
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.5em;
+        transition: $normal-transition;
+
+        &:hover {
+            @include set-colors($dark);
+        }
+    }
+
+    .rule--light-#{$color} {
+        border-color: $light;
+    }
+    .rule--dark-#{$color} {
+        border-color: $dark;
+    }
+}

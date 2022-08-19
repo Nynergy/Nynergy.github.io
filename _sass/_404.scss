@@ -1,0 +1,64 @@
+.fnf-container {
+    flex: 1;
+    @include grid-container;
+
+    .fnf-container__card {
+        @include set-colors($light-accent);
+        @include flexbox($justify: center);
+
+        .fnf-container__info {
+            @include flexbox($height: 20%, $justify: space-around, $align: center);
+            width: 75%;
+            margin-top: 3%;
+
+            .fnf-header {
+                font-size: 50px;
+            }
+
+            .fnf__subtext-container {
+                @include flexbox($height: 50%,
+                                 $direction: column,
+                                 $justify: space-around,
+                                 $align: center);
+                font-size: 20px;
+
+                a {
+                    color: $light-red;
+                    text-decoration: none;
+                    transition: $normal-transition;
+
+                    &:hover {
+                        color: $light-yellow;
+                    }
+                }
+            }
+        }
+    }
+
+    .fnf-container__image {
+        @include gradient-image("../assets/404/expanse.jpg",
+                                $light-color,
+                                top);
+    }
+}
+
+// Tablet Dimensions
+@media (max-width: 1000px) {
+    .fnf-container__info {
+        flex-direction: column !important;
+    }
+}
+
+// Phone Dimensions
+@media (max-width: 500px) {
+    .fnf-container__info {
+        h1 {
+            font-size: 25px !important;
+            margin-bottom: 2rem;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 1rem;
+        }
+    }
+}

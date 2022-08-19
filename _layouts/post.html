@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+{% assign post_type = page.categories | first %}
+{% case post_type %}
+{% when 'music' %}
+    {% assign post_color = 'magenta' %}
+{% when 'writing' %}
+    {% assign post_color = 'red' %}
+{% when 'blog' %}
+    {% assign post_color = 'blue' %}
+{% when 'gallery' %}
+    {% assign post_color = 'yellow' %}
+{% when 'about' %}
+    {% assign post_color = 'green' %}
+{% endcase %}
+
+{% assign cat_num = page.categories | size | minus: 1 %}
+{% assign cat = page.categories[cat_num] %}
+{% assign cat_list = site.categories[cat] %}
+{% for post in cat_list %}
+  {% if post.url == page.url %}
+  	{% assign pOffset = forloop.index0 | minus: 1 %}
+  	{% assign nOffset = pOffset | plus: 2 %}
+  	{% if forloop.first == false %}
+  	  {% assign next_post = cat_list[pOffset] %}
+  	{% endif %}
+  	{% if forloop.last == false %}
+  	  {% assign previous_post = cat_list[nOffset] %}
+  	{% endif %}
+  	{% break %}
+  {% endif %}
+{% endfor %}
+
+<div class="post-container">
+    <div class="post-container__links">
+        {% if previous_post %}
+            <a class="previous {{ 'colored-button--' | append: post_color }}"
+               href="{{ previous_post.url }}">
+                <i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;Previous Post
+            </a>
+        {% endif %}
+        {% if next_post %}
+            <a class="next {{ 'colored-button--' | append: post_color }}"
+               href="{{ next_post.url }}">
+                Next Post&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
+            </a>
+        {% endif %}
+    </div>
+    <div class="post-container__info">
+        <h4>{{ page.date | date: "%B %d, %Y" }}</h4>
+        <h2>{{ page.title }}</h2>
+        <hr class="{{ 'rule--light-' | append: post_color }}">
+    </div>
+    <div class="post-container__content">
+        {{ content | newline_to_br }}
+    </div>
+    <div class="post-container__links">
+        {% if previous_post %}
+            <a class="previous {{ 'colored-button--' | append: post_color }}"
+               href="{{ previous_post.url }}">
+                <i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;Previous Post
+            </a>
+        {% endif %}
+        {% if next_post %}
+            <a class="next {{ 'colored-button--' | append: post_color }}"
+               href="{{ next_post.url }}">
+                Next Post&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
+            </a>
+        {% endif %}
+    </div>
+</div>

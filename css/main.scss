@@ -1,0 +1,66 @@
+---
+---
+
+@import 'config';
+@import 'utilities';
+@import 'containers';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    @include set-colors($light-color);
+	font-family: $font-stack;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    height: 100px;
+    font-weight: bold;
+}
+
+nav {
+    @include set-colors($light-accent);
+    margin: 1em 1em 0 1em;
+
+    .nav__links {
+        @include flexbox($justify: center, $align: center);
+
+        @include colored-buttons($light-accent, $dark-accent);
+        .colored-button {
+            flex: 1;
+        }
+        .current-page {
+            @include set-colors($dark-accent);
+        }
+    }
+}
+
+main {
+    flex: 1 auto;
+    @include flexbox($direction: column);
+    margin: 1em;
+}
+
+footer {
+    @include set-colors($dark-color);
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@import 'masthead';
+@import '404';
+@import 'home';
+@import 'music';
+@import 'writing';
+@import 'blog';
+@import 'gallery';
+@import 'about';
+@import 'post';
