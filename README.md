@@ -7,4 +7,4 @@ other miscellaneous projects.
 
 Visit __Lexica Chromatica__ at <https://lexicachromatica.xyz/>
 
-Last Major Update was August 19, 2022 (Site Overhaul)
+Last Major Update was July 30, 2023 (Site Overhaul)
