@@ -4,92 +4,76 @@ title: Writing
 meta: Original poetry and prose by Ben Buchanan.
 ---
 
-<div class="writing-container">
-    <div class="writing-container__showcase" onclick="location.href = '/writing/published'">
-        <div class="showcase__info">
-            <div>
-                <div class="showcase__header-tease">
-                    <h2>Published Works</h2>
-                    <h3 class="tease">
-                        See All&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
-                    </h3>
-                </div>
-                <hr class="rule--light-red">
-            </div>
+<p>
+This is where you can read all the stories and collections of words that I
+write. Some of them have even been self-published into volumes.
+</p>
 
-            <div>
-                <p>I started writing poetry around 2014, but it wasn't until
-                2018 that I seriously began considering publishing some of my
-                material in volumes. I downloaded a typesetting program and put
-                together my first collection of original poetry in 2019, titled
-                <strong>Babylon Effect</strong>, self-publishing it through KDP
-                (Amazon).</p>
-                <br>
-                <p>Since then, I've taught myself typesetting with LaTeX on the
-                command line, published two other volumes of poetry
-                (<strong>Another Flow</strong> in 2020, and <strong>Drift
-                Illogical</strong> in 2021), and even released a second edition
-                of <strong>Babylon Effect</strong> with updated styling and
-                extra content.</p>
-                <br>
-                <p>Links to paperbacks on Amazon are available, as well as free
-                PDF downloads of each manuscript.</p>
-            </div>
+<hr>
 
-            <div class="showcase__buttons">
-                <a class="colored-button" href="/writing/published">
-                    Published Works&nbsp;&nbsp;<i class="fas fa-pen-fancy"></i>
-                </a>
-            </div>
-        </div>
-        <div class="showcase__image"></div>
+<h2>My Published Words</h2>
+
+<div class="writing-summary">
+    <img src="/assets/writing/DICover.jpg"></img>
+    <div class="writing-summary__content">
+        <strong>Drift Illogical</strong>
+        <p>
+        My third collection of abstract poetry, focusing on nature and the
+        isolation of the COVID-19 pandemic.
+        </p>
+        <a href="https://amazon.com/Drift-Illogical-Ben-Buchanan/dp/B092PG42QL/">
+            Paperback (Amazon)
+        </a>
+        <a href="/assets/writing/Drift Illogical.pdf">
+            Download PDF
+        </a>
     </div>
-
-    {% assign sections = 'poetry prose' | split: ' ' %}
-    {% for section in sections %}
-    <div class="writing-container__section">
-        <div class="writing-container__info" onclick="location.href = '/writing/{{ section }}'">
-            <div class="writing-container__header">
-                <div class="writing-container__header-tease">
-                    <h2>Latest {{ section | capitalize }} Posts</h2>
-                    <h3 class="tease">
-                        See All&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
-                    </h3>
-                </div>
-                <hr class="rule--light-red">
-            </div>
-
-            <div class="writing-container__labels">
-                <h4>Title</h4>
-                <h4>Date</h4>
-                <h4></h4>
-            </div>
-        </div>
-
-        <hr>
-
-        {% assign posts = site.categories[section] %}
-        {% for post in posts limit: 3 %}
-        <div class="writing-container__post" onclick="location.href = '{{ post.url }}'">
-            <div class="post__meta">
-                <h3>{{ post.title }}</h3>
-                {% if post.meta %}
-                    <p>{{ post.meta }}</p>
-                {% else %}
-                    {% assign excerpt_pieces = post.excerpt | strip_html | newline_to_br | normalize_whitespace | split: '<br />' %}
-                    <p>{{ excerpt_pieces | join: ' / ' }}</p>
-                {% endif %}
-            </div>
-            <div class="post__date">
-                <p>{{ post.date | date: "%B %d, %Y" }}</p>
-            </div>
-            <div class="post__link">
-                <a class="colored-button" href="{{ post.url }}">
-                    Read More&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
-                </a>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-    {% endfor %}
 </div>
+
+<br>
+
+<div class="writing-summary">
+    <img src="/assets/writing/AFCover.jpg"></img>
+    <div class="writing-summary__content">
+        <strong>Another Flow</strong>
+        <p>
+        My second collection of abstract poetry, focusing on dreams and
+        experiments with concrete/blackout/collage poetry.
+        </p>
+        <a href="https://amazon.com/Another-Flow-Ben-Buchanan/dp/B089M2HZ9S/">
+            Paperback (Amazon)
+        </a>
+        <a href="/assets/writing/Another Flow.pdf">
+            Download PDF
+        </a>
+    </div>
+</div>
+
+<br>
+
+<div class="writing-summary">
+    <img src="/assets/writing/BE2ECover.jpg"></img>
+    <div class="writing-summary__content">
+        <strong>Babylon Effect <span class="edition">2nd Edition</span></strong>
+        <p>
+        My first collection of abstract poetry, updated to fit the styling of
+        my other collected volumes.
+        </p>
+        <a href="https://amazon.com/Babylon-Effect-2nd-Ben-Buchanan/dp/B09HR6QBF8/">
+            Paperback (Amazon)
+        </a>
+        <a href="/assets/writing/Babylon Effect 2nd Edition.pdf">
+            Download PDF
+        </a>
+    </div>
+</div>
+
+<br>
+
+<hr>
+
+{% include post-table.html category="writing" %}
+
+<br>
+
+<hr>

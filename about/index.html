@@ -4,39 +4,31 @@ title: About
 meta: Information about Ben Buchanan.
 ---
 
-<div class="about-container">
-    {% for card in site.data.about_cards %}
-    {% assign remainder = forloop.index | modulo: 2 %}
+<img id="me" src="/assets/about/me.jpg"></img>
 
-    <div class="about-container__card">
-        {% if remainder == 1 %}
-        <div class="about-container__image--{{ card.type }}--right"></div>
-        {% endif %}
+<div class="about-bio">
+    <strong>About Me</strong>
+    <p>
+    My name is Ben Buchanan, and I made the stuff you're looking at on this
+    site. Sometimes I write, sometimes I make music, sometimes I create art.
+    Perhaps I might spend a week straight programming some tool or interface.
+    Or maybe I'll spend far too much time ignoring this site and playing video
+    games.
+    </p>
 
-        <div class="about-container__info">
-            <div class="about-container__header">
-                <h2>{{ card.type | capitalize }}</h2>
-                <hr class="rule--light-green">
-            </div>
+    <p>
+    I also have a day job where I type on a keyboard and sit in a nice office
+    chair. Not every day is a creative one. And that's okay.
+    </p>
 
-            <div class="about-container__blurbs">
-                {% for text in card.blurbs %}
-                <p>{{ text }}</p>
-                {% endfor %}
-            </div>
+    <p>
+    I hope you enjoy the stuff I make, or find something interesting on the
+    site. Thanks for visiting, and be well.
+    </p>
 
-            <div class="about-container__buttons">
-                {% for link in card.links %}
-                <a class="colored-button--green" href="{{ link.url }}">
-                    {{ link.name }}&nbsp;&nbsp;<i class="{{ link.icon }}"></i>
-                </a>
-                {% endfor %}
-            </div>
-        </div>
-
-        {% if remainder == 0 %}
-        <div class="about-container__image--{{ card.type }}--left"></div>
-        {% endif %}
-    </div>
-    {% endfor %}
+    <blockquote>
+    - Ben
+    </blockquote>
 </div>
+
+<hr>

@@ -1,0 +1,72 @@
+---
+layout: default
+title: Maps of Low Fidelity
+meta: Information about the music of Maps of Low Fidelity.
+---
+
+<div class="music-bio">
+    <strong>Maps of Low Fidelity</strong>
+    <p>
+    A side project where I make shorter 5-track collections of sound, typically
+    with a focus on evoking natural landscapes through generative composition,
+    minimal voices, and simple atmospheres of soft noise.
+    </p>
+
+    <p>
+    After hearing of the passing of Lindsheaven Virtual Plaza during the
+    pandemic, I was extremely sad that we would never get to hear more of the
+    minimal ambient work on 'Rainforest Hills'. So I set out to make some of my
+    own work in that style, as much in tribute to the late artist as it was in
+    practice for my passion. Eventually it spiraled into more than just a
+    one-off release, and now I plan to put out plenty more projects under the
+    MoLF name.
+    </p>
+
+    <p>
+    You can expect a new Maps of Low Fidelity project every six months, in
+    March and September.
+    </p>
+
+    <div class="music-buttons">
+        <a href="https://mapsoflowfidelity.bandcamp.com">Bandcamp</a>
+    </div>
+</div>
+
+<hr>
+
+<h2>Discography</h2>
+
+{% for album in site.data.album_info["Maps of Low Fidelity"] %}
+<h3>'{{ album.title }}' - {{ album.released }}</h3>
+
+{{ album.embed }}
+
+<p>{{ album.blurb }}</p>
+
+<div class="tracklist">
+    <div class="tracklist__header">Tracklist</div>
+    {% if album.multidisc %}
+        {% assign discnum = 1 %}
+        {% assign tracknum = 1 %}
+        {% for disc in album.discs %}
+            <div class="tracklist__disc">Disc {{ discnum }}</div>
+            {% assign discnum = discnum | plus: 1 %}
+
+            {% for track in disc.tracks %}
+                <div class="tracklist__track">{{ tracknum }}. {{ track }}</div>
+                {% assign tracknum = tracknum | plus: 1 %}
+            {% endfor %}
+        {% endfor %}
+    {% else %}
+        {% assign tracknum = 1 %}
+        {% for track in album.tracks %}
+            <div class="tracklist__track">{{ tracknum }}. {{ track }}</div>
+            {% assign tracknum = tracknum | plus: 1 %}
+        {% endfor %}
+    {% endif %}
+</div>
+{% endfor %}
+
+<br>
+
+<hr>

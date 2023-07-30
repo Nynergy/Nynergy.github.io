@@ -5,75 +5,37 @@ meta: The personal website of Ben Buchanan.
 priority: 1.0
 ---
 
-<div class="home-container">
-    <div class="home-container__post-list column">
-        <div class="home-container__info full-width">
-            <div class="home-container__header">
-                <h2>Latest</h2>
-                <hr class="rule--dark-color">
+<p>
+Lexica Chromatica is a repository of ideas, notes, links, arrows, paths,
+dreams, words, sounds, letters, landscapes, and columns of arbitrary text. It
+is where I sleep, and where I sometimes stir the waters.
+</p>
+
+<hr>
+
+<h2>Latest Posts</h2>
+
+<div class="latest-posts-table">
+    <div class="latest-posts-table__row">
+        <div class="latest-posts-table__category-header"></div>
+        <div class="latest-posts-table__title-header">Title</div>
+        <div class="latest-posts-table__date-header">Date Published</div>
+    </div>
+    {% for post in site.posts limit: 10 %}
+    {% assign post_type = post.url | replace: '/', ' ' | truncatewords: 1, '' %}
+    <a href="{{ post.url }}">
+        <div class="latest-posts-table__row">
+            <div class="latest-posts-table__category-cell {{ post_type }}-color">
             </div>
-
-            <hr>
-
-            <div class="home-container__posts">
-                {% for post in site.posts limit: 10 %}
-                {% assign post_type = post.url | replace: '/', ' ' | truncatewords: 1, '' %}
-                {% case post_type %}
-                {% when 'writing' %}
-                    {% assign post_color = 'red' %}
-                {% when 'blog' %}
-                    {% assign post_color = 'blue' %}
-                {% endcase %}
-                <div class="home-container__post--{{ post_color }}" onclick="location.href = '{{ post.url }}'">
-                    <div class="post__meta">
-                        <h3>{{ post.title }}</h3>
-                    </div>
-                    <div class="post__date">
-                        <p>{{ post.date | date: "%B %d, %Y" }}</p>
-                    </div>
-                </div>
-                {% endfor %}
+            <div class="latest-posts-table__title-cell">
+                {{ post.title }}
+            </div>
+            <div class="latest-posts-table__date-cell">
+                {{ post.date | date: "%B %d, %Y" }}
             </div>
         </div>
-    </div>
-
-    {% for card in site.data.home_cards %}
-    <div class="home-container__card{% if card.type == 'writing' %} column{% endif %}"
-         onclick="location.href = '/{{ card.type }}'">
-        {% case card.type %}
-            {% when 'gallery', 'about' %}
-            <div class="home-container__image--{{ card.image-dir }} home__{{ card.type }}-image"></div>
-        {% endcase %}
-        <div class="home-container__info{% if card.type == 'writing' %} full-width{% endif %}">
-            <div class="home-container__header">
-                <div class="home-container__header-tease">
-                    <h2>{{ card.type | capitalize }}</h2>
-                    <h3 class="tease">
-                        See More&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
-                    </h3>
-                </div>
-                <hr class="rule--light-{{ card.color }}">
-            </div>
-
-            <div class="home-container__blurbs">
-                {% for text in card.blurbs %}
-                <p>{{ text }}</p>
-                {% endfor %}
-            </div>
-
-            <div class="home-container__{{ card.type }}-buttons">
-                {% for button in card.buttons %}
-                <a class="colored-button"
-                   href="{{ button.link }}">
-                    {{ button.name }}&nbsp;&nbsp;<i class="{{ button.icon }}"></i>
-                </a>
-                {% endfor %}
-            </div>
-        </div>
-        {% case card.type %}
-            {% when 'music', 'writing', 'blog' %}
-            <div class="home-container__image--{{ card.image-dir }} home__{{ card.type }}-image"></div>
-        {% endcase %}
-    </div>
+    </a>
     {% endfor %}
 </div>
+
+<hr>

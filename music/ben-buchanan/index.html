@@ -1,0 +1,67 @@
+---
+layout: default
+title: Ben Buchanan
+meta: Information about the music of Ben Buchanan.
+---
+
+<div class="music-bio">
+    <strong>Ben Buchanan</strong>
+    <p>
+    The music I make under my own name can be a calm electronic ambient
+    soundscape, an experimental warping of samples, an abrasive drone of noise
+    and discordant voices, and more. It's whatever I feel like making. Most
+    material is composed and recorded in VCV Rack, with a focus on generative
+    composition, improvised performance, and modular synth soundplay.
+    </p>
+
+    <p>
+    Official releases can be found on my Bandcamp, but I also post a lot of
+    videos to my YouTube channel, whether they be live patch performances,
+    Teletype scene overviews, audio visualizers, and plenty more you won't find
+    on my Bandcamp.
+    </p>
+
+    <div class="music-buttons">
+        <a href="https://benbuchanan.bandcamp.com">Bandcamp</a>
+        <a href="https://www.youtube.com/channel/UCnWTmsuxOUfJYNEDGMFWmaw">YouTube</a>
+    </div>
+</div>
+
+<hr>
+
+<h2>Discography</h2>
+
+{% for album in site.data.album_info["Ben Buchanan"] %}
+<h3>'{{ album.title }}' - {{ album.released }}</h3>
+
+{{ album.embed }}
+
+<p>{{ album.blurb }}</p>
+
+<div class="tracklist">
+    <div class="tracklist__header">Tracklist</div>
+    {% if album.multidisc %}
+        {% assign discnum = 1 %}
+        {% assign tracknum = 1 %}
+        {% for disc in album.discs %}
+            <div class="tracklist__disc">Disc {{ discnum }}</div>
+            {% assign discnum = discnum | plus: 1 %}
+
+            {% for track in disc.tracks %}
+                <div class="tracklist__track">{{ tracknum }}. {{ track }}</div>
+                {% assign tracknum = tracknum | plus: 1 %}
+            {% endfor %}
+        {% endfor %}
+    {% else %}
+        {% assign tracknum = 1 %}
+        {% for track in album.tracks %}
+            <div class="tracklist__track">{{ tracknum }}. {{ track }}</div>
+            {% assign tracknum = tracknum | plus: 1 %}
+        {% endfor %}
+    {% endif %}
+</div>
+{% endfor %}
+
+<br>
+
+<hr>

@@ -1,52 +1,20 @@
 // COLORS
-$light-color:     #daddd8;
-$light-accent:    darken($light-color, 10%);
-$light-secondary: darken($light-color, 20%);
-$dark-color:     #171816;
-$dark-accent:    lighten($dark-color, 10%);
-$dark-secondary: lighten($dark-color, 20%);
+$foreground:        #ffeeee;
 
-$light-blue: #729d8d;
-$dark-blue:  #325d4d;
+$background:        #3d3838;
+$background-dark:   #2d2828;
+$background-light:  #4d4848;
 
-$light-green: #90a583;
-$dark-green:  #506543;
+$home-color:        #5d5858;
+$blog-color:        #4d4858;
+$music-color:       #5d4858;
+$music-color-dark:  #3d2838;
+$writing-color:     #6d4848;
+$artwork-color:     #8d5848;
+$about-color:       #ad7808;
 
-$light-yellow: #c3984d;
-$dark-yellow:  #93681d;
-
-$light-red: #ba5a5a;
-$dark-red:  #7a1a1a;
-
-$light-magenta: #81667a;
-$dark-magenta:  #4a253b;
-
-$light-color-map: (
-    'color': $light-color,
-    'accent': $light-accent,
-    'secondary': $light-secondary,
-    'blue': $light-blue,
-    'green': $light-green,
-    'yellow': $light-yellow,
-    'red': $light-red,
-    'magenta': $light-magenta
-);
-
-$dark-color-map: (
-    'color': $dark-color,
-    'accent': $dark-accent,
-    'secondary': $dark-secondary,
-    'blue': $dark-blue,
-    'green': $dark-green,
-    'yellow': $dark-yellow,
-    'red': $dark-red,
-    'magenta': $dark-magenta
-);
-
-$color-map: ('light': $light-color-map, 'dark': $dark-color-map);
+$link-color:        #fdc008;
+$link-hover-color:  #fd3068;
 
 // FONTS
 $font-stack: Palatino, "Palatino Linotype", "Palatino LT STD", serif;
-
-// TRANSITIONS
-$normal-transition: 500ms;

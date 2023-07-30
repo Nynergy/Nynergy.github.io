@@ -1,146 +1,18 @@
-$directions: top, left, bottom, right;
-$cards: 'programmer', 'musician', 'writer', 'contact';
-
-.about-container {
-    flex: 1;
-    @include grid-container($columns: 1fr 1fr, $rows: 1fr 1fr);
-
-    .about-container__card {
-        @include card;
-
-        &:hover {
-            @each $dir in $directions {
-                @each $card in $cards {
-                    // Upon card hover, transition the gradients
-                    .about-container__image--#{$card}--#{$dir}::before {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-
-        .about-container__info {
-            @include flexbox($direction: column, $justify: space-between);
-            width: 50%;
-            padding: 1em;
-
-            .about-container__blurbs {
-                @include flexbox($direction: column, $justify: space-around);
-                height: 50%;
-            }
-
-            .about-container__buttons {
-                display: grid;
-                grid-gap: 1em;
-
-                a {
-                    &:nth-child(2) {
-                        grid-column: 2;
-                    }
-                }
-            }
-        }
-
-        @each $dir in $directions {
-            @each $card in $cards {
-                // Create default appearance
-                .about-container__image--#{$card}--#{$dir} {
-                    width: 50%;
-                    position: relative;
-                    z-index: 2;
-                    @include gradient-image("../assets/about/#{$card}.jpg",
-                                            $light-accent,
-                                            $dir);
-                }
-                // Stow an invisible transition appearance beneath the default
-                .about-container__image--#{$card}--#{$dir}::before {
-                    position: absolute;
-                    content: "";
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    z-index: 1;
-                    opacity: 0;
-                    transition: opacity $normal-transition;
-                    @include gradient-image("../assets/about/#{$card}.jpg",
-                                            $dark-color,
-                                            $dir);
-                }
-            }
-        }
-    }
-}
-
-.contact-container {
-    flex: 1;
-    @include card($direction: column);
+.about-bio {
+    display: flex;
+    flex-direction: column;
     padding: 1em;
+    margin: 1em 0;
+    background: linear-gradient(to bottom, $about-color, $background-light 250px);
 
-    &:hover {
-        input {
-            @include set-colors($dark-secondary);
-        }
-
-        textarea {
-            @include set-colors($dark-secondary);
-        }
-    }
-
-    .contact-container__header {
-        padding-bottom: 1em;
-    }
-
-    .contact-container__form {
-        flex: 1;
-        @include flexbox($direction: column, $justify: center);
-
-        input {
-            width: 100%;
-            transition: $normal-transition;
-        }
-
-        textarea {
-            resize: none;
-            width: 100%;
-            transition: $normal-transition;
-        }
-    }
-
-    .contact-container__buttons {
-        display: grid;
-
-        .colored-button--green {
-            cursor: pointer;
-        }
+    strong {
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
     }
 }
 
-// Tablet Dimensions
-@media (max-width: 1000px) {
-    .about-container {
-        grid-template-columns: 1fr;
-
-        .about-container__blurbs {
-            p {
-                margin: 1rem 0;
-            }
-        }
-    }
-}
-
-// Phone Dimensions
-@media (max-width: 500px) {
-    @each $dir in $directions {
-        @each $card in $cards {
-            // Create default appearance
-            .about-container__image--#{$card}--#{$dir} {
-                display: none;
-            }
-        }
-    }
-
-    .about-container__info {
-        width: 100% !important;
-    }
+#me {
+    width: 100%;
+    margin-top: 1em;
 }

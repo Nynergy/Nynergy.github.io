@@ -7,4 +7,3 @@ defaults:
       type: "posts"
     values:
       layout: post
-      excerpt_separator: <!--excerpt-->

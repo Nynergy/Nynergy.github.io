@@ -4,8 +4,6 @@
 		<title>{% if page.title %}{{page.title}} | {% endif %}Lexica Chromatica</title>
 
         <link rel="stylesheet" href="/css/main.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
-		integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 		<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
@@ -15,12 +13,13 @@
 	</head>
 
 	<body>
-        {% capture page_baseurl %}{{ page.url | replace: "/", " " | truncatewords: 1,"" }}{% endcapture %}
-        {% if page_baseurl == " " %}{% assign page_baseurl = "home" %}{% endif %}
-        {% if page.status_code == 404 %}{% assign page_baseurl = "404" %}{% endif %}
-        <header class="masthead--{{ page_baseurl }}">
-            <h1>Lexica Chromatica</h1>
- 			<p id="masthead-quote"></p>
+        <header>
+            <div class="header-container">
+                <img class="site-icon" src="/assets/icon.jpg"></img>
+                <h1>Lexica Chromatica</h1>
+            </div>
+            <hr>
+            <p id="masthead-quote"><strong>Today's Strategy: </strong></p>
             <script src="/js/mastheadQuote.js"></script>
         </header>
 

@@ -4,97 +4,46 @@ title: Music
 meta: Original music by Ben Buchanan.
 ---
 
-<div class="music-container">
-    {% for card in site.data.music_cards %}
-    {% case card.artist %}
-        {% when 'Maps of Low Fidelity' %}
-        <div class="music-container__card">
-            <div class="music-container__info pb-1">
-                <h2>{{ card.artist }}</h2>
-                <hr class="rule--light-magenta">
-            </div>
+<p>
+This is where you can listen to my sonic experiments and reflections of self.
+Sometimes I also make written posts about noise.
+</p>
 
-            {% for album in card.albums %}
-            <div id="MoLF" class="music-container__album-showcase column">
-                <div class="side-embed">
-                    {{ album.embed }}
-                </div>
-                <div>
-                    <div>
-                        <h3>{{ album.title }} ({{ album.year }})</h3>
-                        <hr class="rule--light-magenta">
-                    </div>
+<hr>
 
-                    {% for text in album.blurbs %}
-                    <p>{{ text }}</p>
-                    {% endfor %}
+<h2>My Various Noises</h2>
 
-                    <a class="colored-button" href="{{ album.link }}">
-                        Listen on Bandcamp&nbsp;&nbsp;<i class="fab fa-bandcamp"></i>
-                    </a>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% when 'Ben Buchanan' %}
-        <div class="music-container__card">
-            <div class="music-container__info pb-1">
-                <h2>{{ card.artist }}</h2>
-                <hr class="rule--light-magenta">
-            </div>
-
-            {% assign main-album = card.albums[0] %}
-            <div class="music-container__album-showcase">
-                <div class="main-embed">
-                    {{ main-album.embed }}
-                </div>
-                <div class="main-info ml-1">
-                    <div>
-                        <h3>{{ main-album.title }} ({{ main-album.year }})</h3>
-                        <hr class="rule--light-magenta">
-                    </div>
-
-                    {% for text in main-album.blurbs %}
-                    <p>{{ text }}</p>
-                    {% endfor %}
-
-                    <a class="colored-button"
-                       href="{{ main-album.link }}">
-                        Listen on Bandcamp&nbsp;&nbsp;<i class="fab fa-bandcamp"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="music-container__info py-1">
-                <h3>Other Albums</h3>
-                <hr class="rule--light-magenta">
-            </div>
-
-            <div class="music-container__discog">
-                {% for album in card.albums %}
-                {% if forloop.first == false %}
-                <div class="music-container__album-showcase">
-                    {{ album.embed }}
-                    <div class="discog-info ml-1">
-                        <div>
-                            <strong>{{ album.title }} ({{ album.year }})</strong>
-                            <hr class="rule--light-magenta">
-                        </div>
-
-                        {% for text in album.blurbs %}
-                        <p>{{ text }}</p>
-                        {% endfor %}
-
-                        <a class="colored-button"
-                           href="{{ album.link }}">
-                            Listen on Bandcamp&nbsp;&nbsp;<i class="fab fa-bandcamp"></i>
-                        </a>
-                    </div>
-                </div>
-                {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    {% endcase %}
-    {% endfor %}
+<div class="music-summary">
+    <img src="/assets/music/TWOR.jpg"></img>
+    <div class="music-summary__content">
+        <strong>Ben Buchanan</strong>
+        <p>
+        Ambient electronic pieces made in VCV Rack, focusing on drones, noise,
+        and generative composition.
+        </p>
+        <a href="/music/ben-buchanan">Tell Me More</a>
+    </div>
 </div>
+
+<br>
+
+<div class="music-summary">
+    <img src="/assets/music/MoLF.jpg"></img>
+    <div class="music-summary__content">
+        <strong>Maps of Low Fidelity</strong>
+        <p>
+        Generative soundscapes from places I once was, and will yet be.
+        </p>
+        <a href="/music/maps-of-low-fidelity">Tell Me More</a>
+    </div>
+</div>
+
+<br>
+
+<hr>
+
+{% include post-table.html category="music" %}
+
+<br>
+
+<hr>

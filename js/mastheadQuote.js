@@ -136,4 +136,4 @@ const quotes = [
 let num = Math.floor(Math.random() * (quotes.length));
 let quote = quotes[num];
 let display = document.getElementById('masthead-quote');
-display.innerHTML = quote;
+display.innerHTML = display.innerHTML + quote;
