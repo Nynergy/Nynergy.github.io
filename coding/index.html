@@ -1,0 +1,29 @@
+---
+layout: default
+title: Coding
+meta: Programming projects by Ben Buchanan.
+---
+
+<p>
+This is where you can find my recreational programming projects. As you can
+tell, I like to make TUI programs.
+</p>
+
+<hr>
+
+<h2>My Code Monkey Sculptures</h2>
+
+{% for card in site.data.coding_cards %}
+<a href="https://github.com/Nynergy/{{ card.title }}">
+<div class="coding-card__container">
+    <div class="coding-card">
+        <h2>{{ card.title }}</h2>
+        <p>
+        {{ card.blurb }}
+        </p>
+    </div>
+</div>
+</a>
+{% endfor %}
+
+<hr>

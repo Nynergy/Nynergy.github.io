@@ -5,16 +5,15 @@ $background:        #3d3838;
 $background-dark:   #2d2828;
 $background-light:  #4d4848;
 
-$home-color:        #5d5858;
-$blog-color:        #4d4858;
-$music-color:       #5d4858;
-$music-color-dark:  #3d2838;
-$writing-color:     #6d4848;
-$artwork-color:     #8d5848;
+$coding-color:      #4d4878;
+$music-color:       #6d4868;
+$music-color-dark:  #4d2848;
+$writing-color:     #8d4848;
+$artwork-color:     #9d6248;
 $about-color:       #ad7808;
-
-$link-color:        #fdc008;
-$link-hover-color:  #fd3068;
 
 // FONTS
 $font-stack: Palatino, "Palatino Linotype", "Palatino LT STD", serif;
+
+// TRANSITIONS
+$transition-normal: 500ms;

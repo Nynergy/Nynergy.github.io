@@ -13,29 +13,17 @@ is where I sleep, and where I sometimes stir the waters.
 
 <hr>
 
-<h2>Latest Posts</h2>
-
-<div class="latest-posts-table">
-    <div class="latest-posts-table__row">
-        <div class="latest-posts-table__category-header"></div>
-        <div class="latest-posts-table__title-header">Title</div>
-        <div class="latest-posts-table__date-header">Date Published</div>
-    </div>
-    {% for post in site.posts limit: 10 %}
-    {% assign post_type = post.url | replace: '/', ' ' | truncatewords: 1, '' %}
-    <a href="{{ post.url }}">
-        <div class="latest-posts-table__row">
-            <div class="latest-posts-table__category-cell {{ post_type }}-color">
-            </div>
-            <div class="latest-posts-table__title-cell">
-                {{ post.title }}
-            </div>
-            <div class="latest-posts-table__date-cell">
-                {{ post.date | date: "%B %d, %Y" }}
-            </div>
+{% for card in site.data.home_cards %}
+<a href="/{{ card.type }}/">
+<div class="home-card__container">
+    <div class="home-card {{ card.type }}">
+        <div></div>
+        <div class="home-card__content">
+            <h2>{{ card.text }}</h2>
         </div>
-    </a>
-    {% endfor %}
+    </div>
 </div>
+</a>
+{% endfor %}
 
 <hr>

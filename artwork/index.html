@@ -13,54 +13,14 @@ keyboard and mouse, other times with more primitive instruments.
 
 <h2>My Whimsical Galleries</h2>
 
-<div class="artwork-summary">
-    <img src="/assets/artwork/TWORThumbnail.jpg"></img>
-    <div class="artwork-summary__content">
-        <strong>Thousand Wishes of Rain</strong>
-        <p>
-        Digital artwork I made during the recording of my album 'Thousand
-        Wishes of Rain', made in GIMP by layering watercolor-esque sheets of
-        color over grainy, noisy, abstract grayscale backgrounds.
-        </p>
-        <a href="/artwork/thousand-wishes-of-rain">Show Me More</a>
+{% for card in site.data.artwork_cards %}
+<a href="/artwork/{{ card.title | slugify: 'ascii' }}/">
+<div class="artwork-card__container">
+    <div class="artwork-card">
+        <h2>{{ card.title }}</h2>
     </div>
 </div>
-
-<br>
-
-<div class="artwork-summary">
-    <img src="/assets/artwork/ISThumbnail.jpg"></img>
-    <div class="artwork-summary__content">
-        <strong>Illogical Sketches</strong>
-        <p>
-        Sketches I made to be included in my poetry collection 'Drift
-        Illogical', made with pens, pencils, watercolor paper, and a ruler.
-        </p>
-        <a href="/artwork/illogical-sketches">Show Me More</a>
-    </div>
-</div>
-
-<br>
-
-<div class="artwork-summary">
-    <img src="/assets/artwork/GLThumbnail.jpg"></img>
-    <div class="artwork-summary__content">
-        <strong>Genius Loci</strong>
-        <p>
-        Digital artwork I made during the recording of my album 'Inner
-        Weather', made in GIMP by layering images as pseudo-transparent
-        watercolors.
-        </p>
-        <a href="/artwork/genius-loci">Show Me More</a>
-    </div>
-</div>
-
-<br>
-
-<hr>
-
-{% include post-table.html category="artwork" %}
-
-<br>
+</a>
+{% endfor %}
 
 <hr>

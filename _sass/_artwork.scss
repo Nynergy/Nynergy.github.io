@@ -1,29 +1,26 @@
-.artwork-summary {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 1em;
-    padding: 1em;
-    background: linear-gradient(to bottom, $artwork-color, $background-light 100px);
+.artwork-card__container {
+    background: $background-light;
+    transition: $transition-normal;
 
-    img {
-        width: 100%;
-        align-self: center;
+    &:hover {
+        background: $background-dark;
     }
 
-    .artwork-summary__content {
+    .artwork-card {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: end;
+        margin-top: 1em;
+        background: linear-gradient(to right, $artwork-color, transparent 200px);
 
-        a {
-            width: 90%;
-            text-align: center;
-            padding: 0.5em;
-            background-color: $artwork-color;
+        h2 {
+            line-height: 1.0;
+            margin-bottom: 0.7em;
+            margin-right: 1em;
+        }
 
-            &:hover {
-                background-color: $background-dark;
-            }
+        &:last-child {
+            margin-bottom: 1em;
         }
     }
 }

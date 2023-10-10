@@ -151,6 +151,21 @@ Ben Buchanan:
 
 # Maps of Low Fidelity Albums
 Maps of Low Fidelity:
+  - title: Opal Drifters
+    released: September 2023
+    multidisc: false
+    tracks:
+      - Opal Drifters
+      - Rethought Topographical
+      - Endless Patience
+      - Aimless Time
+      - Halcyon Old Tongues
+    blurb: >
+      A shifting cloudscape of hues and emotion, remembrance and devotion.
+      Digital download includes 20-minute single 'Landscape in Sketch'.
+    embed: >
+      <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=4278743578/size=large/bgcol=333333/linkcol=fd88a8/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://mapsoflowfidelity.bandcamp.com/album/opal-drifters">Opal Drifters by Maps of Low Fidelity</a></iframe>
+
   - title: Heavy Light Gradient
     released: March 2023
     multidisc: false

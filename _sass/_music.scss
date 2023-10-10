@@ -1,29 +1,26 @@
-.music-summary {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 1em;
-    padding: 1em;
-    background: linear-gradient(to bottom, $music-color, $background-light 100px);
+.music-card__container {
+    background: $background-light;
+    transition: $transition-normal;
 
-    img {
-        width: 100%;
-        align-self: center;
+    &:hover {
+        background: $background-dark;
     }
 
-    .music-summary__content {
+    .music-card {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: end;
+        margin-top: 1em;
+        background: linear-gradient(to right, $music-color, transparent 200px);
 
-        a {
-            width: 90%;
-            text-align: center;
-            padding: 0.5em;
-            background-color: $music-color;
+        h2 {
+            line-height: 1.0;
+            margin-bottom: 0.7em;
+            margin-right: 1em;
+        }
 
-            &:hover {
-                background-color: $background-dark;
-            }
+        &:last-child {
+            margin-bottom: 1em;
         }
     }
 }
@@ -78,5 +75,9 @@
         &:nth-child(even) {
             background-color: $music-color;
         }
+    }
+
+    &:last-of-type {
+        margin-bottom: 1em;
     }
 }

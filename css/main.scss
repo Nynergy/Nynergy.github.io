@@ -60,6 +60,7 @@ nav {
 
             a {
                 flex: 1;
+                transition: $transition-normal;
 
                 &:hover {
                     background-color: $background-dark;
@@ -73,7 +74,8 @@ nav {
     }
 }
 
-@import 'posts';
+@import 'home';
+@import 'coding';
 @import 'music';
 @import 'writing';
 @import 'artwork';

@@ -1,0 +1,12 @@
+- title: horizon
+  blurb: A TUI controller for Logitech Media Server, written in Python
+- title: lyra
+  blurb: A TUI app for viewing Logitech Media Server playback, written in Rust
+- title: kadai
+  blurb: A TUI kanban-style task tracker, written in Rust
+- title: midna
+  blurb: An item tracker for Twilight Princess Randomizer, written in Python
+- title: escher
+  blurb: A random deck generator for Android Netrunner, written in Python
+- title: scintilator
+  blurb: A pretty ASCII light show for the terminal, written in C++
