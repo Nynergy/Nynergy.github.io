@@ -6,6 +6,8 @@
   blurb: A TUI kanban-style task tracker, written in Rust
 - title: midna
   blurb: An item tracker for Twilight Princess Randomizer, written in Python
+- title: magellan
+  blurb: A universe generator and map renderer for the Traveller TTRPG
 - title: escher
   blurb: A random deck generator for Android Netrunner, written in Python
 - title: scintilator
