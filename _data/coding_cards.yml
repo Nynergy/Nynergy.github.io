@@ -1,14 +1,20 @@
+- title: dotfiles
+  blurb: Configuration files and custom scripts, written mostly in Bash
+- title: kiln
+  blurb: An id3 tag utility for the command line, written in Rust
 - title: horizon
   blurb: A TUI controller for Logitech Media Server, written in Python
 - title: lyra
   blurb: A TUI app for viewing Logitech Media Server playback, written in Rust
 - title: kadai
   blurb: A TUI kanban-style task tracker, written in Rust
+- title: silica
+  blurb: A sand timer for the terminal, written in Rust
 - title: midna
   blurb: An item tracker for Twilight Princess Randomizer, written in Python
 - title: magellan
   blurb: A universe generator and map renderer for Traveller, written in Python
 - title: escher
-  blurb: A random deck generator for Android Netrunner, written in Python
+  blurb: A random deck generator for Netrunner, written in Python
 - title: scintilator
   blurb: A pretty ASCII light show for the terminal, written in C++
