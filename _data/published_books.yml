@@ -1,55 +1,36 @@
-# Babylon Effect 2nd Edition
-- title: Babylon Effect <small>2nd Edition</small>
-  year: 2021
-  image: babylon
-  blurbs:
-    - >
-      <strong>Babylon Effect</strong> (originally published in 2019) was my
-      first collection of original poetry. The pieces tend to be abstract,
-      expressionistic, and littered with imagery and emotions inspired by
-      nature and various dreams I was having at the time.
-    - >
-      The second edition (published in 2021) features updated styling to
-      compliment the design of other collections, as well as added content --
-      including pieces never published in my other collections.
-  amazon: https://www.amazon.com/Babylon-Effect-2nd-Ben-Buchanan/dp/B09HR6QBF8/
-  download: /assets/writing/Babylon Effect 2nd Edition.pdf
+Poetry:
+  # Even If I Am Ash
+  - title: Even If I Am Ash
+    blurb: >
+      My fourth collection of abstract poetry, focusing on self-exploration and
+      the wonder of the natural world.
+    link: https://www.amazon.com/Even-If-I-Am-Ash/dp/B0D3WJWDZB/
+    type: Hardcover
+    source: Amazon
 
-# Another Flow
-- title: Another Flow
-  year: 2020
-  image: flow
-  blurbs:
-    - >
-      <strong>Another Flow</strong> was my second volume of original poetry.
-      The pieces in this collection are similarly abstract to those in
-      <strong>Babylon Effect</strong>, but I also tried to experiment with a
-      more concrete style. Many poems are physically shaped and typeset on the
-      page in a particular way, in order to evoke some kind of imagery in the
-      reader.
-    - >
-      This volume also features an extensive set of appendices, including some
-      collaborative work between myself and Ashley Markowicz,
-      deconstructed/blackout poetry, and collage poetry.
-  amazon: https://amazon.com/Another-Flow-Ben-Buchanan/dp/B089M2HZ9S/
-  download: /assets/writing/Another Flow.pdf
+  # Drift Illogical
+  - title: Drift Illogical
+    blurb: >
+      My third collection of abstract poetry, focusing on nature and the
+      isolation of the COVID-19 pandemic.
+    link: https://www.amazon.com/Drift-Illogical-Ben-Buchanan/dp/B092PG42QL/
+    type: Paperback
+    source: Amazon
 
-# Drift Illogical
-- title: Drift Illogical
-  year: 2021
-  image: drift
-  blurbs:
-    - >
-      <strong>Drift Illogical</strong> was my third collection of original
-      poetry, and serves as a capstone to my initial "trilogy" of volumes. It
-      was released during the COVID-19 pandemic, and serves as a sort of view
-      into my headspace during the first year or so of that time.
-    - >
-      The pieces are arranged in such a way as to put across the idea of
-      "aimless time", or the feeling of time slipping by, elastic-like. Days
-      going by in a haze of isolation. I cling to landscapes and other natural
-      imagery, in order to offset the solitude of the pandemic, and as a
-      result, this collection feels like my most introspective, emotionally
-      resonant one to date.
-  amazon: https://www.amazon.com/Drift-Illogical-Ben-Buchanan/dp/B092PG42QL/
-  download: /assets/writing/Drift Illogical.pdf
+  # Another Flow
+  - title: Another Flow
+    blurb: >
+      My second collection of abstract poetry, focusing on dreams and
+      experiments with concrete/blackout/collage poetry.
+    link: https://amazon.com/Another-Flow-Ben-Buchanan/dp/B089M2HZ9S/
+    type: Paperback
+    source: Amazon
+
+  # Babylon Effect 2nd Edition
+  - title: Babylon Effect <span class="edition">2nd Edition</span>
+    blurb: >
+      My first collection of abstract poetry, updated to fit the styling of my
+      other collected volumes.
+    link: https://www.amazon.com/Babylon-Effect-2nd-Ben-Buchanan/dp/B09HR6QBF8/
+    type: Paperback
+    source: Amazon
