@@ -1,0 +1,57 @@
+.post__container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25em;
+
+    .blog-return {
+        transition: $transition-normal;
+        background: $blog-color;
+        text-align: center;
+        padding: 0.25em;
+
+        &:hover {
+            background: $background-dark;
+        }
+    }
+
+    .post__info {
+        h2 {
+            margin-top: 0;
+        }
+
+        h4 {
+            margin-top: 1em;
+            margin-bottom: 0;
+        }
+    }
+
+    .post__content {
+        background: $background-light;
+        margin: 0.5em 0;
+        padding: 1em;
+
+        .attrib {
+            background: linear-gradient(to right, $background-dark, $blog-color 80%);
+            padding: 0.5em 1em;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        a {
+            transition: $transition-normal;
+            color: $link-color;
+
+            &:hover {
+                color: $link-hover-color;
+            }
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            margin: auto;
+        }
+    }
+}

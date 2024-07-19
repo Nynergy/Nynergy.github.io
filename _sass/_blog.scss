@@ -1,4 +1,4 @@
-.coding-card__container {
+.blog-card__container {
     background: $background-light;
     transition: $transition-normal;
 
@@ -6,12 +6,12 @@
         background: $background-dark;
     }
 
-    .coding-card {
+    .blog-card {
         display: flex;
         flex-direction: column;
         align-items: end;
         margin-top: 1em;
-        background: linear-gradient(to right, $coding-color, transparent 200px);
+        background: linear-gradient(to right, $blog-color, transparent 200px);
 
         h2 {
             line-height: 1.0;

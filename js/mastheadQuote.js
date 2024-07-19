@@ -133,7 +133,8 @@ const quotes = [
     "Be less critical more often"
 ];
 
-let num = Math.floor(Math.random() * (quotes.length));
-let quote = quotes[num];
+let today = parseInt(new Date().toJSON().slice(0, 10).replace(/-/g, ''));
+let index = today % quotes.length;
+let quote = quotes[index];
 let display = document.getElementById('masthead-quote');
 display.innerHTML = display.innerHTML + quote;

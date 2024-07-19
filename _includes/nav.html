@@ -6,6 +6,11 @@
             </a>
         </li>
         <li>
+            <a {% if page.url contains '/blog/' %}class="current-page"{% endif %}href="/blog">
+                Blog
+            </a>
+        </li>
+        <li>
             <a {% if page.url contains '/coding/' %}class="current-page"{% endif %}href="/coding">
                 Coding
             </a>

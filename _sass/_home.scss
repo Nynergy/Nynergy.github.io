@@ -16,6 +16,9 @@
             margin-bottom: 1em;
         }
 
+        &.blog {
+            background: linear-gradient(to right, $blog-color, transparent 200px);
+        }
         &.coding {
             background: linear-gradient(to right, $coding-color, transparent 200px);
         }

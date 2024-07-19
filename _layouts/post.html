@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="post__container">
+    <a class="blog-return" href="/blog/">Return to All Blog Posts</a>
+    <div class="post__info">
+        <h4>{{ page.date | date: "%B %d, %Y" }}</h4>
+        <h2>{{ page.title }}</h2>
+        <hr>
+    </div>
+    <div class="post__content">
+        {{ content }}
+    </div>
+</div>
+
+<hr>
