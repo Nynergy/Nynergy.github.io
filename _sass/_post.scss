@@ -42,6 +42,7 @@
         a {
             transition: $transition-normal;
             color: $link-color;
+            text-decoration: underline;
 
             &:hover {
                 color: $link-hover-color;
@@ -52,6 +53,28 @@
             display: block;
             width: 100%;
             margin: auto;
+        }
+
+        ul {
+            list-style-type: square;
+            border-left: 5px solid $blog-color;
+            background: $background-dark;
+            padding: 1em 1em 1em 2em;
+
+            li {
+                margin: 0.5em 0;
+
+                &:first-of-type {
+                    margin: 0;
+                }
+                &:last-of-type {
+                    margin: 0;
+                }
+
+                &::marker {
+                    color: $link-color;
+                }
+            }
         }
     }
 }

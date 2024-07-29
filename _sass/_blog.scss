@@ -1,6 +1,11 @@
 .blog-card__container {
+    display: flex;
     background: $background-light;
     transition: $transition-normal;
+
+    &:last-of-type {
+        margin-bottom: 1em;
+    }
 
     &:hover {
         background: $background-dark;
@@ -10,8 +15,8 @@
         display: flex;
         flex-direction: column;
         align-items: end;
-        margin-top: 1em;
         background: linear-gradient(to right, $blog-color, transparent 200px);
+        flex: 1;
 
         h2 {
             line-height: 1.0;
@@ -26,6 +31,24 @@
 
         &:last-child {
             margin-bottom: 1em;
+        }
+    }
+
+    .blog-date {
+        width: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: $background-dark;
+
+        h2, h3 {
+            line-height: 1.0;
+            margin: 0;
+        }
+
+        .year {
+            color: $link-color;
         }
     }
 }
