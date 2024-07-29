@@ -3,6 +3,10 @@
     flex-direction: column;
     margin-top: 1.25em;
 
+    hr {
+        margin: 1em 0;
+    }
+
     .blog-return {
         transition: $transition-normal;
         background: $blog-color;
@@ -15,6 +19,10 @@
     }
 
     .post__info {
+        background: $background-dark;
+        padding: 0 1em;
+        margin-top: 1em;
+
         h2 {
             margin-top: 0;
         }
@@ -27,7 +35,7 @@
 
     .post__content {
         background: $background-light;
-        margin: 0.5em 0;
+        margin-bottom: 0.5em;
         padding: 1em;
 
         .attrib {
