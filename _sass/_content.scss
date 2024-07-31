@@ -21,6 +21,10 @@
         &.return {
             width: 50px;
             max-width: 50px;
+
+            .icon {
+                width: 30px;
+            }
         }
 
         &:hover {

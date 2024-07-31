@@ -4,9 +4,11 @@
     .captioned-image {
         p {
             margin-bottom: 0;
+            padding: 0.2em 0;
             width: 100%;
             text-align: center;
             font-weight: bold;
+            font-variant-caps: small-caps;
             background-color: $background-dark;
         }
 

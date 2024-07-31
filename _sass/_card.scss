@@ -57,6 +57,16 @@
             &.fill-width {
                 width: 100%;
             }
+
+            &.small-caps {
+                h1, h2 {
+                    font-variant-caps: small-caps;
+                }
+
+                h4 {
+                    font-variant-caps: all-small-caps;
+                }
+            }
         }
 
         .card__date {

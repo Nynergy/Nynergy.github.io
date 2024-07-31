@@ -4,7 +4,7 @@
 
 .ticker__move {
     display: flex;
-    animation: ticker-scroll linear 10s infinite;
+    animation: ticker-scroll linear 12s infinite;
 
     &:hover {
         animation-play-state: paused;
