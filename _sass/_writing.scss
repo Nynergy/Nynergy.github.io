@@ -27,4 +27,17 @@
 
 .edition {
     color: darken($foreground, 15%);
+    white-space: nowrap;
+}
+
+@media (max-width: $mobile-width) {
+    .book__container {
+        a .icon {
+            width: 30px;
+        }
+
+        .book__cover {
+            width: 90px;
+        }
+    }
 }

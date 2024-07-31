@@ -52,3 +52,9 @@
 #discog__header {
     margin: 1em 0;
 }
+
+@media (max-width: $mobile-width) {
+    .album__header .album__artwork {
+        width: 72px;
+    }
+}

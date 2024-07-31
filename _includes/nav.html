@@ -1,4 +1,4 @@
-<nav>
+<nav id="desktop-nav">
     <ul>
         <li>
             <a {% if page.url == '/' %}class="current-page"{% endif %}href="/">
@@ -37,3 +37,29 @@
         </li>
     </ul>
 </nav>
+
+<details id="mobile-nav">
+    <summary>Navigation</summary>
+    <a {% if page.url == '/' %}class="current-page"{% endif %}href="/">
+        Home
+    </a>
+    <a {% if page.url contains '/blog/' %}class="current-page"{% endif %}href="/blog">
+        Blog
+    </a>
+    <a {% if page.url contains '/coding/' %}class="current-page"{% endif %}href="/coding">
+        Coding
+    </a>
+    <a {% if page.url contains '/music/' %}class="current-page"{% endif %}href="/music">
+        Music
+    </a>
+    <a {% if page.url contains '/writing/' %}class="current-page"{% endif %}href="/writing">
+        Writing
+    </a>
+    <a {% if page.url contains '/artwork/' %}class="current-page"{% endif %}href="/artwork">
+        Artwork
+    </a>
+    <a {% if page.url contains '/about/' %}class="current-page"{% endif %}href="/about">
+        About
+    </a>
+</li>
+</details>

@@ -7,3 +7,9 @@
 .right-aligned {
     text-align: right;
 }
+
+@media (max-width: $mobile-width) {
+    .hidden-mobile {
+        display: none;
+    }
+}

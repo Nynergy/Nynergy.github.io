@@ -43,6 +43,7 @@
         }
 
         .card__text {
+            text-align: right;
             height: 100%;
             padding: 1em;
             margin: auto 0;
@@ -120,5 +121,29 @@
     a:nth-child(3) {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .card__content.slim .card__text {
+        padding: 0.25em 1em !important;
+    }
+
+    .card__text {
+        padding: 0.75em 1em !important;
+    }
+
+    .card__date {
+        min-width: 80px;
+        max-width: 80px !important;
+        width: 80px !important;
+    }
+
+    .card__icon .icon {
+        width: 30px !important;
+    }
+
+    .card__grid {
+        grid-template-columns: 1fr;
     }
 }

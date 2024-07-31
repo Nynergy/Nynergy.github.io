@@ -79,6 +79,53 @@ nav {
     margin: 1em 0;
 }
 
+#mobile-nav {
+    display: none;
+
+    &[open] summary {
+        background: $background-lighter;
+    }
+
+    summary {
+        background: $background-dark;
+        padding: 0.25em 1em;
+        transition: $transition-normal;
+    }
+
+    a {
+        background: $background-light;
+        padding: 0.25em 1em;
+        font-variant-caps: all-small-caps;
+        font-weight: bold;
+        transition: $transition-normal;
+
+        &:hover {
+            background-color: $background-dark;
+        }
+
+        &.current-page {
+            background-color: $background-dark;
+        }
+    }
+}
+
+@media (max-width: $mobile-width) {
+    body {
+        font-size: 14px;
+    }
+
+    header .site-icon {
+        width: 55px;
+    }
+
+    #desktop-nav {
+        display: none;
+    }
+    #mobile-nav {
+        display: flex;
+    }
+}
+
 @import 'card';
 @import 'ticker';
 @import 'content';

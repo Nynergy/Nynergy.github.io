@@ -68,3 +68,24 @@
         }
     }
 }
+
+@media (max-width: $mobile-width) {
+    .content__header a {
+        &.return {
+            width: 30px;
+            max-width: 30px;
+
+            .icon {
+                width: 20px;
+            }
+        }
+
+        .logo {
+            width: 90%;
+
+            &#youtube {
+                width: 60%;
+            }
+        }
+    }
+}
