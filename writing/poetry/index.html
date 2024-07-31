@@ -4,7 +4,19 @@ title: Poetry
 meta: Original poetry by Ben Buchanan.
 ---
 
-<p>
+<div class="writing content__header">
+    <a class="return" href="/writing/"><h2>&#8617;</h2></a>
+
+    <div no-hover class="dark card">
+        <div class="card__content">
+            <div class="card__text">
+                <h2>Published Collections</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="writing content__blurb">
 I've self-published a number of collected volumes of poetry through Amazon's
 KDP service. You can find links for the physical releases below, as well as
 free PDF downloads.
@@ -12,24 +24,40 @@ free PDF downloads.
 
 <hr>
 
-{% for book in site.data.published_books["Poetry"] %}
-{% assign image = book.title | strip_html | slugify: ascii %}
-{% assign pdf = book.title | strip_html %}
-<div class="writing-summary">
-    <img src="/assets/writing/{{image}}-cover.jpg"></img>
-    <div class="writing-summary__content">
-        <strong>{{book.title}}</strong>
-        <p>
-        {{book.blurb}}
-        </p>
-        <a href="{{book.link}}">
-            {{book.type}} ({{book.source}})
-        </a>
-        <a href="/assets/writing/{{pdf}}.pdf">
-            Download PDF
-        </a>
+<div class="card__stack">
+    {% for book in site.data.published_books["Poetry"] %}
+    {% assign image = book.title | strip_html | slugify: ascii %}
+    {% assign pdf = book.title | strip_html %}
+    <div class="book__container">
+        <img
+            class="book__cover"
+            src="/assets/writing/{{ image }}-cover.jpg"
+        />
+
+        <div no-hover class="card">
+            <div class="card__content">
+                <div class="card__text">
+                    <h2>{{ book.title }}</h2>
+                    <p>{{ book.blurb }}</p>
+                </div>
+                <div class="card__side-stack">
+                    <a href="{{book.link}}">
+                        <img class="icon" src="/assets/writing/book-icon.svg"/>
+                    </a>
+
+                    <div class="card__date">
+                        <h3>{{ book.released | date: "%b %d" }}</h3>
+                        <h2 class="year">{{ book.released | date: "%Y" }}</h2>
+                    </div>
+
+                    <a href="/assets/writing/{{pdf}}.pdf">
+                        <img class="icon" src="/assets/writing/pdf-icon.svg"/>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
 
 <hr>

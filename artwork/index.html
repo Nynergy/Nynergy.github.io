@@ -4,23 +4,38 @@ title: Artwork
 meta: Original artwork and digital images by Ben Buchanan.
 ---
 
-<p>
+<div class="artwork content__header">
+    <div no-hover class="card">
+        <div class="card__content left-justify">
+            <div class="lighter card__icon">
+                <img class="icon" src="/assets/artwork/artwork-icon.svg"/>
+            </div>
+            <div class="card__text">
+                <h2>My Whimsical Galleries</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="dark content__blurb">
 This is where you can look at the shapes and colors I make. Sometimes with a
 keyboard and mouse, other times with more primitive instruments.
 </p>
 
 <hr>
 
-<h2>My Whimsical Galleries</h2>
-
-{% for card in site.data.artwork_cards %}
-<a href="/artwork/{{ card.title | slugify: 'ascii' }}/">
-<div class="artwork-card__container">
-    <div class="artwork-card">
-        <h2>{{ card.title }}</h2>
+<div class="card__stack">
+    {% for card in site.data.artwork_cards %}
+    <a href="/artwork/{{ card.title | slugify: 'ascii' }}/">
+    <div class="artwork card">
+        <div class="card__content">
+            <div class="card__text">
+                <h2>{{ card.title }}</h2>
+            </div>
+        </div>
     </div>
+    </a>
+    {% endfor %}
 </div>
-</a>
-{% endfor %}
 
 <hr>

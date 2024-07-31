@@ -1,0 +1,9 @@
+// FUNCTIONS
+@function page-color($page) {
+    @return map-get($page-colors, $page);
+}
+
+// CLASSES
+.right-aligned {
+    text-align: right;
+}

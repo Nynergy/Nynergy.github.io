@@ -4,8 +4,25 @@ title: Ben Buchanan
 meta: Information about the music of Ben Buchanan.
 ---
 
-<div class="music-bio">
-    <strong>Ben Buchanan</strong>
+<div class="music content__header">
+    <a class="return" href="/music/"><h2>&#8617;</h2></a>
+    <a href="https://benbuchanan.bandcamp.com">
+        <img id="bandcamp" class="logo" src="/assets/music/bandcamp-logo.svg"/>
+    </a>
+    <a href="https://www.youtube.com/channel/UCnWTmsuxOUfJYNEDGMFWmaw">
+        <img id="youtube" class="logo" src="/assets/music/youtube-logo.svg"/>
+    </a>
+
+    <div no-hover class="dark card">
+        <div class="card__content">
+            <div class="card__text">
+                <h2>Ben Buchanan</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="music content__blurb">
     <p>
     The music I make under my own name can be a calm electronic ambient
     soundscape, an experimental warping of samples, an abrasive drone of noise
@@ -20,26 +37,44 @@ meta: Information about the music of Ben Buchanan.
     Teletype scene overviews, audio visualizers, and plenty more you won't find
     on my Bandcamp.
     </p>
-
-    <div class="music-buttons">
-        <a href="https://benbuchanan.bandcamp.com">Bandcamp</a>
-        <a href="https://www.youtube.com/channel/UCnWTmsuxOUfJYNEDGMFWmaw">YouTube</a>
-    </div>
 </div>
 
 <hr>
 
-<h2>Discography</h2>
+<div no-hover id="discog__header" class="dark card">
+    <div class="card__content left-justify">
+        <div class="card__text">
+            <h2>Discography</h2>
+        </div>
+    </div>
+</div>
 
 {% for album in site.data.album_info["Ben Buchanan"] %}
-<h3>'{{ album.title }}' - {{ album.released }}</h3>
+<div class="album__header">
+    <img
+        class="album__artwork"
+        src="/assets/music/ben-buchanan/{{ album.title | slugify: ascii }}.jpg"
+    />
 
-{{ album.embed }}
+    <div no-hover class="card">
+        <div class="card__content">
+            <div class="card__text">
+                <h2>{{ album.title }}</h2>
+            </div>
+            <div class="card__date">
+                <h3>{{ album.released | date: "%b %d" }}</h3>
+                <h2 class="year">{{ album.released | date: "%Y" }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p>{{ album.blurb }}</p>
+{{ album.embed | replace: "linkcol=e99708", "linkcol=fa8f38" }}
 
-<div class="tracklist">
-    <div class="tracklist__header">Tracklist</div>
+<p class="album__blurb">{{ album.blurb }}</p>
+
+<details class="tracklist">
+    <summary class="tracklist__header">Tracklist</summary>
     {% if album.multidisc %}
         {% assign discnum = 1 %}
         {% assign tracknum = 1 %}
@@ -59,7 +94,7 @@ meta: Information about the music of Ben Buchanan.
             {% assign tracknum = tracknum | plus: 1 %}
         {% endfor %}
     {% endif %}
-</div>
-{% endfor %}
+</details>
 
-<hr>
+<hr class="discog__break">
+{% endfor %}

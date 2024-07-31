@@ -4,28 +4,43 @@ title: Blog
 meta: Rambling blog posts by Ben Buchanan
 ---
 
-<p>
+<div class="blog content__header">
+    <div no-hover class="card">
+        <div class="card__content left-justify">
+            <div class="lighter card__icon">
+                <img class="icon" src="/assets/blog/blog-icon.svg"/>
+            </div>
+            <div class="card__text">
+                <h2>My Honest Thoughts</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="dark content__blurb">
 This is where you can read all the random diatribes and passionate ramblings I
-decide to place here. Some may be interesting to you, others not so much.
+decide to place here. Some may interest you, others not so much.
 </p>
 
 <hr>
 
-<h2>My Honest Thoughts</h2>
-
-{% for post in site.categories.blog %}
-<a href="{{post.url}}">
-<div class="blog-card__container">
-    <div class="blog-card">
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.meta }}</p>
+<div class="card__stack">
+    {% for post in site.categories.blog %}
+    <a href="{{post.url}}">
+    <div class="blog card">
+        <div class="card__content">
+            <div class="card__text right-aligned">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.meta }}</p>
+            </div>
+            <div class="card__date">
+                <h2>{{ post.date | date: "%b %d" }}</h2>
+                <h3 class="year">{{ post.date | date: "%Y" }}</h3>
+            </div>
+        </div>
     </div>
-    <div class="blog-date">
-        <h2>{{ post.date | date: "%b %d" }}</h2>
-        <h3 class="year">{{ post.date | date: "%Y" }}</h3>
-    </div>
+    </a>
+    {% endfor %}
 </div>
-</a>
-{% endfor %}
 
 <hr>

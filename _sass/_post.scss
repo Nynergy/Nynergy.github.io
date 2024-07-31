@@ -1,36 +1,9 @@
 .post__container {
     display: flex;
     flex-direction: column;
-    margin-top: 1.25em;
 
     hr {
         margin: 1em 0;
-    }
-
-    .blog-return {
-        transition: $transition-normal;
-        background: $blog-color;
-        text-align: center;
-        padding: 0.25em;
-
-        &:hover {
-            background: $background-dark;
-        }
-    }
-
-    .post__info {
-        background: $background-dark;
-        padding: 0 1em;
-        margin-top: 1em;
-
-        h2 {
-            margin-top: 0;
-        }
-
-        h4 {
-            margin-top: 1em;
-            margin-bottom: 0;
-        }
     }
 
     .post__content {
@@ -39,7 +12,7 @@
         padding: 1em;
 
         .attrib {
-            background: linear-gradient(to right, $background-dark, $blog-color 80%);
+            background: linear-gradient(to right, $background-dark, page-color(blog) 80%);
             padding: 0.5em 1em;
         }
 
@@ -65,7 +38,7 @@
 
         ul {
             list-style-type: square;
-            border-left: 5px solid $blog-color;
+            border-left: 5px solid page-color(blog);
             background: $background-dark;
             padding: 1em 1em 1em 2em;
 

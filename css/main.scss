@@ -2,6 +2,7 @@
 ---
 
 @import 'config';
+@import 'utils';
 
 body {
     margin: 40px auto;
@@ -74,11 +75,15 @@ nav {
     }
 }
 
-@import 'home';
-@import 'blog';
-@import 'coding';
+#strategy {
+    margin: 1em 0;
+}
+
+@import 'card';
+@import 'ticker';
+@import 'content';
+@import 'post';
 @import 'music';
 @import 'writing';
 @import 'artwork';
 @import 'about';
-@import 'post';

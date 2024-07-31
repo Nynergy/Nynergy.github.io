@@ -1,0 +1,66 @@
+.content__header {
+    display: flex;
+    margin-top: 1em;
+
+    @each $page, $color in $page-colors {
+        &.#{$page} a {
+            background: $color;
+        }
+    }
+
+    a {
+        width: 100px;
+        max-width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $transition-normal;
+        padding: 0.25em;
+        margin-right: 1em;
+
+        &.return {
+            width: 50px;
+            max-width: 50px;
+        }
+
+        &:hover {
+            background: $link-color;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        .logo {
+            width: 100%;
+
+            &#youtube {
+                width: 70%;
+            }
+        }
+    }
+}
+
+.content__blurb {
+    padding: 1em;
+    margin: 1em 0;
+
+    @each $page, $color in $page-colors {
+        &.#{$page} {
+            background: linear-gradient(to bottom, $color, $background-light 65%);
+        }
+    }
+
+    &.dark {
+        background: $background-dark;
+    }
+
+    p {
+        &:first-of-type {
+            margin-top: 0;
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

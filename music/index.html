@@ -4,28 +4,38 @@ title: Music
 meta: Original music by Ben Buchanan.
 ---
 
-<p>
+<div class="music content__header">
+    <div no-hover class="card">
+        <div class="card__content left-justify">
+            <div class="lighter card__icon">
+                <img class="icon" src="/assets/music/music-icon.svg"/>
+            </div>
+            <div class="card__text">
+                <h2>My Various Noises</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="dark content__blurb">
 This is where you can listen to my sonic experiments and reflections of self.
 </p>
 
 <hr>
 
-<h2>My Various Noises</h2>
-
-<a href="/music/ben-buchanan/">
-<div class="music-card__container">
-    <div class="music-card">
-        <h2>Ben Buchanan</h2>
+<div class="card__stack">
+    {% for artist_info in site.data.album_info %}
+    {% assign artist = artist_info[0] %}
+    <a href="/music/{{ artist | slugify: ascii }}/">
+    <div class="music card">
+        <div class="card__content">
+            <div class="card__text">
+                <h2>{{ artist }}</h2>
+            </div>
+        </div>
     </div>
+    </a>
+    {% endfor %}
 </div>
-</a>
-
-<a href="/music/maps-of-low-fidelity/">
-<div class="music-card__container">
-    <div class="music-card">
-        <h2>Maps of Low Fidelity</h2>
-    </div>
-</div>
-</a>
 
 <hr>

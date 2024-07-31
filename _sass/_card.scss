@@ -1,0 +1,114 @@
+.card {
+    background: $background-light;
+    transition: $transition-normal;
+    width: 100%;
+
+    &:not([no-hover]):hover {
+        background: $background-dark;
+    }
+
+    &.dark {
+        background: $background-dark;
+    }
+
+    @each $page, $color in $page-colors {
+        &.#{$page} {
+            .card__content {
+                background: linear-gradient(to right, $color, transparent 200px);
+            }
+        }
+    }
+
+    .card__content {
+        display: flex;
+        justify-content: end;
+        height: 100%;
+
+        &.left-justify {
+            justify-content: start;
+        }
+
+        &.slim .card__text {
+            padding: 0.25em 1em;
+            white-space: nowrap;
+        }
+
+        h2, h3, h4, p {
+            margin: 0;
+        }
+
+        .card__side-stack {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card__text {
+            height: 100%;
+            padding: 1em;
+            margin: auto 0;
+
+            &.dark {
+                background: $background-dark;
+            }
+            &.light {
+                background: $background-light;
+            }
+
+            &.fill-width {
+                width: 100%;
+            }
+        }
+
+        .card__date {
+            flex: 1;
+            max-width: 100px;
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: $background-dark;
+
+            .year {
+                color: $link-color;
+            }
+        }
+
+        .card__icon {
+            width: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.lighter {
+                background: $background-lighter;
+            }
+
+            .icon {
+                width: 50px;
+            }
+        }
+    }
+}
+
+.card__stack {
+    .card {
+        margin: 1em 0;
+    }
+}
+
+.card__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    margin: 1em 0;
+
+    a:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    a:nth-child(3) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+}

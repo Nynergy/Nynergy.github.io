@@ -5,7 +5,20 @@ meta: The personal website of Ben Buchanan.
 priority: 1.0
 ---
 
-<p>
+<div class="content__header">
+    <div no-hover class="card">
+        <div class="card__content left-justify">
+            <div class="lighter card__icon">
+                <img class="icon" src="/assets/home-icon.svg"/>
+            </div>
+            <div class="card__text">
+                <h2>Welcome Home</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="dark content__blurb">
 Lexica Chromatica is a repository of ideas, notes, links, arrows, paths,
 dreams, words, sounds, letters, landscapes, and columns of arbitrary text. It
 is where I sleep, and where I sometimes stir the waters.
@@ -13,17 +26,18 @@ is where I sleep, and where I sometimes stir the waters.
 
 <hr>
 
-{% for card in site.data.home_cards %}
-<a href="/{{ card.type }}/">
-<div class="home-card__container">
-    <div class="home-card {{ card.type }}">
-        <div></div>
-        <div class="home-card__content">
-            <h2>{{ card.text }}</h2>
+<div class="card__grid">
+    {% for card in site.data.home_cards %}
+    <a href="/{{ card.type }}/">
+    <div class="card {{ card.type }}">
+        <div class="card__content">
+            <div class="card__text">
+                <h2>{{ card.text }}</h2>
+            </div>
         </div>
     </div>
+    </a>
+    {% endfor %}
 </div>
-</a>
-{% endfor %}
 
 <hr>

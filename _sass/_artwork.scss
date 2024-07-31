@@ -1,47 +1,7 @@
-.artwork-card__container {
-    background: $background-light;
-    transition: $transition-normal;
-
-    &:hover {
-        background: $background-dark;
-    }
-
-    .artwork-card {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        margin-top: 1em;
-        background: linear-gradient(to right, $artwork-color, transparent 200px);
-
-        h2 {
-            line-height: 1.0;
-            margin-bottom: 0.7em;
-            margin-right: 1em;
-        }
-
-        &:last-child {
-            margin-bottom: 1em;
-        }
-    }
-}
-
-.artwork-bio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
-    margin: 1em 0;
-    background: linear-gradient(to bottom, $artwork-color, $background-light 250px);
-
-    strong {
-        font-size: 20px;
-    }
-}
-
-.artwork-container {
+.artwork__container {
     width: 100%;
 
-    .artwork-container__captioned-image {
+    .captioned-image {
         p {
             margin-bottom: 0;
             width: 100%;

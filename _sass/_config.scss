@@ -1,23 +1,29 @@
 // COLORS
-$foreground:        #ffeeee;
+$foreground:            #ffeeee;
 
-$background:        #3d3838;
-$background-dark:   #2d2828;
-$background-light:  #4d4848;
+$background:            #3d3838;
+$background-dark:       #2d2828;
+$background-light:      #4d4848;
+$background-lighter:    lighten($background-light, 15%);
 
-$blog-color:        #4d4888;
-$coding-color:      #6d5898;
-$music-color:       #6d4868;
-$music-color-dark:  #4d2848;
-$writing-color:     #8d4848;
-$artwork-color:     #9d6248;
-$about-color:       #ad7808;
+$page-colors: (
+    blog:               #4d4888,
+    coding:             #6d5898,
+    music:              #6d4868,
+    music-dark:         #4d2848,
+    writing:            #8d4848,
+    artwork:            #9d6248,
+    about:              #ad7808,
+);
 
-$link-color:        #fa8f38;
-$link-hover-color:  #ff20cf;
+$link-color:            #fa8f38;
+$link-hover-color:      #ff20cf;
 
 // FONTS
 $font-stack: Palatino, "Palatino Linotype", "Palatino LT STD", serif;
 
+// PAGE TYPES
+$pages: blog, coding, music, writing, artwork, about;
+
 // TRANSITIONS
-$transition-normal: 500ms;
+$transition-normal:     500ms;

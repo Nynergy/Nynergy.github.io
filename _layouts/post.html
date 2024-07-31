@@ -3,12 +3,25 @@ layout: default
 ---
 
 <div class="post__container">
-    <a class="blog-return" href="/blog/">Return to All Blog Posts</a>
-    <div class="post__info">
-        <h4>{{ page.date | date: "%B %d, %Y" }}</h4>
-        <h2>{{ page.title }}</h2>
+    <div class="blog content__header">
+        <a class="return" href="/blog/"><h2>&#8617;</h2></a>
+
+        <div no-hover class="card">
+            <div class="card__content left-justify">
+                <div class="card__date">
+                    <h2>{{ page.date | date: "%b %d" }}</h2>
+                    <h3 class="year">{{ page.date | date: "%Y" }}</h3>
+                </div>
+                <div class="card__text">
+                    <h2>{{ page.title }}</h2>
+                    <p>{{ page.meta }}</p>
+                </div>
+            </div>
+        </div>
     </div>
+
     <hr>
+
     <div class="post__content">
         {{ content }}
     </div>

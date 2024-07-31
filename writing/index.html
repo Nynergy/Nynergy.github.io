@@ -4,29 +4,39 @@ title: Writing
 meta: Original poetry and prose by Ben Buchanan.
 ---
 
-<p>
+<div class="writing content__header">
+    <div no-hover class="card">
+        <div class="card__content left-justify">
+            <div class="lighter card__icon">
+                <img class="icon" src="/assets/writing/writing-icon.svg"/>
+            </div>
+            <div class="card__text">
+                <h2>My Published Words</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="dark content__blurb">
 This is where you can read all the stories and collections of words that I
 write. Some of them have even been self-published into volumes.
 </p>
 
 <hr>
 
-<h2>My Published Words</h2>
-
-<a href="/writing/poetry/">
-<div class="writing-card__container">
-    <div class="writing-card">
-        <h2>Poetry</h2>
+<div class="card__stack">
+    {% assign subpages = "Poetry, Prose" | split: ", " %}
+    {% for subpage in subpages %}
+    <a href="/writing/{{ subpage | slugify: ascii }}/">
+    <div class="writing card">
+        <div class="card__content">
+            <div class="card__text">
+                <h2>{{ subpage }}</h2>
+            </div>
+        </div>
     </div>
+    </a>
+    {% endfor %}
 </div>
-</a>
-
-<a href="/writing/prose/">
-<div class="writing-card__container">
-    <div class="writing-card">
-        <h2>Prose</h2>
-    </div>
-</div>
-</a>
 
 <hr>
