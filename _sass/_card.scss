@@ -26,6 +26,10 @@
 
         &.left-justify {
             justify-content: start;
+
+            .card__text {
+                text-align: left;
+            }
         }
 
         &.slim .card__text {
