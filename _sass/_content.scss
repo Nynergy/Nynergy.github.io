@@ -59,6 +59,10 @@
         background: $background-dark;
     }
 
+    &.half-margin-top {
+        margin-top: 0.5em;
+    }
+
     p {
         &:first-of-type {
             margin-top: 0;

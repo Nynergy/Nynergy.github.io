@@ -1,19 +1,19 @@
 // COLORS
 $foreground:            #ffeeee;
 
-$background:            #3d3838;
-$background-dark:       #2d2828;
-$background-light:      #4d4848;
+$background:            #3f383d;
+$background-dark:       darken($background, 8%);
+$background-light:      lighten($background, 8%);
 $background-lighter:    lighten($background-light, 15%);
 
 $page-colors: (
-    blog:               #4d4888,
-    coding:             #6d5898,
-    music:              #6d4868,
-    music-dark:         #4d2848,
-    writing:            #8d4848,
-    artwork:            #9d6248,
-    about:              #ad7808,
+    blog:               #4d4898,
+    coding:             #7d5898,
+    music:              #7d3878,
+    music-dark:         darken(#7d3878, 12%),
+    writing:            #9d4848,
+    artwork:            #ad6248,
+    about:              #bd8808,
 );
 
 $link-color:            #fa8f38;
