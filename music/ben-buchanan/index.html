@@ -73,7 +73,9 @@ meta: Information about the music of Ben Buchanan.
 
 {{ album.embed | replace: "linkcol=e99708", "linkcol=fa8f38" }}
 
-<p class="album__blurb">{{ album.blurb }}</p>
+<div class="dark content__blurb">
+    <p>{{ album.blurb }}</p>
+</div>
 
 <details class="tracklist">
     <summary class="tracklist__header">Tracklist</summary>

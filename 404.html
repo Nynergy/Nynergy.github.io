@@ -4,18 +4,7 @@ permalink: /404.html
 status_code: 404
 ---
 
-<div class="content__header">
-    <div no-hover class="card">
-        <div class="card__content left-justify">
-            <div class="lighter card__icon">
-                <img class="icon" src="/assets/error-icon.svg"/>
-            </div>
-            <div class="card__text small-caps">
-                <h2>404 Page Not Found</h2>
-            </div>
-        </div>
-    </div>
-</div>
+{% include page-header.html icon-path="error-icon.svg" text="404 Page Not Found" %}
 
 <p class="dark content__blurb">
 If you're lost, you can always go <a id="northstar" href="/">back home</a>.
