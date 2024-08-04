@@ -29,3 +29,27 @@ meta: Information about Ben Buchanan.
 </div>
 
 <hr>
+
+<div no-hover id="elsewhere__header" class="dark card">
+    <div class="card__content left-justify">
+        <div class="card__text small-caps">
+            <h2>Find Me Elsewhere</h2>
+        </div>
+    </div>
+</div>
+
+<div class="card__stack">
+    {% for card in site.data.about_cards %}
+    <a href="{{ card.link }}">
+    <div class="about card">
+        <div class="card__content">
+            <div class="card__text small-caps">
+                <h2>{{ card.text }}</h2>
+            </div>
+        </div>
+    </div>
+    </a>
+    {% endfor %}
+</div>
+
+<hr>
