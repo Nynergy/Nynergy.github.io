@@ -58,6 +58,9 @@
     &.dark {
         background: $background-dark;
     }
+    &.light {
+        background: $background-light;
+    }
 
     &.half-margin-top {
         margin-top: 0.5em;

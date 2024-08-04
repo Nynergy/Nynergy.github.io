@@ -11,9 +11,10 @@
         margin-bottom: 0.5em;
         padding: 1em;
 
-        .attrib {
-            background: linear-gradient(to right, $background-dark, page-color(blog) 80%);
-            padding: 0.5em 1em;
+        h2, h3 {
+            font-variant-caps: small-caps;
+            background: linear-gradient(to right, page-color(blog), $background-light 60%);
+            padding: 0.25em 1em;
         }
 
         p {
@@ -32,7 +33,17 @@
 
         img {
             display: block;
-            width: 100%;
+            width: 70%;
+            min-width: 300px;
+            margin: auto;
+        }
+
+        img + em {
+            display: block;
+            text-align: center;
+            background: $background-dark;
+            width: 70%;
+            min-width: 300px;
             margin: auto;
         }
 
@@ -56,6 +67,11 @@
                     color: $link-color;
                 }
             }
+        }
+
+        .attrib {
+            background: linear-gradient(to right, $background-dark, page-color(blog) 80%);
+            padding: 0.5em 1em;
         }
     }
 }

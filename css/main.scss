@@ -75,6 +75,11 @@ nav {
     }
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
 #strategy {
     margin: 1em 0;
 }
@@ -116,6 +121,10 @@ nav {
 
     header .site-icon {
         width: 55px;
+    }
+
+    footer {
+        flex-direction: column-reverse;
     }
 
     #desktop-nav {
