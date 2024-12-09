@@ -1,5 +1,19 @@
 # Ben Buchanan Albums
 Ben Buchanan:
+  - title: Four Songs For Wind & Light
+    released: December 5 2024
+    multidisc: false
+    tracks:
+      - Winter Sunlight
+      - Deep Canals of Wind
+      - Yellow to Red, Brass to Bronze
+      - Through a Forward Light
+    blurb: >
+      A four track collection of material that evokes the wind and light of
+      winter, as well as the passage of time.
+    embed: >
+      <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=31354363/size=small/bgcol=333333/linkcol=e99708/artwork=none/transparent=true/" seamless><a href="https://benbuchanan.bandcamp.com/album/four-songs-for-wind-light">Four Songs For Wind &amp; Light by Ben Buchanan</a></iframe>
+
   - title: Thousand Wishes of Rain
     released: July 27 2023
     multidisc: true
