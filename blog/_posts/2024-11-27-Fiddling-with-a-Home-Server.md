@@ -15,18 +15,65 @@ as well.
 
 ### What is a homelab?
 
-TODO: Very barebones explanation of homelabs and self-hosting. Maybe grab some
-photos of other homelabs, maybe link the homelab subreddit.
+![Homelab Examples](/assets/blog/2024-11-29-Homelab-Examples.jpg)
+*Some examples of homelabs from the Internet*
+
+Going by the pictures and descriptions you'll find across the Internet, you may
+feel like a homelab is a convoluted mess of expensive hardware and endless
+software/web interfaces that draws a ton of power and turns your house into a
+small-scale enterprise headquarters. In reality, a homelab is just any group of
+computing devices that run services accessible to other computing devices on
+your home network. This could be local file storage, media servers for
+audio/video content, or really anything you want.
 
 ### Why bother with it?
 
-TODO:
-- Fun & Interesting
-- Privacy, Ownership, & Ethics
+Most of what you'd run on a homelab is already taken care of by other cloud
+services like Google Drive, Spotify, Trello, etc. So in a world where you can
+just use a 3rd-party service and not have to run everything yourself, why would
+you choose to create a homelab?
 
-TODO: This is where we can echo the funny meta description about cosplaying as a
-sysadmin. Also briefly talk about my own specific reasons for self-hosting, in
-addition to the broader reasons already stated.
+**Privacy** is one concern you may see come up in discussion around self-hosting
+and moving away from 3rd-party services. If you upload and store documents on
+something like Google Drive, then Google has that data stored on their servers.
+You may not know exactly what kind of information they are harvesting from your
+data, or what other operations they might perform on it as part of their
+business practices. When you self-host, you are the one in control of all your
+data, and you dictate exactly what it's used for, and used by.
+
+**Ownership** of data kind of goes along with the privacy issues. Do you still
+own your data if you willingly upload to a server that's operated by a corporate
+entity? What if that entity decides to shut down the service they were
+providing, do you still have a right to retrieve your data? Could you even ask
+them not to shut down the service in the first place? You are at the mercy of a
+capitalist enterprise, and your data could be collateral damage in their wake.
+
+Speaking of capitalism, many people have **ethical** concerns with using
+services provided by these tech giants like Google, Meta, Amazon, etc. In a
+world of ubiquitous generative AI and plenty of potential legal and ethical
+ramifications around that kind of exploitative (and ecologically disasterous)
+behavior, people should be more wary of who they are supporting, even if only by
+necessity.
+
+Personally, my ethical dilemma centers mostly around my love of music, and my
+desire to support the artists I enjoy. Streaming platforms like Spotify do not
+pay their artists what they deserve, and have disrupted the music landscape in
+ways that I find detrimental to the greater music industry, at least from the
+perspective of a music listener. Everything is homogenized, and the industry
+begins to mirror the increasing monopolization of the greater capitalist
+enterprise landscape. In this case, huge artists are like monopolies, trusts to
+be busted - attention to be divided up and offered to smaller artists.
+
+This, as well as the propensity of these platforms to invest in and perpetuate
+systems of the military-industrial complex, has soured me on them entirely. So I
+purchase the music I listen to on sites like Bandcamp, or other platforms that
+can adequately pay those artists, and host the digital files on my own music
+server, curating my own collection of music.
+
+At the end of the day, running a homelab is also **fun**, at least for people
+like me that enjoy cosplaying as a sysadmin after I come home from working my IT
+job. You learn a ton about networking, hardware, firewalls, containerization,
+and a ton more.
 
 ---
 
