@@ -81,21 +81,97 @@ and a ton more.
 
 ### What am I running?
 
-TODO: Talk about the apps you currently have running, knowing that there is
-still more stuff to be added, more things to be done. We can give a small list
-of use cases for things here, then go into more detail in the following
-sections.
+My homelab currently consists of a couple small computers, some smart home
+products, and a bunch of Docker containers. I use it for hosting my music
+server, file storage, task tracking, personal wiki, and more. There's still
+plenty to be done, but I'm very happy with how it runs for a starter homelab.
 
 #### Hardware
 
-TODO: Talk about the Beelink and the Pi, as well as the new Zigbee stuff. Be
-sure to include pictures. Probably bring up the upgraded SSD for the Beelink as
-well.
+The vast majority of the homelab is running on a Beelink Mini PC with an Intel
+N100 chip and an upgraded 2TB SSD. It's small, it's quiet, it's not very power
+hungry, and it gets the job done. This machine is called 'Ys', named after the
+[Joanna Newsom album](https://en.wikipedia.org/wiki/Ys_(album)).
+
+Sitting on top of the mini PC is an old Raspberry Pi 3b+, which used to run my
+old music server. Now the Pi just handles some of the internal networking stuff
+that I don't want to bother bogging the Beelink down with. This machine is
+called 'Pink', named after the [Boris
+album](https://en.wikipedia.org/wiki/Pink_(Boris_album)).
+
+![My Homelab Hardware](/assets/blog/2024-11-29-My-Homelab-Hardware.jpg)
+*My mini PC server and Raspberry Pi homelab setup*
+
+Not pictured above are the Sonoff Zigbee controller and Philips Hue lights that
+I purchased as a jumping off point for a smart home network. The controller is
+just plugged into a USB port on the back of the Beelink.
 
 #### Software
 
-TODO: Talk about Docker and all the different stuff you have running on it. Also
-talk about the baremetal networking stuff on the Pi.
+We'll start with what's running on Pink, since that's simpler. The Pi is just
+running two things baremetal: Pi-hole (with Unbound) and PiVPN (with Wireguard).
+Pi-hole serves as my local DNS center, ad blocker, and general networking
+dashboard outside of my router's browser interface. PiVPN allows me to VPN into
+my home network from outside the house, and is what makes it so that I don't
+have to directly expose my services and devices to the public Internet.
+
+Next up is Ys, which currently runs everything in Docker. There's quite a bit
+here, so let's take it one at a time.
+
+**duckdns** is running a job that updates the IP address of my DuckDNS static IP
+to reflect whatever my ISP decides my home router's dynamic IP is. This is what
+makes the Wireguard VPN work, even when my dynamic IP changes.
+
+**Nginx Proxy Manager** handles redirecting all my fancy URLs to their
+respective service endpoints (in conjunction with Pi-hole local DNS records). It
+also handles applying local self-signed SSL certificates to all my endpoints.
+This service is called 'Veckatimest', named after the [Grizzly Bear
+album](https://en.wikipedia.org/wiki/Veckatimest).
+
+**Nextcloud** is my current "cloud" file storage system of choice. I use it as
+pretty much a direct replacement for Google Drive (though because it is not
+exposed to the public I cannot share files with anyone outside of my home
+network) and that also includes the Calendar and Tasks functionality. This
+service is called 'Souvlaki', named after the [Slowdive
+album](https://en.wikipedia.org/wiki/Souvlaki_(album)).
+
+**OnlyOffice** is the document editing suite that I have integrated into my
+Nextcloud service as a replacement for things like Google Docs, Sheets, etc. You
+can view and edit documents right inside of Nextcloud, which is very convenient.
+This service is called 'Vespertine', named after the [Björk
+album](https://en.wikipedia.org/wiki/Vespertine).
+
+**Home Assistant** is the smart home controller/dashboard that I am using with
+my Zigbee network. It's the latest thing I've added to the homelab, so there
+isn't much going on here yet besides a couple Hue lights that I can mess with.
+This serice is called 'Superkilen', named after the [Svaneborg Kardyb
+album](https://svaneborgkardyb.bandcamp.com/album/superkilen).
+
+**Lyrion Music Server** (fka Logitech Media Server) is what I use to run my
+music streaming server. Setup is simple, adding and removing music is easy, the
+interface (using the Material Skin plugin) is nice to look at and intuitive to
+navigate. It doesn't try to be flashy, it doesn't try to emulate Spotify, and
+because it comes from the lineage of the Logitech Squeezebox ecosystem, it's
+easy to connect to and play around with via a JSON RPC API. It's my favorite
+thing that I run, and I love it to death. This service is not named after an
+album, and is simply called 'Muse'.
+
+**Firefly III** is what I use to track my finances. I used to use an
+over-engineered spreadsheet, but this service is much more tailored for how I
+like to keep track of my expenses and income, as well as bills and other major
+purchases. This service is called 'Buckminster', named after the [Driftless Pony
+Club album](https://en.wikipedia.org/wiki/Driftless_Pony_Club).
+
+**Planka** is a kanban-style task tracker that I have mostly moved away from in
+favor of the Tasks app on Nextcloud, though I do still sometimes use Planka for
+tracking my music and programming projects. This service is called 'Tapestry',
+named after the [Carole King
+album](https://en.wikipedia.org/wiki/Tapestry_(Carole_King_album)).
+
+**Wiki.js** is the platform I use for my personal wiki. At the moment I use it
+mostly to track various sysadmin information for my homelab, but I plan to use
+it more as a general information center as time goes on. This service is called
+'Relayer', named after the [Yes album](https://en.wikipedia.org/wiki/Relayer).
 
 ---
 
@@ -109,7 +185,6 @@ security, public access, going with a VPN solution instead. Also talk about the
 quality of life networking handled by the reverse proxy and local DNS for easy,
 named access to your services.
 
-
 ### Lessons Learned
 
 TODO: Talk about temperamental integrations (Nextcloud/Onlyoffice), dealing with
@@ -119,7 +194,8 @@ having to redo the Docker network after building everything in a macvlan first.
 ### Future Plans
 
 TODO: Regular backups, NAS, dashboard, and whatever else you can find on the
-Nextcloud tasks section for the homelab.
+Nextcloud tasks section for the homelab. Adding another server to split up
+computing load would be a good idea.
 
 ---
 
