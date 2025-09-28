@@ -165,6 +165,19 @@ Ben Buchanan:
 
 # Maps of Low Fidelity Albums
 Maps of Low Fidelity:
+  - title: Distant Colors
+    released: September 28 2025
+    multidisc: false
+    tracks:
+      - Distant Colors
+      - Across the Ranges
+      - Nomads
+      - Hue Repose Becalm
+      - Beyond Glimpse Returning
+    blurb: >
+      A chromatic plain of ranges and rings, pauses and returnings.
+    embed: >
+      <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=4195374645/size=small/bgcol=333333/linkcol=e99708/artwork=none/transparent=true/" seamless><a href="https://mapsoflowfidelity.bandcamp.com/album/distant-colors">Distant Colors by Maps of Low Fidelity</a></iframe>
   - title: Before and After Time
     released: March 30 2025
     multidisc: false
