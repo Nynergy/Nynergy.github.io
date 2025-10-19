@@ -1,9 +1,0 @@
-{% assign collection = site.data.artwork_collections[include.title] %}
-<div class="artwork__container">
-    {% for artwork in collection.images %}
-    <div class="captioned-image">
-        <p>{{ artwork }}</p>
-        <img src="/assets/artwork/{{ page.title }}/{{ artwork | slugify: 'ascii' }}.jpg"/>
-    </div>
-    {% endfor %}
-</div>

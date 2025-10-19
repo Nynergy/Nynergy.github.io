@@ -1,9 +1,0 @@
-exclude: ['CNAME', 'README.md', 'scribe']
-permalink: pretty
-
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
