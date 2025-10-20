@@ -7,4 +7,5 @@ other miscellaneous projects.
 
 Visit __Lexica Chromatica__ at <https://lexicachromatica.xyz/>
 
-Last Major Update was July 30, 2024 (Site Style Overhaul)
+Last Major Update was October 19, 2025
+(Migration to [totem](https://github.com/Nynergy/totem))
