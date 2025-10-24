@@ -14,23 +14,24 @@
     --gap-sm:           0.5em;
     --gap-header:       0.655em;
 
-    --fg:               light-dark(#221c1d, #feeede);
-    --fg-dark:          light-dark(#322c2d, #febeae);
-    --bg:               light-dark(#feeede, #221c1d);
-    --bg-light:         light-dark(#fff6f2, #322c2d);
-    --bg-lighter:       light-dark(#fffafa, #423c3d);
-    --bg-dark:          light-dark(#efddcd, #171112);
+    --fg:               light-dark(#221c1d, #ffd7c0);
+    --fg-dark:          light-dark(#322c2d, #ffaf8d);
+    --bg:               light-dark(#feeede, #252120);
+    --bg-light:         light-dark(#fff6f2, #353130);
+    --bg-lighter:       light-dark(#fffafa, #454140);
+    --bg-dark:          light-dark(#efddcd, #161312);
 
-    --accent-blog:      light-dark(#903ad2, #b05af2);
-    --accent-coding:    light-dark(#36b9da, #56d9fa);
-    --accent-music:     light-dark(#19cd82, #39eda2);
-    --accent-writing:   light-dark(#ca960d, #fac64d);
-    --accent-artwork:   light-dark(#df721f, #ff923f);
-    --accent-about:     light-dark(#ca0027, #ea1a47);
+    --accent-blog:      light-dark(#903ad2, #c07ad2);
+    --accent-coding:    light-dark(#36b9da, #86e9fa);
+    --accent-music:     light-dark(#19cd82, #79f4c2);
+    --accent-writing:   light-dark(#ca960d, #ffb060);
+    --accent-artwork:   light-dark(#df721f, #f07860);
+    --accent-about:     light-dark(#ca0027, #f02060);
 
-    --link:             light-dark(#f47676, #d47496);
+    --link:             light-dark(#f47676, #f07080);
 
     --border:           1px solid;
+    --radius-sm:        0.25rem;
     --radius-md:        0.5rem;
 
     --img-size:         150px;
@@ -344,6 +345,11 @@ section#home h3,
 section#home h4 {
     padding-bottom: var(--gap-sm);
     border-bottom: var(--border);
+}
+
+section#home img[src*="rss.jpg"] {
+    height: var(--font-md);
+    border-radius: var(--radius-sm);
 }
 
 /* BLOG */
