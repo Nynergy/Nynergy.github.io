@@ -138,6 +138,7 @@ a[href*="//"]:hover:after {
 /* INLINE FOOTNOTES */
 
 label {
+    color: var(--fg-dark);
     cursor: pointer;
     font-size: 0.8em;
     vertical-align: super;
@@ -436,6 +437,7 @@ section.music .links a {
 }
 
 .tracklist label {
+    color: var(--fg);
     vertical-align: baseline;
 }
 
