@@ -34,7 +34,7 @@
     --radius-sm:        0.25rem;
     --radius-md:        0.5rem;
 
-    --img-size:         150px;
+    --img-size:         200px;
 }
 
 /* DEFAULTS */
@@ -612,6 +612,22 @@ section.about h3 {
 
 section.about img {
     width: 100%;
+}
+
+/* HASH PAGES */
+
+section#log h4 {
+    color: var(--fg-dark);
+}
+
+section#colophon h3 {
+    padding-bottom: var(--gap-sm);
+    border-bottom: var(--border);
+    border-color: var(--link);
+}
+
+section#now b#now-status {
+    color: var(--fg-dark);
 }
 
 /* MEDIA QUERIES */
