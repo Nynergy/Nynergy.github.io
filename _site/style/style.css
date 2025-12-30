@@ -9,6 +9,7 @@
     --font-md:          18px;
     --font-sm:          16px;
 
+    --gap-xl:           3em;
     --gap-lg:           2em;
     --gap-md:           1em;
     --gap-sm:           0.5em;
@@ -618,6 +619,15 @@ section.about img {
 
 section#log h4 {
     color: var(--fg-dark);
+}
+section#log h4:not(:first-of-type) {
+    margin-top: var(--gap-xl);
+}
+
+section#log img {
+    max-width: 100%;
+    margin: auto;
+    border-radius: var(--radius-md);
 }
 
 section#colophon h3 {
