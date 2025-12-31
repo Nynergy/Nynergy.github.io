@@ -32,6 +32,7 @@
     --link:             light-dark(#f47676, #f07080);
 
     --border:           1px solid;
+    --border-thick:     3px solid;
     --radius-sm:        0.25rem;
     --radius-md:        0.5rem;
 
@@ -68,56 +69,56 @@ a:hover {
     border-bottom: var(--border) var(--link);
 }
 
-a[href="#blog"],
+a[href*="#blog"],
 section.blog a {
     color: var(--accent-blog);
 }
-a[href="#blog"]:hover,
+a[href*="#blog"]:hover,
 section.blog a:hover {
     border-color: var(--accent-blog);
 }
 
-a[href="#coding"],
+a[href*="#coding"],
 section.coding a {
     color: var(--accent-coding);
 }
-a[href="#coding"]:hover,
+a[href*="#coding"]:hover,
 section.coding a:hover {
     border-color: var(--accent-coding);
 }
 
-a[href="#music"],
+a[href*="#music"],
 section.music a {
     color: var(--accent-music);
 }
-a[href="#music"]:hover,
+a[href*="#music"]:hover,
 section.music a:hover {
     border-color: var(--accent-music);
 }
 
-a[href="#writing"],
+a[href*="#writing"],
 section.writing a {
     color: var(--accent-writing);
 }
-a[href="#writing"]:hover,
+a[href*="#writing"]:hover,
 section.writing a:hover {
     border-color: var(--accent-writing);
 }
 
-a[href="#artwork"],
+a[href*="#artwork"],
 section.artwork a {
     color: var(--accent-artwork);
 }
-a[href="#artwork"]:hover,
+a[href*="#artwork"]:hover,
 section.artwork a:hover {
     border-color: var(--accent-artwork);
 }
 
-a[href="#about"],
+a[href*="#about"],
 section.about a {
     color: var(--accent-about);
 }
-a[href="#about"]:hover,
+a[href*="#about"]:hover,
 section.about a:hover {
     border-color: var(--accent-about);
 }
@@ -159,7 +160,21 @@ label + input + small {
 
 input:checked + small {
     display: block;
-    padding: var(--gap-sm);
+    padding: var(--gap-md) var(--gap-lg);
+}
+
+/* CODE BLOCKS */
+
+code {
+    background: var(--bg-light);
+    border-left: var(--border-thick) var(--fg-dark);
+    border-radius: var(--radius-md);
+    font-family: monospace;
+    font-size: var(--font-sm);
+    max-width: 100%;
+    overflow-x: scroll;
+    padding: var(--gap-md);
+    display: block;
 }
 
 /* MASTHEAD */
@@ -378,6 +393,13 @@ section.blog h4 {
     border-bottom: 1px solid var(--fg);
 }
 
+.content a[href="#music"] {
+    color: var(--accent-music);
+}
+.content a[href="#music"]:hover {
+    border-color: var(--accent-music);
+}
+
 .content ul {
     display: flex;
     flex-direction: column;
@@ -410,6 +432,36 @@ section.blog h4 {
 .content figure figcaption:before {
     content: 'Fig /';
     color: var(--fg-dark);
+}
+
+.content s {
+    text-decoration-color: red;
+}
+
+.content blockquote {
+    background: var(--bg-light);
+    margin: 0;
+    padding: var(--gap-md);
+    border-left: var(--border-thick) var(--accent-blog);
+    border-radius: var(--radius-md);
+}
+
+.content blockquote.note > b {
+    color: var(--fg-dark);
+    text-decoration: underline;
+}
+
+.content details summary {
+    color: var(--accent-blog);
+    cursor: pointer;
+}
+
+.content details summary:hover {
+    text-decoration: underline;
+}
+
+.content .centered {
+    text-align: center;
 }
 
 /* CODING */

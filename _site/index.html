@@ -37,7 +37,7 @@
     <small>Copyright &copy; 2025
  Lexica Chromatica</small>
     <small>Built with <a target="_blank" rel="noopener noreferrer" href="https://github.com/Nynergy/totem">totem</a></small>
-    <small>Last Update: December 29, 2025
+    <small>Last Update: December 31, 2025
 </small>
 </footer>
 </aside>
@@ -198,7 +198,7 @@ shapes and colors.
 <img loading="lazy" class="masthead" src="static/mastheads/blog.jpg" />
 
 <div class="card-list">
-    <div><a href="#blog/2025/12/13/Finding Good Music"><h3>Finding Good Music</h3></a><small>Posted on 2025/12/13</small></div><div><a href="#blog/2024/12/28/Fiddling with a Home Server"><h3>Fiddling with a Home Server</h3></a><small>Posted on 2024/12/28</small></div><div><a href="#blog/2024/08/04/A Return to Digital Gardening"><h3>A Return to Digital Gardening</h3></a><small>Posted on 2024/08/04</small></div><div><a href="#blog/2024/07/29/Saying Less"><h3>Saying Less</h3></a><small>Posted on 2024/07/29</small></div>
+    <div><a href="#blog/2025/12/31/I Wrote My Own Static Site Generator in Bash"><h3>I Wrote My Own Static Site Generator in Bash</h3></a><small>Posted on 2025/12/31</small></div><div><a href="#blog/2025/12/13/Finding Good Music"><h3>Finding Good Music</h3></a><small>Posted on 2025/12/13</small></div><div><a href="#blog/2024/12/28/Fiddling with a Home Server"><h3>Fiddling with a Home Server</h3></a><small>Posted on 2024/12/28</small></div><div><a href="#blog/2024/08/04/A Return to Digital Gardening"><h3>A Return to Digital Gardening</h3></a><small>Posted on 2024/08/04</small></div><div><a href="#blog/2024/07/29/Saying Less"><h3>Saying Less</h3></a><small>Posted on 2024/07/29</small></div>
 </div>
 </section>
 <section id="coding" class="coding">
@@ -277,8 +277,9 @@ becomes a reality.
 <p>
 One fun and interesting benefit(?) of hosting my site in a
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/Nynergy/Nynergy.github.io/">public GitHub repo</a>
-is that previous versions of Lexica Chromatica (of which there are many) can
-all be browsed by going back in the commit history and building the site.
+is that previous versions of <em>Lexica Chromatica</em> (of which there are
+many) can all be browsed by going back in the commit history and building the
+site.
 </p>
 
 <h3>Site Construction</h3>
@@ -286,19 +287,22 @@ all be browsed by going back in the commit history and building the site.
 <p>
 Once upon a time this site was built with
 <a target="_blank" rel="noopener noreferrer" href="https://jekyllrb.com/">Jekyll</a>, but for reasons that I
-will probably expound upon in a blog post somewhere, it is now built with
+expound upon in
+<a href="#blog/2025/12/31/I Wrote My Own Static Site Generator in Bash">
+    this blog post
+</a>, it is now built with
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/Nynergy/totem">totem</a>, a custom
 static site generator written in pure bash, and created by yours truly.
 </p>
 
 <p>
-Lexica Chromatica (the current iteration of it, at least) features no
-Javascript. Everything you see is handwritten HTML and CSS, barring the minimal
+<em>Lexica Chromatica</em> (the current iteration of it, at least) features no
+JavaScript. Everything you see is handwritten HTML and CSS, barring the minimal
 amount of pseudo-templating I employ as part of using <em>totem</em>.
 </p>
 
 <p>
-Even the fact that this site functions like a single page application is
+Even the fact that this site functions like a single-page application is
 implemented with CSS. It is this implementation that relies on the odd URL
 structure utilizing hashes ("#") instead of slashes ("/") for the initial page
 routes.
@@ -1625,6 +1629,749 @@ free PDF downloads.
     </div>
 </div>
 </section>
+<section id="blog/2025/12/31/I Wrote My Own Static Site Generator in Bash" class="blog">
+<div class="post__header">
+    <h2>I Wrote My Own Static Site Generator in Bash</h2>
+    <small>Posted on 2025/12/31</small>
+</div>
+
+<div class="content">
+    <p>
+I wrote a static site generator (SSG) in pure bash to replace
+<a target="_blank" rel="noopener noreferrer" href="https://jekyllrb.com/">Jekyll</a>, and allow myself to
+hand-write my site from scratch.
+</p>
+
+<p>
+Now, why would I use an SSG in the first place when my goal is to hand-write
+the site? Why would I <s>torture</s> enjoy myself by writing an SSG in pure
+bash? Why not just use a fully-featured SSG or site template that a lot of
+other people use?
+</p>
+
+<p>
+Let's answer those questions, and discuss my thoughts on the resulting tool,
+as well as my initial experience using it to build this site.
+</p>
+
+<h3>Step One</h3>
+
+<p class="centered">
+<b><em>Become disillusioned with the thing.</em></b>
+</p>
+
+<p>
+For years, I had used Jekyll to build my site. I liked the flexibility of using
+YAML, Markdown, and Liquid templating to turn directories of posts and other
+data/collections into nicely-formatted HTML pages. Things were peaceful in the
+garden that I had cultivated.
+</p>
+
+<p>
+Eventually, I came to a point where I felt a friction in the process; my tools
+were chafing me, but why? I realized that my frustrations were not necessarily
+in <em>what</em> the tools were doing, but <em>how</em> they were doing it.
+<label for="2025-12-31-fn-1">1</label>
+<input id="2025-12-31-fn-1" type="checkbox"></input>
+<small>
+    Jekyll is a <a target="_blank" rel="noopener noreferrer" href="https://www.ruby-lang.org/en/">Ruby</a>
+    application; you must have Ruby installed on your machine in order to use
+    it. I have never, not once, found myself interested in writing anything in
+    Ruby. After auditing the packages installed on my systems, I found that
+    Jekyll was the only app I used that required Ruby as a dependency.
+</small>
+I also began to wonder what these tools were driving me to do, and whether I
+felt comfortable with the idea of my tools influencing the direction and
+content of my site more than my brain.
+<label for="2025-12-31-fn-2">2</label>
+<input id="2025-12-31-fn-2" type="checkbox"></input>
+<small>
+    Reading through the documentation for Jekyll and the Liquid templating
+    language left me with an insatiable lust for utilizing as many features of
+    the two that I could. This is a bad idea. This is how software becomes
+    bloated. This is how we create things which cannot sustain themselves.
+</small>
+</p>
+
+<p>
+I could feel the power of the SSG was drawing me closer and closer to this
+place I did not want to be in.
+</p>
+
+<p>
+It was time for Jekyll to go.
+</p>
+
+<h3>Step Two</h3>
+
+<p class="centered">
+<b><em>Deny yourself the thing.</em></b>
+</p>
+
+<p>
+So I removed Jekyll (and consequently Ruby) from my system. Would I move to a
+different, less powerful SSG, then? Hell no!
+</p>
+
+<p>
+I began to read up on the small web, the minimalist web, the handmade web. I
+became increasingly enamored with the idea of re-writing my site from scratch,
+without the use of any templating or external programs.
+</p>
+
+<p>
+In particular, I was inspired by
+<a target="_blank" rel="noopener noreferrer" href="https://john-doe.neocities.org/">this site</a> and the way
+it uses CSS to emulate the behavior of a
+<a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Single-page_application">
+    single-page application
+</a>. In fact, the bones of this site stick pretty closely to that formula, and
+the entire thing remains a single HTML file.
+<label for="2025-12-31-fn-3">3</label>
+<input id="2025-12-31-fn-3" type="checkbox"></input>
+<small>
+    Of course, there is a separate CSS stylesheet, and plenty of static image
+    files, PDFs, etc.
+</small>
+</p>
+
+<p>
+So I said, "Fuck it! I'll do it myself!" And that's exactly what I did.
+</p>
+
+<p>
+And that's when I started chafing again.
+</p>
+
+<h3>Step Three</h3>
+
+<p class="centered">
+<b><em>Accept that you could use the thing.</em></b>
+</p>
+
+<p>
+While it was certainly possible to write everything by hand, that also meant I
+had to:
+</p>
+
+<ul>
+    <li>
+        Update everything myself.
+        <label for="2025-12-31-fn-4">4</label>
+        <input id="2025-12-31-fn-4" type="checkbox"></input>
+        <small>
+            This includes the copyright year and date of last update in the
+            aside footer, among other things.
+        </small>
+    </li>
+    <li>
+        Maintain unique &lt;section&gt; tag ids myself.
+        <label for="2025-12-31-fn-5">5</label>
+        <input id="2025-12-31-fn-5" type="checkbox"></input>
+        <small>
+            This is because each "page" of the site needs to be contained in an
+            HTML &lt;section&gt; tag with a unique id attribute. These ids also
+            need to be maintained across links within the site that point to
+            those pages.
+        </small>
+    </li>
+    <li>Maneuver around an increasingly large HTML file in my editor.</li>
+    <li>...and much more.</li>
+</ul>
+
+<p>
+Perhaps I don't need to explicitly mention this, but these tasks were tedious,
+annoying, and getting in the way of my enjoyment of cultivating this website.
+</p>
+
+<p>
+Something needed to be done about this, or else I would never touch this thing
+ever again, and that would be sad. So I did what I always do in these sorts of
+situations; I went about writing my own bespoke solution to problems that other
+people much smarter and more talented than I have already solved.
+</p>
+
+<h3>Step Four</h3>
+
+<p class="centered">
+<b><em>Identify what you want the thing to do.</em></b>
+</p>
+
+<p>
+Because I still had that bad taste in my mouth of <em>unnecessary
+dependencies</em>, I decided to write my solution in pure bash. No matter what
+system I need to build my site on, I can be damn sure that it'll have bash
+installed on it.
+</p>
+
+<p>
+Other things I needed this tool to do included:
+</p>
+
+<ul>
+    <li>Automatically update the aforementioned dates in the footer.</li>
+    <li>Organize my blog posts into reverse-chronological order.</li>
+    <li>Generate an RSS feed of those blog posts.</li>
+    <li>Ensure (as much as is reasonable) that page ids are unique.</li>
+    <li>Identify external links and open them in a new tab.</li>
+    <li>Allow images to load lazily.</li>
+    <li>
+        Generate
+        <a target="_blank" rel="noopener noreferrer" href="https://www.w3schools.com/howto/howto_js_lightbox.asp">
+            lightboxes
+        </a>
+        for some images (<em>without any JavaScript</em>).
+        <label for="2025-12-31-fn-6">6</label>
+        <input id="2025-12-31-fn-6" type="checkbox"></input>
+        <small>
+            Doing things without JS is important to me for this site. These
+            inline footnotes you're reading are also implemented using CSS
+            only, no JS required.
+        </small>
+    </li>
+    <li>Take a directory of files and collapse it into one HTML file.</li>
+    <li>Take static files and move them into a final site directory.</li>
+    <li>Allow for draft files that are not included in release builds.</li>
+    <li>Be simple enough that I don't tear my hair out when modifying it.</li>
+</ul>
+
+<p>
+This may seem like a daunting task, but keep in mind that a major thing this
+tool would <em>not</em> need to do is parse some external templating language
+or reference a library of "collections" and "filters" and such.
+<label for="2025-12-31-fn-7">7</label>
+<input id="2025-12-31-fn-7" type="checkbox"></input>
+<small>
+    In fact, the resulting script comes in at almost exactly 300 source lines
+    of code (SLOC) at time of writing. Turns out, removing complex features
+    intended for increasingly generic use cases and replacing them with custom
+    solutions meant for specific use cases leads to a much smaller tool.
+</small>
+</p>
+
+<p>
+Now all I had to do was actually write the damn thing. Let's see how I did it.
+</p>
+
+<h3>Step Five</h3>
+
+<p class="centered">
+<b><em>Make a thing that does what you want.</em></b>
+</p>
+
+<blockquote>
+    Many of the strange "bash-isms" you are about to see in my code were lifted
+    from, or otherwise inspired by, the brilliant
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/dylanaraps/pure-bash-bible">
+        Pure Bash Bible
+    </a>.
+</blockquote>
+
+<p>
+The script handles updating certain dates by looking for a particular string in
+the HTML code and replacing that string with a date generated and formatted
+using a neat little
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/dylanaraps/pure-bash-bible?tab=readme-ov-file#get-the-current-date-using-strftime">
+    'printf' trick
+</a>.
+</p>
+
+<details>
+<summary>Show/Hide Code Block</summary>
+
+<pre><code>interpolate() {
+    local pattern=$1
+    local replacement=$2
+    local num_replace=${3:-all}
+
+    local temp
+    temp="$(&lt;"$BUILD")"
+    case $num_replace in
+        once)
+            temp="${temp/$pattern/$replacement}" ;;
+        all)
+            temp="${temp//$pattern/$replacement}" ;;
+    esac
+    echo "$temp" &gt; "$BUILD"
+}
+
+format_date() {
+    local -n ptr=${1}
+    local fmt=$2
+
+    printf -v ptr "%($fmt)T\\n" "-1"
+}
+
+...
+
+interpolate_dates() {
+    local copyright_year &amp;&amp; format_date copyright_year '%Y'
+    interpolate '%COPYRIGHT_YEAR%' "$copyright_year"
+
+    local modification_date &amp;&amp; format_date modification_date '%B %d, %Y'
+    interpolate '%MODIFICATION_DATE%' "$modification_date"
+}
+</code></pre>
+</details>
+
+<p>
+The '$BUILD' variable in the above code block is used to track the current HTML
+file generated by the script. I often read it into a string, modify that string
+in some way, then write it back to the file.
+</p>
+
+<blockquote class="note">
+    <b>NOTE</b>
+    <br>
+    In many of these blocks you will see me interpolate strings of the form
+    "%PATTERN%". In my actual script, I use '{' and '}' to enclose these
+    patterns, but if I include that syntax in these code blocks, my script will
+    try to interpolate them as well, which I don't want. So I use '%' to "fool"
+    my script into leaving them alone.
+</blockquote>
+
+<p>
+The script accomplishes writing blog posts and rolling them into an index page
+by iterating over a '_posts/' directory and doing some more interpolations. We
+also programmatically determine the publish date, post title, and link id based
+on the filename of the post.
+</p>
+
+<details>
+<summary>Show/Hide Code Block</summary>
+
+<pre><code>output() {
+    local string=$1
+    local dest=${2:-$BUILD}
+    echo "$string" &gt;&gt; "$dest"
+}
+
+...
+
+parse_post_date() {
+    local -n ptr=${1}
+
+    ptr="${ptr%% *}"
+    ptr="${ptr//-/\/}"
+}
+
+parse_post_title() {
+    local -n ptr=${1}
+
+    ptr="${post#* }"
+    ptr="${post_title%.*}"
+}
+
+parse_post_href() {
+    local -n ptr=${1}
+    local post_date post_title
+
+    post_date="$ptr" &amp;&amp; parse_post_date post_date
+    post_title="$ptr" &amp;&amp; parse_post_title post_title
+    ptr="blog/$post_date/$post_title"
+}
+
+escape_ampersands() {
+    local -n ptr=${1}
+
+    ptr="${ptr//\&amp;/\\&amp;}"
+}
+
+write_posts() {
+    # Iterate over posts in reverse
+    # This puts most recent posts at the top
+    local posts=("$POSTS_DIR"/*.html)
+    local post post_date post_title post_href post_content post_string
+
+    local post_list=''
+    local i
+    for ((i=${#posts[@]}-1; i &gt;= 0; --i)); {
+        post="${posts[$i]##*/}"
+
+        [[ "$post" == *DRAFT* &amp;&amp; $DRAFT_MODE == 0 ]] &amp;&amp; continue
+
+        post_content="$(&lt;"${posts[$i]}")" &amp;&amp; escape_ampersands post_content
+        post_date="$post" &amp;&amp; parse_post_date post_date
+        post_title="$post" &amp;&amp; parse_post_title post_title
+        post_href="$post" &amp;&amp; parse_post_href post_href
+
+        # Output the actual post page
+        output "&lt;section id=\"$post_href\" class=\"blog\"&gt;"
+
+        post_string="$(&lt;"$PARTS_DIR/post.html")"
+        post_string="${post_string//\{POST_TITLE\}/$post_title}"
+        post_string="${post_string//\{POST_DATE\}/$post_date}"
+        post_string="${post_string//\{POST_CONTENT\}/$post_content}"
+
+        output "$post_string"
+
+        output '&lt;/section&gt;'
+
+        # Add the post to the post list
+        post_list+='&lt;div&gt;'
+        post_list+="&lt;a href=\"#$post_href\"&gt;"
+        post_list+="&lt;h3&gt;$post_title&lt;/h3&gt;"
+        post_list+='&lt;/a&gt;'
+        post_list+="&lt;small&gt;Posted on $post_date&lt;/small&gt;"
+        post_list+='&lt;/div&gt;'
+    }
+
+    interpolate '%BLOG_POST_LIST%' "$post_list"
+}
+</code></pre>
+</details>
+
+<p>
+One of my requirements was the inclusion of a "Draft Mode", which you can see
+me use in the above block. I look for the user to pass in a '-d' command line
+argument to see if we should build the site in Draft Mode or not. If the script
+is <em>not</em> in Draft Mode, then any file with the string 'DRAFT' anywhere
+in its filename will be skipped over.
+<label for="2025-12-31-fn-8">8</label>
+<input id="2025-12-31-fn-8" type="checkbox"></input>
+<small>
+    This is not a perfect solution, as I often find myself modifying some part
+    of the CSS for a DRAFT file, but I also have some production change I want
+    to make. I don't want to rename the CSS file to have 'DRAFT' in its name,
+    so I compromise by manually selecting hunks of the file to commit with 'git
+    add -p'.
+</small>
+</p>
+
+<p>
+You may have also noticed the '$PARTS_DIR' variable in the above code block. I
+use this directory to store little pieces and parts of HTML that get included
+elsewhere, like the header, footer, and post layout. In this way, it kind of
+fulfills the role of both an '_includes/' and '_layouts/' directory.
+</p>
+
+<p>
+We can use similar logic to writing posts in order to generate an RSS file by
+iterating over the blog posts once again.
+</p>
+
+<details>
+<summary>Show/Hide Code Block</summary>
+
+<pre><code>write_rss_feed() {
+    local posts=("$POSTS_DIR"/*.html)
+    local post post_title post_href post_date
+
+    output '&lt;?xml version="1.0" encoding="UTF-8" ?&gt;' "$RSS"
+    output '&lt;rss version="2.0"&gt;' "$RSS"
+
+    output '&lt;channel&gt;' "$RSS"
+
+    output "&lt;title&gt;$SITE_TITLE&lt;/title&gt;" "$RSS"
+    output "&lt;link&gt;$SITE_BASE_URL&lt;/link&gt;" "$RSS"
+    output "&lt;description&gt;$SITE_DESCRIPTION&lt;/description&gt;" "$RSS"
+
+    # Iterate over posts in reverse
+    # This puts most recent posts at the top
+    local i
+    for ((i=${#posts[@]}-1; i &gt;= 0; --i)); {
+        post="${posts[$i]##*/}"
+
+        [[ "$post" == *DRAFT* &amp;&amp; $DRAFT_MODE == 0 ]] &amp;&amp; continue
+
+        post_date="$post" &amp;&amp; parse_post_date post_date
+        post_title="$post" &amp;&amp; parse_post_title post_title
+        post_href="$post" &amp;&amp; parse_post_href post_href
+
+        output '&lt;item&gt;' "$RSS"
+        output "&lt;title&gt;$post_title&lt;/title&gt;" "$RSS"
+        output "&lt;link&gt;$SITE_BASE_URL/#$post_href&lt;/link&gt;" "$RSS"
+        output "&lt;description&gt;$post_date - Blog Post&lt;/description&gt;" "$RSS"
+        output '&lt;/item&gt;' "$RSS"
+    }
+
+    output '&lt;/channel&gt;' "$RSS"
+
+    output '&lt;/rss&gt;' "$RSS"
+}
+</code></pre>
+</details>
+
+<p>
+We've seen in some of the above code snippets that we are generating the
+enclosing &lt;section&gt; tags for some pages. The id is programmatically
+generated, which effectively fulfills my requirement of maintaining unique ids
+across pages, to a certain extent.
+</p>
+
+<p>
+For opening external links in a new tab, we take advantage of some &lt;a&gt;
+tag attributes, interpolating them into every marked link in our site. Now,
+remembering to mark external links with this placeholder string is a huge pain,
+and goes directly against what this tool is supposed to prevent. So, I also add
+a check for any <em>unmarked</em> external links using a regex match. If one
+such link is found, the script will print it to the terminal so the user can
+see which links they need to go in and add the marker to.
+<label for="2025-12-31-fn-9">9</label>
+<input id="2025-12-31-fn-9" type="checkbox"></input>
+<small>
+    Again, it's not a perfect solution, but directly interpolating without
+    using a marker was giving me a lot of trouble with infinite loops, or not
+    finding all external links properly. I settled for a "good enough" solution
+    instead.
+</small>
+</p>
+
+<details>
+<summary>Show/Hide Code Block</summary>
+
+<pre><code>modify_external_links() {
+    check_for_unmarked_external_links
+    interpolate '%EXT_LINK%' 'target="_blank" rel="noopener noreferrer"'
+}
+
+check_for_unmarked_external_links() {
+    local line
+    while read -r line; do
+        [[ $line =~ \&lt;a\ *href=(\".*//.*\")\ *\&gt; ]] &amp;&amp; {
+            echo "External link ${BASH_REMATCH[1]} has no %EXT_LINK% mark"
+        }
+    done &lt; "$BUILD"
+}
+</code></pre>
+</details>
+
+<p>
+Perhaps in the future I will modify this behavior so that instead of reporting
+missing marks, we actually just interpolate the external links directly,
+eliminating the marks entirely.
+</p>
+
+<p>
+Making images load lazily is much easier than a lot of the other logic, just
+using a simple interpolation.
+</p>
+
+<details>
+<summary>Show/Hide Code Block</summary>
+
+<pre><code>make_images_lazy() {
+    interpolate '&lt;img ' '&lt;img loading="lazy" '
+}
+</code></pre>
+</details>
+
+<p>
+For generating lightboxes, we iterate over all the files within our 'artwork/'
+directory, and for each image file, we write out a link to another "page" that
+functions as a lightbox. It also functions as a link back to the original page
+that the image was hosted on.
+</p>
+
+<details>
+<summary>Show/Hide Code Block</summary>
+
+<pre><code>write_image_lightboxes() {
+    local image extension image_id origin
+    for image in "$STATIC_DIR"/artwork/**/*; {
+        [[ "$image" == *DRAFT* &amp;&amp; $DRAFT_MODE == 0 ]] &amp;&amp; continue
+        extension="${image##*.}"
+
+        case $extension in
+            jpg|png)
+                image_id="${image#*/}" ;
+                origin="${image_id%/*}" ;
+                [[ $origin != *.* ]] &amp;&amp; {
+                    write_lightbox "${image:1}" "$image_id" "$origin"
+                } ;;
+            *)
+                ;;
+        esac
+    }
+}
+
+write_lightbox() {
+    local image_src=$1
+    local image_id=$2
+    local origin=$3
+
+    output "&lt;a id=\"$image_id\" class=\"lightbox\" href=\"#$origin\"&gt;"
+    output "&lt;img src=\"$image_src\" /&gt;"
+    output '&lt;/a&gt;'
+}
+</code></pre>
+</details>
+
+<p>
+As for the other requirements, they've basically been fulfilled by the nature
+of what our script has become, or can be solved with very simple calls to 'mv'
+and 'cp'.
+</p>
+
+<p>
+The only other pain point I had when trying to emulate the behavior of a
+single-page application was that the CSS I grabbed from my inspiration site was
+meant to be used with absolute positions and overlays and such. I don't like to
+use that kind of style, so I needed to modify my CSS to replicate the behavior
+in a different way.
+</p>
+
+<p>
+I ended up with the following code to control which "page" is shown.
+</p>
+
+<details>
+<summary>Show/Hide Code Block</summary>
+
+<pre><code>section,
+section:target ~ #home,
+#home:has(~ section:target) {
+    display: none;
+}
+
+#home, section:target {
+    display: block;
+}
+</code></pre>
+</details>
+
+<p>
+Originally this code was a bit different, but I had to change it to allow the
+home page to exist in any position relative to other pages. Before, the CSS I
+used required the home page to always be the first page, but I didn't want to
+bake that requirement into the logic of my script. So, I landed on this
+admittedly dense CSS declaration.
+<label for="2025-12-31-fn-10">10</label>
+<input id="2025-12-31-fn-10" type="checkbox"></input>
+<small>
+    For those not well-versed in CSS declarations and selectors, what the above
+    two declarations say is:
+    <br><br>
+    1. All sections are display: none.
+    <br>
+    2. All elements with id 'home' (#home) that exist adjacent to a targeted
+       section are display: none (including 'left-of' and 'right-of').
+    <br>
+    3. All other targeted sections and #home elements are display: block.
+    <br><br>
+    This results in the behavior that any targeted section is the displayed
+    page, and if nothing is targeted, then the home page is displayed.
+</small>
+</p>
+
+<p>
+With all that out of the way, I could now properly include generic multi-level
+pages in my generated HTML file by iterating over a '_pages/' directory. Using
+a glob allows nested pages, such as the ones I use for the
+<a href="#music">Music</a> section of this site.
+</p>
+
+<details>
+<summary>Show/Hide Code Block</summary>
+
+<pre><code>output_content() {
+    local filepath=$1
+    local dirname="${filepath%%/*}"
+    local page_id="${filepath#*/}"
+    page_id="${page_id%.*}"
+    local page_class="${page_id%%/*}"
+
+    [ -f "$filepath" ] &amp;&amp; {
+        [ "$dirname" == "$PAGES_DIR" ] &amp;&amp; \
+            output "&lt;section id=\"$page_id\" class=\"$page_class\"&gt;"
+
+        output "$(&lt;"$filepath")"
+
+        [ "$dirname" == "$PAGES_DIR" ] &amp;&amp; \
+            output '&lt;/section&gt;'
+    }
+}
+
+...
+
+write_pages() {
+    local page
+    for page in "$PAGES_DIR"/**/*.html; {
+        [[ "$page" == *DRAFT* &amp;&amp; $DRAFT_MODE == 0 ]] &amp;&amp; continue
+        output_content "$page"
+    }
+}
+</code></pre>
+</details>
+
+<h3>Step Six</h3>
+
+<p class="centered">
+<b><em>Use the thing. Rejoice.</em></b>
+</p>
+
+<p>
+And so, <a target="_blank" rel="noopener noreferrer" href="https://github.com/Nynergy/totem">
+    <em>totem</em>
+</a>
+<label for="2025-12-31-fn-11">11</label>
+<input id="2025-12-31-fn-11" type="checkbox"></input>
+<small>
+    The name comes from the way it structures the resulting HTML file. It
+    "stacks" the various sections on top of one another, resulting in a long
+    file that you could say resembles a
+    <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Totem_pole">
+        totem pole
+    </a>.
+</small>
+was born, and <em>Lexica Chromatica</em> reborn alongside it.
+</p>
+
+<p>
+As with all things, both the site and the tool used to build it are not final.
+There will be changes, fixes, workarounds, alterations, compromises, etc. But I
+am very pleased with the results thus far.
+</p>
+
+<p>
+<em>totem</em> allows me to continue writing the HTML of my site by hand, while
+also eliminating much of the friction I experienced with the more tedious tasks
+of website maintenance. I already feel more at home in this iteration of the
+site, and I don't feel the draw of extra features leading me to fill the site
+with useless pages it doesn't need.
+</p>
+
+<p>
+I built a tool that does just enough for me, and nothing more. It's portable,
+not reliant on external dependencies, small, and simple. Most programmers today
+could learn a thing or two about that sort of brevity.
+</p>
+
+<p>
+If you want to read more about how <em>totem</em> works, and even build an
+example site with it, you can follow the link at the top of this section and
+clone the repo for it.
+<label for="2025-12-31-fn-12">12</label>
+<input id="2025-12-31-fn-12" type="checkbox"></input>
+<small>
+    However, I would not suggest using it as your own SSG unless you feel
+    comfortable making changes to it, or otherwise using a similar site
+    structure to mine.  While I did bake some generic functionality into the
+    script, I did not intend for it to be used in any serious context outside
+    of my own website. Your mileage may vary.
+</small>
+</p>
+
+<p>
+If you're at all of a technical mind, or perhaps already proficient in writing
+programs, I'd encourage you to give rolling your own SSG a shot. Or maybe take
+the time to create another tiny tool that solves another of your problems. It's
+rewarding, and using software that you actually <em>understand</em> inside and
+out is an important part of digital independence, especially in today's
+hyper-capitalist techno-feudalist reality.
+</p>
+
+<p>
+Craft your own tools. Break the chains they put you in.
+</p>
+
+<h3>Step Seven</h3>
+
+<p class="centered">
+<b><em>Ponder the thing. Perhaps write a blog post.</em></b>
+</p>
+</div>
+</section>
 <section id="blog/2025/12/13/Finding Good Music" class="blog">
 <div class="post__header">
     <h2>Finding Good Music</h2>
@@ -1644,7 +2391,7 @@ for the music they crave.
 In this age of mass-produced musical deluge, it can be difficult to know what's
 actually worth listening to, and where to go to find it. Let's talk about a few
 places to look, and a few strategies to employ when looking for new music.
-<label for="2025-12-13-fn-1">*</label>
+<label for="2025-12-13-fn-1">1</label>
 <input id="2025-12-13-fn-1" type="checkbox"></input>
 <small>
     This is by no means an exhaustive list of resources for finding music. This
@@ -1671,7 +2418,7 @@ Nerd certainly lives up to that title as the man behind
 <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@theneedledrop">The Needle Drop</a>.
 I have found countless albums through Anthony's reviews, including a few of my
 Album of the Year's, but that doesn't mean I always agree with him.
-<label for="2025-12-13-fn-2">*</label>
+<label for="2025-12-13-fn-2">2</label>
 <input id="2025-12-13-fn-2" type="checkbox"></input>
 <small>
     That's kind of the thing about critics -- you don't need to agree with
