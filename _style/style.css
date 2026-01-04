@@ -97,10 +97,12 @@ section.music a:hover {
 }
 
 a[href*="#writing"],
+a.link--writing,
 section.writing a {
     color: var(--accent-writing);
 }
 a[href*="#writing"]:hover,
+a.link--writing:hover,
 section.writing a:hover {
     border-color: var(--accent-writing);
 }
@@ -175,6 +177,13 @@ code {
     overflow-x: scroll;
     padding: var(--gap-md);
     display: block;
+}
+
+/* CONTAINERS */
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 /* MASTHEAD */
@@ -748,6 +757,10 @@ section#now b#now-status {
 }
 
 @media only screen and (max-width: 800px) {
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
     .album .main {
         flex-direction: column;
         gap: var(--gap-md);
