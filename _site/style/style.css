@@ -232,10 +232,10 @@ code {
 }
 
 .card-list div {
-    background: var(--bg-light);
     display: flex;
     flex-direction: column;
     padding: var(--gap-md);
+    border: var(--border) var(--fg);
     border-radius: var(--radius-md);
 }
 
