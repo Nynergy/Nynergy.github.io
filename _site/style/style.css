@@ -139,6 +139,32 @@ a[href*="//"]:hover:after {
     opacity: 1;
 }
 
+.ignore-ext a[href*="//"]:after {
+    content: "";
+}
+
+/* WEBRINGS */
+
+.webring {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--gap-md);
+    padding: var(--gap-sm);
+    border: var(--border) var(--fg);
+    border-radius: var(--radius-md);
+}
+
+.webring p {
+    margin: 0;
+}
+
+.webring > div {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-md);
+}
+
 /* INLINE FOOTNOTES */
 
 label {
