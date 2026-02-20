@@ -58,6 +58,12 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 
+/* UTIL */
+
+.centered {
+    text-align: center;
+}
+
 /* LINKS */
 
 a {
@@ -497,10 +503,6 @@ section.blog h4 {
 
 .content details summary:hover {
     text-decoration: underline;
-}
-
-.content .centered {
-    text-align: center;
 }
 
 /* CODING */
