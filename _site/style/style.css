@@ -299,6 +299,11 @@ img:has(+ .info) {
     align-self: start;
 }
 
+.info .album-links {
+    display: flex;
+    gap: var(--gap-md);
+}
+
 /* SIDEBAR NAV */
 
 aside {
