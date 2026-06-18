@@ -116,8 +116,8 @@ While it was certainly possible to write everything by hand, that also meant I
 had to:
 </p>
 
-<ul>
-    <li>
+<table class="headerless">
+    <tr><td>
         Update everything myself.
         <label for="2025-12-31-fn-4">4</label>
         <input id="2025-12-31-fn-4" type="checkbox"></input>
@@ -125,8 +125,8 @@ had to:
             This includes the copyright year and date of last update in the
             aside footer, among other things.
         </small>
-    </li>
-    <li>
+    </tr></td>
+    <tr><td>
         Maintain unique &lt;section&gt; tag ids myself.
         <label for="2025-12-31-fn-5">5</label>
         <input id="2025-12-31-fn-5" type="checkbox"></input>
@@ -136,10 +136,14 @@ had to:
             need to be maintained across links within the site that point to
             those pages.
         </small>
-    </li>
-    <li>Maneuver around an increasingly large HTML file in my editor.</li>
-    <li>...and much more.</li>
-</ul>
+    </tr></td>
+    <tr><td>
+        Maneuver around an increasingly large HTML file in my editor.
+    </tr></td>
+    <tr><td>
+        ...and much more.
+    </tr></td>
+</table>
 
 <p>
 Perhaps I don't need to explicitly mention this, but these tasks were tedious,
@@ -170,14 +174,14 @@ installed on it.
 Other things I needed this tool to do included:
 </p>
 
-<ul>
-    <li>Automatically update the aforementioned dates in the footer.</li>
-    <li>Organize my blog posts into reverse-chronological order.</li>
-    <li>Generate an RSS feed of those blog posts.</li>
-    <li>Ensure (as much as is reasonable) that page ids are unique.</li>
-    <li>Identify external links and open them in a new tab.</li>
-    <li>Allow images to load lazily.</li>
-    <li>
+<table class="headerless">
+    <tr><td>Automatically update the aforementioned dates in the footer.</td></tr>
+    <tr><td>Organize my blog posts into reverse-chronological order.</td></tr>
+    <tr><td>Generate an RSS feed of those blog posts.</td></tr>
+    <tr><td>Ensure (as much as is reasonable) that page ids are unique.</td></tr>
+    <tr><td>Identify external links and open them in a new tab.</td></tr>
+    <tr><td>Allow images to load lazily.</td></tr>
+    <tr><td>
         Generate
         <a {EXT_LINK} href="https://www.w3schools.com/howto/howto_js_lightbox.asp">
             lightboxes
@@ -190,12 +194,12 @@ Other things I needed this tool to do included:
             inline footnotes you're reading are also implemented using CSS
             only, no JS required.
         </small>
-    </li>
-    <li>Take a directory of files and collapse it into one HTML file.</li>
-    <li>Take static files and move them into a final site directory.</li>
-    <li>Allow for draft files that are not included in release builds.</li>
-    <li>Be simple enough that I don't tear my hair out when modifying it.</li>
-</ul>
+    </td></tr>
+    <tr><td>Take a directory of files and collapse it into one HTML file.</td></tr>
+    <tr><td>Take static files and move them into a final site directory.</td></tr>
+    <tr><td>Allow for draft files that are not included in release builds.</td></tr>
+    <tr><td>Be simple enough that I don't tear my hair out when modifying it.</td></tr>
+</table>
 
 <p>
 This may seem like a daunting task, but keep in mind that a major thing this

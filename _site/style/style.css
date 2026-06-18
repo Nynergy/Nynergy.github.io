@@ -6,9 +6,9 @@
     --body-max-w:       80ch;
     --small-nav-w:      3em;
 
-    --font-lg:          22px;
-    --font-md:          18px;
-    --font-sm:          16px;
+    --font-lg:          20px;
+    --font-md:          17px;
+    --font-sm:          15px;
 
     --gap-xl:           3em;
     --gap-lg:           2em;
@@ -18,10 +18,9 @@
 
     --fg:               light-dark(#221c1d, #ffd7c0);
     --fg-dark:          light-dark(#322c2d, #ffaf8d);
-    --bg:               light-dark(#feeede, #252120);
-    --bg-light:         light-dark(#fff6f2, #353130);
-    --bg-lighter:       light-dark(#fffafa, #454140);
-    --bg-dark:          light-dark(#efddcd, #161312);
+    --bg:               light-dark(#feeede, #110e11);
+    --bg-dark:          light-dark(#efddcd, #090609);
+    --bg-light:         light-dark(#fff6f2, #312e31);
 
     --accent-blog:      light-dark(#903ad2, #c07ad2);
     --accent-coding:    light-dark(#36b9da, #86e9fa);
@@ -156,10 +155,6 @@ a[href*="//"]:hover:after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: var(--gap-md);
-    padding: var(--gap-sm);
-    border: var(--border) var(--fg);
-    border-radius: var(--radius-md);
 }
 
 .webring p {
@@ -172,12 +167,8 @@ a[href*="//"]:hover:after {
     gap: var(--gap-md);
 }
 
-.webring > div a {
-    font-size: var(--font-sm);
-}
-
 .webring .divider {
-    font-size: var(--font-lg);
+    font-size: var(--font-md);
 }
 
 /* INLINE FOOTNOTES */
@@ -209,15 +200,39 @@ input:checked + small {
 /* CODE BLOCKS */
 
 code {
-    background: var(--bg-light);
+    background: var(--bg);
+    border: var(--border) var(--bg-light);
     border-left: var(--border-thick) var(--fg-dark);
     border-radius: var(--radius-md);
     font-family: monospace;
-    font-size: var(--font-sm);
+    font-size: calc(var(--font-sm) - 2px);
     max-width: 100%;
     overflow-x: scroll;
     padding: var(--gap-md);
     display: block;
+}
+
+/* TABLES */
+
+table {
+    width: 100%;
+    font-size: var(--font-sm);
+    border-collapse: collapse;
+}
+
+table.headerless tr:first-of-type td {
+    border-top: var(--border) var(--bg-light);
+}
+
+table th {
+    text-align: left;
+    padding: var(--gap-sm);
+    border-bottom: var(--border-thick) var(--bg-light);
+}
+
+table td {
+    padding: var(--gap-sm);
+    border-bottom: var(--border) var(--bg-light);
 }
 
 /* CONTAINERS */
@@ -285,12 +300,6 @@ img:has(+ .info) {
     border-bottom: var(--border) var(--fg);
 }
 
-.info h3 span {
-    color: var(--fg-dark);
-    font-size: 0.8em;
-}
-
-
 .info p {
     margin: 0;
 }
@@ -329,7 +338,7 @@ header > div {
     align-items: center;
     width: 100%;
     padding: var(--gap-md) 0;
-    border-bottom: var(--border) var(--bg-lighter);
+    border-bottom: var(--border) var(--bg-light);
 }
 
 header > div > div {
@@ -375,6 +384,11 @@ footer {
     padding-bottom: var(--gap-md);
 }
 
+footer img[src*="rss.jpg"] {
+    height: var(--font-sm);
+    border-radius: var(--radius-sm);
+}
+
 /* MAIN */
 
 main {
@@ -414,11 +428,6 @@ section#home h4 {
     border-bottom: var(--border);
 }
 
-section#home img[src*="rss.jpg"] {
-    height: var(--font-md);
-    border-radius: var(--radius-sm);
-}
-
 /* BLOG */
 
 section.blog h2,
@@ -450,32 +459,23 @@ section.blog h4 {
     border-color: var(--accent-music);
 }
 
-.content ul {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-sm);
-    padding: var(--gap-md);
-    padding-left: calc(var(--gap-md) * 2);
-    background: var(--bg-light);
-    border-radius: var(--radius-md);
-}
-
 .content figure {
     display: flex;
     flex-direction: column;
     gap: var(--gap-sm);
     align-items: center;
-    background: var(--bg-light);
-    padding: var(--gap-md);
-    border-radius: var(--radius-md);
+    padding-bottom: var(--gap-sm);
+    border-bottom: var(--border) var(--bg-light);
 }
 
 .content figure img {
-    max-width: 85%;
+    max-width: 100%;
+    max-height: 50vh;
+    border-radius: var(--radius-md);
 }
 
 .content figure figcaption {
-    font-size: 0.9em;
+    font-size: var(--font-sm);
     font-style: italic;
 }
 
@@ -489,9 +489,11 @@ section.blog h4 {
 }
 
 .content blockquote {
-    background: var(--bg-light);
+    font-size: var(--font-sm);
+    background: var(--bg);
     margin: 0;
     padding: var(--gap-md);
+    border: var(--border) var(--bg-light);
     border-left: var(--border-thick) var(--accent-blog);
     border-radius: var(--radius-md);
 }
@@ -530,8 +532,23 @@ section.music .links a {
     margin: var(--gap-sm);
 }
 
+section.music details summary {
+    font-size: var(--font-sm);
+    text-align: center;
+    background: var(--bg-light);
+    cursor: pointer;
+}
+
+section.music details table tr td:first-of-type {
+    width: 4ch;
+}
+
+section.music details table tr.new-disc {
+    border-top: var(--border-thick) var(--bg-light);
+}
+
 .album {
-    margin-bottom: var(--gap-md);
+    margin-top: var(--gap-md);
 }
 
 .album .main {
@@ -539,8 +556,8 @@ section.music .links a {
     margin-bottom: var(--gap-md);
 }
 
-.album .main .info h3 {
-    border-color: var(--accent-music);
+.album .main .info table th {
+    width: 50%;
 }
 
 .tracklist label {
@@ -565,12 +582,8 @@ section.music .links a {
 }
 
 .tracks thead {
-    background: var(--bg-lighter);
+    background: var(--bg-light);
     border-bottom: var(--border) var(--fg);
-}
-
-.tracks tr.new-disc {
-    border-top: var(--border) var(--fg);
 }
 
 .tracks tr th,
@@ -610,8 +623,12 @@ section.writing h2 {
     margin-bottom: var(--gap-md);
 }
 
-.book .info h3 {
-    border-color: var(--accent-writing);
+.book .info table th {
+    width: 50%;
+}
+
+.book .info span {
+    color: var(--fg-dark);
 }
 
 /* ARTWORK */
@@ -733,6 +750,9 @@ section#colophon h3 {
 
 section#log h4 {
     color: var(--fg-dark);
+    padding: var(--gap-sm);
+    border-top: var(--border) var(--bg-light);
+    border-bottom: var(--border) var(--bg-light);
 }
 section#log h4:not(:first-of-type) {
     margin-top: var(--gap-xl);
@@ -746,6 +766,16 @@ section#log img {
 
 section#now b#now-status {
     color: var(--fg-dark);
+}
+
+section#now table td.to-do {
+    color: var(--accent-music);
+}
+section#now table td.in-progress{
+    color: var(--accent-writing);
+}
+section#now table td.paused {
+    color: var(--accent-about);
 }
 
 /* MEDIA QUERIES */
