@@ -223,6 +223,11 @@ table.headerless tr:first-of-type td {
     border-top: var(--border) var(--bg-light);
 }
 
+table.initial-center tr th:first-of-type,
+table.initial-center tr td:first-of-type {
+    text-align: center;
+}
+
 table th {
     text-align: left;
     padding: var(--gap-sm);
@@ -248,19 +253,46 @@ table td {
     border-radius: var(--radius-md);
 }
 
-/* INFO CONTAINERS */
+/* SHOWCASES */
 
-img:has(+ .info) {
+.showcase {
+    display: flex;
+    margin-top: var(--gap-md);
+    margin-bottom: var(--gap-md);
+}
+
+.showcase img {
     width: 25%;
     margin-bottom: auto;
 }
 
-.info {
+.showcase .info {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: var(--gap-sm);
     padding-left: var(--gap-md);
+}
+
+.showcase .info span {
+    color: var(--fg-dark);
+}
+
+.showcase .info table th {
+    width: 50%;
+}
+
+.showcase .info table:first-of-type th:nth-of-type(2) {
+    text-align: center;
+}
+
+.showcase .info table:nth-of-type(2) tr {
+    display: flex;
+    justify-content: space-around;
+}
+
+.showcase .info table:nth-of-type(2) td {
+    width: 100%;
+    text-align: center;
 }
 
 /* SIDEBAR NAV */
@@ -483,42 +515,17 @@ section.music details summary {
 
 section.music details table tr td:first-of-type {
     width: 4ch;
+    text-align: center;
 }
 
 section.music details table tr.new-disc {
     border-top: var(--border-thick) var(--bg-light);
 }
 
-.album {
-    margin-top: var(--gap-md);
-}
-
-.album .main {
-    display: flex;
-    margin-bottom: var(--gap-md);
-}
-
-.album .main .info table th {
-    width: 50%;
-}
-
 /* WRITING */
 
 section.writing h2 {
     border-color: var(--accent-writing);
-}
-
-.book {
-    display: flex;
-    margin-bottom: var(--gap-md);
-}
-
-.book .info table th {
-    width: 50%;
-}
-
-.book .info span {
-    color: var(--fg-dark);
 }
 
 /* ARTWORK */
@@ -728,34 +735,20 @@ section#now table td.paused {
     .two-column {
         grid-template-columns: 1fr;
     }
-
-    .album .main {
-        flex-direction: column;
-        gap: var(--gap-md);
-    }
-
-    .album .main img {
-        width: 70%;
-        margin: 0 auto;
-    }
-
-    .album .main .info {
-        padding: 0;
-    }
 }
 
 @media only screen and (max-width: 550px) {
-    .book {
+    .showcase {
         flex-direction: column;
         gap: var(--gap-md);
     }
 
-    .book img {
+    .showcase img {
         width: 70%;
         margin: 0 auto;
     }
 
-    .book .info {
+    .showcase .info {
         padding: 0;
     }
 }
