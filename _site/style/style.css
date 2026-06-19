@@ -10,7 +10,6 @@
     --font-md:          17px;
     --font-sm:          15px;
 
-    --gap-xl:           3em;
     --gap-lg:           2em;
     --gap-md:           1em;
     --gap-sm:           0.5em;
@@ -249,36 +248,6 @@ table td {
     border-radius: var(--radius-md);
 }
 
-.masthead:has(+ .card-list) {
-    margin-bottom: var(--gap-md);
-}
-
-/* CARD LIST */
-
-.card-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-md);
-}
-
-.card-list div {
-    display: flex;
-    flex-direction: column;
-    padding: var(--gap-md);
-    border: var(--border) var(--fg);
-    border-radius: var(--radius-md);
-}
-
-.card-list div h3,
-.card-list div h4,
-.card-list div p {
-    margin: 0;
-}
-
-.card-list div a {
-    align-self: start;
-}
-
 /* INFO CONTAINERS */
 
 img:has(+ .info) {
@@ -292,25 +261,6 @@ img:has(+ .info) {
     flex-direction: column;
     gap: var(--gap-sm);
     padding-left: var(--gap-md);
-}
-
-.info h3 {
-    margin: 0;
-    padding-bottom: var(--gap-sm);
-    border-bottom: var(--border) var(--fg);
-}
-
-.info p {
-    margin: 0;
-}
-
-.info a {
-    align-self: start;
-}
-
-.info .album-links {
-    display: flex;
-    gap: var(--gap-md);
 }
 
 /* SIDEBAR NAV */
@@ -524,14 +474,6 @@ section.music h2 {
     border-color: var(--accent-music);
 }
 
-section.music .links {
-    margin-bottom: var(--gap-md);
-}
-
-section.music .links a {
-    margin: var(--gap-sm);
-}
-
 section.music details summary {
     font-size: var(--font-sm);
     text-align: center;
@@ -558,58 +500,6 @@ section.music details table tr.new-disc {
 
 .album .main .info table th {
     width: 50%;
-}
-
-.tracklist label {
-    color: var(--fg);
-    vertical-align: baseline;
-}
-
-.tracklist label:hover {
-    color: var(--accent-music);
-}
-
-.tracklist label + input + small {
-    padding: 0;
-}
-
-.tracks {
-    table-layout: fixed;
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: var(--gap-md);
-    background: var(--bg);
-}
-
-.tracks thead {
-    background: var(--bg-light);
-    border-bottom: var(--border) var(--fg);
-}
-
-.tracks tr th,
-.tracks tr td {
-    padding: calc(var(--gap-sm) / 2) 0;
-}
-
-.tracks tr th:first-of-type,
-.tracks tr td:first-of-type {
-    width: 8ch;
-}
-
-.tracks thead tr th:not(:first-of-type) {
-    text-align: left;
-}
-
-.tracks tbody tr:nth-of-type(2n) {
-    background: var(--bg-light);
-}
-
-.tracks tbody tr td:first-of-type {
-    text-align: center;
-}
-
-.tracks tbody tr td:first-of-type:after {
-    content: '.';
 }
 
 /* WRITING */
@@ -737,6 +627,7 @@ section.about h3 {
 
 section.about img {
     width: 100%;
+    border-radius: var(--radius-md);
 }
 
 /* HASH PAGES */
@@ -748,14 +639,18 @@ section#colophon h3 {
     border-bottom: var(--border);
 }
 
-section#log h4 {
+section#log details {
+    margin-top: var(--gap-md);
+}
+
+section#log summary {
     color: var(--fg-dark);
+    font-weight: bold;
     padding: var(--gap-sm);
+    margin-bottom: var(--gap-md);
     border-top: var(--border) var(--bg-light);
     border-bottom: var(--border) var(--bg-light);
-}
-section#log h4:not(:first-of-type) {
-    margin-top: var(--gap-xl);
+    cursor: pointer;
 }
 
 section#log img {
@@ -764,18 +659,18 @@ section#log img {
     border-radius: var(--radius-md);
 }
 
-section#now b#now-status {
+section#now #now-status {
     color: var(--fg-dark);
 }
 
 section#now table td.to-do {
-    color: var(--accent-music);
+    color: lime;
 }
 section#now table td.in-progress{
-    color: var(--accent-writing);
+    color: gold;
 }
 section#now table td.paused {
-    color: var(--accent-about);
+    color: red;
 }
 
 /* MEDIA QUERIES */
