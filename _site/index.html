@@ -36,7 +36,7 @@
  Lexica Chromatica</small>
     <small>Built with <a target="_blank" rel="noopener noreferrer" href="https://github.com/Nynergy/totem">totem</a></small>
     <small>Want an RSS feed? <a href="rss.xml">Click Here <img loading="lazy" src="static/rss.jpg" /></a></small>
-    <small>Last Update: June 19, 2026
+    <small>Last Update: June 20, 2026
 </small>
 </footer>
 </aside>
@@ -210,7 +210,7 @@ shapes and colors.
         <th>Date Posted</th>
         <th>Title</th>
     </tr>
-    <tr><td>2025/12/31</td><td><a href="#blog/2025/12/31/I Wrote My Own Static Site Generator in Bash">I Wrote My Own Static Site Generator in Bash</a></td></tr><tr><td>2025/12/13</td><td><a href="#blog/2025/12/13/Finding Good Music">Finding Good Music</a></td></tr><tr><td>2024/12/28</td><td><a href="#blog/2024/12/28/Fiddling with a Home Server">Fiddling with a Home Server</a></td></tr><tr><td>2024/08/04</td><td><a href="#blog/2024/08/04/A Return to Digital Gardening">A Return to Digital Gardening</a></td></tr><tr><td>2024/07/29</td><td><a href="#blog/2024/07/29/Saying Less">Saying Less</a></td></tr>
+    <tr><td>2026/06/20</td><td><a href="#blog/2026/06/20/Digital Garden: Seeds of a System">Digital Garden: Seeds of a System</a></td></tr><tr><td>2025/12/31</td><td><a href="#blog/2025/12/31/I Wrote My Own Static Site Generator in Bash">I Wrote My Own Static Site Generator in Bash</a></td></tr><tr><td>2025/12/13</td><td><a href="#blog/2025/12/13/Finding Good Music">Finding Good Music</a></td></tr><tr><td>2024/12/28</td><td><a href="#blog/2024/12/28/Fiddling with a Home Server">Fiddling with a Home Server</a></td></tr><tr><td>2024/08/04</td><td><a href="#blog/2024/08/04/A Return to Digital Gardening">A Return to Digital Gardening</a></td></tr><tr><td>2024/07/29</td><td><a href="#blog/2024/07/29/Saying Less">Saying Less</a></td></tr>
 </table>
 </section>
 <section id="coding" class="coding">
@@ -2137,6 +2137,522 @@ free PDF downloads.
             </tr>
         </table>
     </div>
+</div>
+</section>
+<section id="blog/2026/06/20/Digital Garden: Seeds of a System" class="blog">
+<div class="post__header">
+    <h2>Digital Garden: Seeds of a System</h2>
+    <small>Posted on 2026/06/20</small>
+</div>
+
+<div class="content">
+    <p>
+It's been a while since the last time I discussed my Linux systems, and there
+are some changes I want to go over. Let's talk about what those changes are,
+why they were necessary, and how I went about implementing them without tearing
+my hair out.
+</p>
+
+<h3>Journey to a New (Old) OS</h3>
+
+<p>
+Those who read <a href="#blog/2024/08/04/A Return to Digital Gardening">
+    my last digital gardening blog post
+</a> will remember that I was daily driving Gentoo systems, administered with
+some custom bash scripts. Most of those scripts still exist (I'll touch more on
+those in a bit), but I've now migrated over to Debian on all my machines.
+</p>
+
+<figure>
+    <img loading="lazy" src="static/blog/2026-06-20-pfetch.jpg" />
+    <figcaption>
+        Output of pfetch on my main system, 'kaguya'
+    </figcaption>
+</figure>
+
+<figure>
+    <img loading="lazy" src="static/blog/2026-06-20-kaguya-Screenshot.jpg" />
+    <figcaption>
+        Screenshot of kaguya while writing this blog post
+    </figcaption>
+</figure>
+
+<p>
+I don't hate Gentoo, but after compiling my entire system for the <em>nth</em>
+time in a row, I started feeling a lot more friction than I wanted. Once
+everything was set up, the system ran perfectly fine, but getting a
+freshly-installed system to that point was a hassle, especially in a world
+where I was doing this setup on multiple machines.
+</p>
+
+<p>
+I found myself dreading the idea of setting up a new machine, even with my
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/Nynergy/dotfiles">dotfiles repo</a> at
+the ready. Something needed to change, so I opted to move to Debian for faster
+installation of a minimal system.
+</p>
+
+<p>
+I also felt that my dotfiles were lacking in a few departments, so I added some
+scripts, pruned some old unused files, and refined what was already there to
+make the post-install setup as seamless and easy as possible. We'll talk about
+those refinements later, but first, let's talk about what my post-install
+process is at this point.
+</p>
+
+<h3>Building the House</h3>
+
+<p>
+My post-install process can generally be broken down into the following steps.
+This is what I do right after I've rebooted into a freshly-installed system.
+</p>
+
+<table class="headerless">
+    <tr> <td class="centered"><b>Step 1</b></td> <td>Bootstrap user</td> </tr>
+    <tr> <td class="centered"><b>Step 2</b></td> <td>Install dotfiles</td> </tr>
+    <tr> <td class="centered"><b>Step 3</b></td> <td>Start up an X session</td> </tr>
+    <tr> <td class="centered"><b>Step 4</b></td> <td>Machine-specific configurations</td> </tr>
+</table>
+
+<p>
+Bootstrapping the user is very simple; As root, I install
+<code class="inline">sudo</code> and add my personal user to the sudo group.
+Once I log out and back in again, I can begin the real setup by pulling down my
+dotfiles.
+</p>
+
+<h4>Installing the Dotfiles</h4>
+
+<p>
+In order to install my dotfiles, I first need to install
+<code class="inline">git</code> and clone the repo into a hidden directory.
+</p>
+
+<pre><code>$ sudo apt install git
+...
+$ git clone https://github.com/Nynergy/dotfiles.git .dotfiles
+</code></pre>
+
+<p>
+Once the repo is cloned, we can move into it and run the included install
+script.
+</p>
+
+<pre><code>$ cd .dotfiles/
+$ ./install/proliferate
+</code></pre>
+
+<p>
+The install script <code class="inline">proliferate</code> will look through
+all the subdirectories in the repo for various property files and perform
+actions based on the contents of those files. When it finds a
+<code class="inline">links.prop</code> file, it reads source-destination pairs
+from it and symlinks the source to the destination on my system. When it finds
+an <code class="inline">env.prop</code> file, it reads script-variable pairs
+and adds them to an environment file.
+</p>
+
+<p>
+Some scripts that use this environment file need to be run as root, so I also
+manually symlink it to a location that root can see it.
+</p>
+
+<pre><code>$ cd /
+$ sudo ln -s $HOME/.env.sh /.env.sh
+</code></pre>
+
+<p>
+Then I can go in and edit the environment file (after installing
+<code class="inline">vim</code>) to populate all the variables.
+</p>
+
+<h4>Installing the Other Stuff</h4>
+
+<p>
+My dotfiles are littered with <code class="inline">README.md</code> files that
+contain lists of dependencies and suggested installs. These usually look
+something like this:
+</p>
+
+<pre><code>#### Dependencies
+
+- Apt
+  - tmux
+  - rxvt-unicode
+  - suckless-tools
+
+#### Suggested Installs
+
+- Apt
+  - fonts-terminus
+</code></pre>
+
+<p>
+Instead of reading through all these files manually, I also include a
+multi-stage shell command that will scrape the install targets from all the
+files and present them on the command line. Usually, I will redirect this list
+into a temporary file that I can reference while installing packages.
+</p>
+
+<pre><code>$ grep -r "\- " ./**/README.md | grep -Ev "Apt|Repos|#|\`" | cut -d '-' -f 2- | sort | uniq | sed 's/ //' 
+</code></pre>
+
+<p>
+This is a bit of a mouthful, so let's go over what it's doing step-by-step.
+</p>
+
+<table class="headerless">
+    <tr>
+        <td><code class="inline">grep -r "\- " ./**/README.md</code></td>
+        <td>
+            Find all lines in any <code class="inline">README.md</code>
+            file that contain <code class="inline">'- '</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code class="inline">grep -Ev "Apt|Repos|#|\`"</code></td>
+        <td>
+            Remove lines containing stuff we don't care about
+        </td>
+    </tr>
+    <tr>
+        <td><code class="inline">cut -d '-' -f 2-</code></td>
+        <td>
+            Grab only the text after the hyphen delimiter
+        </td>
+    </tr>
+    <tr>
+        <td><code class="inline">sort</code></td>
+        <td>
+            Sort the output lexicographically
+        </td>
+    </tr>
+    <tr>
+        <td><code class="inline">uniq</code></td>
+        <td>
+            Remove duplicate lines
+        </td>
+    </tr>
+    <tr>
+        <td><code class="inline">sed 's/ //'</code></td>
+        <td>
+            Remove spaces
+        </td>
+    </tr>
+</table>
+
+<p>
+What you're left with in the output is a sorted list of package atoms for
+<code class="inline">apt</code> or links to third-party repositories. Once all
+of those are installed, I'm ready to start an X session via
+<code class="inline">startx</code> and finish setting up.
+</p>
+
+<h4>Final Configurations</h4>
+
+<p>
+Once inside the X session, it becomes immediately apparent that there is no
+wallpaper, so I usually install GIMP and create a "blank" wallpaper of the
+appropriate resolution. This is just a solid color that matches whatever the
+background of my system color scheme is.
+</p>
+
+<p>
+Then I take care of any machine-specific configuration changes. For example, my
+polybar config file expects the network interface to have a certain name, but
+it may have a different name on this machine. Another common one is a screen
+layout file for use with <code class="inline">xrandr</code> via my
+<code class="inline">mosaic</code> script.
+</p>
+
+<p>
+Speaking of scripts, let's talk about how I've refined my system scripts, and
+added some new ones to improve my daily driving experience.
+</p>
+
+<h3>Tilling the Land</h3>
+
+<p>
+My dotfiles also contain a bunch of bash scripts that I symlink into my
+<code class="inline">$PATH</code> for ease of use. These system scripts have
+worked well enough up to now, but there were definitely pain points I wanted to
+address with some updates. Notably, the ways in which I handled screen layouts
+and system color schemes was all over the place, with weird quirks, redundant
+files, and tedious trial-and-error changes.
+</p>
+
+<p>
+With this latest round of refactors and refinements, I wanted to overhaul my
+color scheme management and screen layout selection, as well as introduce some
+scripts centered around the following ideals:
+</p>
+
+<table class="headerless">
+    <tr>
+        <td class="centered">Reduce Friction</td>
+        <td class="centered">Remove Redundancy</td>
+    </tr>
+    <tr>
+        <td class="centered">Improve Maintenance</td>
+        <td class="centered">Increase Quality-of-Life</td>
+    </tr>
+</table>
+
+<p>
+Let's talk about these ideals and the scripts/changes that embody them.
+</p>
+
+<h4>Reduce Friction</h4>
+
+<p>
+A lot of these scripts have been refined in a way that makes everyday tasks
+easier, but <code class="inline">lintel</code>
+<label for="2026-06-20-fn-1">1</label>
+<input id="2026-06-20-fn-1" type="checkbox"></input>
+<small>
+    The script handles opening terminal windows, so the name comes from a
+    <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Lintel">
+        window-related architectural term
+    </a>.
+</small>
+is the one that I feel most directly reduces friction.
+</p>
+
+<p>
+It's a deceptively simple script. All it does is grab a list of project
+directories from inside a specific folder and present the user with a
+<code class="inline">dmenu</code> selector for those projects. When the user
+selects one, it opens a new terminal instance, changes to that project's
+directory, and starts a <code class="inline">tmux</code> session.
+</p>
+
+<p>
+This may seem kind of inconsequential, but it makes the process of working on
+programming projects so much easier. Instead of manually navigating to wherever
+my code base is and getting myself set up to code, I can tie
+<code class="inline">lintel</code> to a system hotkey and jump in right away.
+Plus, once all <code class="inline">tmux</code> panes are closed, the terminal
+disappears with it, eliminating some cleanup that used to be manual as well.
+</p>
+
+<h4>Remove Redundancy</h4>
+
+<p>
+I used to have two scripts -- <code class="inline">doublescreen</code> and
+<code class="inline">triplescreen</code> -- that did the same thing.
+<label for="2026-06-20-fn-2">2</label>
+<input id="2026-06-20-fn-2" type="checkbox"></input>
+<small>
+    One was for my 2-monitor setup at home, and another for my 3-monitor setup
+    at work.
+</small>
+They used a set of hard-coded display parameters in conjunction with
+<code class="inline">xrandr</code> to set the screen layout of the X session.
+</p>
+
+<p>
+Not only was there a lot of code duplication across the two scripts, but if I
+ever needed to create a screen layout for a new setup, it would require me to
+create a whole new script. The only things that really differed between the two
+were the screen configuration details, and the amount of screens. Surely we
+could pull those out into some kind of configuration file and then use separate
+files for different layouts?
+</p>
+
+<p>
+So that's what I did. I combined the two previous scripts into one called
+<code class="inline">mosaic</code> that reads a layout configuration file
+provided by the user via <code class="inline">dmenu</code> and sets the layout
+accordingly. You can see one of these files below, describing a setup with
+three screens.
+</p>
+
+<pre><code>output DP-1-3
+primary
+mode 1920x1080
+pos 1920x0
+rotate normal
+
+output eDP-1
+mode 1920x1080
+pos 0x0
+rotate normal
+
+output DP-3
+mode 1920x1080
+pos 4000x0
+rotate left
+</code></pre>
+
+<p>
+The values are the same ones that <code class="inline">xrandr</code> expects,
+but without any of the leading dashes.
+</p>
+
+<p>
+By handling layouts this way, we can now add a new layout by creating another
+configuration file in the directory <code class="inline">mosaic</code> looks
+in. We've also made it so that only a single script handles setting the layout,
+not an ever-expanding number.
+</p>
+
+<h4>Improve Maintenance</h4>
+
+<p>
+Maintaining these scripts, as well as any number of other programming projects,
+can be tedious. Often I will have an idea of how to improve or add to
+something, but that idea will sit there in some
+<code class="inline">TODO</code> comment for a long time. Upon coming back to
+it, I may not remember what I meant by it, or I may lack some context for why
+it was necessary. I also don't like littering my code with a bunch of comments
+that aren't really documenting anything related to the code itself, but instead
+what I would like to <em>do</em> to the code.
+</p>
+
+<p>
+I implemented <code class="inline">isli</code>
+<label for="2026-06-20-fn-3">3</label>
+<input id="2026-06-20-fn-3" type="checkbox"></input>
+<small>
+    Pronounced like "eye-lee". I know, taking a lot of creative liberties with
+    this one.
+</small>
+to add more context to different
+maintenance tasks, and to eliminate these vestigial comments in my code. The
+script is highly inspired by Tsoding's
+<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=8NdRGmp70Go&t=6976s&pp=0gcJCT8LAYcqIYzv">tatr</a>
+tool, though it has a fraction of the features. In fact, the name is even
+inspired by it; <code class="inline">tatr</code> is a <b><u>ta</u></b>sk
+<b><u>tr</u></b>acker, while <code class="inline">isli</code> is an
+<b><u>is</u></b>sue <b><u>li</u></b>ster.
+</p>
+
+<p>
+Very simply, <code class="inline">isli</code> looks for a
+<code class="inline">tasks/</code> directory in the current directory, and
+looks at the files therein. Inside that directory are a bunch of date-stamped
+Markdown files containing the name of the issue, its creation date, its status,
+and some arbitrary information about the issue. See an example of the issue I
+made for writing this blog post below.
+</p>
+
+<pre><code># [Blog] Digital Garden Update: Using .dotfiles
+
+- Created:  June 18, 2026
+- Status:   OPEN
+
+I'd love to write up a blog post about how my digital garden has changed since
+my days daily driving Gentoo. This includes some changes to programs,
+configurations, and most notably my dotfiles repository.
+
+I want to talk more about how I've updated my system scripts and dotfiles repo
+to make the task of installing and spinning up a new system easy and quick, even
+with all the custom configuration I use.
+
+Topics to discuss:
+- [~] Move from Gentoo to Debian
+  - [ ] Desktop screenshot mid-blog post, pfetch output
+  - [~] The need to quickly spin up a fresh, post-install machine
+- [~] The Post-Install Checklist
+  - [~] Install sudo and add my user to the sudo group
+  - [~] Install git and clone my dotfiles repo
+  - [~] Run proliferate
+  - [~] Populate and symlink the env file
+  - [~] Scrape the install list from the repo and install them all
+    - [~] Go over how this multi-pipe Bash command works
+  - [~] Start up an X session
+  - [~] Create/Download a wallpaper
+  - [~] Create/Modify any machine-specific configuration
+    - [~] Wireless interface in polybar
+    - [~] Screen layout for mosaic
+- [~] Refining my system scripts
+  - [~] Reduce friction (lintel)
+  - [~] Remove redundancy (mosaic)
+  - [ ] Improve long-term maintenance (isli)
+  - [ ] Increase quality of life (rimeglass)
+- [ ] Tie it all together
+
+Be sure to trim the fat with edits, footnotes, and omissions before publishing!
+</code></pre>
+
+<p>
+You can use <code class="inline">isli</code> to list issues, open existing
+issues in your editor, and create new issues. At time of writing, I haven't
+implemented any kind of tag system, query language, issue deletion, or anything
+like that. Just something simple that makes creating and tracking tasks easy.
+</p>
+
+<h4>Increase Quality-of-Life</h4>
+
+<p>
+One real pain point I had with the previous iteration of dotfiles was the way I
+handled system color schemes. Before, I would edit the color values in my
+<code class="inline">.Xresources</code> file, reload my terminal settings, view
+the changes in a new terminal window, and repeat that process until I found
+colors I liked. Then I would run another script called
+<code class="inline">palette</code> to chop off the head of my
+<code class="inline">.Xresources</code> and dump it in a new color scheme file.
+Then, I could use another set of scripts to actually select and apply that
+color scheme to all manner of configuration files across my system.
+</p>
+
+<p>
+Not only was this process incredibly tedious, it also meant that my
+<code class="inline">.Xresources</code> file needed to stay in a certain
+format/order, and my color scheme files needed to obey that same order. This
+was a problem, so I decided to go a little overboard and make another one of my
+little TUI projects.
+</p>
+
+<figure>
+    <img loading="lazy" src="static/blog/2026-06-20-rimeglass.jpg" />
+    <figcaption>
+        Some screenshots of rimeglass in action
+    </figcaption>
+</figure>
+
+<p>
+I named the resulting tool <code class="inline">rimeglass</code> in reference
+to Atrus' crystal experiments on
+<a target="_blank" rel="noopener noreferrer" href="https://dni.fandom.com/wiki/Rime">Rime</a> in the Myst
+series. It reads color scheme files from a specific directory and allows the
+user to scroll through them, updating the terminal colors in real-time as you
+scroll from scheme to scheme. It also allows the user to edit the current
+palette of colors and save that palette to a new color scheme file.
+</p>
+
+<p>
+With color schemes now decoupled from the
+<code class="inline">.Xresources</code> file, I could finally add some metadata
+information to it, reorganize my color scheme collection, and eliminate the old
+<code class="inline">palette</code> script. Not only does
+<code class="inline">rimeglass</code> improve my quality-of-life as a Linux
+user, it also reduced the friction of handling system colors, removed some
+redundant scripts, and improved the way I maintain my color schemes and
+associated scripts.
+<label for="2026-06-20-fn-4">4</label>
+<input id="2026-06-20-fn-4" type="checkbox"></input>
+<small>
+    I also think it's the best-looking TUI I've made to date. Just don't try to
+    resize the terminal window... @_@
+</small>
+</p>
+
+<h3>Planting the Seeds</h3>
+
+<p>
+With all of these updates and refinements in place, I can be confident that if
+I need to spin up a new system, it won't take very long before I have a machine
+that works the way I need it to. Tending to this garden of code, planting the
+seeds that grow into a well-trimmed system, that is the Zen I love about
+programming.
+</p>
+
+<p>
+I hope you found something here that inspires you to plant some digital seeds
+of your own. Go make your own tools, and cultivate a digital space where you
+can exist as you wish.
+</p>
 </div>
 </section>
 <section id="blog/2025/12/31/I Wrote My Own Static Site Generator in Bash" class="blog">

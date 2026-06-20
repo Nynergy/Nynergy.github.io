@@ -211,6 +211,13 @@ code {
     display: block;
 }
 
+code.inline {
+    border: var(--border) var(--bg-light);
+    border-radius: var(--radius-sm);
+    padding: calc(var(--gap-sm) / 2) var(--gap-sm);
+    display: inline;
+}
+
 /* TABLES */
 
 table {
