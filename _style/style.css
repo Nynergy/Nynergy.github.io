@@ -16,19 +16,19 @@
     --gap-header:       0.655em;
 
     --fg:               light-dark(#221c1d, #ffd7c0);
-    --fg-dark:          light-dark(#322c2d, #ffaf8d);
+    --fg-dark:          light-dark(#624c4d, #ffaf8d);
     --bg:               light-dark(#feeede, #110e11);
     --bg-dark:          light-dark(#efddcd, #090609);
-    --bg-light:         light-dark(#fff6f2, #312e31);
+    --bg-light:         light-dark(#ae9e8e, #312e31);
 
-    --accent-blog:      light-dark(#903ad2, #c07ad2);
-    --accent-coding:    light-dark(#36b9da, #86e9fa);
-    --accent-music:     light-dark(#19cd82, #79f4c2);
-    --accent-writing:   light-dark(#ca960d, #ffb060);
+    --accent-blog:      light-dark(#b405f2, #c07ad2);
+    --accent-coding:    light-dark(#1290f1, #86e9fa);
+    --accent-music:     light-dark(#0bad5e, #79f4c2);
+    --accent-writing:   light-dark(#e2a904, #ffb060);
     --accent-artwork:   light-dark(#df721f, #f07860);
     --accent-about:     light-dark(#ca0027, #f02060);
 
-    --link:             light-dark(#f47676, #f07080);
+    --link:             light-dark(#f95151, #f07080);
 
     --border:           1px solid;
     --border-thick:     3px solid;
