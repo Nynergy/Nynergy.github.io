@@ -235,6 +235,17 @@ table.initial-center tr td:first-of-type {
     text-align: center;
 }
 
+table.even-columns tr {
+    display: flex;
+    justify-content: space-around;
+}
+
+table.even-columns th,
+table.even-columns td {
+    width: 100%;
+    text-align: center;
+}
+
 table th {
     text-align: left;
     padding: var(--gap-sm);
