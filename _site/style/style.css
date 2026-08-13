@@ -186,6 +186,11 @@ label:hover {
 label:before { content: "["; }
 label:after { content: "]"; }
 
+/* Turn off the brackets for music physicals */
+/* TODO: Maybe we just select labels with internal img tags? */
+.physical-display label:before { content: ""; }
+.physical-display label:after { content: ""; }
+
 label + input,
 label + input + small {
     display: none;
@@ -540,6 +545,31 @@ section.music details table tr.new-disc {
     border-top: var(--border-thick) var(--bg-light);
 }
 
+section.music span.heart {
+    color: red;
+}
+
+.physical-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(var(--img-size) / 2), 1fr));
+    grid-auto-flow: dense;
+    gap: var(--gap-md);
+    padding: var(--gap-md);
+}
+
+.physical-display img {
+    width: 100%;
+}
+
+.physical-display input + small hr {
+    color: var(--bg-light);
+}
+
+.physical-display input:checked + small {
+    grid-column: 1 / -1;
+    border: var(--border) var(--accent-music);
+}
+
 /* WRITING */
 
 section.writing h2 {
@@ -710,7 +740,6 @@ section#now table td.paused {
 
     header > div {
         justify-content: center;
-        padding: calc(var(--small-nav-w) / 4);
     }
 
     header > div > div {
@@ -768,5 +797,9 @@ section#now table td.paused {
 
     .showcase .info {
         padding: 0;
+    }
+
+    .physical-display {
+        grid-template-columns: repeat(auto-fill, minmax(calc(var(--img-size) / 2.5), 1fr));
     }
 }
