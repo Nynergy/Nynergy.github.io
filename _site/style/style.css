@@ -203,6 +203,12 @@ input:checked + small {
 
 /* CODE BLOCKS */
 
+pre:has(code) {
+    max-width: calc(var(--body-max-w) - var(--gap-md) * 2);
+    overflow-x: scroll;
+    margin: auto;
+}
+
 code {
     background: var(--bg);
     border: var(--border) var(--bg-light);
@@ -769,6 +775,10 @@ section#now table td.paused {
         display: none;
     }
 
+    pre:has(code) {
+        max-width: calc(100vw - var(--small-nav-w) - var(--gap-md) * 2);
+    }
+
     section.blog figure {
         margin: 0;
     }
@@ -785,6 +795,11 @@ section#now table td.paused {
 }
 
 @media only screen and (max-width: 550px) {
+    .webring > div {
+        flex-direction: column;
+        gap: 0;
+    }
+
     .showcase {
         flex-direction: column;
         gap: var(--gap-md);
